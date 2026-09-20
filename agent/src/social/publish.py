@@ -104,8 +104,13 @@ def _wait_ready(container_id: str, token: str) -> None:
 
 def post_instagram(p: dict, token: str, ig: str) -> dict:
     """Container model: create → poll status_code until FINISHED → publish.
-    Carousels: one container per slide (is_carousel_item), then a CAROUSEL parent."""
+    Carousels: one container per slide (is_carousel_item), then a CAROUSEL parent.
+    Stories: media_type=STORIES with a 9:16 image, no caption."""
     urls = public_urls(p)
+    if p.get("surface") == "story":
+        creation = graph("POST", f"{ig}/media", media_type="STORIES", image_url=urls[0], access_token=token)
+        _wait_ready(creation["id"], token)
+        return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
     if len(urls) > 1:
         children = []
         for u in urls[:10]:
@@ -130,8 +135,12 @@ def post_instagram(p: dict, token: str, ig: str) -> dict:
 
 
 def post_facebook(p: dict, token: str, page: str) -> dict:
-    """Single photo → /photos. Several → unpublished photos attached to one feed post."""
+    """Single photo → /photos. Several → unpublished photos attached to one feed post.
+    Stories → an unpublished photo, then /photo_stories."""
     urls = public_urls(p)
+    if p.get("surface") == "story":
+        pid = graph("POST", f"{page}/photos", url=urls[0], published="false", access_token=token)["id"]
+        return graph("POST", f"{page}/photo_stories", photo_id=pid, access_token=token)
     if len(urls) == 1:
         return graph("POST", f"{page}/photos", url=urls[0], message=caption_text(p), access_token=token)
     ids = [graph("POST", f"{page}/photos", url=u, published="false", access_token=token)["id"] for u in urls]
@@ -159,7 +168,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--really", action="store_true", help="actually post")
     ap.add_argument("--date", default=None, help="treat this YYYY-MM-DD as today (default: today UTC)")
-    ap.add_argument("--slot", choices=["am", "pm"], default=None, help="only post items in this slot for today")
+    ap.add_argument("--slot", choices=["am", "noon", "pm"], default=None, help="only post items in this slot for today")
     args = ap.parse_args(argv)
     load_env()
     cfg = load_config()["social"]
@@ -178,7 +187,7 @@ def main(argv=None):
         n += 1
         if not live:
             n = len(p.get("image_urls") or [1])
-            print(f"[publish:DRY-RUN] {p['scheduled_for']} {p.get('slot', '-'):>2} {p['id']} ({n} slide{'s' if n > 1 else ''}) → {', '.join(p['platforms'])}: {p.get('title') or p.get('card_text')}")
+            print(f"[publish:DRY-RUN] {p['scheduled_for']} {p.get('slot', '-'):>4} {p.get('surface', 'feed'):>5} {p['id']} ({n} image{'s' if n > 1 else ''}) → {', '.join(p['platforms'])}: {p.get('title') or p.get('card_text')}")
             continue
         # Check the image is really public before Meta tries to fetch it.
         missing = [u for u in public_urls(p) if requests.head(u, timeout=20, allow_redirects=True).status_code != 200]

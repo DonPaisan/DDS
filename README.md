@@ -152,10 +152,15 @@ reports into the dashboard by ad name automatically.
 
 ## Social content
 
-Two educational carousels a day (9 AM and 6 PM ET), rendered by `agent/src/social/slides.py`
+Daily: a carousel at 9 AM ET, a Story at noon, a one-pager (fact / true story / quote) at 6 PM ET.
+Carousels, rendered by `agent/src/social/slides.py`
 in the logo palette with the logo on every slide: navy hook cover, four white content slides
 (text, stat tile, two-bar comparison, checklist), and a save/share CTA. The content brief with the
-engagement research is `prompts/social-carousels.md`.
+engagement research is `prompts/social-carousels.md`. One-pagers (`agent/src/social/onepagers.py`)
+sit on a real photo: drop your own JPGs in `site/social/photos/own/` (filename = tags, e.g.
+`kitchen-table-bills.jpg`), or add a free `PEXELS_API_KEY` repository secret and the publish
+workflow fetches licensed stock photos and records attribution in `site/social/photos/manifest.json`.
+Without either, posts render on the navy brand background.
 
 `agent/src/social/generate.py` asks Claude for a week of posts (themes, compliance rules in
 `prompts/social-content.md`, a regex gate on top), renders 1080×1080 JPEG quote cards into

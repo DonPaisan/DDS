@@ -45,3 +45,26 @@ Hard rules (a carousel that breaks one is discarded):
   "we understand your stress". Form questions and math examples are fine.
 - When settlement comes up, say plainly that it can affect credit scores and is not right for
   everyone.
+
+
+## One-pagers and Stories (added 2026-09-20)
+
+Daily cadence, chosen from the 2026 research (3–5 feed posts a *week* is the platform's sweet
+spot; many posts a day dilutes reach per post and reads as spam for a small account):
+- **9 AM ET, feed:** one carousel.
+- **12 PM ET, Story:** a quote or a did-you-know as a 9:16 Story. Stories are meant to be
+  near-daily and do not affect feed ranking.
+- **6 PM ET, feed:** one one-pager, rotating did-you-know → true story → quote.
+If reach per post drops over two weeks, cut the evening feed post first, not the carousel.
+
+One-pager rules:
+- **Did you know:** one fact that is true, specific, and checkable (a statute, a rule, a number),
+  plus a one-line "so what". Never a stat we cannot source.
+- **True story:** only real, public, sourced events (court verdicts, regulator settlements, news
+  reports), with the outlet and date on the image and in the caption. Client stories only with
+  written permission, details changed, and a visible "details changed" line. Never invented.
+- **Quote:** our own words (best for engagement) or a correctly attributed quotation.
+- **Photos:** real photographs only, from site/social/photos/own/ (yours) or Pexels stock. Never
+  AI-generated imagery: Meta detects it through embedded metadata and reduces reach on
+  undisclosed AI content, and it undercuts trust.
+- Hashtags 3–5, varied per post. No engagement bait ("like if…"), no pods, official API only.

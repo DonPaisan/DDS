@@ -1,6 +1,7 @@
 name: Social publish
 
-# Two carousels a day: the "am" slot at 9:00 AM ET and the "pm" slot at 6:00 PM ET.
+# Feed: morning carousel (am, 9:00 AM ET) and evening one-pager (pm, 6:00 PM ET).
+# Stories: the noon slot (12:00 PM ET) for quotes and did-you-knows as Stories.
 # Posts whatever is queued for today in that slot (plus anything overdue) to the
 # Facebook Page and the linked Instagram account. Run by hand from the Actions tab
 # to post right now; pick the slot or leave it on "auto".
@@ -8,14 +9,15 @@ name: Social publish
 # instagram_basic, instagram_content_publish) and social.enabled: true.
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 9:00 AM ET  → am
-    - cron: "0 22 * * *"   # 22:00 UTC = 6:00 PM ET  → pm
+    - cron: "0 13 * * *"   # 13:00 UTC = 9:00 AM ET  → am   (feed carousel)
+    - cron: "0 16 * * *"   # 16:00 UTC = 12:00 PM ET → noon (story)
+    - cron: "0 22 * * *"   # 22:00 UTC = 6:00 PM ET  → pm   (feed one-pager)
   workflow_dispatch:
     inputs:
       slot:
         description: "Which slot to post (auto = by time of day)"
         type: choice
-        options: [auto, am, pm]
+        options: [auto, am, noon, pm]
         default: auto
 
 permissions:
@@ -40,10 +42,17 @@ jobs:
         run: |
           s="${{ github.event.inputs.slot }}"
           if [ -z "$s" ] || [ "$s" = "auto" ]; then
-            if [ "$(date -u +%H)" -lt 18 ]; then s=am; else s=pm; fi
+            h=$(date -u +%H)
+            if [ "$h" -lt 15 ]; then s=am; elif [ "$h" -lt 19 ]; then s=noon; else s=pm; fi
           fi
           echo "slot=$s" >> "$GITHUB_OUTPUT"
           echo "Posting slot: $s"
+
+      - name: Fetch photos for one-pagers that still need one
+        working-directory: agent
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python src/social/render_queue.py --photos-only || true
 
       - name: Publish due posts
         working-directory: agent
@@ -58,6 +67,6 @@ jobs:
         run: |
           git config user.name "dds-social-bot"
           git config user.email "noreply@debtdirectsolutions.com"
-          git add agent/social/queue
+          git add agent/social/queue site/social
           git diff --cached --quiet || git commit -m "social: mark posts published $(date -u +%F) ${{ steps.slot.outputs.slot }}"
           git push
