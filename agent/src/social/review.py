@@ -76,8 +76,13 @@ def build() -> str:
             L.append(f"**Follower growth:** +{g1} this week vs +{g0} the week before.")
         L.append("")
 
+    errors = [r for r in rows if r.get("error")]
+    rows = [r for r in rows if r.get("reach") is not None]
     if not rows:
-        L += ["No post metrics yet. The first snapshot lands the morning after the first post.", ""]
+        if errors and "permission" in errors[0]["error"].lower():
+            L += ["Post insights are not readable yet: the Meta token needs the `instagram_manage_insights` permission. Regenerate it in Business Settings → System users, replace the `META_TOKEN` secret, and this fills in the next morning.", ""]
+        else:
+            L += ["No post metrics yet. The first snapshot lands the morning after the first post.", ""]
         OUT.write_text("\n".join(L), encoding="utf-8")
         return "\n".join(L)
 
