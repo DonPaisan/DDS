@@ -60,11 +60,19 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-06.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-07.jpg"
       ],
-      "status": "queued",
+      "status": "partial",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "results": {
+        "instagram": {
+          "id": "18115052455976870"
+        },
+        "facebook": {
+          "error": "Graph API error: {'message': '(#200) Unpublished posts must be posted to a page as the page itself.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A_Vc4uuLiplzB9E2eZ0Fokg'}"
+        }
+      }
     },
     {
       "id": "2026-09-21-am",
