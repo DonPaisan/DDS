@@ -184,6 +184,16 @@ weekly generation on.
   ad. Headlines describe the service ("a free debt settlement review"), never the visitor
   ("struggling with debt?"). Form questions may ask about the visitor's situation.
 
+## Reels (audio)
+
+Image posts and carousels cannot get music through Meta's API (only in the app, at posting time).
+Reels can: `agent/src/social/reels.py` turns a carousel spec into a 9:16 MP4 (slow zoom, crossfades,
+music bed) and `publish.py` posts it as an Instagram Reel (`media_type=REELS`, shared to feed) and a
+Page video. Music must be a track you hold a license for, dropped into `agent/assets/audio/*.mp3`;
+Instagram's music library is not available via the API. Reels queued without a track are marked
+`needs_audio` and skipped until one exists. Voiceover is deliberately not generated: synthetic
+narration counts as AI-generated audio under Meta's labeling rules and undercuts trust.
+
 ## Compliance
 
 Consent text and disclosures live in `site/compliance.js` and are never edited by automation.

@@ -1,6 +1,6 @@
 name: Social publish
 
-# Feed: morning carousel (am, 9:00 AM ET) and evening one-pager (pm, 6:00 PM ET).
+# Feed: morning carousel (am, 9:00 AM ET) and evening one-pager or Reel (pm, 6:00 PM ET).
 # Stories: the noon slot (12:00 PM ET) for quotes and did-you-knows as Stories.
 # Posts whatever is queued for today in that slot (plus anything overdue) to the
 # Facebook Page and the linked Instagram account. Run by hand from the Actions tab

@@ -13,3 +13,4 @@ agent/reports/*.md
 agent/drafts/
 .DS_Store
 .local/
+site/social/frames/

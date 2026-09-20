@@ -138,3 +138,9 @@ p.note { font-size: 36px; line-height: 1.45; color: var(--muted); margin: 0; }
 .t-navy .vs .col.myth, .t-sky .vs .col.myth, .t-photo .vs .col.myth { background: rgba(255,255,255,.10); }
 .vs .tag { font-weight: 700; font-size: 24px; letter-spacing: .1em; text-transform: uppercase; opacity: .75; margin-bottom: 14px; }
 .vs .txt { font-weight: 600; font-size: 36px; line-height: 1.3; }
+
+/* reels: video frames — no swipe cue, no progress dots, keep clear of the Reels UI overlay */
+body.reel .swipe, body.reel .dots { display: none; }
+body.reel .content { top: 360px; bottom: calc(var(--band) + 120px); }
+body.reel .top { top: 220px; }
+body.reel .cta .head { height: 300px; }

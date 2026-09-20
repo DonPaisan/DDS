@@ -72,3 +72,11 @@ One-pager rules:
   AI-generated imagery: Meta detects it through embedded metadata and reduces reach on
   undisclosed AI content, and it undercuts trust.
 - Hashtags 3–5, varied per post. No engagement bait ("like if…"), no pods, official API only.
+
+## Reels (added 2026-09-20)
+
+Three evenings a week (Tue/Thu/Sat) the one-pager slot carries a Reel instead: the frames of a
+carousel scheduled a week or more later, 3.2 s per slide with a slow push-in and 0.6 s crossfades,
+about 17 s total, music bed only (no synthetic voice). Reels are the discovery format; carousels
+serve existing followers. Music: licensed tracks in agent/assets/audio/. A Reel with no licensed
+track is never posted.

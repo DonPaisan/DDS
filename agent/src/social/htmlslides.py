@@ -67,6 +67,7 @@ def band(i: int | None, total: int | None, credit: str | None = None) -> str:
 
 
 def page(theme: str, body: str, *, surface: str = "feed", photo: Path | None = None, extra_class: str = "") -> str:
+    surface = "story" if surface in ("story", "reel") else surface
     bg = '<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="grid"></div></div>'
     if theme == "photo" and photo:
         bg = f'<div class="bg"><div class="photo" style="background-image:url({Path(photo).resolve().as_uri()})"></div><div class="tint"></div><div class="shade"></div></div>'
@@ -79,28 +80,28 @@ SWIPE = '<div class="swipe">swipe <svg viewBox="0 0 190 70" fill="none" stroke="
 
 
 # ── carousel slides ──────────────────────────────────────────────────────────
-def slide_cover(spec, i, total, theme, photo=None):
+def slide_cover(spec, i, total, theme, photo=None, surface="feed"):
     c = spec["cover"]
     h = rich(c["title"], c.get("highlight"))
     sub = f'<p class="sub">{esc(c["subtitle"])}</p>' if c.get("subtitle") else ""
     body = f'<header class="top"><span class="kicker">{esc(spec["kicker"])}</span></header><main class="content"><h1 class="{size_class(c["title"], 60, 85)}">{h}</h1>{sub}</main>{SWIPE}{band(i, total)}'
-    return page(theme, body, photo=photo)
+    return page(theme, body, photo=photo, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_text(s, i, total, theme, kicker):
+def slide_text(s, i, total, theme, kicker, surface="feed"):
     ic = f'<div class="icon-tile">{icon(s["icon"])}</div>' if s.get("icon") else ""
     body = f'<header class="top"><span class="kicker">{esc(kicker)}</span><span class="idx">{i:02d} / {total:02d}</span></header><main class="content">{ic}<h2 class="{size_class(s["heading"], 40)}">{rich(s["heading"], s.get("highlight"))}</h2><p class="body">{esc(s["body"])}</p></main>{band(i, total)}'
-    return page(theme, body)
+    return page(theme, body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_stat(s, i, total, theme, kicker):
+def slide_stat(s, i, total, theme, kicker, surface="feed"):
     num_cls = "long" if len(s["value"]) > 7 else ""
     b = f'<p class="body">{esc(s["body"])}</p>' if s.get("body") else ""
     body = f'<header class="top"><span class="kicker">{esc(kicker)}</span><span class="idx">{i:02d} / {total:02d}</span></header><main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="stat"><div class="num {num_cls}">{esc(s["value"])}</div><div class="lbl">{esc(s["label"])}</div></div>{b}</main>{band(i, total)}'
-    return page(theme, body)
+    return page(theme, body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_compare(s, i, total, theme, kicker):
+def slide_compare(s, i, total, theme, kicker, surface="feed"):
     vmax = max(b["value"] for b in s["bars"]) or 1
     bars = ""
     for b in s["bars"]:
@@ -110,39 +111,40 @@ def slide_compare(s, i, total, theme, kicker):
         bars += f'<div class="bar {"emph" if b.get("emphasis") else ""}"><div class="lbl">{esc(b["label"])}</div><div class="track">{fill}</div></div>'
     note = f'<p class="note">{esc(s["note"])}</p>' if s.get("note") else ""
     body = f'<header class="top"><span class="kicker">{esc(kicker)}</span><span class="idx">{i:02d} / {total:02d}</span></header><main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="bars">{bars}</div>{note}</main>{band(i, total)}'
-    return page(theme, body)
+    return page(theme, body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_list(s, i, total, theme, kicker):
+def slide_list(s, i, total, theme, kicker, surface="feed"):
     items = ""
     for n, it in enumerate(s["items"], 1):
         bullet = str(n) if s.get("numbered") else icon("check")
         items += f'<div class="item"><div class="bullet">{bullet}</div><div>{esc(it)}</div></div>'
     body = f'<header class="top"><span class="kicker">{esc(kicker)}</span><span class="idx">{i:02d} / {total:02d}</span></header><main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="list">{items}</div></main>{band(i, total)}'
-    return page(theme, body)
+    return page(theme, body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_vs(s, i, total, theme, kicker):
+def slide_vs(s, i, total, theme, kicker, surface="feed"):
     body = f'<header class="top"><span class="kicker">{esc(kicker)}</span><span class="idx">{i:02d} / {total:02d}</span></header><main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="vs"><div class="col myth"><div class="tag">{esc(s.get("left_tag", "Myth"))}</div><div class="txt">{esc(s["left"])}</div></div><div class="col fact"><div class="tag">{esc(s.get("right_tag", "Fact"))}</div><div class="txt">{esc(s["right"])}</div></div></div>' + (f'<p class="note" style="margin-top:34px">{esc(s["note"])}</p>' if s.get("note") else "") + f'</main>{band(i, total)}'
-    return page(theme, body)
+    return page(theme, body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def slide_cta(i, total):
+def slide_cta(i, total, surface="feed"):
     body = f'<div class="head"><div class="blob"></div></div><main class="content cta"><img class="logo" src="{LOGO.as_uri()}"><h1>Save this for later.</h1><p class="sub">Send it to someone who could use it.</p><span class="pill">Free, no-judgment money review. Link in bio.</span><span class="follow">Follow <b>{HANDLE}</b><small>Plain-English money basics, every day.</small></span></main><footer class="band" style="background:transparent;box-shadow:none;justify-content:flex-end">{dots(i, total)}</footer>'
-    return page("white", body)
+    return page("white", body, surface=surface, extra_class="reel" if surface == "reel" else "")
 
 
-def render_carousel(out_dir: Path, slug: str, spec: dict, photo: Path | None = None) -> list[Path]:
+def render_carousel(out_dir: Path, slug: str, spec: dict, photo: Path | None = None, surface: str = "feed") -> list[Path]:
+    """surface: feed (1080×1350) or reel (1080×1920, no swipe cue / dots) for video frames."""
     theme = spec.get("theme", "navy")
     slides = spec["slides"]
     total = len(slides) + 2
-    pages = [(f"{slug}-01", slide_cover(spec, 1, total, spec.get("cover_theme", theme), photo))]
+    pages = [(f"{slug}-01", slide_cover(spec, 1, total, spec.get("cover_theme", theme), photo, surface))]
     body_theme = spec.get("body_theme", "white" if theme in ("navy", "photo", "sky") else theme)
     for k, s in enumerate(slides, start=2):
         fn = {"text": slide_text, "stat": slide_stat, "compare": slide_compare, "list": slide_list, "vs": slide_vs}[s["kind"]]
-        pages.append((f"{slug}-{k:02d}", fn(s, k, total, s.get("theme", body_theme), spec["kicker"])))
-    pages.append((f"{slug}-{total:02d}", slide_cta(total, total)))
-    return _render(out_dir, pages, "feed")
+        pages.append((f"{slug}-{k:02d}", fn(s, k, total, s.get("theme", body_theme), spec["kicker"], surface)))
+    pages.append((f"{slug}-{total:02d}", slide_cta(total, total, surface)))
+    return _render(out_dir, pages, "story" if surface == "reel" else "feed")
 
 
 # ── one-pagers ───────────────────────────────────────────────────────────────

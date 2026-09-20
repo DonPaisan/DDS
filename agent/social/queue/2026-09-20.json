@@ -377,6 +377,86 @@
       "photo_credit": null
     },
     {
+      "id": "2026-09-22-reel",
+      "kind": "reel",
+      "surface": "feed",
+      "title": "Five signs the call about your money is a scam.",
+      "source_carousel": "2026-10-02-am",
+      "spec": {
+        "kicker": "Stay safe",
+        "theme": "navy",
+        "cover": {
+          "title": "Five signs the call about your money is a scam.",
+          "highlight": [
+            "scam."
+          ],
+          "subtitle": "They target people who are careful. Especially the careful ones."
+        },
+        "slides": [
+          {
+            "kind": "list",
+            "heading": "The pattern",
+            "items": [
+              "Urgency: act now, today, or else",
+              "Payment by gift card, wire, or crypto",
+              "A government agency calling out of the blue",
+              "A request to keep it secret or stay on the line",
+              "Pressure to \"verify\" a password or full card number"
+            ],
+            "numbered": true
+          },
+          {
+            "kind": "text",
+            "heading": "The IRS does not call",
+            "body": "Neither does Social Security, Medicare, or your bank's fraud team, to demand payment or a code on the spot. They write. You call back on the number printed on your card or statement.",
+            "icon": "phone",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "The one move that beats all of them",
+            "body": "Hang up. Wait ten minutes. Call the organization back using a number you find yourself. Scams depend on not giving you that gap.",
+            "icon": "shield-check",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "I would never fall for that.",
+            "right": "Victims skew educated and careful. The scripts are built for smart people under pressure.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "Five signs the call about your money is a scam. 🚩 Urgency, payment by gift card or wire, a government agency calling out of the blue, a request to keep it secret, and pressure to verify a password or full card number. The move that beats all of them: hang up, wait ten minutes, call back on a number you find yourself. Save this for someone you love. \n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "scamalert",
+        "fraudprevention",
+        "moneysafety",
+        "seniorfinance",
+        "financialliteracy"
+      ],
+      "scheduled_for": "2026-09-22",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-22-reel.mp4"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-reel.mp4"
+      ],
+      "cover_path": "site/social/frames/2026-09-22-reel-01.jpg",
+      "needs_audio": true,
+      "music": "2026-09-22-reel-bed.mp3",
+      "seconds": 17.4,
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
       "id": "2026-09-22-pm",
       "kind": "single",
       "subkind": "story",
@@ -735,6 +815,94 @@
       "photo_credit": null
     },
     {
+      "id": "2026-09-24-reel",
+      "kind": "reel",
+      "surface": "feed",
+      "title": "A 401(k) match is a raise you have to opt into.",
+      "source_carousel": "2026-10-01-am",
+      "spec": {
+        "kicker": "Retirement",
+        "theme": "white",
+        "cover": {
+          "title": "A 401(k) match is a raise you have to opt into.",
+          "highlight": [
+            "raise"
+          ],
+          "subtitle": "What it is, what it is worth, and the one mistake that forfeits it."
+        },
+        "slides": [
+          {
+            "kind": "stat",
+            "heading": "A common match",
+            "value": "$3,000",
+            "label": "a year on a $50,000 salary with a 6% match",
+            "body": "Contribute 6%, the employer adds 6%. Contribute less and the difference is simply not paid to you."
+          },
+          {
+            "kind": "compare",
+            "heading": "That match, invested at 7% for 25 years",
+            "bars": [
+              {
+                "label": "Your own 6%",
+                "value": 202517.92325577774,
+                "display": "$202,518"
+              },
+              {
+                "label": "Employer match",
+                "value": 202517.92325577774,
+                "display": "$202,518",
+                "emphasis": true
+              }
+            ],
+            "note": "Two piles, one of them free. Illustration only; returns vary."
+          },
+          {
+            "kind": "text",
+            "heading": "Vesting",
+            "body": "Some employers keep part of the match if you leave within a few years. Ask HR for the vesting schedule. It can change the math on switching jobs.",
+            "icon": "clock",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "If money is tight",
+            "items": [
+              "Contribute at least enough to get the full match",
+              "Raise it 1% each time you get a raise",
+              "Do not cash it out when you change jobs; roll it over",
+              "Check the fees on the funds once a year"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "A 401(k) match is a raise you have to opt into. 💼 On a $50,000 salary with a 6% match, that is $3,000 a year the employer adds only if you contribute. Invested at a 7% average for 25 years, the match alone grows to roughly $202,518. Contribute less than the match and that money is never paid to you.  (Illustration only, not investment advice.)\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "401k",
+        "retirementplanning",
+        "investing101",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-24",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-24-reel.mp4"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-reel.mp4"
+      ],
+      "cover_path": "site/social/frames/2026-09-24-reel-01.jpg",
+      "needs_audio": true,
+      "music": "2026-09-24-reel-bed.mp3",
+      "seconds": 17.4,
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
       "id": "2026-09-24-pm",
       "kind": "single",
       "subkind": "did_you_know",
@@ -1083,6 +1251,85 @@
         "facebook"
       ],
       "photo_credit": null
+    },
+    {
+      "id": "2026-09-26-reel",
+      "kind": "reel",
+      "surface": "feed",
+      "title": "Most bills are negotiable. Almost nobody asks.",
+      "source_carousel": "2026-09-29-am",
+      "spec": {
+        "kicker": "Negotiating",
+        "theme": "sky",
+        "cover": {
+          "title": "Most bills are negotiable. Almost nobody asks.",
+          "highlight": [
+            "negotiable."
+          ],
+          "subtitle": "A script that works for medical bills, cable, insurance, and card rates."
+        },
+        "slides": [
+          {
+            "kind": "list",
+            "heading": "The four-line script",
+            "items": [
+              "\"I have been a customer for X years.\"",
+              "\"I am looking at my options and this is higher than I expected.\"",
+              "\"Is there a promotion, a hardship rate, or a lower plan?\"",
+              "\"Can you send that in writing?\""
+            ],
+            "numbered": true
+          },
+          {
+            "kind": "text",
+            "heading": "Medical bills",
+            "body": "Ask for an itemized bill, check it against the insurer's statement, then ask about financial assistance and a no-interest payment plan. Errors and discounts are both common.",
+            "icon": "stethoscope",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "Card interest rates",
+            "body": "Call and ask for a lower APR, especially with a good payment history. The worst answer is no. Ask again in six months.",
+            "icon": "credit-card",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "Asking makes me look desperate.",
+            "right": "Retention departments exist because asking works. Polite, specific, and in writing.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "Most bills are negotiable. Almost nobody asks. ☎️ Medical bills, cable, insurance, even your card's interest rate. The script: how long you have been a customer, that the price is higher than expected, whether there is a promotion or lower plan, and can they put it in writing. Swipe for the version for each bill ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "negotiation",
+        "savemoney",
+        "moneytips",
+        "medicalbills",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-26-reel.mp4"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-reel.mp4"
+      ],
+      "cover_path": "site/social/frames/2026-09-26-reel-01.jpg",
+      "needs_audio": true,
+      "music": "2026-09-26-reel-bed.mp3",
+      "seconds": 17.4,
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
     },
     {
       "id": "2026-09-26-pm",

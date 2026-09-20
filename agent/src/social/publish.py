@@ -91,7 +91,7 @@ def caption_text(p: dict) -> str:
 
 
 def _wait_ready(container_id: str, token: str) -> None:
-    for _ in range(30):
+    for _ in range(60):   # video containers can take a couple of minutes
         st = graph("GET", container_id, fields="status_code,status", access_token=token)
         code = st.get("status_code")
         if code == "FINISHED":
@@ -107,6 +107,10 @@ def post_instagram(p: dict, token: str, ig: str) -> dict:
     Carousels: one container per slide (is_carousel_item), then a CAROUSEL parent.
     Stories: media_type=STORIES with a 9:16 image, no caption."""
     urls = public_urls(p)
+    if p.get("kind") == "reel":
+        creation = graph("POST", f"{ig}/media", media_type="REELS", video_url=urls[0], caption=caption_text(p), share_to_feed="true", access_token=token)
+        _wait_ready(creation["id"], token)
+        return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
     if p.get("surface") == "story":
         creation = graph("POST", f"{ig}/media", media_type="STORIES", image_url=urls[0], access_token=token)
         _wait_ready(creation["id"], token)
@@ -138,6 +142,8 @@ def post_facebook(p: dict, token: str, page: str) -> dict:
     """Single photo → /photos. Several → unpublished photos attached to one feed post.
     Stories → an unpublished photo, then /photo_stories."""
     urls = public_urls(p)
+    if p.get("kind") == "reel":
+        return graph("POST", f"{page}/videos", file_url=urls[0], description=caption_text(p), access_token=token)
     if p.get("surface") == "story":
         pid = graph("POST", f"{page}/photos", url=urls[0], published="false", access_token=token)["id"]
         return graph("POST", f"{page}/photo_stories", photo_id=pid, access_token=token)
@@ -158,6 +164,9 @@ def due_posts(t: str | None = None, slot: str | None = None):
         data = json.loads(f.read_text(encoding="utf-8"))
         for p in data["posts"]:
             if p["status"] not in ("queued", "partial") or p["scheduled_for"] > t:
+                continue
+            if p.get("needs_audio"):
+                print(f"[publish] {p['id']}: reel has no licensed music track yet (agent/assets/audio/) — skipping", file=sys.stderr)
                 continue
             if slot and p["scheduled_for"] == t and p.get("slot", slot) != slot:
                 continue
