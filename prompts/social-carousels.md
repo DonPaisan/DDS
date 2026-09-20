@@ -25,10 +25,10 @@ Carousel shape (6 slides, rendered by agent/src/social/slides.py in the logo pal
   `text` (heading + body), `stat` (one big number with a label), `compare` (two bars of one
   measure, e.g. minimum payments vs a fixed payment), `list` (3–4 short items, checks or numbers).
   Every number must be computed, never rounded up for drama.
-- Slide 6, CTA (navy, automatic): "Save this for later. Send it to someone who could use it." plus
-  the free-review pill. Saves and sends are what the algorithm rewards.
-- Caption: a hook line first, then 60–110 words, one to three emojis, "Swipe ➡️", and the DM +
-  link-in-bio close. 3 to 5 lowercase hashtags (Instagram's own guidance; more reads as spam).
+- Slide 6, CTA (automatic): "Save this for later. Send it to someone who could use it.", the
+  free-review pill, and "Follow @debt_direct_solutions". Saves and sends are what the algorithm rewards.
+- Caption: a hook line first, then 60–110 words, one to three emojis, "Swipe ➡️", and the close:
+  "Follow @debt_direct_solutions … DM us REVIEW or tap the link in bio". 3 to 5 lowercase hashtags (Instagram's own guidance; more reads as spam).
 - Slots: 9:00 AM and 6:00 PM Eastern. Mid-week mornings perform best; weekends worst.
 
 Why 6 and not 10: research in 2026 puts the sweet spot at 5–10 slides with completion rate as the

@@ -37,6 +37,7 @@ social:
   posts_per_week: 3
   platforms: ["instagram", "facebook"]
   brand_color: "#0b5fb0"
+  instagram_handle: "@debt_direct_solutions"
   github_repo: "DonPaisan/DDS"
   github_branch: "claude/debt-direct-landing-automation-u808zk"   # raw-URL fallback for images
   posts_per_day: 2

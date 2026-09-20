@@ -12,7 +12,17 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[3]
 FONT_DIR = ROOT / "agent" / "assets" / "fonts"
 LOGO_PATH = ROOT / "site" / "brand" / "logo.png"
-LOGO_LIGHT_PATH = ROOT / "site" / "brand" / "logo-light.png"
+TEMPLATE_DIR = ROOT / "site" / "brand" / "templates"   # optional Canva-exported PNG backgrounds
+HANDLE = "@debt_direct_solutions"
+
+
+def template(name: str, size: tuple[int, int]) -> Image.Image | None:
+    """A Canva-designed background (text areas left empty) if one has been exported."""
+    p = TEMPLATE_DIR / f"{name}.png"
+    if not p.exists():
+        return None
+    im = Image.open(p).convert("RGB")
+    return im if im.size == size else im.resize(size, Image.LANCZOS)
 
 W, H = 1080, 1350
 M = 84  # margin
@@ -128,13 +138,12 @@ def draw_rich(d, x, y, words_lines, f, color, highlight_words, hl_color):
 
 # ── slide kinds ──────────────────────────────────────────────────────────────
 def cover(path: Path, *, title: str, kicker: str, subtitle: str | None, highlight: list[str], index: int, total: int):
-    img = Image.new("RGB", (W, H), NAVY)
-    d = ImageDraw.Draw(img)
-    # soft blue glow top-right
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    gd = ImageDraw.Draw(glow)
-    gd.ellipse([W - 520, -380, W + 260, 400], fill=(*BLUE_DEEP, 110))
-    img.paste(Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB"))
+    img = template("cover", (W, H))
+    if img is None:
+        img = Image.new("RGB", (W, H), NAVY)
+        glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).ellipse([W - 520, -380, W + 260, 400], fill=(*BLUE_DEEP, 110))
+        img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
     d = ImageDraw.Draw(img)
 
     kf = font("semibold", 30)
@@ -162,7 +171,7 @@ def cover(path: Path, *, title: str, kicker: str, subtitle: str | None, highligh
 
 
 def _light_base(kicker: str, index: int):
-    img = Image.new("RGB", (W, H), WHITE)
+    img = template("content", (W, H)) or Image.new("RGB", (W, H), WHITE)
     d = ImageDraw.Draw(img)
     nf = font("bold", 34)
     d.text((M, M), f"{index:02d}", font=nf, fill=BLUE)
@@ -290,15 +299,17 @@ def list_slide(path: Path, *, heading: str, items: list[str], kicker: str, index
 
 
 def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for later.", line2: str = "Send it to someone who could use it.", pill: str = "Free, no-judgment review. Link in bio."):
-    img = Image.new("RGB", (W, H), WHITE)
+    img = template("cta", (W, H))
+    if img is None:
+        img = Image.new("RGB", (W, H), WHITE)
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 0, W, 220], fill=NAVY)
+        glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(glow).ellipse([W - 520, -380, W + 260, 400], fill=(*BLUE_DEEP, 110))
+        img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 220, W, H], fill=WHITE)
     d = ImageDraw.Draw(img)
-    # navy top band with a soft glow, original logo on white below it
-    d.rectangle([0, 0, W, 220], fill=NAVY)
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(glow).ellipse([W - 520, -380, W + 260, 400], fill=(*BLUE_DEEP, 110))
-    img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
-    d = ImageDraw.Draw(img)
-    d.rectangle([0, 220, W, H], fill=WHITE)
     lg = logo(380)
     img.paste(lg, ((W - lg.width) // 2, 220 + 50), lg)
     y = 220 + 50 + lg.height + 60
@@ -311,11 +322,18 @@ def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for
     for ln in l2:
         d.text((M, y), ln, font=f2, fill=MUTED)
         y += int(f2.size * 1.35)
-    y += 56
+    y += 48
     pf = font("semibold", 36)
     pw = d.textlength(pill, font=pf) + 64
     d.rounded_rectangle([M, y, M + pw, y + 82], radius=41, fill=YELLOW)
     d.text((M + 32, y + 20), pill, font=pf, fill=NAVY)
+    y += 82 + 40
+    # follow line: blue handle, navy text
+    ff_ = font("bold", 40)
+    d.text((M, y), "Follow ", font=ff_, fill=NAVY)
+    hx = M + d.textlength("Follow ", font=ff_)
+    d.text((hx, y), HANDLE, font=ff_, fill=BLUE)
+    d.text((M, y + 54), "for daily debt basics, explained plainly.", font=font("medium", 32), fill=MUTED)
     progress(d, index, total, dark=False)
     img.save(path, "JPEG", quality=92, optimize=True)
 

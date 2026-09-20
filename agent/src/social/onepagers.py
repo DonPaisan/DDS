@@ -14,7 +14,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from social.slides import BAND, BLUE_LIGHT, LOGO_PATH, M, MUTED, NAVY, WHITE, YELLOW, fit, font, logo, paste_logo, wrap  # noqa: F401
+from social.slides import BAND, BLUE, BLUE_LIGHT, HANDLE, LOGO_PATH, M, MUTED, NAVY, WHITE, YELLOW, fit, font, logo, paste_logo, template, wrap  # noqa: F401
 
 SIZES = {"feed": (1080, 1350), "story": (1080, 1920)}
 
@@ -39,6 +39,9 @@ def _background(size: tuple[int, int], photo: Path | None, darken: float = 0.62)
         shade = Image.new("RGB", (W, H), NAVY)
         im = Image.composite(shade, im, grad)
         return im
+    tpl = template("story" if H > 1400 else "onepager", (W, H))
+    if tpl is not None:
+        return tpl
     im = Image.new("RGB", (W, H), NAVY)
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(glow).ellipse([W - 560, -420, W + 300, 440], fill=(0x08, 0x70, 0xD0, 110))
@@ -50,10 +53,16 @@ def _brand(img: Image.Image, d: ImageDraw.ImageDraw, surface: str, credit: str |
     band = BAND if surface == "feed" else 260   # Stories: keep the band clear of the reply bar
     d.rectangle([0, H - band, W, H], fill=WHITE)
     paste_logo(img, M, H - band + (band - 130) // 2 - (30 if surface == "story" else 0), 130)
+    # follow line on the right of the band
+    ff_ = font("bold", 30)
+    fy = H - band // 2 - 34 - (30 if surface == "story" else 0)
+    fw = d.textlength("Follow " + HANDLE, font=ff_)
+    d.text((W - M - fw, fy), "Follow ", font=ff_, fill=NAVY)
+    d.text((W - M - fw + d.textlength("Follow ", font=ff_), fy), HANDLE, font=ff_, fill=BLUE)
     if credit:
         cf = font("regular", 22)
         tw = d.textlength(credit, font=cf)
-        d.text((W - M - tw, H - band // 2 - 12 - (30 if surface == "story" else 0)), credit, font=cf, fill=MUTED)
+        d.text((W - M - tw, fy + 44), credit, font=cf, fill=MUTED)
 
 
 def _pill(d, x, y, text, fill=YELLOW, ink=NAVY, size=30):
