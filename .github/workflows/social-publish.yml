@@ -1,0 +1,46 @@
+name: Social publish
+
+# Posts whatever is due today from agent/social/queue/*.json to the Facebook
+# Page and the linked Instagram account. Runs every evening; also run it by
+# hand from the Actions tab ("Run workflow") to post right now.
+# Requires: META_TOKEN secret with pages_manage_posts, pages_read_engagement,
+# instagram_basic, instagram_content_publish, and the Page + IG account
+# assigned to the system user. social.enabled must be true in agent/config.yml.
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 23:00 UTC = 7:00 PM ET
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: social-publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: agent/requirements.txt
+      - run: pip install -r agent/requirements.txt
+
+      - name: Publish due posts
+        working-directory: agent
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python src/social/publish.py --really
+
+      - name: Record what was posted
+        run: |
+          git config user.name "dds-social-bot"
+          git config user.email "noreply@debtdirectsolutions.com"
+          git add agent/social/queue
+          git diff --cached --quiet || git commit -m "social: mark posts published $(date -u +%F)"
+          git push

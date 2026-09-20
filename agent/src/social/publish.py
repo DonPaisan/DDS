@@ -36,14 +36,33 @@ def graph(method: str, path: str, **params) -> dict:
     return body
 
 
+def resolve_ids(token: str) -> tuple[str, str | None]:
+    """Page id and Instagram professional account id, from env or looked up via the token."""
+    page = env("FB_PAGE_ID")
+    if not page:
+        pages = graph("GET", "me/accounts", fields="id,name,instagram_business_account", access_token=token).get("data", [])
+        if not pages:
+            sys.exit("[publish] the token can see no Pages; assign the Page to the system user in Business Settings")
+        if len(pages) > 1:
+            names = ", ".join(f"{x['name']} ({x['id']})" for x in pages)
+            sys.exit(f"[publish] token can see several Pages, set FB_PAGE_ID: {names}")
+        page = pages[0]["id"]
+        ig = (pages[0].get("instagram_business_account") or {}).get("id")
+        print(f"[publish] using Page {pages[0]['name']} ({page})" + (f", Instagram {ig}" if ig else ", no Instagram account linked"))
+        return page, env("IG_USER_ID") or ig
+    ig = env("IG_USER_ID")
+    if not ig:
+        ig = (graph("GET", page, fields="instagram_business_account", access_token=token).get("instagram_business_account") or {}).get("id")
+    return page, ig
+
+
 def caption_text(p: dict) -> str:
     tags = " ".join("#" + t.strip("#") for t in p.get("hashtags", []))
     return f"{p['caption']}\n\n{tags}".strip()
 
 
-def post_instagram(p: dict, token: str) -> dict:
+def post_instagram(p: dict, token: str, ig: str) -> dict:
     """Container model: create → poll status_code until FINISHED → publish."""
-    ig = env("IG_USER_ID", required=True)
     creation = graph("POST", f"{ig}/media", image_url=p["image_url"], caption=caption_text(p), access_token=token)
     for _ in range(20):
         st = graph("GET", creation["id"], fields="status_code,status", access_token=token)
@@ -58,13 +77,12 @@ def post_instagram(p: dict, token: str) -> dict:
     return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
 
 
-def post_facebook(p: dict, token: str) -> dict:
-    page = env("FB_PAGE_ID", required=True)
+def post_facebook(p: dict, token: str, page: str) -> dict:
     return graph("POST", f"{page}/photos", url=p["image_url"], message=caption_text(p), access_token=token)
 
 
-def due_posts():
-    t = today().isoformat()
+def due_posts(t: str | None = None):
+    t = t or today().isoformat()
     for f in sorted(QUEUE_DIR.glob("*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
         for p in data["posts"]:
@@ -75,18 +93,20 @@ def due_posts():
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--really", action="store_true", help="actually post")
+    ap.add_argument("--date", default=None, help="treat this YYYY-MM-DD as today (default: today UTC)")
     args = ap.parse_args(argv)
     load_env()
     cfg = load_config()["social"]
     live = args.really and cfg["enabled"]
     if args.really and not cfg["enabled"]:
         print("[publish] social.enabled is false in config.yml — dry run only.")
-    token = env("FB_PAGE_TOKEN") if live else None
+    token = (env("FB_PAGE_TOKEN") or env("META_TOKEN")) if live else None
     if live and not token:
-        sys.exit("[publish] FB_PAGE_TOKEN not set")
+        sys.exit("[publish] FB_PAGE_TOKEN or META_TOKEN not set")
+    page, ig = resolve_ids(token) if live else (None, None)
 
     n = 0
-    for f, data, p in due_posts():
+    for f, data, p in due_posts(args.date):
         n += 1
         if not live:
             print(f"[publish:DRY-RUN] {p['scheduled_for']} {p['id']} → {', '.join(p['platforms'])}: {p['card_text']}")
@@ -98,8 +118,12 @@ def main(argv=None):
             continue
         results = {}
         for platform in p["platforms"]:
+            if platform == "instagram" and not ig:
+                results[platform] = {"error": "no Instagram professional account linked to the Page"}
+                print(f"[publish] {p['id']}: skipping Instagram, no IG account linked to the Page", file=sys.stderr)
+                continue
             try:
-                results[platform] = post_instagram(p, token) if platform == "instagram" else post_facebook(p, token)
+                results[platform] = post_instagram(p, token, ig) if platform == "instagram" else post_facebook(p, token, page)
             except Exception as e:  # noqa: BLE001
                 results[platform] = {"error": str(e)}
                 print(f"[publish] {p['id']} {platform} failed: {e}", file=sys.stderr)
