@@ -36,24 +36,30 @@ def graph(method: str, path: str, **params) -> dict:
     return body
 
 
-def resolve_ids(token: str) -> tuple[str, str | None]:
-    """Page id and Instagram professional account id, from env or looked up via the token."""
-    page = env("FB_PAGE_ID")
-    if not page:
-        pages = graph("GET", "me/accounts", fields="id,name,instagram_business_account", access_token=token).get("data", [])
-        if not pages:
-            sys.exit("[publish] the token can see no Pages; assign the Page to the system user in Business Settings")
-        if len(pages) > 1:
-            names = ", ".join(f"{x['name']} ({x['id']})" for x in pages)
-            sys.exit(f"[publish] token can see several Pages, set FB_PAGE_ID: {names}")
-        page = pages[0]["id"]
-        ig = (pages[0].get("instagram_business_account") or {}).get("id")
-        print(f"[publish] using Page {pages[0]['name']} ({page})" + (f", Instagram {ig}" if ig else ", no Instagram account linked"))
-        return page, env("IG_USER_ID") or ig
-    ig = env("IG_USER_ID")
-    if not ig:
-        ig = (graph("GET", page, fields="instagram_business_account", access_token=token).get("instagram_business_account") or {}).get("id")
-    return page, ig
+def resolve_ids(token: str) -> tuple[str, str | None, str]:
+    """Page id, Instagram professional account id, and a PAGE access token.
+
+    Meta's current Pages API rejects user/system-user tokens on Page endpoints
+    ("A Page access token is required"), so we mint one from /me/accounts."""
+    want = env("FB_PAGE_ID")
+    pages = graph("GET", "me/accounts", fields="id,name,access_token,instagram_business_account", limit=50, access_token=token).get("data", [])
+    if not pages:
+        sys.exit("[publish] the token can see no Pages; assign the Page to the system user in Business Settings")
+    if want:
+        match = [x for x in pages if x["id"] == want]
+        if not match:
+            sys.exit(f"[publish] FB_PAGE_ID {want} is not among the Pages this token can see")
+        pg = match[0]
+    elif len(pages) > 1:
+        names = ", ".join(f"{x['name']} ({x['id']})" for x in pages)
+        sys.exit(f"[publish] token can see several Pages, set FB_PAGE_ID: {names}")
+    else:
+        pg = pages[0]
+    page = pg["id"]
+    ig = env("IG_USER_ID") or (pg.get("instagram_business_account") or {}).get("id")
+    page_token = pg.get("access_token") or token
+    print(f"[publish] using Page {pg['name']} ({page})" + (f", Instagram {ig}" if ig else ", no Instagram account linked"))
+    return page, ig, page_token
 
 
 def public_urls(p: dict) -> list[str]:
@@ -163,7 +169,9 @@ def main(argv=None):
     token = (env("FB_PAGE_TOKEN") or env("META_TOKEN")) if live else None
     if live and not token:
         sys.exit("[publish] FB_PAGE_TOKEN or META_TOKEN not set")
-    page, ig = resolve_ids(token) if live else (None, None)
+    page, ig, page_token = resolve_ids(token) if live else (None, None, None)
+    if page_token:
+        token = page_token   # Page token works for both Page and Instagram publishing
 
     n = 0
     for f, data, p in due_posts(args.date, args.slot):

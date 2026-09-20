@@ -21,7 +21,8 @@ def main(argv=None):
     args = ap.parse_args(argv)
     load_env()
     token = env("FB_PAGE_TOKEN") or env("META_TOKEN") or sys.exit("[inspect] META_TOKEN not set")
-    page, ig = resolve_ids(token)
+    page, ig, page_token = resolve_ids(token)
+    token = page_token
     out = {"page_id": page, "ig_id": ig, "instagram": [], "facebook": []}
 
     if ig:
