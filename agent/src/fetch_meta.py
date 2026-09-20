@@ -65,7 +65,7 @@ def action_sum(actions: list | None, types: list[str]) -> int:
 
 def fetch_insights(days: int) -> int:
     cfg = load_config()["meta"]
-    account = env("META_AD_ACCOUNT_ID", required=True)
+    account = env("META_AD_ACCOUNT_ID") or load_config()["meta"].get("ad_account_id") or sys.exit("[config] set META_AD_ACCOUNT_ID or meta.ad_account_id")
     since, until = days_ago(days).isoformat(), today().isoformat()
     rows = paged(f"{account}/insights", {
         "level": "ad", "fields": FIELDS, "time_increment": 1, "limit": 500,
@@ -97,7 +97,7 @@ def fetch_insights(days: int) -> int:
 
 
 def fetch_adsets() -> int:
-    account = env("META_AD_ACCOUNT_ID", required=True)
+    account = env("META_AD_ACCOUNT_ID") or load_config()["meta"].get("ad_account_id") or sys.exit("[config] set META_AD_ACCOUNT_ID or meta.ad_account_id")
     conn = db()
     now = datetime.now(timezone.utc).isoformat()
     n = 0

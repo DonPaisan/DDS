@@ -22,6 +22,7 @@ rules:
   account_daily_spend_kill_usd: 500  # pause everything and alert above this
 
 meta:
+  ad_account_id: act_276922883       # not a secret; the token (META_TOKEN) is
   # Which action types count as a "lead" in insights. Pixel Lead + CAPI Lead both map to these.
   lead_action_types: ["lead", "offsite_conversion.fb_pixel_lead", "onsite_conversion.lead_grouped"]
   link_click_action_types: ["link_click"]

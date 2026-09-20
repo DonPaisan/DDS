@@ -78,8 +78,7 @@ That is what makes "which ad brings people who actually fill the form" answerabl
   (`&type=events` for raw events, `&type=leads` for leads, `&full=1` to include contact details).
 
 ### 5. Daily digest by email (GitHub Actions)
-Add repository secrets: `SITE_URL`, `REPORT_TOKEN`, `META_TOKEN`, `META_AD_ACCOUNT_ID` (as `act_…`),
-and optionally `RESEND_API_KEY`, `DIGEST_TO`, `DIGEST_FROM`. The workflow in
+Add repository secrets: `SITE_URL`, `REPORT_TOKEN`, `META_TOKEN`, and optionally `RESEND_API_KEY`, `DIGEST_TO`, `DIGEST_FROM`. The workflow in
 `.github/workflows/daily-digest.yml` runs at 7:00 ET and emails spend, CPL, the funnel, and what the
 rules engine *would* have done. Nothing writes to the ad account from CI.
 
