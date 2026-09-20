@@ -77,7 +77,7 @@ def build() -> str:
         L.append("")
 
     errors = [r for r in rows if r.get("error")]
-    rows = [r for r in rows if r.get("reach") is not None]
+    rows = [r for r in rows if not r.get("error")]
     if not rows:
         if errors and "permission" in errors[0]["error"].lower():
             L += ["Post insights are not readable yet: the Meta token needs the `instagram_manage_insights` permission. Regenerate it in Business Settings → System users, replace the `META_TOKEN` secret, and this fills in the next morning.", ""]
