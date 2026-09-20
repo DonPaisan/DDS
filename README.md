@@ -120,6 +120,28 @@ flip the switch, so the safe rollout is:
 The Meta token needs `ads_management` for steps 3 and 4; `ads_read` alone is enough for 1 and 2.
 Creative and survey copy changes never run automatically: they arrive as a PR for you to merge.
 
+## Ad management (creatives and settings, never money)
+
+`agent/src/ads.py` is how Claude builds and tunes ads from the funnel data: upload videos, write
+primary text and headlines, create ads (always paused), and change an ad set's optimization
+event, placements, or attribution window. It refuses any budget or bid field in code, rejects
+targeting the Special Ad Category forbids, and runs every line of copy through the same
+compliance gate as the page. Dry run until `ads.enabled: true` in `agent/config.yml`.
+
+```bash
+cd agent
+python src/ads.py list
+python src/ads.py upload-video hook-3.mp4 --name "hook-3 medical bills"
+python src/ads.py create-creative --video-id V --page-id P --ig-id I --primary "..." --headline "..." \
+    --link https://www.debtdirectsolutions.com --name "hook-3" --reason "..."
+python src/ads.py create-ad --adset-id A --creative-id C --name "hook-3 / feeds" --reason "..."
+python src/ads.py update-adset A --optimize survey_starts --placements feeds+reels --reason "..."
+python src/ads.py --really set-status ad AD_ID ACTIVE --reason "approved by Brendon"
+```
+
+Tracking parameters are attached at the creative level (`url_tags`), so every ad built this way
+reports into the dashboard by ad name automatically.
+
 ## Survey optimization loop
 
 1. `funnel.py` shows which step loses people.

@@ -28,6 +28,10 @@ meta:
   link_click_action_types: ["link_click"]
   landing_page_view_action_types: ["landing_page_view"]
 
+ads:
+  enabled: false        # ads.py can write creatives/ads/ad set settings when true. Never budgets.
+  auto_activate: false  # new ads are created PAUSED; a human (or an explicit set-status) turns them on
+
 social:
   enabled: false                     # publish.py refuses to post unless true
   posts_per_week: 3

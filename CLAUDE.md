@@ -15,13 +15,15 @@ that watches it. Netlify deploys `site/` on every push to `main` that touches
 | `netlify/functions/*` | `/api/track`, `/api/lead`, `/api/report` | Code changes only |
 | `netlify/lib/funnel.js` ↔ `agent/src/funnel.py` | Funnel math, must stay in sync | Change both, run both test suites |
 | `agent/config.yml` | Every threshold | You |
-| `agent/src/act.py` | The only file that writes to the Meta ad account | Never called by a model. Only `rules.py` calls it. |
+| `agent/src/act.py` | Pause / budget writes driven by `rules.py` | Never called by a model. Only `rules.py` calls it. |
+| `agent/src/ads.py` | Creatives, ads, ad set settings (optimization, placements, attribution) | Claude, when `ads.enabled` is true. Refuses every budget/bid field in code. |
 | `prompts/*.md` | Standing instructions for the scheduled Claude jobs | You |
 
 ## Rules for any automated agent working here
 
 1. **Never edit `site/compliance.js`.** It is legal language.
-2. **Never call `agent/src/act.py` directly, never set `rules.enabled: true`, never set `social.enabled: true`.** Those are human decisions.
+2. **Never call `agent/src/act.py` directly, never set `rules.enabled: true`, `ads.enabled: true`, or `social.enabled: true`.** Those are human decisions.
+   **Money is never yours to change.** `ads.py` refuses budget, bid, and spend-cap fields; do not work around it. Ad settings, copy, placements, optimization events, and creative rotation are yours via `ads.py`, with the reason recorded on every write. New ads are created PAUSED; say what you built and why, and let a human activate it unless told otherwise.
 3. **Never change which fields the lead form collects or the `/api/lead` payload.** You may change question wording, order, options, help text, and step count in `survey.config.js`.
 4. **Keep every survey step `id` stable.** Analytics are keyed by id. Bump `version` on every change.
 5. **Propose survey changes as a branch + PR with the drop-off data that justifies them.** A human merges. Netlify deploys.
