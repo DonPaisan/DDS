@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[3]
 FONT_DIR = ROOT / "agent" / "assets" / "fonts"
 LOGO_PATH = ROOT / "site" / "brand" / "logo.png"
+LOGO_LIGHT_PATH = ROOT / "site" / "brand" / "logo-light.png"
 
 W, H = 1080, 1350
 M = 84  # margin
@@ -68,24 +69,20 @@ def fit(d, text, weight, start, min_size, max_w, max_lines):
 _logo_cache: dict = {}
 
 
-def logo(height: int) -> Image.Image:
-    if height not in _logo_cache:
-        im = Image.open(LOGO_PATH).convert("RGBA")
+def logo(height: int, light: bool = False) -> Image.Image:
+    key = (height, light)
+    if key not in _logo_cache:
+        im = Image.open(LOGO_LIGHT_PATH if light and LOGO_LIGHT_PATH.exists() else LOGO_PATH).convert("RGBA")
         bbox = im.getbbox()
         im = im.crop(bbox)
         r = height / im.height
-        _logo_cache[height] = im.resize((int(im.width * r), height), Image.LANCZOS)
-    return _logo_cache[height]
+        _logo_cache[key] = im.resize((int(im.width * r), height), Image.LANCZOS)
+    return _logo_cache[key]
 
 
 def paste_logo(img: Image.Image, x: int, y: int, height: int, card: bool = False):
-    lg = logo(height)
-    if card:
-        pad = 18
-        d = ImageDraw.Draw(img)
-        d.rounded_rectangle([x, y, x + lg.width + 2 * pad, y + lg.height + 2 * pad], radius=22, fill=WHITE)
-        img.paste(lg, (x + pad, y + pad), lg)
-        return lg.width + 2 * pad, lg.height + 2 * pad
+    """`card=True` means a dark background: use the reversed (white-outline) logo, no box."""
+    lg = logo(height, light=card)
     img.paste(lg, (x, y), lg)
     return lg.width, lg.height
 
@@ -104,7 +101,7 @@ def progress(d: ImageDraw.ImageDraw, index: int, total: int, dark: bool):
 
 
 def footer(img: Image.Image, d: ImageDraw.ImageDraw, index: int, total: int, dark: bool):
-    paste_logo(img, M, H - M - (110 if dark else 130), 110 if dark else 130, card=dark)
+    paste_logo(img, M, H - M - 130, 130, card=dark)
     progress(d, index, total, dark)
 
 
@@ -290,11 +287,9 @@ def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for
     ImageDraw.Draw(glow).ellipse([-300, H - 500, 500, H + 300], fill=(*BLUE_DEEP, 110))
     img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
     d = ImageDraw.Draw(img)
-    lg = logo(300)
-    card_w, card_h = lg.width + 60, lg.height + 60
-    cx = (W - card_w) // 2
-    d.rounded_rectangle([cx, M + 40, cx + card_w, M + 40 + card_h], radius=36, fill=WHITE)
-    img.paste(lg, (cx + 30, M + 70), lg)
+    lg = logo(360, light=True)
+    card_h = lg.height + 60
+    img.paste(lg, ((W - lg.width) // 2, M + 70), lg)
     y = M + 40 + card_h + 90
     f1, l1, _ = fit(d, line1, "bold", 80, 56, W - 2 * M, 2)
     for ln in l1:
