@@ -81,28 +81,36 @@ def logo(height: int, light: bool = False) -> Image.Image:
 
 
 def paste_logo(img: Image.Image, x: int, y: int, height: int, card: bool = False):
-    """`card=True` means a dark background: use the reversed (white-outline) logo, no box."""
-    lg = logo(height, light=card)
+    lg = logo(height)
     img.paste(lg, (x, y), lg)
     return lg.width, lg.height
 
 
-def progress(d: ImageDraw.ImageDraw, index: int, total: int, dark: bool):
+BAND = 200  # white footer band on dark slides
+
+
+def progress(d: ImageDraw.ImageDraw, index: int, total: int, dark: bool, y: int | None = None):
     """Segmented progress strip, bottom-right."""
     seg_w, gap, h = 34, 8, 8
     total_w = total * seg_w + (total - 1) * gap
     x = W - M - total_w
-    y = H - M - 30
+    y = (H - M - 30) if y is None else y
     for i in range(total):
         on = i < index
-        col = (YELLOW if on else (70, 88, 110)) if dark else (NAVY if on else LINE)
+        col = NAVY if on else LINE
         d.rounded_rectangle([x, y, x + seg_w, y + h], radius=4, fill=col)
         x += seg_w + gap
 
 
 def footer(img: Image.Image, d: ImageDraw.ImageDraw, index: int, total: int, dark: bool):
-    paste_logo(img, M, H - M - 130, 130, card=dark)
-    progress(d, index, total, dark)
+    """Original logo on white: on dark slides that means a white band across the bottom."""
+    if dark:
+        d.rectangle([0, H - BAND, W, H], fill=WHITE)
+        paste_logo(img, M, H - BAND + (BAND - 130) // 2, 130)
+        progress(d, index, total, dark=False, y=H - BAND // 2 - 4)
+    else:
+        paste_logo(img, M, H - M - 130, 130)
+        progress(d, index, total, dark=False)
 
 
 def draw_rich(d, x, y, words_lines, f, color, highlight_words, hl_color):
@@ -144,7 +152,7 @@ def cover(path: Path, *, title: str, kicker: str, subtitle: str | None, highligh
             y += int(sf.size * 1.35)
 
     # swipe cue: yellow arrow bleeding off the right edge
-    ay = H - M - 170
+    ay = H - BAND - 110
     d.text((W - M - 250, ay - 6), "swipe", font=font("semibold", 34), fill=YELLOW)
     d.line([(W - M - 120, ay + 14), (W + 10, ay + 14)], fill=YELLOW, width=10)
     d.polygon([(W - 60, ay - 26), (W + 10, ay + 14), (W - 60, ay + 54)], fill=YELLOW)
@@ -282,30 +290,33 @@ def list_slide(path: Path, *, heading: str, items: list[str], kicker: str, index
 
 
 def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for later.", line2: str = "Send it to someone who could use it.", pill: str = "Free, no-judgment review. Link in bio."):
-    img = Image.new("RGB", (W, H), NAVY)
+    img = Image.new("RGB", (W, H), WHITE)
+    d = ImageDraw.Draw(img)
+    # navy top band with a soft glow, original logo on white below it
+    d.rectangle([0, 0, W, 220], fill=NAVY)
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(glow).ellipse([-300, H - 500, 500, H + 300], fill=(*BLUE_DEEP, 110))
+    ImageDraw.Draw(glow).ellipse([W - 520, -380, W + 260, 400], fill=(*BLUE_DEEP, 110))
     img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
     d = ImageDraw.Draw(img)
-    lg = logo(360, light=True)
-    card_h = lg.height + 60
-    img.paste(lg, ((W - lg.width) // 2, M + 70), lg)
-    y = M + 40 + card_h + 90
-    f1, l1, _ = fit(d, line1, "bold", 80, 56, W - 2 * M, 2)
+    d.rectangle([0, 220, W, H], fill=WHITE)
+    lg = logo(380)
+    img.paste(lg, ((W - lg.width) // 2, 220 + 50), lg)
+    y = 220 + 50 + lg.height + 60
+    f1, l1, _ = fit(d, line1, "bold", 84, 56, W - 2 * M, 2)
     for ln in l1:
-        d.text((M, y), ln, font=f1, fill=WHITE)
+        d.text((M, y), ln, font=f1, fill=NAVY)
         y += int(f1.size * 1.18)
     y += 16
-    f2, l2, _ = fit(d, line2, "medium", 40, 30, W - 2 * M, 3)
+    f2, l2, _ = fit(d, line2, "medium", 42, 30, W - 2 * M, 3)
     for ln in l2:
-        d.text((M, y), ln, font=f2, fill=BLUE_LIGHT)
+        d.text((M, y), ln, font=f2, fill=MUTED)
         y += int(f2.size * 1.35)
-    y += 60
-    pf = font("semibold", 34)
-    pw = d.textlength(pill, font=pf) + 60
-    d.rounded_rectangle([M, y, M + pw, y + 74], radius=37, fill=YELLOW)
-    d.text((M + 30, y + 17), pill, font=pf, fill=NAVY)
-    progress(d, index, total, dark=True)
+    y += 56
+    pf = font("semibold", 36)
+    pw = d.textlength(pill, font=pf) + 64
+    d.rounded_rectangle([M, y, M + pw, y + 82], radius=41, fill=YELLOW)
+    d.text((M + 32, y + 20), pill, font=pf, fill=NAVY)
+    progress(d, index, total, dark=False)
     img.save(path, "JPEG", quality=92, optimize=True)
 
 

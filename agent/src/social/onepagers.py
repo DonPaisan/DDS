@@ -14,7 +14,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter
 
-from social.slides import BLUE_LIGHT, LOGO_PATH, M, NAVY, WHITE, YELLOW, fit, font, logo, paste_logo, wrap  # noqa: F401
+from social.slides import BAND, BLUE_LIGHT, LOGO_PATH, M, MUTED, NAVY, WHITE, YELLOW, fit, font, logo, paste_logo, wrap  # noqa: F401
 
 SIZES = {"feed": (1080, 1350), "story": (1080, 1920)}
 
@@ -47,11 +47,13 @@ def _background(size: tuple[int, int], photo: Path | None, darken: float = 0.62)
 
 def _brand(img: Image.Image, d: ImageDraw.ImageDraw, surface: str, credit: str | None):
     W, H = img.size
-    paste_logo(img, M, H - M - 100, 100, card=True)
+    band = BAND if surface == "feed" else 260   # Stories: keep the band clear of the reply bar
+    d.rectangle([0, H - band, W, H], fill=WHITE)
+    paste_logo(img, M, H - band + (band - 130) // 2 - (30 if surface == "story" else 0), 130)
     if credit:
         cf = font("regular", 22)
         tw = d.textlength(credit, font=cf)
-        d.text((W - M - tw, H - M - 26), credit, font=cf, fill=(170, 185, 205))
+        d.text((W - M - tw, H - band // 2 - 12 - (30 if surface == "story" else 0)), credit, font=cf, fill=MUTED)
 
 
 def _pill(d, x, y, text, fill=YELLOW, ink=NAVY, size=30):
@@ -72,7 +74,7 @@ def did_you_know(path: Path, *, fact: str, so_what: str, photo: Path | None, sur
     lh = int(ff.size * 1.15)
     sf, sl, _ = fit(d, so_what, "medium", 38, 30, W - 2 * M, 4)
     block = len(fl) * lh + 34 + len(sl) * int(sf.size * 1.4)
-    y = max(top + 110, (H - block) // 2 - (40 if surface == "feed" else 80))
+    y = max(top + 110, (H - BAND - block) // 2)
     hl = {w.lower().strip(".,!?") for w in (highlight or [])}
     for ln in fl:
         cx = M
@@ -101,7 +103,7 @@ def story(path: Path, *, kicker: str, headline: str, summary: str, source: str, 
     blh = int(bf.size * 1.42)
     src_f = font("medium", 26)
     block = len(hl) * lh + 30 + len(bl) * blh + 40 + 40
-    y = max(top + 110, H - M - 150 - block)   # anchor toward the bottom where the shade is darkest
+    y = max(top + 110, H - BAND - 60 - block)   # anchor just above the white band
     for ln in hl:
         d.text((M, y), ln, font=hf, fill=WHITE)
         y += lh
@@ -126,7 +128,7 @@ def quote(path: Path, *, text: str, attribution: str, photo: Path | None, surfac
     lh = int(tf.size * 1.25)
     af = font("medium", 34)
     block = len(tl) * lh + 40 + 44
-    y = (H - block) // 2
+    y = (H - BAND - block) // 2
     for ln in tl:
         d.text((M, y), ln, font=tf, fill=WHITE)
         y += lh
