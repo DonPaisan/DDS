@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debt Direct Solutions — Free Debt Review</title>
+  <meta name="description" content="See if you qualify to lower your credit card, medical, or personal loan debt. Free, no-obligation review in about 60 seconds.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/config.js"></script>
+  <script src="/compliance.js"></script>
+  <script src="/survey.config.js"></script>
+  <script>
+    // Meta Pixel — only loads when a pixel ID is configured in config.js.
+    (function () {
+      var id = window.DDS_CONFIG && window.DDS_CONFIG.metaPixelId;
+      if (!id) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', id);
+      // PageView is fired by tracker.js with an event_id so CAPI can dedupe.
+    })();
+  </script>
+  <script src="/tracker.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap row">
+      <a class="brand" href="/">Debt Direct Solutions</a>
+      <a id="header-phone" class="phone" href="#" hidden></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-headline"></h1>
+          <p class="sub" id="hero-subhead"></p>
+          <button class="btn primary big" id="hero-cta" type="button"></button>
+          <ul class="trust" id="hero-trust"></ul>
+        </div>
+
+        <div class="card" id="survey-card">
+          <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+          <p class="progress-label" id="progress-label"></p>
+          <div id="survey" aria-live="polite"></div>
+          <p class="reassure" id="survey-reassurance"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Answer 4 questions.</strong> About a minute. No credit check to see if you qualify.</li>
+          <li><strong>Get a free estimate.</strong> A specialist reviews your situation and explains your options in plain language.</li>
+          <li><strong>You decide.</strong> There's no obligation and no pressure. If it's not a fit, we'll tell you.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <h2>Common questions</h2>
+        <details><summary>Is this a loan?</summary><p>No. We are not a lender. Debt settlement works by negotiating with your creditors to accept less than the full balance owed.</p></details>
+        <details><summary>Will I be charged to find out if I qualify?</summary><p>No. The review and estimate are free. You only pay a fee if you enroll in a program and a debt is actually settled.</p></details>
+        <details><summary>What kinds of debt can be included?</summary><p>Unsecured debt such as credit cards, medical bills, personal loans, and accounts in collections. Mortgages, auto loans, and federal student loans generally cannot be included.</p></details>
+        <details><summary>Is my information safe?</summary><p>Yes. Your answers are private, used only to match you with the right option, and never sold. See our <a href="/privacy.html">Privacy Policy</a>.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div id="disclosures" class="disclosures"></div>
+      <p class="fine">© <span id="year"></span> Debt Direct Solutions · <a href="/privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="/app.js"></script>
+</body>
+</html>

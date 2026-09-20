@@ -1,0 +1,15 @@
+{
+  "name": "dds-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Debt Direct Solutions landing page, funnel tracking, and lead capture (Netlify)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test netlify/tests/*.test.js",
+    "dev": "netlify dev",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  }
+}

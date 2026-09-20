@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you — Debt Direct Solutions</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/config.js"></script>
+  <script src="/compliance.js"></script>
+  <script src="/survey.config.js"></script>
+  <script>
+    (function () {
+      var id = window.DDS_CONFIG && window.DDS_CONFIG.metaPixelId;
+      if (!id) return;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', id);
+    })();
+  </script>
+  <script src="/tracker.js"></script>
+</head>
+<body>
+  <header class="top"><div class="wrap row"><a class="brand" href="/">Debt Direct Solutions</a></div></header>
+  <main>
+    <section class="hero center">
+      <div class="wrap narrow">
+        <div class="card">
+          <p class="eyebrow">You're all set</p>
+          <h1 id="ty-title">Thank you.</h1>
+          <p class="sub">A debt specialist will reach out, usually within one business day, to walk you through your free estimate.</p>
+          <h2>What happens next</h2>
+          <ol class="steps">
+            <li><strong>Watch for our call or text.</strong> It will come from a number you don't recognize — that's us.</li>
+            <li><strong>Have a rough idea of your balances.</strong> You don't need statements; estimates are fine.</li>
+            <li><strong>Ask anything.</strong> There's no obligation. The point of the call is to give you clear options.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot"><div class="wrap"><div id="disclosures" class="disclosures"></div><p class="fine"><a href="/privacy.html">Privacy Policy</a></p></div></footer>
+  <script>
+    (function () {
+      var d = document.getElementById("disclosures");
+      window.DDS_COMPLIANCE.disclosures.forEach(function (t) { var p = document.createElement("p"); p.textContent = t; d.appendChild(p); });
+      try {
+        var lead = JSON.parse(sessionStorage.getItem("dds_lead") || "null");
+        if (lead && lead.first_name) document.getElementById("ty-title").textContent = "Thank you, " + lead.first_name + ".";
+      } catch (e) {}
+      window.addEventListener("load", function () { window.DDS && DDS.track("thank_you_view", { step: null, question_id: null }); });
+    })();
+  </script>
+</body>
+</html>

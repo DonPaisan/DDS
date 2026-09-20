@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DDS Funnel</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 16px 0; }
+    .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+    .kpi b { display: block; font-size: 26px; }
+    .kpi span { font-size: 13px; color: var(--muted); }
+    .bar { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 15px; }
+    .bar .lbl { width: 150px; flex: 0 0 auto; }
+    .bar .track { flex: 1; background: var(--brand-soft); border-radius: 6px; height: 26px; position: relative; }
+    .bar .fill { background: var(--brand); height: 100%; border-radius: 6px; }
+    .bar .drop { font-size: 12px; color: var(--err); white-space: nowrap; }
+    .finding { border-left: 4px solid var(--line); padding: 8px 12px; margin: 8px 0; background: var(--surface); border-radius: 0 10px 10px 0; }
+    .finding.critical { border-color: var(--err); } .finding.high { border-color: #d97706; } .finding.medium { border-color: var(--brand); }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; } td, th { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; } td.n { text-align: right; }
+    .ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+    .ctl input { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap row"><a class="brand" href="/">Debt Direct Solutions</a><span class="phone">Funnel monitor</span></div></header>
+  <main><section class="page"><div class="wrap">
+    <h1 style="font-size:28px">Landing page funnel</h1>
+    <div class="ctl">
+      <input id="token" type="password" placeholder="Report token" style="width:220px">
+      <input id="from" type="date"> <input id="to" type="date">
+      <input id="clicks" type="number" placeholder="Meta link clicks (optional)" style="width:220px">
+      <button class="btn primary" id="load" type="button">Load</button>
+    </div>
+    <p id="status" class="note" style="text-align:left"></p>
+    <div id="out" hidden>
+      <div class="kpis" id="kpis"></div>
+      <h2>Where people leave</h2>
+      <div id="steps"></div>
+      <h2>Findings</h2>
+      <div id="findings"></div>
+      <h2>By ad</h2>
+      <table id="sources"><thead><tr><th>source / campaign / ad</th><th>sessions</th><th>start %</th><th>leads</th><th>lead %</th></tr></thead><tbody></tbody></table>
+      <h2>Device</h2>
+      <table id="devices"><thead><tr><th>device</th><th>sessions</th><th>start %</th><th>leads</th><th>lead %</th></tr></thead><tbody></tbody></table>
+    </div>
+  </div></section></main>
+  <script>
+    const $ = (s) => document.querySelector(s);
+    const day = (d) => d.toISOString().slice(0, 10);
+    $("#to").value = day(new Date()); $("#from").value = day(new Date(Date.now() - 6 * 864e5));
+    try { $("#token").value = localStorage.getItem("dds_report_token") || ""; } catch (e) {}
+    $("#load").addEventListener("click", load);
+    if ($("#token").value) load();
+
+    async function load() {
+      const token = $("#token").value.trim();
+      try { localStorage.setItem("dds_report_token", token); } catch (e) {}
+      $("#status").textContent = "Loading…";
+      const q = new URLSearchParams({ from: $("#from").value, to: $("#to").value });
+      if ($("#clicks").value) q.set("link_clicks", $("#clicks").value);
+      const r = await fetch("/api/report?" + q, { headers: { Authorization: "Bearer " + token } });
+      if (!r.ok) { $("#status").textContent = "Error " + r.status + ": " + (await r.text()).slice(0, 200); return; }
+      const { summary: s, findings } = await r.json();
+      $("#status").textContent = ""; $("#out").hidden = false;
+      $("#kpis").innerHTML = [
+        ["Sessions", s.sessions], ["Started survey", s.survey_starts + " (" + (s.rates.start_rate ?? 0) + "%)"],
+        ["Submitted", s.form_submits], ["Leads", s.leads + " (" + (s.rates.lead_rate_of_sessions ?? 0) + "%)"],
+        ["Lead errors", s.lead_errors], ["Median load", (s.load.median_ms ?? "-") + " ms"]
+      ].map(([l, v]) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
+      const max = Math.max(s.sessions, 1);
+      const rows = [{ lbl: "Landed", n: s.sessions }, { lbl: "Started", n: s.survey_starts, drop: s.sessions - s.survey_starts }]
+        .concat(s.steps.map((st) => ({ lbl: (st.step + 1) + ". " + (st.question_id || "?"), n: st.viewed, drop: st.abandoned_here, ms: st.median_ms })))
+        .concat([{ lbl: "Lead", n: s.leads }]);
+      $("#steps").innerHTML = rows.map((r) => `<div class="bar"><div class="lbl">${r.lbl}</div><div class="track"><div class="fill" style="width:${(r.n / max) * 100}%"></div></div><div style="width:170px">${r.n}${r.ms != null ? ` <span style="color:var(--muted);font-size:12px">${r.ms}ms</span>` : ""}${r.drop ? ` <span class="drop">−${r.drop} left</span>` : ""}</div></div>`).join("");
+      $("#findings").innerHTML = findings.map((f) => `<div class="finding ${f.level}"><strong>${f.level.toUpperCase()}</strong> — ${f.text}</div>`).join("");
+      $("#sources tbody").innerHTML = Object.entries(s.by_source).sort((a, b) => b[1].sessions - a[1].sessions).map(([k, b]) => `<tr><td>${k}</td><td class="n">${b.sessions}</td><td class="n">${b.start_rate ?? 0}%</td><td class="n">${b.leads}</td><td class="n">${b.lead_rate ?? 0}%</td></tr>`).join("");
+      $("#devices tbody").innerHTML = Object.entries(s.by_device).map(([k, b]) => `<tr><td>${k}</td><td class="n">${b.sessions}</td><td class="n">${b.start_rate ?? 0}%</td><td class="n">${b.leads}</td><td class="n">${b.lead_rate ?? 0}%</td></tr>`).join("");
+    }
+  </script>
+</body>
+</html>

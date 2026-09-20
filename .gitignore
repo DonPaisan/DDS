@@ -1,0 +1,15 @@
+node_modules/
+.netlify/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+agent/data/*.sqlite
+agent/data/*.db
+agent/logs/*.jsonl
+agent/reports/*.md
+agent/drafts/
+.DS_Store
+.local/

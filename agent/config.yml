@@ -1,0 +1,35 @@
+# Every threshold in one place. Edit here, not in code.
+# Numbers are deliberately conservative. Tune after a month of data, not before.
+
+funnel:
+  min_sessions_for_diagnosis: 30      # below this, rates are noise
+  min_sessions_per_step_for_rewrite: 200
+  lookback_days: 7
+
+rules:
+  enabled: false                     # master switch for ANY write to the ad account
+  safety_only: true                  # when enabled, only pause rules run (no budget scaling)
+  min_conversions_for_decision: 50   # "Minimum evidence" rule
+  lookback_days: 7
+  kill_cpl_multiple: 2.0             # pause if CPL > 2× account average AND enough conversions
+  runaway_spend_usd: 150             # pause if ad set spent > this with 0 leads in runaway_hours
+  runaway_hours: 72
+  scale_cpl_multiple: 0.7            # raise budget if CPL < 0.7× account average
+  scale_step_pct: 20                 # never more than this (learning-phase reset above ~20%)
+  budget_floor_usd: 20
+  budget_ceiling_usd: 200
+  max_budget_changes_per_day: 2
+  account_daily_spend_kill_usd: 500  # pause everything and alert above this
+
+meta:
+  # Which action types count as a "lead" in insights. Pixel Lead + CAPI Lead both map to these.
+  lead_action_types: ["lead", "offsite_conversion.fb_pixel_lead", "onsite_conversion.lead_grouped"]
+  link_click_action_types: ["link_click"]
+  landing_page_view_action_types: ["landing_page_view"]
+
+social:
+  enabled: false                     # publish.py refuses to post unless true
+  posts_per_week: 3
+  platforms: ["instagram", "facebook"]
+  brand_color: "#0b5fb0"
+  site_public_url: "https://debtdirectsolutions.com"
