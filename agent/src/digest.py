@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from common import REPORTS_DIR, db, days_ago, env, fmt_money, load_config, load_env, pct, today
+from common import AGENT_DIR, REPORTS_DIR, db, days_ago, env, fmt_money, load_config, load_env, pct, today
 from funnel import diagnose, load_events, render_text, summarize
 from rules import evaluate
 
@@ -64,6 +64,10 @@ def build_report(conn, cfg: dict) -> str:
         L.append("| (no Meta data yet — run fetch_meta.py) | | | | | | |")
 
     L += ["", "## Landing page funnel", "", "```", render_text(summary, findings), "```", ""]
+
+    review = (AGENT_DIR / "social" / "review.md")
+    if review.exists():
+        L += ["## Social", "", review.read_text(encoding="utf-8").split("\n", 1)[-1].strip(), ""]
 
     L += ["## What the rules engine would do", ""]
     if actions:

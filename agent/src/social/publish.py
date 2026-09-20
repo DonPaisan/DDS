@@ -17,6 +17,7 @@ import argparse
 import json
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -217,6 +218,7 @@ def main(argv=None):
                 results[platform] = {"error": str(e)}
                 print(f"[publish] {p['id']} {platform} failed: {e}", file=sys.stderr)
         p["status"] = "posted" if all("error" not in r for r in results.values()) else "partial"
+        p["posted_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         p["results"] = results
         f.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
         log_action({"mode": "APPLY", "action": "social_post", "post_id": p["id"], "results": results})

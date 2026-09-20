@@ -184,6 +184,17 @@ weekly generation on.
   ad. Headlines describe the service ("a free debt settlement review"), never the visitor
   ("struggling with debt?"). Form questions may ask about the visitor's situation.
 
+## Engagement tracking
+
+`.github/workflows/social-metrics.yml` runs every morning at 8 AM ET: `agent/src/social/metrics.py`
+pulls reach, views, likes, comments, saves, shares (and plays for Reels) for every post from the
+last 14 days plus the account's follower count, appending dated snapshots to
+`agent/social/metrics.jsonl` and `account.jsonl`. `review.py` then writes `agent/social/review.md`:
+a one-line trend verdict (reach, engagement, saves vs the prior week), medians by format, theme and
+topic, top and weakest posts, and what to lean into next. The daily digest includes it, and the
+content brief tells the writer to read it before every batch. Token needs
+`instagram_manage_insights`; Facebook post metrics additionally need `pages_read_engagement`.
+
 ## Reels (audio)
 
 Image posts and carousels cannot get music through Meta's API (only in the app, at posting time).
