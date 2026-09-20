@@ -109,8 +109,16 @@ python src/rules.py                           # DRY RUN: what the rules would do
 `--apply` (also budget scaling, only when `safety_only: false`). Every decision, dry-run or
 real, is appended to `agent/logs/actions.jsonl` with the reason.
 
-Rollout order (from the spec): run the digest for two weeks → read the dry-run decisions nightly
-→ if you disagree, fix thresholds in `config.yml` → enable safety rules only → budget scaling last.
+`.github/workflows/ads-rules.yml` runs the engine every morning. It is a dry run until you
+flip the switch, so the safe rollout is:
+
+1. Read the "What the rules engine would do" section of the digest for two weeks.
+2. Disagree with a call? Change the threshold in `agent/config.yml`, not the code.
+3. Set `rules.enabled: true` → pause rules go live (runaway spend, clear losers, account kill switch).
+4. Set `rules.safety_only: false` → budget scaling goes live, +20% steps clamped to $20–$200/day.
+
+The Meta token needs `ads_management` for steps 3 and 4; `ads_read` alone is enough for 1 and 2.
+Creative and survey copy changes never run automatically: they arrive as a PR for you to merge.
 
 ## Survey optimization loop
 

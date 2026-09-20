@@ -1,0 +1,52 @@
+name: Ads rules (daily)
+
+# Runs the deterministic rules engine against the ad account every morning,
+# an hour after the digest. Until `rules.enabled: true` is set in
+# agent/config.yml this is a DRY RUN: it prints what it would do and writes
+# nothing. Once enabled it applies pause rules only; budget scaling stays off
+# until `rules.safety_only: false`.
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 12:00 UTC = 8:00 ET
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: agent/requirements.txt
+      - run: pip install -r agent/requirements.txt
+
+      - name: Restore data cache
+        uses: actions/cache@v4
+        with:
+          path: agent/data
+          key: dds-data-${{ github.run_id }}
+          restore-keys: dds-data-
+
+      - name: Fetch insights and ad set status
+        working-directory: agent
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python src/fetch_meta.py --days 8
+
+      - name: Apply safety rules (dry run until rules.enabled is true)
+        working-directory: agent
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python src/rules.py --apply-safety-only
+
+      - name: Upload decision log
+        uses: actions/upload-artifact@v4
+        with:
+          name: rules-${{ github.run_id }}
+          path: agent/logs/actions.jsonl
+          if-no-files-found: ignore
