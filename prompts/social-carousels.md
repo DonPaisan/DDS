@@ -8,8 +8,9 @@ negotiating bills, avoiding scams, sinking funds, paying down balances. Debt set
 never the topic. The business appears only in the standing CTA (follow + free review).
 
 Slides render from a spec (agent/src/social/htmlslides.py): kinds are text (with an icon),
-stat, compare (bars), list, vs (myth/fact). Themes rotate: navy, cream, sky, white; a photo
-theme is used when a real photo is attached.
+stat, compare (bars), list, vs (myth/fact). Themes rotate: navy, paper, slate, white; a photo
+theme is used when a real photo is attached. The look is editorial (serif headlines, gold
+accents, paper grain, hairline rules); see docs/social-design-research.md before changing it.
 
 Audience: 50+, on fixed or shrinking income, carrying card or medical balances. They want to
 understand what is happening to them.
@@ -26,8 +27,8 @@ Hashtags: 10 to 14, drawn from the account's existing set (#debtfreejourney #fin
 #personalfinance #budgetingtips) plus two or three topic tags.
 
 Carousel shape (6 slides, rendered by agent/src/social/slides.py in the logo palette):
-- Slide 1, cover (navy): the hook. One sentence, ≤ 75 characters, with 1–3 words to highlight in
-  yellow, plus a one-line subtitle that opens a curiosity gap. The first slide is the whole audition.
+- Slide 1, cover: the hook. One sentence, ≤ 75 characters, with 1–3 words to highlight in
+  italic gold, plus a one-line subtitle that opens a curiosity gap. The first slide is the whole audition.
 - Slides 2–5, content (white), one idea each, ≤ 30 words of body. Mix the kinds:
   `text` (heading + body), `stat` (one big number with a label), `compare` (two bars of one
   measure, e.g. minimum payments vs a fixed payment), `list` (3–4 short items, checks or numbers).

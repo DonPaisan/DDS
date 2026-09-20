@@ -45,7 +45,9 @@ def resolve_ids(token: str) -> tuple[str, str | None, str]:
     want = env("FB_PAGE_ID")
     pages = graph("GET", "me/accounts", fields="id,name,access_token,instagram_business_account", limit=50, access_token=token).get("data", [])
     if not pages:
-        sys.exit("[publish] the token can see no Pages; assign the Page to the system user in Business Settings")
+        sys.exit("[publish] the token can see no Pages. Either the Page is not assigned to the system user in Business Settings, "
+                 "or the token was generated without pages_show_list (a regenerated token needs pages_show_list, pages_manage_posts, "
+                 "pages_read_engagement, instagram_basic, instagram_content_publish, instagram_manage_insights, business_management)")
     if want:
         match = [x for x in pages if x["id"] == want]
         if not match:

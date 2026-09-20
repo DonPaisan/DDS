@@ -154,8 +154,9 @@ reports into the dashboard by ad name automatically.
 
 Daily: a carousel at 9 AM ET, a Story at noon, a one-pager (fact / true story / quote) at 6 PM ET.
 Content is broad personal-finance education for a general audience. Slides are HTML/CSS rendered
-by headless Chromium (`agent/src/social/htmlslides.py` + `html/theme.css`), with four rotating
-themes, icons, real-photo backgrounds, and the logo on every slide. Carousels, are 6 slides: hook cover, four content
+by headless Chromium (`agent/src/social/htmlslides.py` + `html/theme.css`) in an editorial design
+system (serif headlines, navy/paper/slate/white themes, gold accents, paper grain, the logo and
+site on every slide; the research behind it is `docs/social-design-research.md`). Carousels are 6 slides: hook cover, four content
 slides (text, stat tile, bar comparison, checklist, myth vs fact), and a save/share/follow CTA. The content brief with the
 engagement research is `prompts/social-carousels.md`. One-pagers (`agent/src/social/onepagers.py`)
 sit on a real photo: drop your own JPGs in `site/social/photos/own/` (filename = tags, e.g.
