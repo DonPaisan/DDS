@@ -7,9 +7,13 @@
   "scripts": {
     "test": "node --test netlify/tests/*.test.js",
     "dev": "netlify dev",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "render": "node agent/src/social/html/render.mjs"
   },
   "dependencies": {
     "@netlify/blobs": "^8.2.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
   }
 }

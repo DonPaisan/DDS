@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from common import AGENT_DIR, REPO_DIR, load_config  # noqa: E402
-from social.onepagers import render_onepager  # noqa: E402
+from social.htmlslides import render_onepager  # noqa: E402
 from social.photos import PHOTO_DIR, _manifest, get_photo  # noqa: E402
 
 QUEUE_DIR = AGENT_DIR / "social" / "queue"

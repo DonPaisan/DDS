@@ -55,7 +55,7 @@ SCHEMA = {
 # Claims that get a debt-relief post rejected. Percentages are allowed for education
 # (APR, utilization, interest) but not next to a savings/settlement promise.
 BANNED = re.compile(
-    r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs|stimulus|debt[- ]free in)\b"
+    r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs (relief|forgiveness|program|fresh start)|stimulus|debt[- ]free in)\b"
     r"|\b(save|saving|saved|reduce[sd]?|reduction|cut|lower(ed|ing)?|settle[sd]?|settling|forgive[ns]?|forgiven|pay(ing)? (only|just))\b[^.%\n]{0,40}\d{1,3}\s?%"
     r"|\d{1,3}\s?%[^.%\n]{0,15}\b(off|less|savings?|reduction|settlement)\b", re.I)
 

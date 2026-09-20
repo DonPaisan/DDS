@@ -31,6 +31,7 @@ that watches it. Netlify deploys `site/` on every push to `main` that touches
 7. **Compliance for all copy** (page, ads, social): no guaranteed outcomes, no savings percentages or dollar figures, no implied government affiliation, no timelines, never tell people to stop paying creditors, no legal/tax advice. Debt relief runs under Meta's *Financial Products and Services* Special Ad Category.
 8. **Describe the service, never the person** (Meta personal-attributes policy; enforced on the ad *and* the landing page's first screen). Rejected: "Struggling with debt?", "If you're behind on payments", "We understand your stress", "For people with bad credit". Allowed: "Debt settlement options, explained", "A free review of unsecured debt balances". Form questions may ask about the visitor's situation; headlines and ad copy may not assert it. Organic social captions may speak to "you" and "your statement" (that is the account's voice) but still never assert the reader is in debt, behind, or struggling.
 9. **Audience is 50+, under real financial stress.** Calm, plain, consultative. Never salesy.
+10. **Social content is broad personal-finance education, not debt-settlement marketing.** Budgeting, credit, interest, saving, retirement basics, scams, negotiating bills. The business shows up only in the standing CTA (follow + free review). Every number is computed or sourced; every story is real and cited.
 
 ## Commands
 

@@ -36,6 +36,10 @@ jobs:
           cache: pip
           cache-dependency-path: agent/requirements.txt
       - run: pip install -r agent/requirements.txt
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Chromium for slide rendering
+        run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
 
       - name: Pick slot
         id: slot

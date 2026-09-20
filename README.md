@@ -153,9 +153,10 @@ reports into the dashboard by ad name automatically.
 ## Social content
 
 Daily: a carousel at 9 AM ET, a Story at noon, a one-pager (fact / true story / quote) at 6 PM ET.
-Carousels, rendered by `agent/src/social/slides.py`
-in the logo palette with the logo on every slide: navy hook cover, four white content slides
-(text, stat tile, two-bar comparison, checklist), and a save/share CTA. The content brief with the
+Content is broad personal-finance education for a general audience. Slides are HTML/CSS rendered
+by headless Chromium (`agent/src/social/htmlslides.py` + `html/theme.css`), with four rotating
+themes, icons, real-photo backgrounds, and the logo on every slide. Carousels, are 6 slides: hook cover, four content
+slides (text, stat tile, bar comparison, checklist, myth vs fact), and a save/share/follow CTA. The content brief with the
 engagement research is `prompts/social-carousels.md`. One-pagers (`agent/src/social/onepagers.py`)
 sit on a real photo: drop your own JPGs in `site/social/photos/own/` (filename = tags, e.g.
 `kitchen-table-bills.jpg`), or add a free `PEXELS_API_KEY` repository secret and the publish

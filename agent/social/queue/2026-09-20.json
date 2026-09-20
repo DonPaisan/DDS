@@ -1,7 +1,6 @@
 {
   "week": "2026-09-20",
   "generated_at": "2026-09-20",
-  "kind": "carousel",
   "posts": [
     {
       "id": "2026-09-20-pm",
@@ -79,14 +78,1241 @@
     {
       "id": "2026-09-21-am",
       "kind": "carousel",
+      "title": "An emergency fund is not a number. It is a reason.",
+      "theme": "Money basics",
+      "spec": {
+        "kicker": "Money basics",
+        "theme": "navy",
+        "cover": {
+          "title": "An emergency fund is not a number. It is a reason.",
+          "highlight": [
+            "reason."
+          ],
+          "subtitle": "How much, where to keep it, and how to start when money is tight."
+        },
+        "slides": [
+          {
+            "kind": "text",
+            "heading": "What it is for",
+            "body": "Car repair. A dental bill. Two weeks between jobs. It exists so a surprise becomes an inconvenience instead of new debt on a credit card.",
+            "icon": "shield-check",
+            "highlight": null
+          },
+          {
+            "kind": "stat",
+            "heading": "The first target",
+            "value": "$500",
+            "label": "covers most everyday surprises",
+            "body": "Then one month of essentials. Then three to six. The first $500 does the most work, because it breaks the cycle of borrowing for small emergencies."
+          },
+          {
+            "kind": "list",
+            "heading": "Where to keep it",
+            "items": [
+              "A separate account, not your checking",
+              "A high-yield savings account so it earns something",
+              "Boring on purpose: no investing, no lock-ups",
+              "Named something like \"Emergency\" so you hesitate before touching it"
+            ],
+            "numbered": false
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "I should pay off all debt before saving anything.",
+            "right": "A small cushion first. Otherwise the next surprise goes right back on the card.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "An emergency fund is not a number, it is a reason. 🛟 Car repair, dental bill, a gap between paychecks. Without a cushion, every surprise becomes new debt. Start with $500 in a separate high-yield savings account, then build toward one month of essentials. Swipe for where to keep it and the one myth that keeps people from starting ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "emergencyfund",
+        "savingmoney",
+        "moneybasics",
+        "personalfinance",
+        "budgeting"
+      ],
+      "scheduled_for": "2026-09-21",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-21-am-01.jpg",
+        "site/social/2026-09-21-am-02.jpg",
+        "site/social/2026-09-21-am-03.jpg",
+        "site/social/2026-09-21-am-04.jpg",
+        "site/social/2026-09-21-am-05.jpg",
+        "site/social/2026-09-21-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-21-noon",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "story",
+      "spec": {
+        "kind": "quote",
+        "text": "Do not save what is left after spending. Spend what is left after saving.",
+        "attribution": "Attributed to Warren Buffett",
+        "theme": "cream"
+      },
+      "title": "Do not save what is left after spending. Spend what is left after saving.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-21",
+      "slot": "noon",
+      "photo_query": "sunrise over quiet suburban street",
+      "photo_tags": [
+        "sunrise"
+      ],
+      "photo_slug": "2026-09-21-quote",
+      "render_slug": "2026-09-21-noon",
+      "image_paths": [
+        "site/social/2026-09-21-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-21-pm",
+      "kind": "single",
+      "subkind": "did_you_know",
+      "surface": "feed",
+      "spec": {
+        "kind": "did_you_know",
+        "fact": "Anything you pay above the minimum must go to your highest-APR balance first.",
+        "so_what": "The CARD Act of 2009. Check a statement and watch it happen.",
+        "highlight": [
+          "highest-APR"
+        ],
+        "icon": "credit-card",
+        "theme": "sky"
+      },
+      "title": "Anything you pay above the minimum must go to your highest-APR balance first.",
+      "caption": "Did you know? Since the CARD Act of 2009, any amount you pay above the minimum has to be applied to your highest-interest balance first. 💳 It is one of the few rules written in your favor. Check a statement and watch it happen.\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "didyouknow",
+        "financialliteracy",
+        "moneytips",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-21",
+      "slot": "pm",
+      "photo_query": "person paying bills with laptop and credit card at home",
+      "photo_tags": [
+        "bills",
+        "laptop"
+      ],
+      "photo_slug": "2026-09-21-did_you_know",
+      "render_slug": "2026-09-21-pm",
+      "image_paths": [
+        "site/social/2026-09-21-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-22-am",
+      "kind": "carousel",
+      "title": "Your credit score is five numbers pretending to be one.",
+      "theme": "Credit basics",
+      "spec": {
+        "kicker": "Credit basics",
+        "theme": "cream",
+        "cover": {
+          "title": "Your credit score is five numbers pretending to be one.",
+          "highlight": [
+            "five",
+            "numbers"
+          ],
+          "subtitle": "What actually moves it, in order of weight."
+        },
+        "slides": [
+          {
+            "kind": "compare",
+            "heading": "What FICO weighs",
+            "bars": [
+              {
+                "label": "Payment history",
+                "value": 35,
+                "display": "35%",
+                "emphasis": true
+              },
+              {
+                "label": "Amounts owed",
+                "value": 30,
+                "display": "30%"
+              },
+              {
+                "label": "Length of history",
+                "value": 15,
+                "display": "15%"
+              }
+            ],
+            "note": "New credit and credit mix make up the last 20%."
+          },
+          {
+            "kind": "text",
+            "heading": "Payment history",
+            "body": "One late payment reported 30+ days past due can stay on your report for seven years. Autopay for at least the minimum removes the biggest risk.",
+            "icon": "calendar",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "Amounts owed",
+            "body": "Mostly utilization: balance divided by limit, per card and overall. Under 30% is the usual guidance, under 10% is better. This part reacts within a month.",
+            "icon": "credit-card",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "Small things that help",
+            "items": [
+              "Keep old cards open, even at zero",
+              "Pay before the statement closes",
+              "Dispute errors for free with each bureau",
+              "Do not open several new accounts at once"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "Your credit score is five numbers pretending to be one. 📊 Payment history is 35% of a FICO score, amounts owed 30%, length of history 15%, and new credit and mix make up the rest. Two of those you can move fast: never miss a payment (autopay the minimum) and keep utilization low. Swipe for the small things that help ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "creditscore",
+        "credittips",
+        "financialliteracy",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-22",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-22-am-01.jpg",
+        "site/social/2026-09-22-am-02.jpg",
+        "site/social/2026-09-22-am-03.jpg",
+        "site/social/2026-09-22-am-04.jpg",
+        "site/social/2026-09-22-am-05.jpg",
+        "site/social/2026-09-22-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-22-noon",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "story",
+      "spec": {
+        "kind": "quote",
+        "text": "A budget is not a punishment. It is a plan for money you already have.",
+        "attribution": "Debt Direct Solutions",
+        "theme": "navy"
+      },
+      "title": "A budget is not a punishment. It is a plan for money you already have.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-22",
+      "slot": "noon",
+      "photo_query": "person writing in notebook with coffee morning",
+      "photo_tags": [
+        "notebook"
+      ],
+      "photo_slug": "2026-09-22-quote",
+      "render_slug": "2026-09-22-noon",
+      "image_paths": [
+        "site/social/2026-09-22-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-22-pm",
+      "kind": "single",
+      "subkind": "story",
+      "surface": "feed",
+      "spec": {
+        "kind": "story",
+        "kicker": "True story",
+        "headline": "A Vermont janitor quietly built an $8 million fortune.",
+        "summary": "Ronald Read pumped gas and swept floors, drove a used car, and bought dividend-paying stocks he held for decades. When he died in 2014 at 92, he left most of it to his local library and hospital.",
+        "source": "Reported by CNBC and The Wall Street Journal, 2015",
+        "theme": "navy"
+      },
+      "title": "A Vermont janitor quietly built an $8 million fortune.",
+      "caption": "True story. 🧹 Ronald Read worked as a gas station attendant and a janitor in Brattleboro, Vermont. He drove a used Toyota, chopped his own firewood, and bought shares in companies he understood, then held them for decades. When he died in 2014 at 92 he left about $8 million, most of it to the town library and hospital. No lottery, no inheritance. Time, patience, and living below his means. Source: CNBC, Wall Street Journal (2015).\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "truestory",
+        "moneyinspiration",
+        "savingmoney",
+        "financialfreedom",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-22",
+      "slot": "pm",
+      "photo_query": "small town library exterior",
+      "photo_tags": [
+        "library"
+      ],
+      "photo_slug": "2026-09-22-story",
+      "render_slug": "2026-09-22-pm",
+      "image_paths": [
+        "site/social/2026-09-22-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-23-am",
+      "kind": "carousel",
+      "title": "$200 a month can become $243,994. Or $34,617. The difference is time.",
+      "theme": "Compound interest",
+      "spec": {
+        "kicker": "Compound interest",
+        "theme": "sky",
+        "cover": {
+          "title": "$200 a month can become $243,994. Or $34,617. The difference is time.",
+          "highlight": [
+            "$243,994."
+          ],
+          "subtitle": "Same money, same rate. Only the start date changed."
+        },
+        "slides": [
+          {
+            "kind": "compare",
+            "heading": "$200 a month at a 7% average return",
+            "bars": [
+              {
+                "label": "10 years",
+                "value": 34616.961486707405,
+                "display": "$34,617"
+              },
+              {
+                "label": "20 years",
+                "value": 104185.33196510353,
+                "display": "$104,185"
+              },
+              {
+                "label": "30 years",
+                "value": 243994.19915518892,
+                "display": "$243,994",
+                "emphasis": true
+              }
+            ],
+            "note": "Over 30 years you put in $72,000. The rest is growth on growth."
+          },
+          {
+            "kind": "text",
+            "heading": "Why the curve bends",
+            "body": "Growth earns growth. In year one the interest is small. By year twenty, the money the money made is earning more than you deposit.",
+            "icon": "trending-up",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "It works the same way against you",
+            "body": "A credit card at 24% compounds daily in the other direction. The same math that builds a retirement account is what makes a balance feel stuck.",
+            "icon": "trending-down",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "It is too late for me to start.",
+            "right": "Ten years still turns $24,000 of deposits into about $34,617. The best time was 20 years ago. The next best is this month.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "$200 a month at a 7% average return: about $34,617 after 10 years, $104,185 after 20, $243,994 after 30. 📈 Same money, same rate, only the start date changed. Compound growth is slow at first and then it is not. And it runs the same way against you on a 24% credit card. Swipe for the math ➡️ (Illustration only, not investment advice. Returns vary.)\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "compoundinterest",
+        "investing101",
+        "retirementplanning",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-23",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-23-am-01.jpg",
+        "site/social/2026-09-23-am-02.jpg",
+        "site/social/2026-09-23-am-03.jpg",
+        "site/social/2026-09-23-am-04.jpg",
+        "site/social/2026-09-23-am-05.jpg",
+        "site/social/2026-09-23-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-23-noon",
+      "kind": "single",
+      "subkind": "did_you_know",
+      "surface": "story",
+      "spec": {
+        "kind": "did_you_know",
+        "fact": "Your credit reports are free every week, from all three bureaus.",
+        "so_what": "AnnualCreditReport.com. Weekly access became permanent in 2023.",
+        "highlight": [
+          "free",
+          "every",
+          "week,"
+        ],
+        "icon": "file-text",
+        "theme": "navy"
+      },
+      "title": "Your credit reports are free every week, from all three bureaus.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-23",
+      "slot": "noon",
+      "photo_query": "senior reading documents with reading glasses at home",
+      "photo_tags": [
+        "reading"
+      ],
+      "photo_slug": "2026-09-23-fact-noon",
+      "render_slug": "2026-09-23-noon",
+      "image_paths": [
+        "site/social/2026-09-23-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-23-pm",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "feed",
+      "spec": {
+        "kind": "quote",
+        "text": "Beware of little expenses. A small leak will sink a great ship.",
+        "attribution": "Benjamin Franklin",
+        "theme": "sky"
+      },
+      "title": "Beware of little expenses. A small leak will sink a great ship.",
+      "caption": "“Beware of little expenses. A small leak will sink a great ship.” Benjamin Franklin. ⛵️ The reverse is also true: a small fix keeps the ship afloat. Fifty dollars a month, moved automatically, is a leak running the other way.\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "moneymindset",
+        "moneyquotes",
+        "financialpeace",
+        "personalfinance",
+        "moneybasics"
+      ],
+      "scheduled_for": "2026-09-23",
+      "slot": "pm",
+      "photo_query": "sailboat on calm water",
+      "photo_tags": [
+        "boat",
+        "water"
+      ],
+      "photo_slug": "2026-09-23-quote",
+      "render_slug": "2026-09-23-pm",
+      "image_paths": [
+        "site/social/2026-09-23-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-24-am",
+      "kind": "carousel",
+      "title": "50 / 30 / 20 is a starting point, not a rule.",
+      "theme": "Budgeting",
+      "spec": {
+        "kicker": "Budgeting",
+        "theme": "cream",
+        "cover": {
+          "title": "50 / 30 / 20 is a starting point, not a rule.",
+          "highlight": [
+            "starting",
+            "point,"
+          ],
+          "subtitle": "Needs, wants, future. Here is how to use it without hating it."
+        },
+        "slides": [
+          {
+            "kind": "compare",
+            "heading": "Where a paycheck goes",
+            "bars": [
+              {
+                "label": "Needs: housing, food, utilities, minimums",
+                "value": 50,
+                "display": "50%",
+                "emphasis": true
+              },
+              {
+                "label": "Wants: everything optional",
+                "value": 30,
+                "display": "30%"
+              },
+              {
+                "label": "Future: savings and extra debt payments",
+                "value": 20,
+                "display": "20%"
+              }
+            ],
+            "note": null
+          },
+          {
+            "kind": "text",
+            "heading": "Needs first",
+            "body": "Rent or mortgage, groceries, utilities, insurance, transportation, and the minimum on every debt. If needs alone are above 50%, that is information, not failure.",
+            "icon": "home",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "The 20% is the point",
+            "body": "Emergency fund first, then the highest-interest debt, then retirement. When needs run high, shrink wants before shrinking this slice.",
+            "icon": "target",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "Make it stick",
+            "items": [
+              "Track for one month before changing anything",
+              "Automate the 20% on payday",
+              "Give wants a real number, not \"less\"",
+              "Review once a month, ten minutes"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "50/30/20 is a starting point, not a rule. 🧾 Half of take-home pay to needs, 30% to wants, 20% to the future (emergency fund, extra debt payments, retirement). If your needs are above 50%, that is information, not failure. The 20% is the point: automate it on payday so it never gets a vote. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "budgeting",
+        "503020",
+        "moneybasics",
+        "personalfinance",
+        "savingmoney"
+      ],
+      "scheduled_for": "2026-09-24",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-24-am-01.jpg",
+        "site/social/2026-09-24-am-02.jpg",
+        "site/social/2026-09-24-am-03.jpg",
+        "site/social/2026-09-24-am-04.jpg",
+        "site/social/2026-09-24-am-05.jpg",
+        "site/social/2026-09-24-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-24-noon",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "story",
+      "spec": {
+        "kind": "quote",
+        "text": "The best time to plant a tree was twenty years ago. The second best time is now.",
+        "attribution": "Proverb",
+        "theme": "white"
+      },
+      "title": "The best time to plant a tree was twenty years ago. The second best time is now.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-24",
+      "slot": "noon",
+      "photo_query": "young tree sapling planted in soil",
+      "photo_tags": [
+        "tree"
+      ],
+      "photo_slug": "2026-09-24-quote",
+      "render_slug": "2026-09-24-noon",
+      "image_paths": [
+        "site/social/2026-09-24-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-24-pm",
+      "kind": "single",
+      "subkind": "did_you_know",
+      "surface": "feed",
+      "spec": {
+        "kind": "did_you_know",
+        "fact": "FDIC insurance covers up to $250,000 per depositor, per bank, per account category.",
+        "so_what": "If a bank fails, that money is protected. Credit unions have the same through NCUA.",
+        "highlight": [
+          "$250,000"
+        ],
+        "icon": "building-bank",
+        "theme": "cream"
+      },
+      "title": "FDIC insurance covers up to $250,000 per depositor, per bank, per account category.",
+      "caption": "Did you know? FDIC insurance protects up to $250,000 per depositor, per insured bank, per ownership category, and credit unions have the same coverage through the NCUA. 🏦 Above that, spread it across banks or categories. Below it, a bank failure is a paperwork event, not a loss.\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "didyouknow",
+        "financialliteracy",
+        "moneytips",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-24",
+      "slot": "pm",
+      "photo_query": "bank building exterior columns",
+      "photo_tags": [
+        "bank"
+      ],
+      "photo_slug": "2026-09-24-did_you_know",
+      "render_slug": "2026-09-24-pm",
+      "image_paths": [
+        "site/social/2026-09-24-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-25-am",
+      "kind": "carousel",
+      "title": "$20 a day is $7,300 a year.",
+      "theme": "Small leaks",
+      "spec": {
+        "kicker": "Small leaks",
+        "theme": "navy",
+        "cover": {
+          "title": "$20 a day is $7,300 a year.",
+          "highlight": [
+            "$7,300"
+          ],
+          "subtitle": "Nobody notices twenty dollars. Everybody notices seven thousand."
+        },
+        "slides": [
+          {
+            "kind": "stat",
+            "heading": "The daily habit",
+            "value": "$7,300",
+            "label": "a year at $20 a day",
+            "body": "Lunch out, a delivery fee, a subscription you forgot. None of them feel like a decision, which is exactly why they add up."
+          },
+          {
+            "kind": "list",
+            "heading": "The 30-minute audit",
+            "items": [
+              "Print one month of statements",
+              "Circle every recurring charge",
+              "Cancel anything you did not use last month",
+              "Move the total to savings on the same day"
+            ],
+            "numbered": true
+          },
+          {
+            "kind": "compare",
+            "heading": "What a $50 monthly cut does",
+            "bars": [
+              {
+                "label": "Over 1 year",
+                "value": 600,
+                "display": "$600"
+              },
+              {
+                "label": "Over 5 years",
+                "value": 3000,
+                "display": "$3,000"
+              },
+              {
+                "label": "Over 5 years, invested at 7%",
+                "value": 3579.64508240563,
+                "display": "$3,580",
+                "emphasis": true
+              }
+            ],
+            "note": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "Skipping coffee will not change anything.",
+            "right": "One habit will not. Five habits, redirected automatically, will.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "$20 a day is $7,300 a year. ☕️ Nobody notices twenty dollars. Everybody notices seven thousand. Spend 30 minutes with one month of statements: circle every recurring charge, cancel what you did not use, and move the total to savings the same day. Swipe for the audit ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "savingmoney",
+        "budgetingtips",
+        "moneyhabits",
+        "personalfinance",
+        "moneybasics"
+      ],
+      "scheduled_for": "2026-09-25",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-25-am-01.jpg",
+        "site/social/2026-09-25-am-02.jpg",
+        "site/social/2026-09-25-am-03.jpg",
+        "site/social/2026-09-25-am-04.jpg",
+        "site/social/2026-09-25-am-05.jpg",
+        "site/social/2026-09-25-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-25-noon",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "story",
+      "spec": {
+        "kind": "quote",
+        "text": "Clarity is the first form of relief.",
+        "attribution": "Debt Direct Solutions",
+        "theme": "navy"
+      },
+      "title": "Clarity is the first form of relief.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-25",
+      "slot": "noon",
+      "photo_query": "clear window light morning calm room",
+      "photo_tags": [
+        "window",
+        "light"
+      ],
+      "photo_slug": "2026-09-25-quote",
+      "render_slug": "2026-09-25-noon",
+      "image_paths": [
+        "site/social/2026-09-25-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-25-pm",
+      "kind": "single",
+      "subkind": "story",
+      "surface": "feed",
+      "spec": {
+        "kind": "story",
+        "kicker": "True story",
+        "headline": "A secretary turned $180 of stock into $7 million for her college.",
+        "summary": "Grace Groner bought three shares of Abbott Laboratories in 1935 for $180, reinvested every dividend, and never sold. When she died in 2010 at 100, the shares were worth about $7 million, left to Lake Forest College.",
+        "source": "Reported by the Chicago Tribune, 2010",
+        "theme": "cream"
+      },
+      "title": "A secretary turned $180 of stock into $7 million for her college.",
+      "caption": "True story. 🌱 In 1935, Grace Groner, a secretary at Abbott Laboratories, bought three shares of company stock for $180. She reinvested every dividend and never sold. She lived in a one-bedroom cottage and bought clothes at rummage sales. When she died in 2010 at 100, the shares were worth about $7 million, which she left to Lake Forest College for scholarships. Source: Chicago Tribune (2010).\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "truestory",
+        "moneyinspiration",
+        "savingmoney",
+        "financialfreedom",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-25",
+      "slot": "pm",
+      "photo_query": "elderly woman garden sunlight",
+      "photo_tags": [
+        "garden"
+      ],
+      "photo_slug": "2026-09-25-story",
+      "render_slug": "2026-09-25-pm",
+      "image_paths": [
+        "site/social/2026-09-25-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-26-am",
+      "kind": "carousel",
+      "title": "Credit utilization is the fastest lever on your score.",
+      "theme": "Credit basics",
+      "spec": {
+        "kicker": "Credit basics",
+        "theme": "white",
+        "cover": {
+          "title": "Credit utilization is the fastest lever on your score.",
+          "highlight": [
+            "fastest",
+            "lever"
+          ],
+          "subtitle": "It has no memory. Change it and the score reacts next month."
+        },
+        "slides": [
+          {
+            "kind": "stat",
+            "heading": "What it is",
+            "value": "30%",
+            "label": "= $3,000 owed on a $10,000 limit",
+            "body": "Balance divided by limit. Scoring models look at each card and at all cards combined."
+          },
+          {
+            "kind": "text",
+            "heading": "Why it counts so much",
+            "body": "Amounts owed are roughly a third of a FICO score, and utilization is most of that. High utilization signals strain even when every payment is on time.",
+            "icon": "percentage",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "The common guidance",
+            "items": [
+              "Under 30% is the usual rule of thumb",
+              "Under 10% scores better still",
+              "One maxed-out card can drag the score even if the overall ratio is fine",
+              "Pay before the statement date to lower the reported number"
+            ],
+            "numbered": false
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "Closing a paid-off card helps my score.",
+            "right": "It removes that card's limit from the total, which raises utilization. Keep it open at zero.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "Credit utilization is the fastest lever on your score. 📈 Balance divided by limit, per card and overall. Under 30% is the usual rule; under 10% is better. It has no memory: lower the reported balance and the score reacts next cycle. One trap: closing a paid-off card can raise your utilization. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "creditutilization",
+        "creditscore",
+        "credittips",
+        "financialliteracy",
+        "moneybasics"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-26-am-01.jpg",
+        "site/social/2026-09-26-am-02.jpg",
+        "site/social/2026-09-26-am-03.jpg",
+        "site/social/2026-09-26-am-04.jpg",
+        "site/social/2026-09-26-am-05.jpg",
+        "site/social/2026-09-26-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-26-noon",
+      "kind": "single",
+      "subkind": "did_you_know",
+      "surface": "story",
+      "spec": {
+        "kind": "did_you_know",
+        "fact": "A $5 coffee every day is $1,825 a year.",
+        "so_what": "The coffee is fine. The point is that daily habits are yearly numbers.",
+        "highlight": [
+          "$1,825"
+        ],
+        "icon": "coin",
+        "theme": "white"
+      },
+      "title": "A $5 coffee every day is $1,825 a year.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-26",
+      "slot": "noon",
+      "photo_query": "coffee cup on cafe table morning",
+      "photo_tags": [
+        "coffee"
+      ],
+      "photo_slug": "2026-09-26-fact-noon",
+      "render_slug": "2026-09-26-noon",
+      "image_paths": [
+        "site/social/2026-09-26-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-26-pm",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "feed",
+      "spec": {
+        "kind": "quote",
+        "text": "Annual income twenty pounds, annual expenditure nineteen six: happiness. Annual expenditure twenty pounds six: misery.",
+        "attribution": "Charles Dickens, David Copperfield",
+        "theme": "cream"
+      },
+      "title": "Annual income twenty pounds, annual expenditure nineteen six: happiness. Annual expenditure twenty pounds six: misery.",
+      "caption": "Mr. Micawber's rule, from David Copperfield: spend a little less than you earn and the result is happiness; spend a little more and the result is misery. 📖 Dickens wrote it in 1850 from his own family's debt. The margin does not have to be big. It has to be positive.\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "moneymindset",
+        "moneyquotes",
+        "financialpeace",
+        "personalfinance",
+        "moneybasics"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "pm",
+      "photo_query": "old book open on wooden table",
+      "photo_tags": [
+        "book"
+      ],
+      "photo_slug": "2026-09-26-quote",
+      "render_slug": "2026-09-26-pm",
+      "image_paths": [
+        "site/social/2026-09-26-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-27-am",
+      "kind": "carousel",
+      "title": "Interest and APR are two views of the same cost.",
+      "theme": "Money basics",
+      "spec": {
+        "kicker": "Money basics",
+        "theme": "sky",
+        "cover": {
+          "title": "Interest and APR are two views of the same cost.",
+          "highlight": [
+            "APR"
+          ],
+          "subtitle": "Once you can read them, the statement stops being scary."
+        },
+        "slides": [
+          {
+            "kind": "text",
+            "heading": "Interest is the price of borrowing",
+            "body": "Carry a balance past the due date and the issuer charges interest on it. It gets added to the balance, so next month there is more to charge.",
+            "icon": "receipt",
+            "highlight": null
+          },
+          {
+            "kind": "stat",
+            "heading": "APR is the yearly rate",
+            "value": "24%",
+            "label": "APR is about 2% a month",
+            "body": "Statements show the APR. The interest line shows what that rate cost this month, in dollars."
+          },
+          {
+            "kind": "compare",
+            "heading": "Same $5,000 balance, first month of interest",
+            "bars": [
+              {
+                "label": "At 12% APR",
+                "value": 50,
+                "display": "$50",
+                "emphasis": true
+              },
+              {
+                "label": "At 29% APR",
+                "value": 121,
+                "display": "$121"
+              }
+            ],
+            "note": "Same balance. Very different cost. The rate matters more than the balance."
+          },
+          {
+            "kind": "list",
+            "heading": "Find it on your statement",
+            "items": [
+              "The box labeled Interest Charge Calculation",
+              "Purchase APR vs cash advance APR",
+              "Any penalty APR, often above 29%",
+              "The interest line, in dollars"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "Interest and APR are the same cost from two angles. 💳 Interest is the dollar amount, APR is the yearly rate that produces it, applied daily. A $5,000 balance costs about $50 a month at 12% and about $121 at 29%. Knowing the APR on each account tells you which balance is the most expensive to keep. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "apr",
+        "creditcards",
+        "financialliteracy",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-27",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-27-am-01.jpg",
+        "site/social/2026-09-27-am-02.jpg",
+        "site/social/2026-09-27-am-03.jpg",
+        "site/social/2026-09-27-am-04.jpg",
+        "site/social/2026-09-27-am-05.jpg",
+        "site/social/2026-09-27-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-27-noon",
+      "kind": "single",
+      "subkind": "quote",
+      "surface": "story",
+      "spec": {
+        "kind": "quote",
+        "text": "The first step is knowing the number.",
+        "attribution": "Debt Direct Solutions",
+        "theme": "sky"
+      },
+      "title": "The first step is knowing the number.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-27",
+      "slot": "noon",
+      "photo_query": "calculator and pen on paper with numbers",
+      "photo_tags": [
+        "calculator"
+      ],
+      "photo_slug": "2026-09-27-quote",
+      "render_slug": "2026-09-27-noon",
+      "image_paths": [
+        "site/social/2026-09-27-noon-story.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-noon-story.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-27-pm",
+      "kind": "single",
+      "subkind": "did_you_know",
+      "surface": "feed",
+      "spec": {
+        "kind": "did_you_know",
+        "fact": "A collector who calls more than 7 times in 7 days about one debt is presumed to be harassing you.",
+        "so_what": "Federal Regulation F. Log every call: date, time, company.",
+        "highlight": [
+          "7 times",
+          "7 days"
+        ],
+        "icon": "phone",
+        "theme": "navy"
+      },
+      "title": "A collector who calls more than 7 times in 7 days about one debt is presumed to be harassing you.",
+      "caption": "Did you know? Under federal Regulation F, a debt collector who calls more than seven times in seven days about a single debt is presumed to be harassing you. 📞 Keep a log: date, time, company. Not legal advice, just the rule.\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "didyouknow",
+        "financialliteracy",
+        "moneytips",
+        "moneybasics",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-27",
+      "slot": "pm",
+      "photo_query": "older woman looking at phone at kitchen table",
+      "photo_tags": [
+        "phone",
+        "kitchen"
+      ],
+      "photo_slug": "2026-09-27-did_you_know",
+      "render_slug": "2026-09-27-pm",
+      "image_paths": [
+        "site/social/2026-09-27-pm.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-pm.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "photo_credit": null
+    },
+    {
+      "id": "2026-09-28-am",
+      "kind": "carousel",
       "title": "A $5,000 card paid at the minimum takes about 20 years to clear.",
       "theme": "Payoff math",
       "spec": {
+        "kicker": "Payoff math",
+        "theme": "cream",
         "cover": {
           "title": "A $5,000 card paid at the minimum takes about 20 years to clear.",
           "highlight": [
-            "20",
-            "years"
+            "20 years"
           ],
           "subtitle": "Here is the math your statement is not showing you."
         },
@@ -94,7 +1320,9 @@
           {
             "kind": "text",
             "heading": "How the minimum is set",
-            "body": "Usually 1% of the balance plus that month's interest, or $25, whichever is more. On $5,000 at 24% APR, that is about $150 in month one."
+            "body": "Usually 1% of the balance plus that month's interest, or $25, whichever is more. On $5,000 at 24% APR, that is about $150 in month one.",
+            "icon": "calculator",
+            "highlight": null
           },
           {
             "kind": "stat",
@@ -134,785 +1362,132 @@
           }
         ]
       },
-      "caption": "“Just pay the minimum” is the most expensive advice on your statement. 😬 $5,000 at 24% APR, minimums only: about 20 years and roughly $8,887 in interest. Keep the payment fixed at $150 and the same card is gone in about 5 years with about $3,400 in interest. Same debt, same rate, one habit. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "“Just pay the minimum” is the most expensive advice on your statement. 😬 $5,000 at 24% APR, minimums only: about 20 years and roughly $8,887 in interest. Keep the payment fixed at $150 and the same card is gone in about 5 years. Same debt, same rate, one habit. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
         "minimumpayment",
         "payoffmath",
         "creditcarddebt",
-        "debtfreejourney",
-        "moneytips"
+        "moneybasics",
+        "personalfinance"
       ],
-      "scheduled_for": "2026-09-21",
+      "scheduled_for": "2026-09-28",
       "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-21-am-01.jpg",
-        "site/social/2026-09-21-am-02.jpg",
-        "site/social/2026-09-21-am-03.jpg",
-        "site/social/2026-09-21-am-04.jpg",
-        "site/social/2026-09-21-am-05.jpg",
-        "site/social/2026-09-21-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-21-noon",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "story",
-      "spec": {
-        "kind": "quote",
-        "text": "Debt is a math problem, not a character flaw.",
-        "attribution": "Debt Direct Solutions"
-      },
-      "title": "Debt is a math problem, not a character flaw.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-21",
-      "slot": "noon",
-      "photo_query": "sunrise over quiet suburban street",
-      "photo_tags": [
-        "sunrise"
-      ],
-      "photo_slug": "2026-09-21-quote",
-      "render_slug": "2026-09-21-noon",
-      "image_paths": [
-        "site/social/2026-09-21-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-21-pm",
-      "kind": "single",
-      "subkind": "did_you_know",
       "surface": "feed",
-      "spec": {
-        "kind": "did_you_know",
-        "fact": "A collector who calls you more than 7 times in 7 days about one debt is presumed to be harassing you.",
-        "so_what": "That is federal Regulation F. Log every call: date, time, company.",
-        "highlight": [
-          "7",
-          "times",
-          "7",
-          "days"
-        ]
-      },
-      "title": "A collector who calls you more than 7 times in 7 days about one debt is presumed to be harassing you.",
-      "caption": "Did you know? Under federal Regulation F, a debt collector who calls more than seven times in seven days about a single debt is presumed to be harassing you. 📞 Keep a simple log: date, time, company, amount claimed. That log is how the rule gets enforced. Not legal advice, just the rule.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "didyouknow",
-        "financialliteracy",
-        "consumerrights",
-        "moneytips",
-        "debtbasics"
-      ],
-      "scheduled_for": "2026-09-21",
-      "slot": "pm",
-      "photo_query": "older woman looking at phone at kitchen table",
-      "photo_tags": [
-        "phone",
-        "kitchen"
-      ],
-      "photo_slug": "2026-09-21-did_you_know",
-      "render_slug": "2026-09-21-pm",
       "image_paths": [
-        "site/social/2026-09-21-pm.jpg"
+        "site/social/2026-09-28-am-01.jpg",
+        "site/social/2026-09-28-am-02.jpg",
+        "site/social/2026-09-28-am-03.jpg",
+        "site/social/2026-09-28-am-04.jpg",
+        "site/social/2026-09-28-am-05.jpg",
+        "site/social/2026-09-28-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-28-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "photo_credit": null
+      ]
     },
     {
-      "id": "2026-09-21-pm",
+      "id": "2026-09-29-am",
       "kind": "carousel",
-      "title": "Your card charges interest every single day.",
-      "theme": "Debt basics",
+      "title": "Most bills are negotiable. Almost nobody asks.",
+      "theme": "Negotiating",
       "spec": {
+        "kicker": "Negotiating",
+        "theme": "sky",
         "cover": {
-          "title": "Your card charges interest every single day.",
+          "title": "Most bills are negotiable. Almost nobody asks.",
           "highlight": [
-            "every",
-            "single",
-            "day."
+            "negotiable."
           ],
-          "subtitle": "Not once a month. Here is why that matters."
+          "subtitle": "A script that works for medical bills, cable, insurance, and card rates."
         },
         "slides": [
           {
-            "kind": "stat",
-            "heading": "The daily rate",
-            "value": "0.066%",
-            "label": "per day at 24% APR",
-            "body": "Small on its own. But it applies every day to whatever is owed, and unpaid interest joins the balance."
-          },
-          {
-            "kind": "text",
-            "heading": "Average daily balance",
-            "body": "Each day's balance is added up over the billing cycle and averaged. Interest is that average, times the daily rate, times the days in the cycle."
-          },
-          {
-            "kind": "text",
-            "heading": "Timing is money",
-            "body": "A $2,000 payment on day 3 lowers the average for the whole month. The same payment on day 28 barely moves it. Earlier is cheaper."
-          },
-          {
             "kind": "list",
-            "heading": "The grace period rule",
+            "heading": "The four-line script",
             "items": [
-              "Pay the full statement balance by the due date: no interest on new purchases",
-              "Carry any balance: the grace period usually disappears",
-              "It comes back once the card is paid to zero"
-            ],
-            "numbered": false
-          }
-        ]
-      },
-      "caption": "Your card charges interest every day, not once a month. 📆 That changes two things: paying earlier in the billing cycle costs less than paying on the due date, and carrying any balance usually cancels your grace period on new purchases. Once you see the daily math, the statement stops being a mystery. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "creditcards",
-        "interest",
-        "debtbasics",
-        "financialliteracy",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-22",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-21-pm-01.jpg",
-        "site/social/2026-09-21-pm-02.jpg",
-        "site/social/2026-09-21-pm-03.jpg",
-        "site/social/2026-09-21-pm-04.jpg",
-        "site/social/2026-09-21-pm-05.jpg",
-        "site/social/2026-09-21-pm-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-22-noon",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "story",
-      "spec": {
-        "kind": "quote",
-        "text": "Interest never sleeps, never sickens, never dies. It never goes to the hospital.",
-        "attribution": "J. Reuben Clark, 1938"
-      },
-      "title": "Interest never sleeps, never sickens, never dies. It never goes to the hospital.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-22",
-      "slot": "noon",
-      "photo_query": "alarm clock on nightstand at night",
-      "photo_tags": [
-        "clock",
-        "night"
-      ],
-      "photo_slug": "2026-09-22-quote",
-      "render_slug": "2026-09-22-noon",
-      "image_paths": [
-        "site/social/2026-09-22-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-22-pm",
-      "kind": "single",
-      "subkind": "story",
-      "surface": "feed",
-      "spec": {
-        "kind": "story",
-        "kicker": "True story",
-        "headline": "A bank kept calling after a jury already told it to stop.",
-        "summary": "In 2019 a federal jury found Credit One Bank violated California's debt collection law. The calls continued. In February 2026 the bank agreed to pay $10.2 million, including $9 million in penalties.",
-        "source": "Los Angeles County District Attorney, Feb 2026"
-      },
-      "title": "A bank kept calling after a jury already told it to stop.",
-      "caption": "True story. 📞 In 2019 a federal jury found Credit One Bank liable for unlawful collection calls under California's Rosenthal Act. Prosecutors say the same practices continued anyway. In February 2026 the bank settled for $10.2 million, including $9 million in civil penalties. The lesson: call limits are real law, and logging calls is how cases like this get built. Source: Los Angeles County District Attorney's Office.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "truestory",
-        "consumerrights",
-        "debtcollection",
-        "financialliteracy",
-        "moneynews"
-      ],
-      "scheduled_for": "2026-09-22",
-      "slot": "pm",
-      "photo_query": "woman covering face frustrated by phone calls at home",
-      "photo_tags": [
-        "phone",
-        "frustrated"
-      ],
-      "photo_slug": "2026-09-22-story",
-      "render_slug": "2026-09-22-pm",
-      "image_paths": [
-        "site/social/2026-09-22-pm.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-22-am",
-      "kind": "carousel",
-      "title": "$10,000 at 22% APR: minimum payments vs a flat $300 a month.",
-      "theme": "Payoff math",
-      "spec": {
-        "cover": {
-          "title": "$10,000 at 22% APR: minimum payments vs a flat $300 a month.",
-          "highlight": [
-            "$300"
-          ],
-          "subtitle": "Same balance. Same rate. Two very different endings."
-        },
-        "slides": [
-          {
-            "kind": "compare",
-            "heading": "How long until zero",
-            "bars": [
-              {
-                "label": "Minimum payments",
-                "value": 299,
-                "display": "25 yrs"
-              },
-              {
-                "label": "Fixed $300 a month",
-                "value": 52,
-                "display": "4 yrs",
-                "emphasis": true
-              }
-            ],
-            "note": null
-          },
-          {
-            "kind": "compare",
-            "heading": "Total interest paid",
-            "bars": [
-              {
-                "label": "Minimum payments",
-                "value": 17266.44413382773,
-                "display": "$17,266"
-              },
-              {
-                "label": "Fixed $300 a month",
-                "value": 5600,
-                "display": "$5,600",
-                "emphasis": true
-              }
-            ],
-            "note": "Nothing about the debt changed. The payment just stopped shrinking."
-          },
-          {
-            "kind": "text",
-            "heading": "What this assumes",
-            "body": "No new charges, no rate changes, on-time payments every month. Real life is messier, which usually makes the minimum-payment path longer, not shorter."
-          },
-          {
-            "kind": "list",
-            "heading": "Run it for your own card",
-            "items": [
-              "Search: credit card payoff calculator",
-              "Enter balance, APR, and a payment",
-              "Try two or three payment amounts",
-              "The gap between them is the cost of waiting"
+              "\"I have been a customer for X years.\"",
+              "\"I am looking at my options and this is higher than I expected.\"",
+              "\"Is there a promotion, a hardship rate, or a lower plan?\"",
+              "\"Can you send that in writing?\""
             ],
             "numbered": true
+          },
+          {
+            "kind": "text",
+            "heading": "Medical bills",
+            "body": "Ask for an itemized bill, check it against the insurer's statement, then ask about financial assistance and a no-interest payment plan. Errors and discounts are both common.",
+            "icon": "stethoscope",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "Card interest rates",
+            "body": "Call and ask for a lower APR, especially with a good payment history. The worst answer is no. Ask again in six months.",
+            "icon": "credit-card",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "Asking makes me look desperate.",
+            "right": "Retention departments exist because asking works. Polite, specific, and in writing.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
           }
         ]
       },
-      "caption": "Same $10,000. Same 22% APR. Two very different endings. 💳 Minimum payments: about 25 years and roughly $17,266 in interest. A flat $300 a month: about 4 years and roughly $5,600. Nothing about the debt changed, the payment just stopped shrinking. Free payoff calculators do this for any balance in under a minute. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "Most bills are negotiable. Almost nobody asks. ☎️ Medical bills, cable, insurance, even your card's interest rate. The script: how long you have been a customer, that the price is higher than expected, whether there is a promotion or lower plan, and can they put it in writing. Swipe for the version for each bill ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "payoffmath",
-        "creditcarddebt",
-        "debtpayoff",
-        "financialplanning",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-23",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-22-am-01.jpg",
-        "site/social/2026-09-22-am-02.jpg",
-        "site/social/2026-09-22-am-03.jpg",
-        "site/social/2026-09-22-am-04.jpg",
-        "site/social/2026-09-22-am-05.jpg",
-        "site/social/2026-09-22-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-23-noon",
-      "kind": "single",
-      "subkind": "did_you_know",
-      "surface": "story",
-      "spec": {
-        "kind": "did_you_know",
-        "fact": "Anything you pay above the minimum must go to your highest-APR balance first. That is the law.",
-        "so_what": "The CARD Act of 2009. Check your statement to see it happen.",
-        "highlight": [
-          "highest-APR",
-          "first."
-        ]
-      },
-      "title": "Anything you pay above the minimum must go to your highest-APR balance first. That is the law.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-23",
-      "slot": "noon",
-      "photo_query": "person paying bills with laptop and credit card at home",
-      "photo_tags": [
-        "bills",
-        "laptop"
-      ],
-      "photo_slug": "2026-09-23-did_you_know-noon",
-      "render_slug": "2026-09-23-noon",
-      "image_paths": [
-        "site/social/2026-09-23-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-23-pm",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "feed",
-      "spec": {
-        "kind": "quote",
-        "text": "You don't need a perfect plan. You need the next payment.",
-        "attribution": "Debt Direct Solutions"
-      },
-      "title": "You don't need a perfect plan. You need the next payment.",
-      "caption": "You don't need a perfect plan. You need the next payment. ☕️ The people who get out of debt are not the ones with the best spreadsheet. They are the ones who made the next payment, then the one after that. Pick a number. Automate it. Adjust later.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "moneymindset",
-        "debtfreejourney",
-        "financialpeace",
-        "moneyquotes",
-        "over50"
-      ],
-      "scheduled_for": "2026-09-23",
-      "slot": "pm",
-      "photo_query": "person writing in notebook with coffee morning",
-      "photo_tags": [
-        "notebook"
-      ],
-      "photo_slug": "2026-09-23-quote",
-      "render_slug": "2026-09-23-pm",
-      "image_paths": [
-        "site/social/2026-09-23-pm.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-22-pm",
-      "kind": "carousel",
-      "title": "Secured debt has collateral. Unsecured debt does not.",
-      "theme": "Debt basics",
-      "spec": {
-        "cover": {
-          "title": "Secured debt has collateral. Unsecured debt does not.",
-          "highlight": [
-            "Secured",
-            "Unsecured"
-          ],
-          "subtitle": "The first sort every plan starts with."
-        },
-        "slides": [
-          {
-            "kind": "text",
-            "heading": "Secured",
-            "body": "A mortgage is backed by the house. An auto loan by the car. Stop paying and the lender can take the collateral. Rates are lower because of that safety net."
-          },
-          {
-            "kind": "text",
-            "heading": "Unsecured",
-            "body": "Credit cards, medical bills, personal loans, store cards, collections. Nothing physical backs them. The lender's tools are interest, fees, collections, and sometimes a lawsuit."
-          },
-          {
-            "kind": "list",
-            "heading": "Why it matters",
-            "items": [
-              "Hardship programs, counseling plans, and settlement work with unsecured balances",
-              "Secured loans go through the lender, refinancing, or selling the asset",
-              "Federal student loans have their own rules"
-            ],
-            "numbered": false
-          },
-          {
-            "kind": "text",
-            "heading": "First step for any plan",
-            "body": "List every balance. Mark each one secured or unsecured. Most plans start by sorting the pile this way, because it shows which doors are open."
-          }
-        ]
-      },
-      "caption": "Before any plan, sort the pile: secured or unsecured? 🗂️ Secured debt has collateral behind it (house, car). Unsecured debt does not (credit cards, medical bills, personal loans, collections). That one sort tells you which doors are open for each balance. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "debtbasics",
-        "medicaldebt",
-        "creditcarddebt",
-        "financialliteracy",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-24",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-22-pm-01.jpg",
-        "site/social/2026-09-22-pm-02.jpg",
-        "site/social/2026-09-22-pm-03.jpg",
-        "site/social/2026-09-22-pm-04.jpg",
-        "site/social/2026-09-22-pm-05.jpg",
-        "site/social/2026-09-22-pm-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-24-noon",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "story",
-      "spec": {
-        "kind": "quote",
-        "text": "Beware of little expenses. A small leak will sink a great ship.",
-        "attribution": "Benjamin Franklin"
-      },
-      "title": "Beware of little expenses. A small leak will sink a great ship.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-24",
-      "slot": "noon",
-      "photo_query": "sailboat on calm water",
-      "photo_tags": [
-        "boat",
-        "water"
-      ],
-      "photo_slug": "2026-09-24-quote",
-      "render_slug": "2026-09-24-noon",
-      "image_paths": [
-        "site/social/2026-09-24-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-24-pm",
-      "kind": "single",
-      "subkind": "did_you_know",
-      "surface": "feed",
-      "spec": {
-        "kind": "did_you_know",
-        "fact": "Your credit reports are free every week, from all three bureaus, at AnnualCreditReport.com.",
-        "so_what": "Weekly access became permanent in 2023. Most people never look.",
-        "highlight": [
-          "free",
-          "every",
-          "week"
-        ]
-      },
-      "title": "Your credit reports are free every week, from all three bureaus, at AnnualCreditReport.com.",
-      "caption": "Did you know? Free credit reports used to be once a year. Weekly access from all three bureaus became permanent in 2023, at AnnualCreditReport.com. 🔎 Errors are common and they are fixable, but only if someone looks. Pull one report a month and rotate bureaus. It takes ten minutes.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "didyouknow",
-        "financialliteracy",
-        "consumerrights",
+        "negotiation",
+        "savemoney",
         "moneytips",
-        "debtbasics"
+        "medicalbills",
+        "personalfinance"
       ],
-      "scheduled_for": "2026-09-24",
-      "slot": "pm",
-      "photo_query": "senior man reading documents with reading glasses at home",
-      "photo_tags": [
-        "reading",
-        "documents"
-      ],
-      "photo_slug": "2026-09-24-did_you_know",
-      "render_slug": "2026-09-24-pm",
-      "image_paths": [
-        "site/social/2026-09-24-pm.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-23-am",
-      "kind": "carousel",
-      "title": "Bankruptcy is not one thing. Chapter 7 and Chapter 13 work very differently.",
-      "theme": "Debt basics",
-      "spec": {
-        "cover": {
-          "title": "Bankruptcy is not one thing. Chapter 7 and Chapter 13 work very differently.",
-          "highlight": [
-            "7",
-            "13"
-          ],
-          "subtitle": "General information, not legal advice."
-        },
-        "slides": [
-          {
-            "kind": "text",
-            "heading": "Chapter 7",
-            "body": "Often called liquidation. Non-exempt assets can be sold, and most remaining unsecured debt is discharged. Usually a few months. There is an income test to qualify."
-          },
-          {
-            "kind": "text",
-            "heading": "Chapter 13",
-            "body": "A court-supervised repayment plan, usually three to five years. You keep your property, pay what the plan says, and eligible debt left over is discharged at the end."
-          },
-          {
-            "kind": "compare",
-            "heading": "How long it stays on a credit report",
-            "bars": [
-              {
-                "label": "Chapter 7",
-                "value": 10,
-                "display": "up to 10 yrs"
-              },
-              {
-                "label": "Chapter 13",
-                "value": 7,
-                "display": "up to 7 yrs",
-                "emphasis": true
-              }
-            ],
-            "note": "Scores usually drop sharply at first and can recover with new on-time history."
-          },
-          {
-            "kind": "list",
-            "heading": "What survives either one",
-            "items": [
-              "Child support and alimony",
-              "Most student loans",
-              "Recent taxes and court fines",
-              "Secured loans, if you keep the collateral and stop paying"
-            ],
-            "numbered": false
-          }
-        ]
-      },
-      "caption": "Bankruptcy is not one thing. ⚖️ Chapter 7 discharges most unsecured debt in months but may involve selling non-exempt assets and has an income test. Chapter 13 is a 3-to-5-year repayment plan that lets you keep your property. Both stay on your credit report for years, and some debts survive either one. This is information, not legal advice. A bankruptcy attorney consultation is often free. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "bankruptcy",
-        "chapter7",
-        "chapter13",
-        "debtbasics",
-        "financialliteracy"
-      ],
-      "scheduled_for": "2026-09-25",
+      "scheduled_for": "2026-09-29",
       "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-23-am-01.jpg",
-        "site/social/2026-09-23-am-02.jpg",
-        "site/social/2026-09-23-am-03.jpg",
-        "site/social/2026-09-23-am-04.jpg",
-        "site/social/2026-09-23-am-05.jpg",
-        "site/social/2026-09-23-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-25-noon",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "story",
-      "spec": {
-        "kind": "quote",
-        "text": "Clarity is the first form of relief.",
-        "attribution": "Debt Direct Solutions"
-      },
-      "title": "Clarity is the first form of relief.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-25",
-      "slot": "noon",
-      "photo_query": "clear window light morning calm room",
-      "photo_tags": [
-        "window",
-        "light"
-      ],
-      "photo_slug": "2026-09-25-quote",
-      "render_slug": "2026-09-25-noon",
-      "image_paths": [
-        "site/social/2026-09-25-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-25-pm",
-      "kind": "single",
-      "subkind": "story",
       "surface": "feed",
-      "spec": {
-        "kind": "story",
-        "kicker": "True story",
-        "headline": "A jury awarded $2.87 million over a credit report a bank refused to fix.",
-        "summary": "In September 2026 a federal jury found Horizon Bank willfully violated the Fair Credit Reporting Act by continuing to report inaccurate information about a consumer.",
-        "source": "Consumer Justice Law Firm verdict announcement, Sept 2026"
-      },
-      "title": "A jury awarded $2.87 million over a credit report a bank refused to fix.",
-      "caption": "True story. ⚖️ Credit reports are supposed to be accurate, and the law has teeth when they are not. In September 2026 a federal jury returned a $2,865,000 verdict against Horizon Bank for willfully violating the Fair Credit Reporting Act after inaccurate information was reported and not corrected. You can dispute errors for free with each bureau and the lender. Keep every letter. Source: verdict announcement, Consumer Justice Law Firm.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "truestory",
-        "consumerrights",
-        "debtcollection",
-        "financialliteracy",
-        "moneynews"
-      ],
-      "scheduled_for": "2026-09-25",
-      "slot": "pm",
-      "photo_query": "man reviewing paperwork at desk serious",
-      "photo_tags": [
-        "paperwork",
-        "desk"
-      ],
-      "photo_slug": "2026-09-25-story",
-      "render_slug": "2026-09-25-pm",
       "image_paths": [
-        "site/social/2026-09-25-pm.jpg"
+        "site/social/2026-09-29-am-01.jpg",
+        "site/social/2026-09-29-am-02.jpg",
+        "site/social/2026-09-29-am-03.jpg",
+        "site/social/2026-09-29-am-04.jpg",
+        "site/social/2026-09-29-am-05.jpg",
+        "site/social/2026-09-29-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-29-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "photo_credit": null
+      ]
     },
     {
-      "id": "2026-09-23-pm",
+      "id": "2026-09-30-am",
       "kind": "carousel",
       "title": "Avalanche pays the highest rate first. Snowball pays the smallest balance first.",
       "theme": "Paying it down",
       "spec": {
+        "kicker": "Paying it down",
+        "theme": "cream",
         "cover": {
           "title": "Avalanche pays the highest rate first. Snowball pays the smallest balance first.",
           "highlight": [
@@ -926,7 +1501,7 @@
             "kind": "list",
             "heading": "The setup is the same",
             "items": [
-              "List every unsecured balance with its APR",
+              "List every balance with its APR",
               "Pay the minimum on all of them",
               "Send every extra dollar to one target",
               "When it is gone, roll that payment to the next"
@@ -934,785 +1509,418 @@
             "numbered": true
           },
           {
-            "kind": "text",
-            "heading": "Avalanche: highest APR first",
-            "body": "Targets the most expensive debt. Over the whole payoff it costs the least in interest and finishes soonest on paper."
-          },
-          {
-            "kind": "text",
-            "heading": "Snowball: smallest balance first",
-            "body": "Targets the account you can close fastest. Costs a bit more in interest, but every closed account is a visible win, and wins keep people going."
+            "kind": "vs",
+            "heading": "Two orders",
+            "left": "Avalanche: highest APR first. Least interest paid, finishes soonest on paper.",
+            "right": "Snowball: smallest balance first. A bit more interest, but every closed account is a visible win.",
+            "note": null,
+            "left_tag": "Avalanche",
+            "right_tag": "Snowball"
           },
           {
             "kind": "text",
             "heading": "A hybrid that works",
-            "body": "Close one or two tiny balances first for momentum, then switch to highest rate. The cost difference is usually small. The consistency is what matters."
+            "body": "Close one or two tiny balances first for momentum, then switch to highest rate. The cost difference is usually small. The consistency is what matters.",
+            "icon": "flame",
+            "highlight": null
+          },
+          {
+            "kind": "stat",
+            "heading": "Either one beats",
+            "value": "0",
+            "label": "extra dollars spread thinly across every card",
+            "body": "Focus is the whole trick. Pick a target, aim everything at it, repeat."
           }
         ]
       },
-      "caption": "Avalanche or snowball? The right answer is the one you will actually keep doing. ❄️🏔️ Avalanche: highest APR first, least interest paid. Snowball: smallest balance first, fastest visible wins. Either one beats spreading extra money thinly across every card. Swipe for the setup ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "Avalanche or snowball? The right answer is the one you will actually keep doing. ❄️🏔️ Avalanche: highest APR first, least interest paid. Snowball: smallest balance first, fastest visible wins. Either one beats spreading extra money thinly across every card. Swipe for the setup ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
         "debtsnowball",
         "debtavalanche",
-        "debtfreejourney",
         "payoffplan",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-26",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-23-pm-01.jpg",
-        "site/social/2026-09-23-pm-02.jpg",
-        "site/social/2026-09-23-pm-03.jpg",
-        "site/social/2026-09-23-pm-04.jpg",
-        "site/social/2026-09-23-pm-05.jpg",
-        "site/social/2026-09-23-pm-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-26-noon",
-      "kind": "single",
-      "subkind": "did_you_know",
-      "surface": "story",
-      "spec": {
-        "kind": "did_you_know",
-        "fact": "Nonprofit hospitals are required by law to have a financial assistance policy.",
-        "so_what": "Most people are never told. You have to ask for it.",
-        "highlight": [
-          "required",
-          "by",
-          "law"
-        ]
-      },
-      "title": "Nonprofit hospitals are required by law to have a financial assistance policy.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-26",
-      "slot": "noon",
-      "photo_query": "hospital billing office waiting room",
-      "photo_tags": [
-        "hospital"
-      ],
-      "photo_slug": "2026-09-26-did_you_know-noon",
-      "render_slug": "2026-09-26-noon",
-      "image_paths": [
-        "site/social/2026-09-26-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-26-pm",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "feed",
-      "spec": {
-        "kind": "quote",
-        "text": "Annual income twenty pounds, annual expenditure nineteen six: happiness. Annual expenditure twenty pounds six: misery.",
-        "attribution": "Charles Dickens, David Copperfield"
-      },
-      "title": "Annual income twenty pounds, annual expenditure nineteen six: happiness. Annual expenditure twenty pounds six: misery.",
-      "caption": "Mr. Micawber's rule, from David Copperfield: spend a little less than you earn and the result is happiness; spend a little more and the result is misery. 📖 Dickens wrote it in 1850 from his own family's debt. The margin does not have to be big. It has to be positive.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "moneymindset",
-        "debtfreejourney",
-        "financialpeace",
-        "moneyquotes",
-        "over50"
-      ],
-      "scheduled_for": "2026-09-26",
-      "slot": "pm",
-      "photo_query": "old book open on wooden table",
-      "photo_tags": [
-        "book"
-      ],
-      "photo_slug": "2026-09-26-quote",
-      "render_slug": "2026-09-26-pm",
-      "image_paths": [
-        "site/social/2026-09-26-pm.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-24-am",
-      "kind": "carousel",
-      "title": "When an account goes to collections, the rules change.",
-      "theme": "Debt basics",
-      "spec": {
-        "cover": {
-          "title": "When an account goes to collections, the rules change.",
-          "highlight": [
-            "rules",
-            "change."
-          ],
-          "subtitle": "Knowing the sequence takes the fear out of the phone."
-        },
-        "slides": [
-          {
-            "kind": "text",
-            "heading": "Charge-off comes first",
-            "body": "After roughly six months without payment, the issuer charges the account off. That is an accounting step, not forgiveness. The debt is often sold or assigned to a collector."
-          },
-          {
-            "kind": "list",
-            "heading": "Your rights on the first call",
-            "items": [
-              "A written validation notice within five days of first contact",
-              "The amount, the original creditor, and how to dispute",
-              "You can ask for everything in writing before saying more"
-            ],
-            "numbered": false
-          },
-          {
-            "kind": "stat",
-            "heading": "How long it can stay on your report",
-            "value": "7 yrs",
-            "label": "from the original missed payment",
-            "body": "Whether or not it is later paid. Paid collections usually hurt less under newer scoring models."
-          },
-          {
-            "kind": "text",
-            "heading": "Statutes of limitations",
-            "body": "Each state limits how long a collector can sue, commonly three to six years. The debt does not vanish, but a lawsuit gets much harder. In some states a small payment restarts the clock."
-          }
-        ]
-      },
-      "caption": "A collector calling is not an emergency. Here is what actually happens at that stage. 📞 Charge-off after about six months. A written validation notice you can ask for. Seven years on your credit report from the first missed payment. A statute of limitations on lawsuits, usually three to six years depending on your state. Not legal advice, but knowing the sequence changes everything. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "debtcollection",
-        "consumerrights",
-        "debtbasics",
-        "financialliteracy",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-27",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-24-am-01.jpg",
-        "site/social/2026-09-24-am-02.jpg",
-        "site/social/2026-09-24-am-03.jpg",
-        "site/social/2026-09-24-am-04.jpg",
-        "site/social/2026-09-24-am-05.jpg",
-        "site/social/2026-09-24-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-27-noon",
-      "kind": "single",
-      "subkind": "quote",
-      "surface": "story",
-      "spec": {
-        "kind": "quote",
-        "text": "The first step is knowing the number.",
-        "attribution": "Debt Direct Solutions"
-      },
-      "title": "The first step is knowing the number.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-09-27",
-      "slot": "noon",
-      "photo_query": "calculator and pen on paper with numbers",
-      "photo_tags": [
-        "calculator"
-      ],
-      "photo_slug": "2026-09-27-quote",
-      "render_slug": "2026-09-27-noon",
-      "image_paths": [
-        "site/social/2026-09-27-noon-story.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-noon-story.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-27-pm",
-      "kind": "single",
-      "subkind": "did_you_know",
-      "surface": "feed",
-      "spec": {
-        "kind": "did_you_know",
-        "fact": "Newer credit scores ignore collections once they are paid.",
-        "so_what": "FICO 9 and VantageScore 3 and 4 both skip paid collections.",
-        "highlight": [
-          "ignore",
-          "paid"
-        ]
-      },
-      "title": "Newer credit scores ignore collections once they are paid.",
-      "caption": "Did you know? Older scoring models count a collection account whether or not it is paid. Newer ones, FICO 9 and VantageScore 3 and 4, ignore a collection once it is paid. 📈 Not every lender uses the newer models yet, but many do. Paying or settling a collection can matter more than people think.\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "didyouknow",
-        "financialliteracy",
-        "consumerrights",
-        "moneytips",
-        "debtbasics"
-      ],
-      "scheduled_for": "2026-09-27",
-      "slot": "pm",
-      "photo_query": "woman smiling relieved holding phone on couch",
-      "photo_tags": [
-        "relief",
-        "couch"
-      ],
-      "photo_slug": "2026-09-27-did_you_know",
-      "render_slug": "2026-09-27-pm",
-      "image_paths": [
-        "site/social/2026-09-27-pm.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-pm.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "photo_credit": null
-    },
-    {
-      "id": "2026-09-24-pm",
-      "kind": "carousel",
-      "title": "Credit utilization is the fastest lever on your score.",
-      "theme": "Credit basics",
-      "spec": {
-        "cover": {
-          "title": "Credit utilization is the fastest lever on your score.",
-          "highlight": [
-            "fastest",
-            "lever"
-          ],
-          "subtitle": "It has no memory. Change it and the score reacts next month."
-        },
-        "slides": [
-          {
-            "kind": "stat",
-            "heading": "What it is",
-            "value": "30%",
-            "label": "= $3,000 owed on a $10,000 limit",
-            "body": "Balance divided by limit. Scoring models look at each card and at all cards combined."
-          },
-          {
-            "kind": "text",
-            "heading": "Why it counts so much",
-            "body": "Amounts owed are roughly a third of a FICO score, and utilization is most of that. High utilization signals strain even when every payment is on time."
-          },
-          {
-            "kind": "list",
-            "heading": "The common guidance",
-            "items": [
-              "Under 30% is the usual rule of thumb",
-              "Under 10% scores better still",
-              "One maxed-out card can drag the score even if the overall ratio is fine"
-            ],
-            "numbered": false
-          },
-          {
-            "kind": "text",
-            "heading": "The trap",
-            "body": "Closing a paid-off card removes its limit from the total and can raise your utilization overnight. Keeping old accounts open, at zero, usually helps."
-          }
-        ]
-      },
-      "caption": "Credit utilization is the fastest lever on your score. 📈 Balance divided by limit, per card and overall. Under 30% is the usual rule; under 10% is better. It has no memory: lower the reported balance and the score reacts next cycle. One trap: closing a paid-off card can raise your utilization. Swipe to see why ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "creditutilization",
-        "creditscore",
-        "credittips",
-        "financialliteracy",
-        "moneytips"
-      ],
-      "scheduled_for": "2026-09-28",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-24-pm-01.jpg",
-        "site/social/2026-09-24-pm-02.jpg",
-        "site/social/2026-09-24-pm-03.jpg",
-        "site/social/2026-09-24-pm-04.jpg",
-        "site/social/2026-09-24-pm-05.jpg",
-        "site/social/2026-09-24-pm-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-25-am",
-      "kind": "carousel",
-      "title": "Consolidation, counseling, and settlement are three different tools.",
-      "theme": "Options",
-      "spec": {
-        "cover": {
-          "title": "Consolidation, counseling, and settlement are three different tools.",
-          "highlight": [
-            "three",
-            "different",
-            "tools."
-          ],
-          "subtitle": "Each fits a different situation. Here is how to tell."
-        },
-        "slides": [
-          {
-            "kind": "text",
-            "heading": "Debt consolidation",
-            "body": "A new loan pays off several balances, leaving one payment, ideally at a lower rate. It needs decent credit to qualify, and it does not reduce what is owed."
-          },
-          {
-            "kind": "text",
-            "heading": "Credit counseling plan",
-            "body": "A nonprofit agency sets up one monthly payment, and creditors often lower interest rates. The full balance is repaid over three to five years. Accounts are typically closed."
-          },
-          {
-            "kind": "text",
-            "heading": "Debt settlement",
-            "body": "A company negotiates with creditors to accept less than the balance, paid from money set aside over time. It can affect credit scores, and forgiven amounts may be taxable."
-          },
-          {
-            "kind": "list",
-            "heading": "Which fits when",
-            "items": [
-              "Good credit and steady income: consolidation",
-              "Can repay in full over time: counseling",
-              "Cannot repay in full: settlement or a bankruptcy consultation",
-              "Not sure: an honest review should say"
-            ],
-            "numbered": false
-          }
-        ]
-      },
-      "caption": "Consolidation, credit counseling, and settlement are three different tools. 🧰 Consolidation: one new loan, needs good credit, same total owed. Counseling plan: one payment, often lower rates, everything repaid over a few years. Settlement: creditors accept less than the balance. It can affect credit scores and is not right for everyone. An honest review tells you which one fits, or if none do. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "debtconsolidation",
-        "creditcounseling",
-        "debtsettlement",
-        "debtrelief",
-        "financialliteracy"
-      ],
-      "scheduled_for": "2026-09-29",
-      "slot": "am",
-      "image_paths": [
-        "site/social/2026-09-25-am-01.jpg",
-        "site/social/2026-09-25-am-02.jpg",
-        "site/social/2026-09-25-am-03.jpg",
-        "site/social/2026-09-25-am-04.jpg",
-        "site/social/2026-09-25-am-05.jpg",
-        "site/social/2026-09-25-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "surface": "feed"
-    },
-    {
-      "id": "2026-09-25-pm",
-      "kind": "carousel",
-      "title": "Medical bills deserve a different first move than a credit card.",
-      "theme": "Debt basics",
-      "spec": {
-        "cover": {
-          "title": "Medical bills deserve a different first move than a credit card.",
-          "highlight": [
-            "different",
-            "first",
-            "move"
-          ],
-          "subtitle": "Four things to do before paying a dollar."
-        },
-        "slides": [
-          {
-            "kind": "list",
-            "heading": "Before you pay",
-            "items": [
-              "Ask for an itemized bill and check it against the insurer's statement",
-              "Ask the hospital about financial assistance",
-              "Ask for an interest-free payment plan",
-              "Ask all three before the account ages"
-            ],
-            "numbered": true
-          },
-          {
-            "kind": "text",
-            "heading": "Financial assistance is real",
-            "body": "Nonprofit hospitals are required to have financial assistance policies, and many reduce or waive bills below certain income levels. It has to be asked for. It is rarely offered."
-          },
-          {
-            "kind": "list",
-            "heading": "Credit reporting is gentler now",
-            "items": [
-              "Paid medical collections are no longer reported",
-              "Unpaid ones under $500 are not shown",
-              "Larger ones get a one-year wait before appearing",
-              "Rules keep shifting, so check your reports"
-            ],
-            "numbered": false
-          },
-          {
-            "kind": "text",
-            "heading": "Once it reaches collections",
-            "body": "A medical bill behaves like any other unsecured account. It can be part of a counseling plan or a settlement review, just like a card balance."
-          }
-        ]
-      },
-      "caption": "Medical bills deserve a different first move than a credit card. 🏥 Ask for an itemized bill. Ask about financial assistance (nonprofit hospitals must have it). Ask for an interest-free payment plan before it ages. Credit reporting on medical debt is gentler than it used to be, but the rules keep changing. Swipe for the checklist ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
-      "hashtags": [
-        "medicaldebt",
-        "medicalbills",
-        "healthcarecosts",
-        "debtbasics",
-        "moneytips"
+        "moneybasics",
+        "debtfreejourney"
       ],
       "scheduled_for": "2026-09-30",
       "slot": "am",
+      "surface": "feed",
       "image_paths": [
-        "site/social/2026-09-25-pm-01.jpg",
-        "site/social/2026-09-25-pm-02.jpg",
-        "site/social/2026-09-25-pm-03.jpg",
-        "site/social/2026-09-25-pm-04.jpg",
-        "site/social/2026-09-25-pm-05.jpg",
-        "site/social/2026-09-25-pm-06.jpg"
+        "site/social/2026-09-30-am-01.jpg",
+        "site/social/2026-09-30-am-02.jpg",
+        "site/social/2026-09-30-am-03.jpg",
+        "site/social/2026-09-30-am-04.jpg",
+        "site/social/2026-09-30-am-05.jpg",
+        "site/social/2026-09-30-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "surface": "feed"
+      ]
     },
     {
-      "id": "2026-09-26-am",
+      "id": "2026-10-01-am",
       "kind": "carousel",
-      "title": "What $50 more a month does to an $8,000 balance.",
-      "theme": "Payoff math",
+      "title": "A 401(k) match is a raise you have to opt into.",
+      "theme": "Retirement",
       "spec": {
+        "kicker": "Retirement",
+        "theme": "white",
         "cover": {
-          "title": "What $50 more a month does to an $8,000 balance.",
+          "title": "A 401(k) match is a raise you have to opt into.",
           "highlight": [
-            "$50"
+            "raise"
           ],
-          "subtitle": "More than you would guess."
+          "subtitle": "What it is, what it is worth, and the one mistake that forfeits it."
         },
         "slides": [
           {
-            "kind": "compare",
-            "heading": "$8,000 at 21% APR: months to zero",
-            "bars": [
-              {
-                "label": "$200 a month",
-                "value": 70,
-                "display": "70 months"
-              },
-              {
-                "label": "$250 a month",
-                "value": 48,
-                "display": "48 months",
-                "emphasis": true
-              }
-            ],
-            "note": null
+            "kind": "stat",
+            "heading": "A common match",
+            "value": "$3,000",
+            "label": "a year on a $50,000 salary with a 6% match",
+            "body": "Contribute 6%, the employer adds 6%. Contribute less and the difference is simply not paid to you."
           },
           {
             "kind": "compare",
-            "heading": "Total interest paid",
+            "heading": "That match, invested at 7% for 25 years",
             "bars": [
               {
-                "label": "$200 a month",
-                "value": 6000,
-                "display": "$6,000"
+                "label": "Your own 6%",
+                "value": 202517.92325577774,
+                "display": "$202,518"
               },
               {
-                "label": "$250 a month",
-                "value": 4000,
-                "display": "$4,000",
+                "label": "Employer match",
+                "value": 202517.92325577774,
+                "display": "$202,518",
                 "emphasis": true
               }
             ],
-            "note": "That $50 avoids about $2,000 in interest and takes about 22 months off the loan."
+            "note": "Two piles, one of them free. Illustration only; returns vary."
           },
           {
             "kind": "text",
-            "heading": "Why the effect is so large",
-            "body": "Early payments mostly cover interest. Anything above that goes straight to principal, and a smaller principal charges less interest next month. Extra money compounds in your favor."
+            "heading": "Vesting",
+            "body": "Some employers keep part of the match if you leave within a few years. Ask HR for the vesting schedule. It can change the math on switching jobs.",
+            "icon": "clock",
+            "highlight": null
           },
           {
             "kind": "list",
-            "heading": "Where $50 usually hides",
+            "heading": "If money is tight",
             "items": [
-              "One unused subscription",
-              "One insurance quote",
-              "One phone plan review",
-              "Then set autopay to the new amount, once"
+              "Contribute at least enough to get the full match",
+              "Raise it 1% each time you get a raise",
+              "Do not cash it out when you change jobs; roll it over",
+              "Check the fees on the funds once a year"
             ],
             "numbered": false
           }
         ]
       },
-      "caption": "What does $50 more a month actually do? More than you would guess. ☕️ $8,000 at 21% APR: $200 a month takes 70 months and roughly $6,000 in interest. $250 a month takes 48 months and roughly $4,000. That $50 buys back about 22 months. Find it once, automate it, done. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "A 401(k) match is a raise you have to opt into. 💼 On a $50,000 salary with a 6% match, that is $3,000 a year the employer adds only if you contribute. Invested at a 7% average for 25 years, the match alone grows to roughly $202,518. Contribute less than the match and that money is never paid to you. Swipe ➡️ (Illustration only, not investment advice.)\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "payoffmath",
-        "budgeting",
-        "creditcarddebt",
-        "debtfreejourney",
-        "moneytips"
+        "401k",
+        "retirementplanning",
+        "investing101",
+        "moneybasics",
+        "personalfinance"
       ],
       "scheduled_for": "2026-10-01",
       "slot": "am",
+      "surface": "feed",
       "image_paths": [
-        "site/social/2026-09-26-am-01.jpg",
-        "site/social/2026-09-26-am-02.jpg",
-        "site/social/2026-09-26-am-03.jpg",
-        "site/social/2026-09-26-am-04.jpg",
-        "site/social/2026-09-26-am-05.jpg",
-        "site/social/2026-09-26-am-06.jpg"
+        "site/social/2026-10-01-am-01.jpg",
+        "site/social/2026-10-01-am-02.jpg",
+        "site/social/2026-10-01-am-03.jpg",
+        "site/social/2026-10-01-am-04.jpg",
+        "site/social/2026-10-01-am-05.jpg",
+        "site/social/2026-10-01-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "surface": "feed"
+      ]
     },
     {
-      "id": "2026-09-26-pm",
+      "id": "2026-10-02-am",
       "kind": "carousel",
-      "title": "Your card issuer has a hardship program. They will not call to tell you.",
-      "theme": "Options",
+      "title": "Five signs the call about your money is a scam.",
+      "theme": "Stay safe",
       "spec": {
+        "kicker": "Stay safe",
+        "theme": "navy",
         "cover": {
-          "title": "Your card issuer has a hardship program. They will not call to tell you.",
+          "title": "Five signs the call about your money is a scam.",
           "highlight": [
-            "hardship",
-            "program."
+            "scam."
           ],
-          "subtitle": "Here is how to ask for it."
+          "subtitle": "They target people who are careful. Especially the careful ones."
         },
         "slides": [
           {
-            "kind": "text",
-            "heading": "What it is",
-            "body": "A temporary arrangement from the issuer itself: a lower APR for a set period, waived late fees, or a fixed monthly payment. Built for job loss, illness, or an income drop."
-          },
-          {
             "kind": "list",
-            "heading": "How to ask",
+            "heading": "The pattern",
             "items": [
-              "Call the number on the back of the card",
-              "Ask for the hardship or financial assistance department",
-              "Explain the situation in one or two sentences",
-              "Ask what programs exist, then get the terms in writing"
+              "Urgency: act now, today, or else",
+              "Payment by gift card, wire, or crypto",
+              "A government agency calling out of the blue",
+              "A request to keep it secret or stay on the line",
+              "Pressure to \"verify\" a password or full card number"
             ],
             "numbered": true
           },
           {
             "kind": "text",
-            "heading": "What to expect",
-            "body": "Often six to twelve months of reduced interest or a fixed payment. The card is usually frozen or closed for new purchases while the program runs."
+            "heading": "The IRS does not call",
+            "body": "Neither does Social Security, Medicare, or your bank's fraud team, to demand payment or a code on the spot. They write. You call back on the number printed on your card or statement.",
+            "icon": "phone",
+            "highlight": null
           },
           {
             "kind": "text",
-            "heading": "Where it fits",
-            "body": "Best for a temporary setback with a clear end. For balances that cannot be repaid in full even at a lower rate, a counseling plan or settlement review may fit better."
+            "heading": "The one move that beats all of them",
+            "body": "Hang up. Wait ten minutes. Call the organization back using a number you find yourself. Scams depend on not giving you that gap.",
+            "icon": "shield-check",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "I would never fall for that.",
+            "right": "Victims skew educated and careful. The scripts are built for smart people under pressure.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
           }
         ]
       },
-      "caption": "Your card issuer probably has a hardship program. They will not call to tell you about it. ☎️ Lower APR for a set period, waived fees, or a fixed payment, usually for job loss, illness, or an income drop. You ask for the hardship department; you get the terms in writing. It fits a temporary problem with an end date. Swipe for how to ask ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "Five signs the call about your money is a scam. 🚩 Urgency, payment by gift card or wire, a government agency calling out of the blue, a request to keep it secret, and pressure to verify a password or full card number. The move that beats all of them: hang up, wait ten minutes, call back on a number you find yourself. Save this for someone you love. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "hardshipprogram",
-        "creditcards",
-        "debtrelief",
-        "financialliteracy",
-        "moneytips"
+        "scamalert",
+        "fraudprevention",
+        "moneysafety",
+        "seniorfinance",
+        "financialliteracy"
       ],
       "scheduled_for": "2026-10-02",
       "slot": "am",
+      "surface": "feed",
       "image_paths": [
-        "site/social/2026-09-26-pm-01.jpg",
-        "site/social/2026-09-26-pm-02.jpg",
-        "site/social/2026-09-26-pm-03.jpg",
-        "site/social/2026-09-26-pm-04.jpg",
-        "site/social/2026-09-26-pm-05.jpg",
-        "site/social/2026-09-26-pm-06.jpg"
+        "site/social/2026-10-02-am-01.jpg",
+        "site/social/2026-10-02-am-02.jpg",
+        "site/social/2026-10-02-am-03.jpg",
+        "site/social/2026-10-02-am-04.jpg",
+        "site/social/2026-10-02-am-05.jpg",
+        "site/social/2026-10-02-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-02-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "surface": "feed"
+      ]
     },
     {
-      "id": "2026-09-27-am",
+      "id": "2026-10-03-am",
       "kind": "carousel",
-      "title": "Five questions to ask before agreeing to any debt plan.",
-      "theme": "Before you sign",
+      "title": "Christmas is not an emergency. Neither are tires.",
+      "theme": "Budgeting",
       "spec": {
+        "kicker": "Budgeting",
+        "theme": "cream",
         "cover": {
-          "title": "Five questions to ask before agreeing to any debt plan.",
+          "title": "Christmas is not an emergency. Neither are tires.",
           "highlight": [
-            "Five",
-            "questions"
+            "not",
+            "an",
+            "emergency."
           ],
-          "subtitle": "Including with us."
+          "subtitle": "Sinking funds: the calm way to handle bills you already know are coming."
         },
         "slides": [
           {
-            "kind": "list",
-            "heading": "Ask about money",
-            "items": [
-              "What is the total cost, in dollars, for the whole plan?",
-              "When exactly are fees charged?"
-            ],
-            "numbered": true
-          },
-          {
-            "kind": "list",
-            "heading": "Ask about consequences",
-            "items": [
-              "What happens to my credit scores?",
-              "What happens if I miss a payment?"
-            ],
-            "numbered": true
-          },
-          {
-            "kind": "list",
-            "heading": "Ask about them",
-            "items": [
-              "Are you licensed or registered in my state?",
-              "Can I have all of this in writing?"
-            ],
-            "numbered": true
-          },
-          {
             "kind": "text",
-            "heading": "What a good answer sounds like",
-            "body": "Specific. In dollars, not percentages. Honest about credit. Clear on fees. Vague answers to any of these are your cue to keep looking."
+            "heading": "What a sinking fund is",
+            "body": "A small monthly amount set aside for an expense you can see coming: holidays, car maintenance, insurance premiums, a vacation. The bill arrives and the money is already there.",
+            "icon": "calendar",
+            "highlight": null
+          },
+          {
+            "kind": "stat",
+            "heading": "The math",
+            "value": "$100",
+            "label": "a month = $1,200 for the holidays, stress-free",
+            "body": "Divide the yearly cost by twelve. Automate the transfer. Stop borrowing from the emergency fund for things that were never emergencies."
+          },
+          {
+            "kind": "list",
+            "heading": "Common sinking funds",
+            "items": [
+              "Car repairs and registration",
+              "Annual insurance premiums",
+              "Holidays and birthdays",
+              "Medical deductible",
+              "Home and appliance repairs"
+            ],
+            "numbered": false
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "That is just savings with extra steps.",
+            "right": "The extra step is the point. A named jar with a date does not get raided.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
           }
         ]
       },
-      "caption": "Five questions to ask before you sign anything about your debt. Including with us. ✅ Total cost in dollars? What happens to my credit? When are fees charged? What if I miss a payment? Are you licensed in my state? Clear answers are the minimum. Vague answers are your cue to keep looking. Save this one. Swipe ➡️\n\nWant clarity on your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment review. 💙",
+      "caption": "Christmas is not an emergency. Neither are tires. 🎄🛞 A sinking fund is a small monthly amount set aside for a bill you can already see coming. $100 a month is $1,200 in December with no card. Divide the yearly cost by twelve, automate it, and stop raiding the emergency fund for things that were never emergencies. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "consumertips",
-        "debtrelief",
-        "debtsettlement",
-        "creditcounseling",
-        "moneytips"
+        "sinkingfund",
+        "budgeting",
+        "savingmoney",
+        "moneyhabits",
+        "personalfinance"
       ],
       "scheduled_for": "2026-10-03",
       "slot": "am",
+      "surface": "feed",
       "image_paths": [
-        "site/social/2026-09-27-am-01.jpg",
-        "site/social/2026-09-27-am-02.jpg",
-        "site/social/2026-09-27-am-03.jpg",
-        "site/social/2026-09-27-am-04.jpg",
-        "site/social/2026-09-27-am-05.jpg",
-        "site/social/2026-09-27-am-06.jpg"
+        "site/social/2026-10-03-am-01.jpg",
+        "site/social/2026-10-03-am-02.jpg",
+        "site/social/2026-10-03-am-03.jpg",
+        "site/social/2026-10-03-am-04.jpg",
+        "site/social/2026-10-03-am-05.jpg",
+        "site/social/2026-10-03-am-06.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-am-06.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-04-am",
+      "kind": "carousel",
+      "title": "Your credit reports are free every week. Most people have never looked.",
+      "theme": "Credit basics",
+      "spec": {
+        "kicker": "Credit basics",
+        "theme": "cream",
+        "cover": {
+          "title": "Your credit reports are free every week. Most people have never looked.",
+          "highlight": [
+            "free",
+            "every",
+            "week."
+          ],
+          "subtitle": "How to pull them, what to check, and how to fix what is wrong."
+        },
+        "slides": [
+          {
+            "kind": "text",
+            "heading": "Where",
+            "body": "AnnualCreditReport.com is the official site. Weekly access from all three bureaus became permanent in 2023. Anything that asks for a card number is not it.",
+            "icon": "file-text",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "What to check",
+            "items": [
+              "Accounts you do not recognize",
+              "Late payments you know you made on time",
+              "Balances that are months out of date",
+              "Old collections past seven years",
+              "Your name and address history"
+            ],
+            "numbered": false
+          },
+          {
+            "kind": "text",
+            "heading": "Disputing is free",
+            "body": "Each bureau has an online dispute form. Attach proof. They have 30 days to investigate. Dispute with the lender too, in writing.",
+            "icon": "gavel",
+            "highlight": null
+          },
+          {
+            "kind": "vs",
+            "heading": "Myth vs fact",
+            "left": "Checking my own report hurts my score.",
+            "right": "Checking your own report is a soft inquiry. It never affects the score.",
+            "note": null,
+            "left_tag": "Myth",
+            "right_tag": "Fact"
+          }
+        ]
+      },
+      "caption": "Your credit reports are free every week from all three bureaus at AnnualCreditReport.com, and most people have never looked. 🔎 Errors are common and fixable: unknown accounts, late payments that were on time, stale balances, collections past seven years. Disputing is free and takes 30 days. Checking your own report never hurts your score. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "creditreport",
+        "credittips",
+        "financialliteracy",
+        "moneybasics",
+        "consumerrights"
       ],
-      "surface": "feed"
+      "scheduled_for": "2026-10-04",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-04-am-01.jpg",
+        "site/social/2026-10-04-am-02.jpg",
+        "site/social/2026-10-04-am-03.jpg",
+        "site/social/2026-10-04-am-04.jpg",
+        "site/social/2026-10-04-am-05.jpg",
+        "site/social/2026-10-04-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-04-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
     }
   ]
 }

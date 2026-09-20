@@ -44,7 +44,7 @@ FORBIDDEN_TARGETING = {"genders", "custom_audiences", "excluded_custom_audiences
 
 # Copy that gets a debt-relief ad rejected: claims, guarantees, and asserting the viewer's situation.
 BANNED_CLAIMS = re.compile(
-    r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs|stimulus|debt[- ]free in)\b"
+    r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs (relief|forgiveness|program|fresh start)|stimulus|debt[- ]free in)\b"
     r"|\b(save|saving|saved|reduce[sd]?|reduction|cut|lower(ed|ing)?|settle[sd]?|settling|forgive[ns]?|forgiven|pay(ing)? (only|just))\b[^.%\n]{0,40}\d{1,3}\s?%"
     r"|\d{1,3}\s?%[^.%\n]{0,15}\b(off|less|savings?|reduction|settlement)\b", re.I)
 PERSONAL_ATTRIBUTES = re.compile(
