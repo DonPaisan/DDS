@@ -284,7 +284,7 @@ def list_slide(path: Path, *, heading: str, items: list[str], kicker: str, index
     img.save(path, "JPEG", quality=92, optimize=True)
 
 
-def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for later.", line2: str = "Send it to someone who could use it.", pill: str = "Free, no-judgment review  →  link in bio"):
+def cta_slide(path: Path, *, index: int, total: int, line1: str = "Save this for later.", line2: str = "Send it to someone who could use it.", pill: str = "Free, no-judgment review. Link in bio."):
     img = Image.new("RGB", (W, H), NAVY)
     glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(glow).ellipse([-300, H - 500, 500, H + 300], fill=(*BLUE_DEEP, 110))
