@@ -27,3 +27,7 @@ Format for each post:
 - caption: 60–140 words. Ends with a soft, optional invitation like
   "If you want to know whether this could fit your situation, the free review on our site takes about a minute."
 - hashtags: 5–8, lowercase, relevant (debtrelief, creditcarddebt, medicaldebt, retirementplanning, financialpeace…).
+
+Personal-attributes rule (Meta rejects violations, and checks the landing page's first screen too):
+describe the service, never the reader's situation. No "struggling with debt?", "if you're behind",
+"we understand your stress", "for people with bad credit". Say what the service is and what the review does.

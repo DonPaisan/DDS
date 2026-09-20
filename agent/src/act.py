@@ -19,7 +19,7 @@ from common import env, load_config, load_env, log_action
 def _post(path: str, data: dict) -> dict:
     load_env()
     token = env("META_TOKEN", required=True)
-    version = env("META_API_VERSION", "v21.0")
+    version = env("META_API_VERSION", "v26.0")
     r = requests.post(f"https://graph.facebook.com/{version}/{path}", data={**data, "access_token": token}, timeout=60)
     body = r.json()
     if "error" in body:

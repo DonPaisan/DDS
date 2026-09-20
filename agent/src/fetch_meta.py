@@ -28,7 +28,7 @@ class MetaError(RuntimeError):
 def graph_get(path: str, params: dict) -> dict:
     load_env()
     token = env("META_TOKEN", required=True)
-    version = env("META_API_VERSION", "v21.0")
+    version = env("META_API_VERSION", "v26.0")
     url = f"https://graph.facebook.com/{version}/{path}"
     r = requests.get(url, params={**params, "access_token": token}, timeout=60)
     try:

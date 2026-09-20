@@ -15,3 +15,7 @@ Steps:
    know in two weeks whether it worked (which number, which direction).
 
 Never touch `site/compliance.js`, `site/app.js`, `netlify/`, or the lead payload.
+
+Personal-attributes rule (Meta rejects violations, and checks the landing page's first screen too):
+describe the service, never the reader's situation. No "struggling with debt?", "if you're behind",
+"we understand your stress", "for people with bad credit". Say what the service is and what the review does.

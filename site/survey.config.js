@@ -11,13 +11,16 @@
 window.DDS_SURVEY = {
   version: "2026-09-20.1",
 
+  // Copy rule (Meta personal-attributes policy, enforced on the first screen of the
+  // landing page too): describe the service, never the visitor's situation.
+  // "Debt settlement options, explained" passes. "Struggling with debt?" gets rejected.
   hero: {
-    eyebrow: "Free debt review",
-    headline: "Struggling with credit card or medical debt?",
+    eyebrow: "Free debt settlement review",
+    headline: "Find out if debt settlement could lower what's owed on credit cards and medical bills.",
     subhead:
-      "Answer 4 quick questions to see if you qualify to lower what you owe. " +
-      "Takes about 60 seconds. No obligation.",
-    cta: "See if I qualify",
+      "A free, no-obligation review of unsecured debt options. Four quick questions, about 60 seconds, " +
+      "and a specialist explains what's possible in plain English.",
+    cta: "Start the free review",
     trust: ["No upfront fees", "No obligation", "Not a lender"]
   },
 
@@ -68,17 +71,17 @@ window.DDS_SURVEY = {
     {
       id: "contact",
       type: "contact",
-      question: "Good news — you may qualify.",
-      help: "Where should we send your free savings estimate? A specialist will reach out, usually within one business day.",
+      question: "Almost done.",
+      help: "Where should the free review go? A specialist will reach out, usually within one business day, to walk through the options.",
       fields: [
         { name: "first_name", label: "First name", type: "text", autocomplete: "given-name" },
         { name: "phone",      label: "Mobile phone", type: "tel", autocomplete: "tel" },
         { name: "email",      label: "Email", type: "email", autocomplete: "email" }
       ],
-      submitLabel: "Get my free estimate"
+      submitLabel: "Get my free review"
     }
   ],
 
   // Reassurance shown below the survey card.
-  reassurance: "Your answers are private and only used to match you with the right option."
+  reassurance: "Answers are private and only used to match the right option."
 };

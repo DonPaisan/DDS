@@ -3,14 +3,20 @@
   python src/social/publish.py            # dry run: shows what is due today
   python src/social/publish.py --really   # posts anything due today (requires social.enabled: true)
 
-Instagram needs a PUBLIC image URL, which is why generate.py writes the PNGs
-into site/social/ — Netlify deploys them. Make sure that deploy has happened.
+Instagram needs a PUBLIC JPEG URL, which is why generate.py writes JPEGs into
+site/social/ — Netlify deploys them. Make sure that deploy has happened.
+
+Token: a Page access token from a user who admins the Page, with
+pages_manage_posts, pages_read_engagement, instagram_basic, and
+instagram_content_publish. IG_USER_ID is the Instagram professional account
+linked to the Page: GET /{page-id}?fields=instagram_business_account.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -22,7 +28,7 @@ QUEUE_DIR = AGENT_DIR / "social" / "queue"
 
 
 def graph(method: str, path: str, **params) -> dict:
-    version = env("META_API_VERSION", "v21.0")
+    version = env("META_API_VERSION", "v26.0")
     r = requests.request(method, f"https://graph.facebook.com/{version}/{path}", params=params, timeout=60)
     body = r.json()
     if "error" in body:
@@ -36,8 +42,19 @@ def caption_text(p: dict) -> str:
 
 
 def post_instagram(p: dict, token: str) -> dict:
+    """Container model: create → poll status_code until FINISHED → publish."""
     ig = env("IG_USER_ID", required=True)
     creation = graph("POST", f"{ig}/media", image_url=p["image_url"], caption=caption_text(p), access_token=token)
+    for _ in range(20):
+        st = graph("GET", creation["id"], fields="status_code,status", access_token=token)
+        code = st.get("status_code")
+        if code == "FINISHED":
+            break
+        if code in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram container {creation['id']} {code}: {st.get('status')}")
+        time.sleep(3)
+    else:
+        raise RuntimeError(f"Instagram container {creation['id']} not ready after 60s")
     return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
 
 

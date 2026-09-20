@@ -2,7 +2,7 @@
  * pixel via event_id. Fails loudly in logs but never throws to the caller. */
 import { sha256 } from "./util.js";
 
-const API_VERSION = process.env.META_API_VERSION || "v21.0";
+const API_VERSION = process.env.META_API_VERSION || "v26.0";
 
 export function capiEnabled() {
   return Boolean(process.env.META_PIXEL_ID && process.env.META_CAPI_TOKEN);

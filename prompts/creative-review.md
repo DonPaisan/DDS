@@ -14,3 +14,7 @@ Run `cd agent && python src/fetch_meta.py --days 28` then query `agent/data/ads.
    never salesy. Comply with every rule in CLAUDE.md (no guarantees, no percentages, no
    government implication, Credit Special Ad Category).
 5. Write to `agent/drafts/<date>-hooks.md`. Do not touch the ad account. Do not create ads.
+
+Personal-attributes rule (Meta rejects violations, and checks the landing page's first screen too):
+describe the service, never the reader's situation. No "struggling with debt?", "if you're behind",
+"we understand your stress", "for people with bad credit". Say what the service is and what the review does.

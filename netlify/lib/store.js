@@ -1,9 +1,10 @@
 import { getStore } from "@netlify/blobs";
 
+// Outside Netlify (local scripts) the store needs explicit credentials.
 const opts = () => (process.env.NETLIFY_BLOBS_CONTEXT || process.env.NETLIFY ? {} : { siteID: process.env.NETLIFY_SITE_ID, token: process.env.NETLIFY_TOKEN });
 
-export const eventsStore = () => getStore({ name: "events", ...opts() });
-export const leadsStore = () => getStore({ name: "leads", ...opts() });
+export const eventsStore = (consistency = "eventual") => getStore({ name: "events", consistency, ...opts() });
+export const leadsStore = (consistency = "eventual") => getStore({ name: "leads", consistency, ...opts() });
 
 export function eventKey(ev) {
   const day = ev.ts.slice(0, 10);
@@ -27,37 +28,60 @@ export function daysBetween(from, to) {
   return out;
 }
 
-async function readAll(store, prefix, limit) {
+/** List every key under a prefix. `list({paginate:true})` yields pages of ≤1000. */
+export async function listKeys(store, prefix, limit = Infinity) {
   const keys = [];
-  let cursor;
-  do {
-    const page = await store.list({ prefix, cursor });
+  for await (const page of store.list({ prefix, paginate: true })) {
     for (const b of page.blobs) keys.push(b.key);
-    cursor = page.cursor;
-  } while (cursor && keys.length < limit);
+    if (keys.length >= limit) break;
+  }
+  return keys.slice(0, limit);
+}
+
+/** Read every JSON blob under a prefix, a few at a time. */
+export async function readAll(store, prefix, limit = Infinity, concurrency = 25) {
+  const keys = await listKeys(store, prefix, limit);
   const out = [];
-  const CHUNK = 25;
-  for (let i = 0; i < keys.length && out.length < limit; i += CHUNK) {
-    const batch = await Promise.all(keys.slice(i, i + CHUNK).map((k) => store.get(k, { type: "json" }).catch(() => null)));
+  for (let i = 0; i < keys.length; i += concurrency) {
+    const batch = await Promise.all(keys.slice(i, i + concurrency).map((k) => store.get(k, { type: "json" }).catch(() => null)));
     for (const b of batch) if (b) out.push(b);
   }
   return out;
 }
 
+const todayKey = () => new Date().toISOString().slice(0, 10);
+
+/**
+ * Events for one day. Past days are rolled up into a single `rollup/<day>.json`
+ * blob the first time they're read, so repeat reads (dashboard, daily agent
+ * pull) are one request instead of thousands. Today is always read live.
+ */
+export async function readDay(day, { store = eventsStore("strong"), rollup = true } = {}) {
+  const isPast = day < todayKey();
+  if (isPast && rollup) {
+    const cached = await store.get(`rollup/${day}.json`, { type: "json" }).catch(() => null);
+    if (cached && Array.isArray(cached.events)) return cached.events;
+  }
+  const events = await readAll(store, day + "/");
+  if (isPast && rollup && events.length) {
+    await store.setJSON(`rollup/${day}.json`, { day, count: events.length, built_at: new Date().toISOString(), events }).catch(() => {});
+  }
+  return events;
+}
+
 export async function readEvents(from, to, limit = 50000) {
-  const store = eventsStore();
+  const store = eventsStore("strong");
   const out = [];
   for (const day of daysBetween(from, to)) {
-    const chunk = await readAll(store, day + "/", limit - out.length);
-    out.push(...chunk);
+    out.push(...(await readDay(day, { store })));
     if (out.length >= limit) break;
   }
   out.sort((a, b) => (a.ts < b.ts ? -1 : a.ts > b.ts ? 1 : 0));
-  return out;
+  return out.slice(0, limit);
 }
 
 export async function readLeads(from, to, limit = 5000) {
-  const store = leadsStore();
+  const store = leadsStore("strong");
   const out = [];
   for (const day of daysBetween(from, to)) {
     out.push(...(await readAll(store, day + "/", limit - out.length)));

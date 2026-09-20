@@ -124,12 +124,25 @@ Rollout order (from the spec): run the digest for two weeks → read the dry-run
 ## Social content
 
 `agent/src/social/generate.py` asks Claude for a week of posts (themes, compliance rules in
-`prompts/social-content.md`, a regex gate on top), renders quote cards into `site/social/`, and
-queues them. The weekly workflow opens a PR so you approve captions and images. After merging,
+`prompts/social-content.md`, a regex gate on top), renders 1080×1080 JPEG quote cards into
+`site/social/` (Instagram's API rejects PNG), and queues them. The weekly workflow opens a PR so you approve captions and images. After merging,
 `python src/social/publish.py --really` posts whatever is due that day to Instagram and the
 Facebook page (Graph API; needs `IG_USER_ID`, `FB_PAGE_ID`, `FB_PAGE_TOKEN`, and
-`social.enabled: true`). Set the repository variable `SOCIAL_CONTENT_ENABLED=true` to turn the
+`social.enabled: true`). The token is a Page access token with `pages_manage_posts`,
+`pages_read_engagement`, `instagram_basic`, and `instagram_content_publish`; the IG user id
+comes from `GET /{page-id}?fields=instagram_business_account`. Set the repository variable `SOCIAL_CONTENT_ENABLED=true` to turn the
 weekly generation on.
+
+## Limits worth knowing
+
+- Netlify synchronous functions time out at 10 s (26 s on Pro by request). `/api/report` rolls
+  each past day up into one blob the first time it's read, so repeat reads are fast; a single day
+  with tens of thousands of events could still be slow on first read. Today's events are read live.
+- Graph API version defaults to `v26.0` (July 2026). Override with `META_API_VERSION` if Meta
+  sunsets it.
+- Meta's personal-attributes policy is enforced on the landing page's first screen, not just the
+  ad. Headlines describe the service ("a free debt settlement review"), never the visitor
+  ("struggling with debt?"). Form questions may ask about the visitor's situation.
 
 ## Compliance
 

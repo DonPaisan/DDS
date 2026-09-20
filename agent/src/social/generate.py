@@ -6,7 +6,7 @@ and queue them for publish.py.
 
 Output:
   agent/social/queue/<week>.json      the posts (caption, hashtags, card text, scheduled day)
-  site/social/<week>-<n>.png          the images (deployed by Netlify → public URL for the Graph API)
+  site/social/<week>-<n>.jpg          the images (deployed by Netlify → public URL for the Graph API; JPEG is required by Instagram)
 
 Nothing here posts anything. publish.py does that, and only when social.enabled is true.
 """
@@ -106,10 +106,10 @@ def queue(posts: list[dict], week: date, cfg: dict) -> Path:
     out = {"week": week.isoformat(), "generated_at": today().isoformat(), "posts": []}
     for i, (p, d) in enumerate(zip(posts, sorted(days)), 1):
         slug = f"{week.isoformat()}-{i}"
-        img = render_card(p["card_text"], IMG_DIR / f"{slug}.png", color=S["brand_color"], kicker=p["theme"])
+        img = render_card(p["card_text"], IMG_DIR / f"{slug}.jpg", color=S["brand_color"], kicker=p["theme"])
         out["posts"].append({
             **p, "id": slug, "scheduled_for": (week + timedelta(days=d)).isoformat(),
-            "image_path": str(img.relative_to(REPO_DIR)), "image_url": f"{S['site_public_url'].rstrip('/')}/social/{slug}.png",
+            "image_path": str(img.relative_to(REPO_DIR)), "image_url": f"{S['site_public_url'].rstrip('/')}/social/{slug}.jpg",
             "status": "queued", "platforms": S["platforms"],
         })
     QUEUE_DIR.mkdir(parents=True, exist_ok=True)
@@ -134,7 +134,7 @@ def main(argv=None):
         sys.exit("[social] no posts survived the compliance gate")
     path = queue(posts, week, cfg)
     print(f"[social] queued {len(posts)} posts → {path}")
-    print("[social] commit site/social/*.png so the images deploy, then publish.py can post them.")
+    print("[social] commit site/social/*.jpg so the images deploy, then publish.py can post them.")
 
 
 if __name__ == "__main__":

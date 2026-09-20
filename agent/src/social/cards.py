@@ -1,4 +1,6 @@
-"""Render simple branded quote cards (1080×1080 PNG) for Instagram/Facebook.
+"""Render simple branded quote cards (1080×1080 JPEG) for Instagram/Facebook.
+
+JPEG, not PNG: the Instagram publishing API rejects PNG. sRGB, 1:1, well under 8 MB.
 
 Kept deliberately plain: solid brand background, big readable text, company name.
 The point is a steady, credible presence, not design awards."""
@@ -66,5 +68,5 @@ def render_card(text: str, out_path: Path, brand: str = "Debt Direct Solutions",
     d.text((margin, H - margin - 40), brand, font=bf, fill="white")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG", optimize=True)
+    img.save(out_path, "JPEG", quality=92, optimize=True)
     return out_path
