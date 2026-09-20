@@ -1,23 +1,65 @@
 {
   "week": "2026-09-20",
   "generated_at": "2026-09-20",
+  "kind": "carousel",
   "posts": [
     {
-      "theme": "how-it-works",
-      "card_text": "Debt settlement, in one sentence: a creditor agrees to accept less than the full balance.",
-      "caption": "That is the whole idea. Instead of paying every dollar over many years, a settlement company negotiates with the creditor to close the account for less than what is owed, paid from money set aside over time.\n\nIt is not a loan, and it is not the same as doing nothing. It also has real trade-offs: it can affect credit scores, and creditors may keep calling until an account is settled. It fits some situations and not others.\n\nIf you want to know whether it could fit yours, the free review on our site takes about a minute.",
-      "hashtags": [
-        "debtsettlement",
-        "debtrelief",
-        "creditcarddebt",
-        "medicaldebt",
-        "personalfinance",
-        "retirementplanning"
+      "id": "2026-09-20-pm",
+      "kind": "carousel",
+      "title": "Interest and APR are two views of the same cost.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Interest is the price of borrowing.",
+          "body": "When a balance carries past the due date, the card issuer charges interest on it. It is added to the balance, so next month there is a little more to charge interest on."
+        },
+        {
+          "heading": "APR is the yearly rate.",
+          "body": "APR stands for annual percentage rate. A card at 24% APR charges about 2% a month. Statements show the APR; the interest line shows what that rate cost this month in dollars."
+        },
+        {
+          "heading": "Cards charge daily, not monthly.",
+          "body": "Most issuers divide the APR by 365 and apply it to the balance every day. That is why paying a few days earlier saves a little, and why a balance grows faster than the yearly rate suggests."
+        },
+        {
+          "heading": "Where to find it on a statement.",
+          "body": "Look for a box called \"Interest Charge Calculation\" or \"APR.\" It lists purchase APR, cash advance APR, and any penalty APR. Penalty APRs are often above 29% and can apply after a late payment."
+        },
+        {
+          "heading": "Why it matters.",
+          "body": "Two people can owe the same $5,000. At 12% APR the interest is about $50 a month at first. At 29% it is about $120. Same balance, very different cost."
+        }
       ],
-      "id": "2026-09-20-1",
+      "caption": "Interest and APR describe the same thing from two angles: interest is the dollar cost of carrying a balance, APR is the yearly rate that produces it. Cards apply that rate daily, which is why balances grow faster than people expect and why a penalty APR after one late payment hurts so much. Knowing the APR on each account is the first step to any plan, because it tells you which balance is the most expensive to keep. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtbasics",
+        "apr",
+        "creditcardinterest",
+        "personalfinance",
+        "financialliteracy",
+        "over50",
+        "moneymatters"
+      ],
       "scheduled_for": "2026-09-20",
-      "image_path": "site/social/2026-09-20-1.jpg",
-      "image_url": "https://debtdirectsolutions.netlify.app/social/2026-09-20-1.jpg",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-20-pm-01.jpg",
+        "site/social/2026-09-20-pm-02.jpg",
+        "site/social/2026-09-20-pm-03.jpg",
+        "site/social/2026-09-20-pm-04.jpg",
+        "site/social/2026-09-20-pm-05.jpg",
+        "site/social/2026-09-20-pm-06.jpg",
+        "site/social/2026-09-20-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-07.jpg"
+      ],
       "status": "queued",
       "platforms": [
         "instagram",
@@ -25,43 +67,62 @@
       ]
     },
     {
-      "theme": "myth-busting",
-      "card_text": "Settling a debt is not the same as ignoring it.",
-      "caption": "There is a difference between letting accounts go quiet and working through them on purpose.\n\nIgnoring debt means the balance keeps growing with interest and fees, and the calls keep coming. Settling means a plan: money set aside each month, creditors contacted, accounts closed one at a time for an agreed amount.\n\nNeither path is free of consequences. But one of them ends. If you would like to see what a settlement plan might look like for a set of balances, the review on our site is free and takes about a minute.",
+      "id": "2026-09-21-am",
+      "kind": "carousel",
+      "title": "A $5,000 card paid at the minimum can take about 20 years to clear.",
+      "theme": "Payoff math",
+      "slides": [
+        {
+          "heading": "How minimum payments are set.",
+          "body": "A common formula is 1% of the balance plus that month's interest, or $25, whichever is more. On $5,000 at 24% APR that is about $150 in month one."
+        },
+        {
+          "heading": "The catch.",
+          "body": "As the balance drops, so does the minimum. Paying less each month stretches the loan. The design keeps the account open for as long as possible."
+        },
+        {
+          "heading": "The projection.",
+          "body": "$5,000 at 24% APR, minimum payments only: roughly 20 years to reach zero and about $8,887 in interest. That is more than the original balance."
+        },
+        {
+          "heading": "The fix is a fixed amount.",
+          "body": "Pick a payment and keep it there even as the minimum falls. Paying a flat $150 on that same $5,000 clears it in about 5 years with about $3,400 in interest."
+        },
+        {
+          "heading": "Every statement shows this.",
+          "body": "By law, statements include a box showing how long payoff takes at the minimum and what to pay to clear the balance in three years. It is worth reading once."
+        }
+      ],
+      "caption": "Minimum payments are not designed to get a balance to zero quickly. On $5,000 at 24% APR, paying only the minimum takes roughly 20 years and costs about $8,887 in interest. Keeping the payment fixed at $150, instead of letting it shrink, changes that to about 5 years. Same card, same rate, one habit. The payoff box on every statement shows these numbers for each account. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
       "hashtags": [
-        "debtrelief",
-        "debtsettlement",
-        "financialpeace",
-        "creditcards",
-        "moneytips",
+        "payoffmath",
+        "minimumpayment",
+        "creditcarddebt",
+        "debtbasics",
+        "personalfinance",
+        "budgeting",
         "over50"
       ],
-      "id": "2026-09-20-2",
       "scheduled_for": "2026-09-21",
-      "image_path": "site/social/2026-09-20-2.jpg",
-      "image_url": "https://debtdirectsolutions.netlify.app/social/2026-09-20-2.jpg",
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ]
-    },
-    {
-      "theme": "practical tip",
-      "card_text": "A collector calling is not an emergency. Write down the date, the name, and the amount.",
-      "caption": "A few things worth knowing before the phone rings again.\n\nA collector must tell you who they are and what the debt is. You can ask for that in writing, and it is reasonable to say nothing else until it arrives. You do not have to agree to a payment on the call. And keeping a simple log of every call, with the date, the caller, and the amount claimed, makes every later conversation easier.\n\nNone of this is legal advice. It is just how to stay calm and organized. If you want help sorting out which balances could be settled, the free review on our site is a good first step.",
-      "hashtags": [
-        "debtcollectors",
-        "consumertips",
-        "debtrelief",
-        "medicaldebt",
-        "moneymanagement",
-        "financialwellness"
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-21-am-01.jpg",
+        "site/social/2026-09-21-am-02.jpg",
+        "site/social/2026-09-21-am-03.jpg",
+        "site/social/2026-09-21-am-04.jpg",
+        "site/social/2026-09-21-am-05.jpg",
+        "site/social/2026-09-21-am-06.jpg",
+        "site/social/2026-09-21-am-07.jpg"
       ],
-      "id": "2026-09-20-3",
-      "scheduled_for": "2026-09-23",
-      "image_path": "site/social/2026-09-20-3.jpg",
-      "image_url": "https://debtdirectsolutions.netlify.app/social/2026-09-20-3.jpg",
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-07.jpg"
+      ],
       "status": "queued",
       "platforms": [
         "instagram",
@@ -69,21 +130,562 @@
       ]
     },
     {
-      "theme": "faq",
-      "card_text": "Can medical bills be included in a settlement? Usually, yes.",
-      "caption": "One of the most common questions we get.\n\nMedical bills are unsecured debt, the same category as credit cards, personal loans, and accounts in collections. That is the kind of debt settlement programs work with. Mortgages, car loans, and federal student loans generally cannot be included, because they are secured or backed by the government.\n\nEvery situation is different, and settlement is not right for everyone. If you have a mix of balances and want to know which ones could qualify, the free review on our site sorts that out in about a minute.",
+      "id": "2026-09-21-pm",
+      "kind": "carousel",
+      "title": "Credit card interest is calculated every day.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "The daily rate.",
+          "body": "Issuers divide the APR by 365. At 24% APR the daily rate is about 0.066%. Small, but it applies every single day to whatever is owed."
+        },
+        {
+          "heading": "The average daily balance.",
+          "body": "Each day's balance is added up over the billing cycle and averaged. Interest is that average times the daily rate times the number of days."
+        },
+        {
+          "heading": "Why timing matters.",
+          "body": "A $2,000 payment made on day 3 of the cycle lowers the average balance for the whole month. The same payment on day 28 barely moves it. Earlier is cheaper."
+        },
+        {
+          "heading": "The grace period.",
+          "body": "Pay the full statement balance by the due date and most cards charge no interest on new purchases. Carry any balance, and the grace period usually disappears until it is paid in full again."
+        },
+        {
+          "heading": "Compounding.",
+          "body": "Unpaid interest becomes part of the balance, so next month charges interest on interest. That is why a balance left alone grows faster every year."
+        }
+      ],
+      "caption": "Interest on a credit card is not charged once a month; it accrues daily on the average balance across the billing cycle. That has two practical consequences: paying earlier in the cycle costs less than paying on the due date, and carrying any balance usually cancels the grace period on new purchases until the card is paid to zero. Understanding the mechanism makes the statement far less mysterious. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "creditcards",
+        "interest",
+        "debtbasics",
+        "financialliteracy",
+        "personalfinance",
+        "moneytips"
+      ],
+      "scheduled_for": "2026-09-21",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-21-pm-01.jpg",
+        "site/social/2026-09-21-pm-02.jpg",
+        "site/social/2026-09-21-pm-03.jpg",
+        "site/social/2026-09-21-pm-04.jpg",
+        "site/social/2026-09-21-pm-05.jpg",
+        "site/social/2026-09-21-pm-06.jpg",
+        "site/social/2026-09-21-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-22-am",
+      "kind": "carousel",
+      "title": "$10,000 at 22% APR: minimum payments vs a flat $300 a month.",
+      "theme": "Payoff math",
+      "slides": [
+        {
+          "heading": "Two ways to pay the same balance.",
+          "body": "Same $10,000, same 22% APR. Option A: pay the minimum each month. Option B: pay a fixed $300 every month no matter what the statement asks for."
+        },
+        {
+          "heading": "Option A, minimums.",
+          "body": "About 25 years to pay off, with roughly $17,266 in interest along the way. The payment shrinks each month, so the balance lingers."
+        },
+        {
+          "heading": "Option B, fixed $300.",
+          "body": "About 4 years to pay off, with roughly $5,600 in interest. Same account, same rate. The difference is only the habit of not paying less as the minimum falls."
+        },
+        {
+          "heading": "What this projection assumes.",
+          "body": "No new charges, no rate changes, on-time payments every month. Real life is messier, which usually makes the minimum-payment path longer, not shorter."
+        },
+        {
+          "heading": "How to run it yourself.",
+          "body": "Search for a credit card payoff calculator, enter the balance, APR, and a payment. Try two or three payment amounts. The gap between them is the cost of waiting."
+        }
+      ],
+      "caption": "A payoff projection puts a number on a feeling. On $10,000 at 22% APR, minimum payments take about 25 years and cost roughly $17,266 in interest. A fixed $300 a month clears it in about 4 years for roughly $5,600. Nothing about the debt changed; only the payment stopped shrinking. Free payoff calculators do this math for any balance in under a minute. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "payoffmath",
+        "creditcarddebt",
+        "debtfreejourney",
+        "personalfinance",
+        "budgeting",
+        "financialplanning",
+        "over50"
+      ],
+      "scheduled_for": "2026-09-22",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-22-am-01.jpg",
+        "site/social/2026-09-22-am-02.jpg",
+        "site/social/2026-09-22-am-03.jpg",
+        "site/social/2026-09-22-am-04.jpg",
+        "site/social/2026-09-22-am-05.jpg",
+        "site/social/2026-09-22-am-06.jpg",
+        "site/social/2026-09-22-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-22-pm",
+      "kind": "carousel",
+      "title": "Secured debt has collateral. Unsecured debt does not.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Secured debt.",
+          "body": "A mortgage is secured by the house. An auto loan is secured by the car. If payments stop, the lender can take the collateral. Rates are lower because the lender has that safety net."
+        },
+        {
+          "heading": "Unsecured debt.",
+          "body": "Credit cards, medical bills, personal loans, store cards, most collection accounts. Nothing physical backs them. The lender's tools are interest, fees, collections, and in some cases a lawsuit."
+        },
+        {
+          "heading": "Why the difference matters.",
+          "body": "Options differ by type. Settlement, counseling plans, and hardship programs generally work with unsecured balances. Secured loans are handled through the lender, refinancing, or selling the asset."
+        },
+        {
+          "heading": "Student loans are their own category.",
+          "body": "Federal student loans are unsecured but backed by the government, with their own repayment and forgiveness rules. Private student loans are closer to personal loans."
+        },
+        {
+          "heading": "First step for any plan.",
+          "body": "List every balance and mark it secured or unsecured. Most plans start by sorting the pile this way."
+        }
+      ],
+      "caption": "The single most useful sort for a pile of bills is secured versus unsecured. Secured debt has collateral behind it, like a house or car, and is handled through the lender or by refinancing. Unsecured debt, which includes credit cards, medical bills, personal loans, and collections, is where hardship programs, counseling plans, and settlement operate. Knowing which is which tells you which doors are open for each balance. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtbasics",
+        "securedvsunsecured",
+        "financialliteracy",
+        "personalfinance",
+        "creditcards",
+        "medicaldebt"
+      ],
+      "scheduled_for": "2026-09-22",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-22-pm-01.jpg",
+        "site/social/2026-09-22-pm-02.jpg",
+        "site/social/2026-09-22-pm-03.jpg",
+        "site/social/2026-09-22-pm-04.jpg",
+        "site/social/2026-09-22-pm-05.jpg",
+        "site/social/2026-09-22-pm-06.jpg",
+        "site/social/2026-09-22-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-23-am",
+      "kind": "carousel",
+      "title": "Bankruptcy has two common chapters, and they work very differently.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Chapter 7.",
+          "body": "Often called liquidation. Non-exempt assets can be sold to pay creditors, and most remaining unsecured debt is discharged. The process usually takes a few months. There is an income test to qualify."
+        },
+        {
+          "heading": "Chapter 13.",
+          "body": "A court-supervised repayment plan, usually three to five years. People keep their property and pay what the plan says; remaining eligible debt is discharged at the end."
+        },
+        {
+          "heading": "What each does to credit.",
+          "body": "A Chapter 7 can stay on credit reports for up to 10 years, a Chapter 13 for 7. Scores usually drop sharply at first and can recover over time with new, on-time history."
+        },
+        {
+          "heading": "What it does not do.",
+          "body": "Child support, most student loans, recent taxes, and court fines generally survive bankruptcy. Secured lenders can still take collateral if the loan is not kept current."
+        },
+        {
+          "heading": "Talk to a bankruptcy attorney.",
+          "body": "This is general information, not legal advice. Many bankruptcy attorneys offer a free first consultation, and a consultation does not commit anyone to filing."
+        }
+      ],
+      "caption": "Bankruptcy is a legal process with two common forms. Chapter 7 discharges most unsecured debt within months but may involve selling non-exempt assets and has an income test. Chapter 13 is a three-to-five-year repayment plan that lets people keep property. Both stay on credit reports for years, and some debts survive either one. It is one option among several, and the right first step is a consultation with a bankruptcy attorney, which is often free. This post is information, not legal advice. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "bankruptcy",
+        "chapter7",
+        "chapter13",
+        "debtbasics",
+        "financialliteracy",
+        "personalfinance",
+        "over50"
+      ],
+      "scheduled_for": "2026-09-23",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-23-am-01.jpg",
+        "site/social/2026-09-23-am-02.jpg",
+        "site/social/2026-09-23-am-03.jpg",
+        "site/social/2026-09-23-am-04.jpg",
+        "site/social/2026-09-23-am-05.jpg",
+        "site/social/2026-09-23-am-06.jpg",
+        "site/social/2026-09-23-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-23-pm",
+      "kind": "carousel",
+      "title": "Avalanche pays the highest rate first. Snowball pays the smallest balance first.",
+      "theme": "Paying it down",
+      "slides": [
+        {
+          "heading": "The setup is the same.",
+          "body": "List every unsecured balance with its APR. Pay the minimum on all of them. Put every extra dollar toward one target account until it is gone, then roll that payment to the next."
+        },
+        {
+          "heading": "Avalanche: highest APR first.",
+          "body": "Targets the most expensive debt. Over the whole payoff it costs the least in interest and finishes soonest on paper."
+        },
+        {
+          "heading": "Snowball: smallest balance first.",
+          "body": "Targets the account that can be closed fastest. Costs a bit more in interest, but each closed account is a visible win, and that keeps many people going."
+        },
+        {
+          "heading": "Which one is right?",
+          "body": "The one that gets followed. If the numbers alone are motivating, avalanche. If a closed account is what keeps the plan alive, snowball. Both beat paying minimums everywhere."
+        },
+        {
+          "heading": "A hybrid that works.",
+          "body": "Close one or two tiny balances first for momentum, then switch to highest rate. The cost difference is usually small; the consistency is what matters."
+        }
+      ],
+      "caption": "Two well-known payoff orders. Avalanche sends extra money to the highest APR first and costs the least in interest. Snowball sends it to the smallest balance first and produces quicker visible wins. Studies and experience both say the best method is the one a person keeps doing, and either one beats spreading extra money thinly across every account. A short hybrid, small wins first then highest rate, is a reasonable middle path. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtsnowball",
+        "debtavalanche",
+        "payoffplan",
+        "debtfreejourney",
+        "personalfinance",
+        "budgeting"
+      ],
+      "scheduled_for": "2026-09-23",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-23-pm-01.jpg",
+        "site/social/2026-09-23-pm-02.jpg",
+        "site/social/2026-09-23-pm-03.jpg",
+        "site/social/2026-09-23-pm-04.jpg",
+        "site/social/2026-09-23-pm-05.jpg",
+        "site/social/2026-09-23-pm-06.jpg",
+        "site/social/2026-09-23-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-23-pm-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-24-am",
+      "kind": "carousel",
+      "title": "When an account goes to collections, the rules change.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Charge-off comes first.",
+          "body": "After roughly six months without payment, a card issuer usually charges the account off. That is an accounting step, not forgiveness. The debt still exists and is often sold or assigned to a collector."
+        },
+        {
+          "heading": "The validation notice.",
+          "body": "Under federal law, a collector must send written details of the debt within five days of first contact: the amount, the original creditor, and how to dispute it. Asking for this in writing is always reasonable."
+        },
+        {
+          "heading": "Credit reports.",
+          "body": "A collection account can appear on credit reports for up to seven years from the original missed payment, whether or not it is later paid. Paid collections often hurt less than unpaid ones under newer scoring models."
+        },
+        {
+          "heading": "Statutes of limitations.",
+          "body": "Each state limits how long a collector can sue over a debt, commonly three to six years. The debt does not vanish after that, but a lawsuit becomes much harder. A small payment can restart the clock in some states."
+        },
+        {
+          "heading": "Keep a log.",
+          "body": "Date, caller, company, amount claimed. Collectors must follow rules about when and how often they call, and a log is how those rules get enforced."
+        }
+      ],
+      "caption": "Collections is a stage with its own rules. The original creditor usually charges off after about six months, then sells or assigns the account. The collector must validate the debt in writing on request, can report it for up to seven years from the first missed payment, and can only sue within the state's statute of limitations. None of this is legal advice, but knowing the sequence removes a lot of the fear from a ringing phone. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtcollection",
+        "collections",
+        "consumerrights",
+        "fdcpa",
+        "debtbasics",
+        "financialliteracy",
+        "personalfinance"
+      ],
+      "scheduled_for": "2026-09-24",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-24-am-01.jpg",
+        "site/social/2026-09-24-am-02.jpg",
+        "site/social/2026-09-24-am-03.jpg",
+        "site/social/2026-09-24-am-04.jpg",
+        "site/social/2026-09-24-am-05.jpg",
+        "site/social/2026-09-24-am-06.jpg",
+        "site/social/2026-09-24-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-am-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-24-pm",
+      "kind": "carousel",
+      "title": "Credit utilization: the number that moves scores fastest.",
+      "theme": "Credit basics",
+      "slides": [
+        {
+          "heading": "What it is.",
+          "body": "Utilization is the balance divided by the credit limit. A $3,000 balance on a $10,000 limit is 30% utilization. Scoring models look at each card and at all cards combined."
+        },
+        {
+          "heading": "Why it counts so much.",
+          "body": "Amounts owed are roughly a third of a FICO score, and utilization is most of that. High utilization signals strain even when every payment is on time."
+        },
+        {
+          "heading": "The common guidance.",
+          "body": "Under 30% is the usual rule of thumb; under 10% scores better still. A single maxed-out card can pull a score down even when the overall ratio is fine."
+        },
+        {
+          "heading": "It is a snapshot.",
+          "body": "Most issuers report the balance on the statement date. Paying before the statement closes lowers the reported number. Utilization has no memory: bring it down and the score reacts the next cycle."
+        },
+        {
+          "heading": "What does not help.",
+          "body": "Closing a paid-off card removes its limit from the total and can raise utilization. Keeping old accounts open, at zero, usually helps."
+        }
+      ],
+      "caption": "Credit utilization is the share of available credit being used, measured per card and overall. It is one of the heaviest factors in a score and one of the few that changes quickly, because it has no memory: lower the reported balance and the score adjusts the next month. Under 30% is the usual guidance, lower is better, and closing paid-off cards can backfire by shrinking the total limit. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "creditutilization",
+        "creditscore",
+        "creditbasics",
+        "financialliteracy",
+        "personalfinance",
+        "creditcards"
+      ],
+      "scheduled_for": "2026-09-24",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-24-pm-01.jpg",
+        "site/social/2026-09-24-pm-02.jpg",
+        "site/social/2026-09-24-pm-03.jpg",
+        "site/social/2026-09-24-pm-04.jpg",
+        "site/social/2026-09-24-pm-05.jpg",
+        "site/social/2026-09-24-pm-06.jpg",
+        "site/social/2026-09-24-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-25-am",
+      "kind": "carousel",
+      "title": "Consolidation, counseling, and settlement are three different tools.",
+      "theme": "Options",
+      "slides": [
+        {
+          "heading": "Debt consolidation.",
+          "body": "A new loan pays off several balances, leaving one payment, ideally at a lower rate. It requires decent credit to qualify, and it does not reduce what is owed."
+        },
+        {
+          "heading": "Credit counseling plan.",
+          "body": "A nonprofit agency sets up a debt management plan: one monthly payment, and creditors often lower interest rates. The full balance is repaid, usually over three to five years. Accounts are typically closed."
+        },
+        {
+          "heading": "Debt settlement.",
+          "body": "A company negotiates with creditors to accept less than the full balance, paid from money set aside over time. It can affect credit scores, creditors may keep collecting until each account settles, and forgiven amounts may be taxable."
+        },
+        {
+          "heading": "Fees and rules.",
+          "body": "Federal rules bar settlement companies from charging a fee before a debt is actually settled. Counseling agencies charge small monthly fees. Consolidation costs are the loan's interest and any origination fee."
+        },
+        {
+          "heading": "Which fits when.",
+          "body": "Good credit and steady income point toward consolidation. Ability to pay in full over time points toward counseling. Balances that cannot be repaid in full point toward settlement or a bankruptcy consultation."
+        }
+      ],
+      "caption": "Three tools that get confused with each other. Consolidation replaces several debts with one new loan and needs good credit. A counseling plan repays everything, usually at reduced rates, through one payment over a few years. Settlement negotiates to close accounts for less than the balance and comes with real trade-offs for credit and taxes. Each fits a different situation, and an honest review should say which one, or none, fits. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtconsolidation",
+        "creditcounseling",
+        "debtsettlement",
+        "debtrelief",
+        "debtbasics",
+        "personalfinance",
+        "over50"
+      ],
+      "scheduled_for": "2026-09-25",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-25-am-01.jpg",
+        "site/social/2026-09-25-am-02.jpg",
+        "site/social/2026-09-25-am-03.jpg",
+        "site/social/2026-09-25-am-04.jpg",
+        "site/social/2026-09-25-am-05.jpg",
+        "site/social/2026-09-25-am-06.jpg",
+        "site/social/2026-09-25-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-am-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-25-pm",
+      "kind": "carousel",
+      "title": "Medical debt plays by slightly different rules.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Ask for an itemized bill first.",
+          "body": "Billing errors are common. An itemized statement lists each charge and code. Comparing it with the insurer's explanation of benefits catches duplicates and services never received."
+        },
+        {
+          "heading": "Financial assistance exists.",
+          "body": "Nonprofit hospitals are required to have financial assistance policies, and many reduce or waive bills below certain income levels. It has to be asked for; it is rarely offered."
+        },
+        {
+          "heading": "Payment plans, often interest-free.",
+          "body": "Most providers will set up a monthly plan at no interest if asked before the account goes to collections. That alone can keep a medical bill from ever touching a credit report."
+        },
+        {
+          "heading": "Credit reporting is gentler now.",
+          "body": "The three big bureaus no longer report paid medical collections, and unpaid ones under $500 are not shown. Larger unpaid ones get a one-year wait before they can appear. The rules have shifted several times, so check reports."
+        },
+        {
+          "heading": "It is still unsecured debt.",
+          "body": "Once it reaches collections, a medical bill behaves like any other unsecured account and can be part of a counseling plan or a settlement review."
+        }
+      ],
+      "caption": "Medical bills deserve a different first response than a card balance. Ask for an itemized bill and check it against the insurer's statement. Ask the hospital about financial assistance, which nonprofit hospitals must offer. Ask for an interest-free payment plan before the account ages. Credit reporting for medical debt is gentler than it used to be, though the rules keep changing. Once in collections, it is ordinary unsecured debt with the same options as any other. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
       "hashtags": [
         "medicaldebt",
         "medicalbills",
-        "debtsettlement",
-        "debtrelief",
         "healthcarecosts",
-        "seniorfinance"
+        "debtbasics",
+        "financialliteracy",
+        "seniorfinance",
+        "personalfinance"
       ],
-      "id": "2026-09-20-4",
       "scheduled_for": "2026-09-25",
-      "image_path": "site/social/2026-09-20-4.jpg",
-      "image_url": "https://debtdirectsolutions.netlify.app/social/2026-09-20-4.jpg",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-25-pm-01.jpg",
+        "site/social/2026-09-25-pm-02.jpg",
+        "site/social/2026-09-25-pm-03.jpg",
+        "site/social/2026-09-25-pm-04.jpg",
+        "site/social/2026-09-25-pm-05.jpg",
+        "site/social/2026-09-25-pm-06.jpg",
+        "site/social/2026-09-25-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-25-pm-07.jpg"
+      ],
       "status": "queued",
       "platforms": [
         "instagram",
@@ -91,21 +693,188 @@
       ]
     },
     {
-      "theme": "encouragement",
-      "card_text": "Debt is a math problem, not a character flaw.",
-      "caption": "A hospital stay, a slow year, a card that covered groceries when something else fell through. Balances add up for ordinary reasons, and carrying them is not a verdict on anyone.\n\nMath problems have steps. Know the total. Know which balances are unsecured. Know what options exist for each. Then pick one and start.\n\nWe are here to explain the options in plain language, with no pressure and no obligation. The free review on our site is the first step, and it takes about a minute.",
-      "hashtags": [
-        "financialpeace",
-        "debtfreejourney",
-        "debtrelief",
-        "encouragement",
-        "over50",
-        "personalfinance"
+      "id": "2026-09-26-am",
+      "kind": "carousel",
+      "title": "What $50 more a month does to an $8,000 balance.",
+      "theme": "Payoff math",
+      "slides": [
+        {
+          "heading": "The setup.",
+          "body": "$8,000 at 21% APR, no new charges. Compare a fixed $200 a month with a fixed $250 a month. Fifty dollars is a few restaurant meals or one streaming bundle."
+        },
+        {
+          "heading": "At $200 a month.",
+          "body": "About 6 years to pay off and roughly $6,000 in interest."
+        },
+        {
+          "heading": "At $250 a month.",
+          "body": "About 4 years to pay off and roughly $4,000 in interest. The extra $50 avoids about $2,000 in interest and takes about 22 months off the loan."
+        },
+        {
+          "heading": "Why the effect is so large.",
+          "body": "Early payments mostly cover interest. Anything above that goes straight to principal, and a smaller principal charges less interest next month. Extra money compounds in your favor."
+        },
+        {
+          "heading": "Where to find $50.",
+          "body": "One subscription, one insurance quote, one phone plan review. Then set the payment to auto-pay at the new amount so the decision is made once."
+        }
       ],
-      "id": "2026-09-20-5",
+      "caption": "Small changes in the payment produce large changes in the outcome because interest is charged on the remaining principal. On $8,000 at 21% APR, $200 a month takes about 6 years and costs roughly $6,000 in interest; $250 a month takes about 4 years and costs roughly $4,000. That extra $50 buys back about 22 months. Finding it once, and automating it, is the whole trick. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "payoffmath",
+        "budgeting",
+        "creditcarddebt",
+        "debtfreejourney",
+        "personalfinance",
+        "moneytips",
+        "over50"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-26-am-01.jpg",
+        "site/social/2026-09-26-am-02.jpg",
+        "site/social/2026-09-26-am-03.jpg",
+        "site/social/2026-09-26-am-04.jpg",
+        "site/social/2026-09-26-am-05.jpg",
+        "site/social/2026-09-26-am-06.jpg",
+        "site/social/2026-09-26-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-26-pm",
+      "kind": "carousel",
+      "title": "Card issuers have hardship programs. They rarely advertise them.",
+      "theme": "Options",
+      "slides": [
+        {
+          "heading": "What a hardship program is.",
+          "body": "A temporary arrangement from the card issuer itself: a lower APR for a set period, waived late fees, or a fixed monthly payment. It is designed for job loss, illness, or a drop in income."
+        },
+        {
+          "heading": "How to ask.",
+          "body": "Call the number on the back of the card and ask for the hardship or financial assistance department. Explain the situation in one or two sentences and ask what programs exist."
+        },
+        {
+          "heading": "What to expect.",
+          "body": "Often six to twelve months of reduced interest or a fixed payment. The card is usually frozen or closed for new purchases during the program."
+        },
+        {
+          "heading": "Trade-offs.",
+          "body": "Closing the card can raise utilization on the others. Some programs are reported to credit bureaus as an arrangement. Get every term in writing before agreeing."
+        },
+        {
+          "heading": "Where it fits.",
+          "body": "Best for a temporary setback with a clear end. For balances that cannot be repaid in full even at a lower rate, a counseling plan or a settlement review may fit better."
+        }
+      ],
+      "caption": "Most card issuers run hardship programs: temporary rate reductions, fee waivers, or fixed payments for people facing a job loss, illness, or income drop. They are rarely offered unprompted; the way in is to call and ask for the hardship department. Programs typically last six to twelve months and may freeze the card. They suit a temporary problem with a visible end. Longer-term shortfalls usually need a different tool. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "hardshipprogram",
+        "creditcards",
+        "debtrelief",
+        "debtbasics",
+        "financialliteracy",
+        "personalfinance",
+        "over50"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-26-pm-01.jpg",
+        "site/social/2026-09-26-pm-02.jpg",
+        "site/social/2026-09-26-pm-03.jpg",
+        "site/social/2026-09-26-pm-04.jpg",
+        "site/social/2026-09-26-pm-05.jpg",
+        "site/social/2026-09-26-pm-06.jpg",
+        "site/social/2026-09-26-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-07.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-27-am",
+      "kind": "carousel",
+      "title": "Five questions to ask before agreeing to any debt plan.",
+      "theme": "Before you sign",
+      "slides": [
+        {
+          "heading": "1. What is the total cost?",
+          "body": "Every fee, every month, for the whole plan, added up. If the answer is a percentage of something, ask for it in dollars on a piece of paper."
+        },
+        {
+          "heading": "2. What happens to credit scores?",
+          "body": "Every option affects credit differently, and a plain answer exists for each. Anyone who says \"nothing\" is not being straight."
+        },
+        {
+          "heading": "3. When are fees charged?",
+          "body": "For settlement, federal rules bar fees before a debt is actually settled. For counseling, small monthly fees are normal. For loans, look for origination fees and prepayment penalties."
+        },
+        {
+          "heading": "4. What if a payment is missed?",
+          "body": "Does the plan pause, restart, or end? Are creditors notified? A good answer is specific."
+        },
+        {
+          "heading": "5. Are you licensed or registered in my state?",
+          "body": "Many states require it for settlement and counseling providers. It is a one-line question with a yes-or-no answer, and it is worth asking every time."
+        }
+      ],
+      "caption": "A short checklist for any conversation about a debt plan, including one with us. Ask for the total cost in dollars, not percentages. Ask what happens to credit scores. Ask exactly when fees are charged. Ask what a missed payment does to the plan. Ask whether the provider is licensed in your state. Clear answers to all five are the minimum. Vague answers to any of them are a reason to keep looking. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "consumertips",
+        "debtrelief",
+        "debtsettlement",
+        "creditcounseling",
+        "financialliteracy",
+        "personalfinance",
+        "over50"
+      ],
       "scheduled_for": "2026-09-27",
-      "image_path": "site/social/2026-09-20-5.jpg",
-      "image_url": "https://debtdirectsolutions.netlify.app/social/2026-09-20-5.jpg",
+      "slot": "am",
+      "image_paths": [
+        "site/social/2026-09-27-am-01.jpg",
+        "site/social/2026-09-27-am-02.jpg",
+        "site/social/2026-09-27-am-03.jpg",
+        "site/social/2026-09-27-am-04.jpg",
+        "site/social/2026-09-27-am-05.jpg",
+        "site/social/2026-09-27-am-06.jpg",
+        "site/social/2026-09-27-am-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-07.jpg"
+      ],
       "status": "queued",
       "platforms": [
         "instagram",

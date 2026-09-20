@@ -43,9 +43,12 @@ FORBIDDEN_TARGETING = {"genders", "custom_audiences", "excluded_custom_audiences
                        "life_events", "income", "education_statuses", "relationship_statuses", "home_ownership", "excluded_geo_locations"}
 
 # Copy that gets a debt-relief ad rejected: claims, guarantees, and asserting the viewer's situation.
-BANNED_CLAIMS = re.compile(r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs|stimulus|debt[- ]free in|forgiven)\b|\d{1,3}\s?%", re.I)
+BANNED_CLAIMS = re.compile(
+    r"\b(guarantee[ds]?|eliminate|erase|wipe out|government program|irs|stimulus|debt[- ]free in)\b"
+    r"|\b(save|saving|saved|reduce[sd]?|reduction|cut|lower(ed|ing)?|settle[sd]?|settling|forgive[ns]?|forgiven|pay(ing)? (only|just))\b[^.%\n]{0,40}\d{1,3}\s?%"
+    r"|\d{1,3}\s?%[^.%\n]{0,15}\b(off|less|savings?|reduction|settlement)\b", re.I)
 PERSONAL_ATTRIBUTES = re.compile(
-    r"\b(struggling with|drowning in|buried in|behind on|can't (keep up|afford)|your (bad )?credit|are you in debt|"
+    r"\b(struggling with|drowning in|buried in|behind on|can't (keep up|afford)|your bad credit|are you in debt|"
     r"if you('re| are) (in debt|behind|struggling)|we (understand|know) (your|how)|for people (with|who))\b", re.I)
 
 

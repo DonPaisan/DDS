@@ -1,15 +1,22 @@
 name: Social publish
 
-# Posts whatever is due today from agent/social/queue/*.json to the Facebook
-# Page and the linked Instagram account. Runs every evening; also run it by
-# hand from the Actions tab ("Run workflow") to post right now.
-# Requires: META_TOKEN secret with pages_manage_posts, pages_read_engagement,
-# instagram_basic, instagram_content_publish, and the Page + IG account
-# assigned to the system user. social.enabled must be true in agent/config.yml.
+# Two carousels a day: the "am" slot at 9:00 AM ET and the "pm" slot at 6:00 PM ET.
+# Posts whatever is queued for today in that slot (plus anything overdue) to the
+# Facebook Page and the linked Instagram account. Run by hand from the Actions tab
+# to post right now; pick the slot or leave it on "auto".
+# Requires the META_TOKEN secret (pages_manage_posts, pages_read_engagement,
+# instagram_basic, instagram_content_publish) and social.enabled: true.
 on:
   schedule:
-    - cron: "0 23 * * *"   # 23:00 UTC = 7:00 PM ET
+    - cron: "0 13 * * *"   # 13:00 UTC = 9:00 AM ET  → am
+    - cron: "0 22 * * *"   # 22:00 UTC = 6:00 PM ET  → pm
   workflow_dispatch:
+    inputs:
+      slot:
+        description: "Which slot to post (auto = by time of day)"
+        type: choice
+        options: [auto, am, pm]
+        default: auto
 
 permissions:
   contents: write
@@ -28,6 +35,16 @@ jobs:
           cache-dependency-path: agent/requirements.txt
       - run: pip install -r agent/requirements.txt
 
+      - name: Pick slot
+        id: slot
+        run: |
+          s="${{ github.event.inputs.slot }}"
+          if [ -z "$s" ] || [ "$s" = "auto" ]; then
+            if [ "$(date -u +%H)" -lt 18 ]; then s=am; else s=pm; fi
+          fi
+          echo "slot=$s" >> "$GITHUB_OUTPUT"
+          echo "Posting slot: $s"
+
       - name: Publish due posts
         working-directory: agent
         env:
@@ -35,12 +52,12 @@ jobs:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: python src/social/publish.py --really
+        run: python src/social/publish.py --really --slot "${{ steps.slot.outputs.slot }}"
 
       - name: Record what was posted
         run: |
           git config user.name "dds-social-bot"
           git config user.email "noreply@debtdirectsolutions.com"
           git add agent/social/queue
-          git diff --cached --quiet || git commit -m "social: mark posts published $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "social: mark posts published $(date -u +%F) ${{ steps.slot.outputs.slot }}"
           git push

@@ -56,14 +56,60 @@ def resolve_ids(token: str) -> tuple[str, str | None]:
     return page, ig
 
 
+def public_urls(p: dict) -> list[str]:
+    """Prefer the site URLs; fall back to GitHub's public raw URL for each image
+    (the repo is public) so posting never waits on a Netlify deploy."""
+    urls = list(p.get("image_urls") or [p["image_url"]])
+    paths = list(p.get("image_paths") or [p.get("image_path")])
+    repo = env("GITHUB_REPOSITORY") or load_config()["social"].get("github_repo") or "DonPaisan/DDS"
+    ref = env("GITHUB_REF_NAME") or load_config()["social"].get("github_branch") or "main"
+    out = []
+    for u, path in zip(urls, paths):
+        ok = False
+        try:
+            ok = requests.head(u, timeout=20, allow_redirects=True).status_code == 200
+        except requests.RequestException:
+            pass
+        if ok:
+            out.append(u)
+        elif path:
+            out.append(f"https://raw.githubusercontent.com/{repo}/{ref}/{path}")
+        else:
+            out.append(u)
+    return out
+
+
 def caption_text(p: dict) -> str:
     tags = " ".join("#" + t.strip("#") for t in p.get("hashtags", []))
     return f"{p['caption']}\n\n{tags}".strip()
 
 
+def _wait_ready(container_id: str, token: str) -> None:
+    for _ in range(30):
+        st = graph("GET", container_id, fields="status_code,status", access_token=token)
+        code = st.get("status_code")
+        if code == "FINISHED":
+            return
+        if code in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram container {container_id} {code}: {st.get('status')}")
+        time.sleep(3)
+    raise RuntimeError(f"Instagram container {container_id} not ready after 90s")
+
+
 def post_instagram(p: dict, token: str, ig: str) -> dict:
-    """Container model: create → poll status_code until FINISHED → publish."""
-    creation = graph("POST", f"{ig}/media", image_url=p["image_url"], caption=caption_text(p), access_token=token)
+    """Container model: create → poll status_code until FINISHED → publish.
+    Carousels: one container per slide (is_carousel_item), then a CAROUSEL parent."""
+    urls = public_urls(p)
+    if len(urls) > 1:
+        children = []
+        for u in urls[:10]:
+            c = graph("POST", f"{ig}/media", image_url=u, is_carousel_item="true", access_token=token)
+            _wait_ready(c["id"], token)
+            children.append(c["id"])
+        creation = graph("POST", f"{ig}/media", media_type="CAROUSEL", children=",".join(children), caption=caption_text(p), access_token=token)
+        _wait_ready(creation["id"], token)
+        return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
+    creation = graph("POST", f"{ig}/media", image_url=urls[0], caption=caption_text(p), access_token=token)
     for _ in range(20):
         st = graph("GET", creation["id"], fields="status_code,status", access_token=token)
         code = st.get("status_code")
@@ -78,22 +124,36 @@ def post_instagram(p: dict, token: str, ig: str) -> dict:
 
 
 def post_facebook(p: dict, token: str, page: str) -> dict:
-    return graph("POST", f"{page}/photos", url=p["image_url"], message=caption_text(p), access_token=token)
+    """Single photo → /photos. Several → unpublished photos attached to one feed post."""
+    urls = public_urls(p)
+    if len(urls) == 1:
+        return graph("POST", f"{page}/photos", url=urls[0], message=caption_text(p), access_token=token)
+    ids = [graph("POST", f"{page}/photos", url=u, published="false", access_token=token)["id"] for u in urls]
+    params = {"message": caption_text(p), "access_token": token}
+    for i, pid in enumerate(ids):
+        params[f"attached_media[{i}]"] = json.dumps({"media_fbid": pid})
+    return graph("POST", f"{page}/feed", **params)
 
 
-def due_posts(t: str | None = None):
+def due_posts(t: str | None = None, slot: str | None = None):
+    """Queued posts scheduled on or before `t`. With a slot (am/pm), today's posts
+    only publish in their own slot; overdue ones from earlier days always go."""
     t = t or today().isoformat()
     for f in sorted(QUEUE_DIR.glob("*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
         for p in data["posts"]:
-            if p["status"] == "queued" and p["scheduled_for"] <= t:
-                yield f, data, p
+            if p["status"] != "queued" or p["scheduled_for"] > t:
+                continue
+            if slot and p["scheduled_for"] == t and p.get("slot", slot) != slot:
+                continue
+            yield f, data, p
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--really", action="store_true", help="actually post")
     ap.add_argument("--date", default=None, help="treat this YYYY-MM-DD as today (default: today UTC)")
+    ap.add_argument("--slot", choices=["am", "pm"], default=None, help="only post items in this slot for today")
     args = ap.parse_args(argv)
     load_env()
     cfg = load_config()["social"]
@@ -106,15 +166,16 @@ def main(argv=None):
     page, ig = resolve_ids(token) if live else (None, None)
 
     n = 0
-    for f, data, p in due_posts(args.date):
+    for f, data, p in due_posts(args.date, args.slot):
         n += 1
         if not live:
-            print(f"[publish:DRY-RUN] {p['scheduled_for']} {p['id']} → {', '.join(p['platforms'])}: {p['card_text']}")
+            n = len(p.get("image_urls") or [1])
+            print(f"[publish:DRY-RUN] {p['scheduled_for']} {p.get('slot', '-'):>2} {p['id']} ({n} slide{'s' if n > 1 else ''}) → {', '.join(p['platforms'])}: {p.get('title') or p.get('card_text')}")
             continue
         # Check the image is really public before Meta tries to fetch it.
-        head = requests.head(p["image_url"], timeout=20)
-        if head.status_code != 200:
-            print(f"[publish] {p['id']}: image not public yet ({head.status_code}) — deploy site/social first", file=sys.stderr)
+        missing = [u for u in public_urls(p) if requests.head(u, timeout=20, allow_redirects=True).status_code != 200]
+        if missing:
+            print(f"[publish] {p['id']}: {len(missing)} image(s) not reachable ({missing[0]}) — skipping", file=sys.stderr)
             continue
         results = {}
         for platform in p["platforms"]:
