@@ -18,15 +18,22 @@ Hashtags: 10 to 14, drawn from the account's existing set (#debtfreejourney #fin
 #moneytips #financialliteracy #creditcarddebt #debtrelief #smartmoneymoves #moneymindset
 #personalfinance #budgetingtips) plus two or three topic tags.
 
-Carousel shape (5 to 7 slides):
-- Slide 1, cover: the headline. One sentence, ≤ 70 characters, states the takeaway.
-- Slides 2–6, content: a short heading (≤ 60 chars) and 25–60 words of body. One idea per slide.
-  Use concrete numbers where they teach something (a $5,000 balance at 24% APR), and make them
-  arithmetically correct.
-- Last slide: "Questions about your own numbers?" with two lines: Debt Direct Solutions offers a
-  free, no-obligation review of unsecured debt options. Link in bio.
-- Caption: 60–120 words restating the takeaway, honest about trade-offs, ending with the same
-  soft invitation. 5–8 lowercase hashtags.
+Carousel shape (6 slides, rendered by agent/src/social/slides.py in the logo palette):
+- Slide 1, cover (navy): the hook. One sentence, ≤ 75 characters, with 1–3 words to highlight in
+  yellow, plus a one-line subtitle that opens a curiosity gap. The first slide is the whole audition.
+- Slides 2–5, content (white), one idea each, ≤ 30 words of body. Mix the kinds:
+  `text` (heading + body), `stat` (one big number with a label), `compare` (two bars of one
+  measure, e.g. minimum payments vs a fixed payment), `list` (3–4 short items, checks or numbers).
+  Every number must be computed, never rounded up for drama.
+- Slide 6, CTA (navy, automatic): "Save this for later. Send it to someone who could use it." plus
+  the free-review pill. Saves and sends are what the algorithm rewards.
+- Caption: a hook line first, then 60–110 words, one to three emojis, "Swipe ➡️", and the DM +
+  link-in-bio close. 3 to 5 lowercase hashtags (Instagram's own guidance; more reads as spam).
+- Slots: 9:00 AM and 6:00 PM Eastern. Mid-week mornings perform best; weekends worst.
+
+Why 6 and not 10: research in 2026 puts the sweet spot at 5–10 slides with completion rate as the
+gate. Six lets every slide earn the swipe for a 50+ audience reading on a phone. Revisit with the
+account's own completion and save data after two weeks.
 
 Hard rules (a carousel that breaks one is discarded):
 - Never guarantee an outcome, promise a timeline, or state a savings percentage or dollar figure.

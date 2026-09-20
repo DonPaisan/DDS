@@ -152,6 +152,11 @@ reports into the dashboard by ad name automatically.
 
 ## Social content
 
+Two educational carousels a day (9 AM and 6 PM ET), rendered by `agent/src/social/slides.py`
+in the logo palette with the logo on every slide: navy hook cover, four white content slides
+(text, stat tile, two-bar comparison, checklist), and a save/share CTA. The content brief with the
+engagement research is `prompts/social-carousels.md`.
+
 `agent/src/social/generate.py` asks Claude for a week of posts (themes, compliance rules in
 `prompts/social-content.md`, a regex gate on top), renders 1080×1080 JPEG quote cards into
 `site/social/` (Instagram's API rejects PNG), and queues them. The weekly workflow opens a PR so you approve captions and images. After merging,
