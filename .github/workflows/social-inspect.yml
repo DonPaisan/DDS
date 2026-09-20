@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   inspect:
@@ -25,7 +25,10 @@ jobs:
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
         run: python src/social/inspect.py --limit 40
-      - uses: actions/upload-artifact@v4
-        with:
-          name: social-inventory
-          path: agent/reports/social-inventory.*
+      - name: Commit the inventory
+        run: |
+          git config user.name "dds-social-bot"
+          git config user.email "noreply@debtdirectsolutions.com"
+          git add agent/social/inventory.md agent/social/inventory.json
+          git diff --cached --quiet || git commit -m "social: refresh inventory $(date -u +%F)"
+          git push

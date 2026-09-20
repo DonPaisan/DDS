@@ -1,5 +1,5 @@
 """Pull what is already on the Facebook Page and Instagram account so new content
-can match the existing voice. Read-only. Writes agent/reports/social-inventory.md + .json.
+can match the existing voice. Read-only. Writes agent/social/inventory.md + .json (committed by the workflow).
 
   python src/social/inspect.py --limit 30
 """
@@ -11,7 +11,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from common import REPORTS_DIR, env, load_env  # noqa: E402
+from common import AGENT_DIR, env, load_env  # noqa: E402
+
+OUT_DIR = AGENT_DIR / "social"
 from social.publish import graph, resolve_ids  # noqa: E402
 
 
@@ -40,7 +42,7 @@ def main(argv=None):
         out["facebook_error"] = str(e)
     out["facebook"] = posts
 
-    (REPORTS_DIR / "social-inventory.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT_DIR / "inventory.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     L = ["# Social inventory", ""]
     if ig:
         p = out.get("instagram_profile", {})
@@ -55,8 +57,8 @@ def main(argv=None):
         att = ((p.get("attachments") or {}).get("data") or [{}])[0]
         L += [f"### {p.get('created_time', '')[:10]} · {att.get('type', 'status')} · {((p.get('likes') or {}).get('summary') or {}).get('total_count', 0)} likes · {((p.get('comments') or {}).get('summary') or {}).get('total_count', 0)} comments",
               f"{p.get('permalink_url')}", "", (p.get("message") or "(no text)").strip(), ""]
-    (REPORTS_DIR / "social-inventory.md").write_text("\n".join(L), encoding="utf-8")
-    print(f"[inspect] {len(out['instagram'])} Instagram posts, {len(out['facebook'])} Facebook posts → reports/social-inventory.md")
+    (OUT_DIR / "inventory.md").write_text("\n".join(L), encoding="utf-8")
+    print(f"[inspect] {len(out['instagram'])} Instagram posts, {len(out['facebook'])} Facebook posts → agent/social/inventory.md")
 
 
 if __name__ == "__main__":
