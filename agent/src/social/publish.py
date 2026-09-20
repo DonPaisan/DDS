@@ -148,7 +148,7 @@ def due_posts(t: str | None = None, slot: str | None = None):
     for f in sorted(QUEUE_DIR.glob("*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
         for p in data["posts"]:
-            if p["status"] != "queued" or p["scheduled_for"] > t:
+            if p["status"] not in ("queued", "partial") or p["scheduled_for"] > t:
                 continue
             if slot and p["scheduled_for"] == t and p.get("slot", slot) != slot:
                 continue
@@ -185,8 +185,10 @@ def main(argv=None):
         if missing:
             print(f"[publish] {p['id']}: {len(missing)} image(s) not reachable ({missing[0]}) — skipping", file=sys.stderr)
             continue
-        results = {}
+        results = dict(p.get("results") or {})
         for platform in p["platforms"]:
+            if "error" not in (results.get(platform) or {"error": 1}):
+                continue   # already posted there; only retry the platform that failed
             if platform == "instagram" and not ig:
                 results[platform] = {"error": "no Instagram professional account linked to the Page"}
                 print(f"[publish] {p['id']}: skipping Instagram, no IG account linked to the Page", file=sys.stderr)
