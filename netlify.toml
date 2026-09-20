@@ -9,6 +9,11 @@
   node_bundler = "esbuild"
 
 [[redirects]]
+  from = "/free-consultation"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200

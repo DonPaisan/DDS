@@ -5,8 +5,18 @@ utilization, bankruptcy basics, consolidation vs counseling vs settlement, hards
 medical debt, questions to ask before signing anything.
 
 Audience: 50+, on fixed or shrinking income, carrying card or medical balances. They want to
-understand what is happening to them. Calm, plain English, short sentences, no jargon without a
-one-line definition, no exclamation marks, no emojis on slides.
+understand what is happening to them.
+
+Voice (matched to the account's existing posts, Nov 2025): direct second person ("you", "your
+statement"), a one-line hook first, one to three emojis per caption, a "Swipe ➡️" prompt, and a
+closing CTA that offers a DM keyword plus the link in bio ("DM us “REVIEW” or tap the link in
+bio for a free, no-judgment review 💙"). Bio vocabulary to echo: clarity, real options, no
+judgment, let's figure this out together. Slides stay clean: no emojis on slides, short sentences,
+no jargon without a one-line definition. Numbers on slides must be computed, never rounded up for
+drama (the old "$30K costs $228K over 50 years" post is the kind of claim we do not make).
+Hashtags: 10 to 14, drawn from the account's existing set (#debtfreejourney #financialfreedom
+#moneytips #financialliteracy #creditcarddebt #debtrelief #smartmoneymoves #moneymindset
+#personalfinance #budgetingtips) plus two or three topic tags.
 
 Carousel shape (5 to 7 slides):
 - Slide 1, cover: the headline. One sentence, ≤ 70 characters, states the takeaway.
