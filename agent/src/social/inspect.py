@@ -31,8 +31,13 @@ def main(argv=None):
         media = graph("GET", f"{ig}/media", fields="id,caption,media_type,media_url,permalink,timestamp,like_count,comments_count,children{media_type,media_url}",
                       limit=args.limit, access_token=token).get("data", [])
         out["instagram"] = media
-    posts = graph("GET", f"{page}/posts", fields="id,message,created_time,permalink_url,attachments{media_type,type,subattachments},shares,likes.summary(true),comments.summary(true)",
-                  limit=args.limit, access_token=token).get("data", [])
+    try:
+        posts = graph("GET", f"{page}/posts", fields="id,message,created_time,permalink_url,attachments{media_type,type,subattachments},shares,likes.summary(true),comments.summary(true)",
+                      limit=args.limit, access_token=token).get("data", [])
+    except RuntimeError as e:
+        print(f"[inspect] Facebook posts unavailable: {e}", file=sys.stderr)
+        posts = []
+        out["facebook_error"] = str(e)
     out["facebook"] = posts
 
     (REPORTS_DIR / "social-inventory.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -44,6 +49,8 @@ def main(argv=None):
             kids = len((m.get("children") or {}).get("data", []))
             L += [f"### {m.get('timestamp', '')[:10]} · {m.get('media_type')}{f' ({kids} slides)' if kids else ''} · {m.get('like_count', 0)} likes · {m.get('comments_count', 0)} comments", f"{m.get('permalink')}", "", (m.get("caption") or "(no caption)").strip(), ""]
     L += ["## Facebook Page posts", ""]
+    if out.get("facebook_error"):
+        L += [f"_Could not read Page posts: {out['facebook_error'][:200]}_", ""]
     for p in out["facebook"]:
         att = ((p.get("attachments") or {}).get("data") or [{}])[0]
         L += [f"### {p.get('created_time', '')[:10]} · {att.get('type', 'status')} · {((p.get('likes') or {}).get('summary') or {}).get('total_count', 0)} likes · {((p.get('comments') or {}).get('summary') or {}).get('total_count', 0)} comments",
