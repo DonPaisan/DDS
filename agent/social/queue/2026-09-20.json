@@ -365,11 +365,12 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
       ],
-      "status": "queued",
+      "status": "held",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "held_reason": "posted manually from the app to test API reach"
     },
     {
       "id": "2026-09-22-noon",
