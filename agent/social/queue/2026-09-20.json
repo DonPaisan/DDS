@@ -154,11 +154,21 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-21-am-06.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "posted_at": "2026-09-21T00:53:38+00:00",
+      "results": {
+        "instagram": {
+          "id": "18010682717973203"
+        },
+        "facebook": {
+          "id": "868663969665622_122139785415139646",
+          "post_supports_client_mutation_id": true
+        }
+      }
     },
     {
       "id": "2026-09-21-noon",
@@ -188,12 +198,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-21-noon-story.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "posted_at": "2026-09-21T00:53:58+00:00",
+      "results": {
+        "instagram": {
+          "id": "18046697555810068"
+        },
+        "facebook": {
+          "success": true,
+          "post_id": "2352105438860987"
+        }
+      }
     },
     {
       "id": "2026-09-21-pm",
@@ -234,12 +254,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-21-pm.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "posted_at": "2026-09-21T00:54:11+00:00",
+      "results": {
+        "instagram": {
+          "id": "18245063989310514"
+        },
+        "facebook": {
+          "id": "122139785847139646",
+          "post_id": "868663969665622_122139785871139646"
+        }
+      }
     },
     {
       "id": "2026-09-22-am",
@@ -492,12 +522,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-22-pm.jpg"
       ],
-      "status": "queued",
+      "status": "partial",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "posted_at": "2026-09-21T00:54:52+00:00",
+      "results": {
+        "instagram": {
+          "error": "Graph API error: {'code': 1, 'message': 'An unknown error occurred', 'error_subcode': 99}"
+        },
+        "facebook": {
+          "id": "122139786045139646",
+          "post_id": "868663969665622_122139786069139646"
+        }
+      }
     },
     {
       "id": "2026-09-23-am",
