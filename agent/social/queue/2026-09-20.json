@@ -641,11 +641,21 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-23-am-06.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "posted_at": "2026-09-22T00:33:57+00:00",
+      "results": {
+        "instagram": {
+          "id": "17923315266199887"
+        },
+        "facebook": {
+          "id": "868663969665622_122139900195139646",
+          "post_supports_client_mutation_id": true
+        }
+      }
     },
     {
       "id": "2026-09-23-noon",
