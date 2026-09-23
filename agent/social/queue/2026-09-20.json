@@ -1031,12 +1031,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-24-pm.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "posted_at": "2026-09-23T19:25:27+00:00",
+      "results": {
+        "instagram": {
+          "id": "18089098076231699"
+        },
+        "facebook": {
+          "id": "122140129161139646",
+          "post_id": "868663969665622_122140129185139646"
+        }
+      }
     },
     {
       "id": "2026-09-25-am",
