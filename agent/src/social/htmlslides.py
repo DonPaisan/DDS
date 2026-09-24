@@ -22,6 +22,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from social.mascot import mascot
+
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent / "html"
 FONTS = ROOT / "agent" / "assets" / "fonts"
@@ -163,7 +165,12 @@ def slide_cover(spec, i, total, theme, photo=None, surface="feed", vcls=""):
     h = rich(c["title"], c.get("highlight"))
     sub = f'<p class="sub">{esc(c["subtitle"])}</p>' if c.get("subtitle") else ""
     serial = f'<div class="serial">{esc(spec.get("serial", f"{total - 2} ideas, {total} slides"))}</div>'
-    body = f'{top(spec["kicker"])}<main class="content"><h1 class="{size_class(c["title"], 60, 85)}">{h}</h1>{sub}</main>{serial}{SWIPE}{band(i, total)}'
+    buck = ""
+    if spec.get("buck"):
+        b = spec["buck"]
+        buck = f'<div class="cover-buck">{mascot(b.get("expr", "happy"), b.get("pose", "wave"), b.get("prop", "none"))}</div>'
+        vcls = (vcls + " has-buck").strip()
+    body = f'{top(spec["kicker"])}<main class="content"><h1 class="{size_class(c["title"], 60, 85)}">{h}</h1>{sub}</main>{serial}{buck}{SWIPE}{band(i, total)}'
     return page(theme, body, photo=photo, surface=surface, extra_class=_cls(surface, vcls))
 
 
@@ -210,6 +217,41 @@ def slide_vs(s, i, total, theme, kicker, surface="feed", vcls=""):
     return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
+def _buck(b: dict | None, cls: str = "") -> str:
+    b = b or {}
+    side = b.get("side", "right")
+    small = " small" if b.get("small") else ""
+    return f'<div class="buck {side}{small} {cls}">{mascot(b.get("expr", "happy"), b.get("pose", "rest"), b.get("prop", "none"))}</div>'
+
+
+SCENE_EXTRAS = {"kitchen": '<div class="window"></div><div class="sun"></div>', "desk": '<div class="clock"></div>', "mail": '<div class="sun"></div>', "night": '<div class="moon"></div>', "plain": ""}
+
+
+def slide_comic(s, i, total, theme, kicker, surface="feed", vcls=""):
+    """One comic panel: a scene, Buck, a speech bubble, optional caption bars and an fx word."""
+    scene = s.get("scene", "plain")
+    b = s.get("buck", {})
+    bside = b.get("side", "right")
+    bub = s.get("bubble")
+    bubble = ""
+    if bub:
+        style = {"say": "", "thought": " thought", "shout": " shout"}.get(bub.get("style", "say"), "")
+        bside_b = bub.get("side", "left" if bside == "right" else "right")
+        bubble = f'<div class="bubble {bside_b}{style}{" under-cap" if s.get("cap") else ""}">{esc(bub["text"])}</div>'
+    cap = f'<div class="cap">{esc(s["cap"])}</div>' if s.get("cap") else ""
+    capb = f'<div class="cap bottom">{esc(s["cap_bottom"])}</div>' if s.get("cap_bottom") else ""
+    fx = f'<div class="fx" style="left:{s.get("fx_x", 60)}px;top:{s.get("fx_y", 300)}px">{esc(s["fx"])}</div>' if s.get("fx") else ""
+    body = f'{top(kicker, i, total)}<main class="content comic"><div class="panel"><div class="scene {scene}">{SCENE_EXTRAS.get(scene, "")}</div>{_buck(b)}{bubble}{cap}{capb}{fx}</div></main>{band(i, total)}'
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
+
+
+def slide_lesson(s, i, total, theme, kicker, surface="feed", vcls=""):
+    """The takeaway after the panels: Buck plus a heading and one paragraph."""
+    b = s.get("buck", {"expr": "relieved", "pose": "cheer"})
+    body = f'{top(kicker, i, total)}<main class="content lesson-slide"><div class="buck-big">{mascot(b.get("expr", "relieved"), b.get("pose", "cheer"), b.get("prop", "none"))}</div><h2 class="{size_class(s["heading"], 40)}">{rich(s["heading"], s.get("highlight"))}</h2><p class="body">{esc(s["body"])}</p></main>{band(i, total)}'
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
+
+
 TRUST = ["Free review", "No obligation", SITE]
 
 
@@ -238,7 +280,7 @@ def render_carousel(out_dir: Path, slug: str, spec: dict, photo: Path | None = N
         mix = [theme]
     accent_done = False
     for k, s in enumerate(slides, start=2):
-        fn = {"text": slide_text, "stat": slide_stat, "compare": slide_compare, "list": slide_list, "vs": slide_vs}[s["kind"]]
+        fn = {"text": slide_text, "stat": slide_stat, "compare": slide_compare, "list": slide_list, "vs": slide_vs, "comic": slide_comic, "lesson": slide_lesson}[s["kind"]]
         t = s.get("theme") or mix[(k - 2) % len(mix)]
         cls = variant_classes(v, body=True)
         if not accent_done and v["accent_slide"] == s["kind"] and theme in DARK and "theme" not in s:

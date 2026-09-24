@@ -84,3 +84,20 @@ carousel scheduled a week or more later, 3.2 s per slide with a slow push-in and
 about 17 s total, music bed only (no synthetic voice). Reels are the discovery format; carousels
 serve existing followers. Music: licensed tracks in agent/assets/audio/. A Reel with no licensed
 track is never posted.
+
+## Comics with Buck (added 2026-09-24)
+
+Buck is the mascot: the logo's money bag with a face, drawn as SVG in `agent/src/social/mascot.py`
+(no generative imagery). A comic carousel is a cover with `spec.buck`, then `comic` slides (one
+panel each) and a closing `lesson` slide before the automatic CTA.
+
+- `comic`: `scene` (kitchen, desk, mail, night, plain), `buck` {expr, pose, prop, side, small},
+  `bubble` {text, style: say|thought|shout, side}, optional `cap` (top bar, e.g. "Month two."),
+  `cap_bottom`, and an `fx` word with `fx_x`/`fx_y`.
+- Expressions: happy, worried, surprised, thinking, relieved, determined, sad, wink. Poses: rest,
+  wave, chin, hold, shrug, cheer, point. Props: phone, bill, calculator, coffee, piggy, letter, card.
+- `lesson`: `heading`, `body`, optional `buck`.
+- Story shape: Buck meets an everyday money situation, gets it wrong the normal way, notices,
+  changes one habit, feels the relief. 4–5 panels, one line per bubble, a computed number where
+  it helps. Buck is the one in the situation, never the reader (personal-attributes rule holds).
+- Keep Buck consistent: same colours, same proportions. Never redraw him with an image model.

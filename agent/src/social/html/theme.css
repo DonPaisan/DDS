@@ -301,3 +301,49 @@ body.look-notebook .bg .shape.s2 { top: 0; bottom: 0; left: 58px; width: 3px; ba
 body.look-notebook .frame { display: none; }
 body.look-notebook .kicker { letter-spacing: .12em; }
 body.look-studio.serif-body p.body, body.look-studio.serif-body .item, body.look-studio.serif-body p.note { font-family: var(--sans); font-size: 40px; }
+
+/* ── comics: Buck the mascot, one panel per slide ─────────────────────────── */
+.comic { display: flex; flex-direction: column; justify-content: flex-start; }
+.panel { position: relative; flex: 1; border: 5px solid var(--ink); border-radius: 28px; background: var(--white); overflow: hidden; display: flex; align-items: flex-end; box-shadow: 10px 10px 0 var(--gold); }
+.dark .panel, .t-navy .panel, .t-slate .panel { box-shadow: 10px 10px 0 var(--gold); }
+.panel .scene { position: absolute; inset: 0; }
+.panel .scene.kitchen { background: linear-gradient(180deg, #fff8e8 0 62%, #e9d9bf 62% 66%, #f3e7d3 66%); }
+.panel .scene.desk { background: linear-gradient(180deg, #eef3fb 0 66%, #c9d6ea 66% 69%, #dde6f4 69%); }
+.panel .scene.mail { background: linear-gradient(180deg, #f2fbf4 0 66%, #cfe7d5 66% 69%, #e4f3e8 69%); }
+.panel .scene.night { background: linear-gradient(180deg, #1c2b3a 0 66%, #35496a 66% 69%, #2b3d57 69%); }
+.panel .scene.plain { background: #fff; }
+.panel .scene .sun { position: absolute; right: 60px; top: 50px; width: 90px; height: 90px; border-radius: 50%; background: var(--gold); opacity: .8; }
+.panel .scene .moon { position: absolute; right: 70px; top: 50px; width: 70px; height: 70px; border-radius: 50%; box-shadow: -18px -8px 0 0 #f8e9a6; }
+.panel .scene .window { position: absolute; left: 60px; top: 50px; width: 170px; height: 150px; border: 6px solid var(--ink); border-radius: 12px; background: #bfe0ff; }
+.panel .scene .window:before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 6px; background: var(--ink); }
+.panel .scene .window:after { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 6px; background: var(--ink); }
+.panel .scene .clock { position: absolute; right: 70px; top: 50px; width: 90px; height: 90px; border-radius: 50%; border: 6px solid var(--ink); background: #fff; }
+.panel .scene .clock:before { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 30px; background: var(--ink); transform-origin: top; transform: rotate(180deg); margin-left: -2px; }
+.panel .scene .clock:after { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 22px; background: var(--ink); transform-origin: top; transform: rotate(-90deg); margin-left: -2px; }
+.panel .buck { position: absolute; bottom: 24px; width: 470px; height: 570px; }
+.panel .buck.left { left: 40px; }
+.panel .buck.right { right: 40px; }
+.panel .buck.small { width: 320px; height: 390px; }
+.panel .buck svg { width: 100%; height: 100%; }
+.bubble { position: absolute; top: 40px; max-width: 600px; background: var(--white); color: var(--ink); border: 5px solid var(--ink); border-radius: 30px; padding: 30px 36px; font-family: var(--sans); font-weight: 600; font-size: 42px; line-height: 1.25; }
+.bubble.under-cap { top: 100px; }
+.bubble.right { right: 44px; }
+.bubble.left { left: 44px; }
+.bubble.right:after { content: ""; position: absolute; left: 60px; bottom: -34px; border: 18px solid transparent; border-top-color: var(--ink); border-bottom: 0; }
+.bubble.right:before { content: ""; position: absolute; left: 63px; bottom: -22px; border: 15px solid transparent; border-top-color: var(--white); border-bottom: 0; z-index: 1; }
+.bubble.left:after { content: ""; position: absolute; right: 60px; bottom: -34px; border: 18px solid transparent; border-top-color: var(--ink); border-bottom: 0; }
+.bubble.left:before { content: ""; position: absolute; right: 63px; bottom: -22px; border: 15px solid transparent; border-top-color: var(--white); border-bottom: 0; z-index: 1; }
+.bubble.thought { border-style: dashed; border-radius: 50% / 40%; padding: 34px 40px; }
+.bubble.thought:after, .bubble.thought:before { display: none; }
+.bubble.shout { border-radius: 12px; font-weight: 700; }
+.panel .cap { position: absolute; left: 0; right: 0; top: 0; background: var(--ink); color: var(--white); font-family: var(--serif); font-style: italic; font-size: 30px; padding: 16px 30px; }
+.panel .cap.bottom { top: auto; bottom: 0; background: rgba(28,43,58,.92); }
+.panel .fx { position: absolute; font-family: var(--sans); font-weight: 800; font-size: 44px; color: var(--ink); transform: rotate(-12deg); letter-spacing: .04em; }
+.comic h2 { font-size: 56px; margin: 0 0 24px; }
+.comic .lesson { margin-top: 0; }
+.lesson-slide .buck-big { width: 460px; height: 560px; margin: 0 auto 10px; }
+.lesson-slide .buck-big svg { width: 100%; height: 100%; }
+.cover-buck { position: absolute; z-index: 2; right: 30px; bottom: calc(var(--band) + 10px); width: 500px; height: 610px; }
+.cover-buck svg { width: 100%; height: 100%; }
+body.has-buck .content { right: 480px; }
+body.has-buck .swipe { display: none; }
