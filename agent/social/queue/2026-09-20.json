@@ -346,7 +346,7 @@
         "moneybasics",
         "personalfinance"
       ],
-      "scheduled_for": "2026-09-21",
+      "scheduled_for": "2026-10-04",
       "slot": "am",
       "surface": "feed",
       "image_paths": [
@@ -365,12 +365,11 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
       ],
-      "status": "held",
+      "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "held_reason": "posted manually from the app to test API reach"
+      ]
     },
     {
       "id": "2026-09-22-noon",
