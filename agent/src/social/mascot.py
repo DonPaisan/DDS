@@ -142,6 +142,16 @@ def _glove(x: int, y: int, rot: float = 0, mirror: bool = False) -> str:
     return f'<g transform="translate({x} {y}) rotate({rot:.0f}){flip}">{layer(NAVY, 20)}{layer(WHITE, 12)}{cuff}</g>'
 
 
+def _fist(x: int, y: int, rot: float = 0, mirror: bool = False) -> str:
+    """A closed cartoon hand gripping something: mitten palm, three knuckle bumps curling over the edge, a thumb across."""
+    flip = " scale(-1 1)" if mirror else ""
+    body = (f'<path d="M-20 -4 C -20 -18, -10 -24, 0 -24 C 12 -24, 22 -16, 22 -4 L 22 10 C 22 20, 12 24, 0 24 C -12 24, -20 18, -20 8 Z" fill="{WHITE}" stroke="{NAVY}" stroke-width="7" stroke-linejoin="round"/>'
+            f'<path d="M-16 -2 a 8 8 0 0 1 14 0 M-2 -4 a 8 8 0 0 1 14 0 M11 0 a 7 7 0 0 1 11 2" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
+            f'<path d="M-14 12 C -6 8, 6 8, 16 12" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
+            f'<path d="M-20 4 q 14 -2 26 4" fill="none" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".6"/>')
+    return f'<g transform="translate({x} {y}) rotate({rot:.0f}){flip}">{body}</g>'
+
+
 def _arm(side: str, pose: str) -> str:
     sx = 104 if side == "L" else 296
     sy = 300
@@ -150,7 +160,7 @@ def _arm(side: str, pose: str) -> str:
         "rest":  (sx + d * 34, 352),
         "wave":  (sx + d * 62, 190) if side == "R" else (sx + d * 34, 352),
         "chin":  (200 - 34, 322) if side == "R" else (sx + d * 34, 352),
-        "hold":  (200 + d * 42, 356),
+        "hold":  (200 + d * 46, 352),
         "shrug": (sx + d * 68, 262),
         "cheer": (sx + d * 62, 176),
         "point": (sx + d * 78, 250) if side == "R" else (sx + d * 34, 352),
@@ -168,7 +178,16 @@ def _arm(side: str, pose: str) -> str:
     else:
         rot = along
     mirror = side == "R"       # thumb toward the body on both hands
-    return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>{_glove(int(hx), int(hy), rot, mirror)}'
+    line = f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>'
+    hand = _fist(int(hx), int(hy), -15 * d, mirror) if pose == "hold" else _glove(int(hx), int(hy), rot, mirror)
+    return line + hand
+
+
+def _arm_parts(side: str, pose: str) -> tuple[str, str]:
+    """(arm line, hand) so the hands can be layered in front of a held prop."""
+    full = _arm(side, pose)
+    k = full.index("<g ")
+    return full[:k], full[k:]
 
 
 def _legs() -> str:
@@ -215,13 +234,12 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
     parts = [_defs()]
     if shadow:
         parts.append(f'<ellipse cx="200" cy="424" rx="112" ry="12" fill="{NAVY}" opacity=".12"/>')
-    parts.append(_arm("L", pose))
-    parts.append(_bag())
-    parts.append(_dollar())
-    parts.append(_legs())
     if pose == "hold":
-        parts.append('<g transform="translate(0 8)">' + _prop(prop) + "</g>")
-    parts.append(_arm("R", pose))
+        l_line, l_hand = _arm_parts("L", pose)
+        r_line, r_hand = _arm_parts("R", pose)
+        parts += [l_line, _bag(), _dollar(), _legs(), r_line, '<g transform="translate(0 8)">' + _prop(prop) + "</g>", l_hand, r_hand]
+    else:
+        parts += [_arm("L", pose), _bag(), _dollar(), _legs(), _arm("R", pose)]
     parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
     attrs = f'width="{size}" height="{size}"' if size else ""
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 60 360 380" {attrs}>{"".join(parts)}</svg>'
