@@ -39,25 +39,27 @@ def _defs() -> str:
 
 
 def _bag() -> str:
-    """Sack body, rope, and the flared cloth above the rope."""
+    """Teardrop sack, a narrow neck with the rope coiled round it, and a tall floppy tuft leaning right."""
     return f"""
-<path d="M148 190 C 92 214, 66 300, 96 348 C 122 388, 278 388, 304 348 C 334 300, 308 214, 252 190 C 232 180, 168 180, 148 190 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M116 322 C 150 366, 250 366, 284 322" fill="none" stroke="{YELLOW_DK}" stroke-width="8" stroke-linecap="round" opacity=".45"/>
-<ellipse cx="150" cy="232" rx="26" ry="14" fill="{WHITE}" opacity=".28" transform="rotate(-30 150 232)"/>
-<path d="M150 190 C 158 168, 242 168, 250 190 L 244 160 L 156 160 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M156 160 C 118 148, 122 108, 150 104 C 156 90, 176 84, 186 96 C 196 80, 220 82, 226 98 C 244 88, 266 100, 260 118 C 284 124, 282 154, 244 160 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M172 112 C 178 128, 178 146, 172 158 M200 100 C 204 120, 204 142, 200 158 M228 110 C 224 128, 224 146, 228 158" fill="none" stroke="{YELLOW_DK}" stroke-width="5" stroke-linecap="round" opacity=".75"/>
-<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{ROPE}" stroke-width="16" stroke-linecap="round"/>
-<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{ROPE_DK}" stroke-width="16" stroke-linecap="round" stroke-dasharray="6 9" opacity=".55"/>
-<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".35" transform="translate(0 8)"/>
-<circle cx="254" cy="170" r="10" fill="{ROPE}" stroke="{NAVY}" stroke-width="5"/>
-<path d="M258 178 q 16 10 10 30 M262 176 q 22 -2 30 14" fill="none" stroke="{ROPE}" stroke-width="8" stroke-linecap="round"/>
-<path d="M258 178 q 16 10 10 30 M262 176 q 22 -2 30 14" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+<path d="M172 186 C 110 214, 70 300, 92 350 C 112 392, 288 392, 308 350 C 330 300, 290 214, 228 186 C 214 178, 186 178, 172 186 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M112 330 C 150 372, 250 372, 288 330" fill="none" stroke="{YELLOW_DK}" stroke-width="8" stroke-linecap="round" opacity=".4"/>
+<path d="M104 344 q 12 10 26 4 M270 348 q 12 6 24 -4" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+<ellipse cx="146" cy="236" rx="26" ry="13" fill="{WHITE}" opacity=".25" transform="rotate(-32 146 236)"/>
+<path d="M172 186 C 176 168, 178 156, 180 146 L 222 146 C 224 156, 226 168, 228 186 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M180 148 C 150 140, 132 118, 138 96 C 158 100, 174 112, 184 126 C 184 104, 194 84, 214 70 C 222 88, 224 108, 220 126 C 236 108, 258 100, 282 104 C 274 122, 258 136, 238 144 C 254 146, 268 152, 276 160 C 258 158, 240 154, 222 150 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M188 138 C 176 124, 162 112, 148 102 M204 136 C 206 116, 210 96, 214 80 M222 138 C 238 122, 256 112, 274 108" fill="none" stroke="{YELLOW_DK}" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+<path d="M176 152 C 190 146, 214 146, 228 152" fill="none" stroke="{ROPE}" stroke-width="11" stroke-linecap="round"/>
+<path d="M174 163 C 190 157, 214 157, 230 163" fill="none" stroke="{ROPE}" stroke-width="11" stroke-linecap="round"/>
+<path d="M176 174 C 190 168, 214 168, 228 174" fill="none" stroke="{ROPE}" stroke-width="11" stroke-linecap="round"/>
+<path d="M176 152 C 190 146, 214 146, 228 152 M174 163 C 190 157, 214 157, 230 163 M176 174 C 190 168, 214 168, 228 174" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round" opacity=".5" transform="translate(0 4)"/>
+<circle cx="232" cy="164" r="9" fill="{ROPE}" stroke="{NAVY}" stroke-width="5"/>
+<path d="M238 168 C 262 176, 266 196, 258 218 M240 166 C 268 164, 284 180, 286 204" fill="none" stroke="{ROPE}" stroke-width="9" stroke-linecap="round"/>
+<path d="M238 168 C 262 176, 266 196, 258 218 M240 166 C 268 164, 284 180, 286 204" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round" opacity=".45"/>
 """
 
 
 def _dollar() -> str:
-    return f"""<text x="200" y="382" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="52" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
+    return f"""<text x="200" y="386" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="56" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
 
 
 def _eye(cx: int, look_x: int = 0, look_y: int = 0, scale: float = 1.0) -> str:
@@ -157,9 +159,10 @@ def _arm(side: str, pose: str) -> str:
 
 
 def _legs() -> str:
-    return f"""<path d="M170 376 L 166 398" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/><path d="M230 376 L 234 398" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>
-<path d="M132 404 C 132 392, 150 386, 166 388 C 182 388, 194 394, 194 404 C 194 412, 176 416, 160 416 C 144 416, 132 412, 132 404 Z" fill="{BLUE}" stroke="{NAVY}" stroke-width="6"/><path d="M136 408 q 30 8 56 0" fill="none" stroke="{WHITE}" stroke-width="5" stroke-linecap="round"/>
-<path d="M206 404 C 206 394, 218 388, 234 388 C 250 386, 268 392, 268 404 C 268 412, 256 416, 240 416 C 224 416, 206 412, 206 404 Z" fill="{BLUE}" stroke="{NAVY}" stroke-width="6"/><path d="M208 408 q 30 8 56 0" fill="none" stroke="{WHITE}" stroke-width="5" stroke-linecap="round"/>"""
+    """Rubber-hose legs and big oval shoes, like the classic running money bag."""
+    return f"""<path d="M172 380 C 168 392, 160 400, 150 404" fill="none" stroke="{NAVY}" stroke-width="14" stroke-linecap="round"/><path d="M228 380 C 232 392, 240 400, 250 404" fill="none" stroke="{NAVY}" stroke-width="14" stroke-linecap="round"/>
+<ellipse cx="140" cy="410" rx="40" ry="16" fill="{NAVY}" transform="rotate(-8 140 410)"/><ellipse cx="260" cy="410" rx="40" ry="16" fill="{NAVY}" transform="rotate(8 260 410)"/>
+<path d="M116 404 q 24 -8 46 -2" fill="none" stroke="#5a6b80" stroke-width="4" stroke-linecap="round" opacity=".7"/><path d="M238 402 q 22 -6 46 2" fill="none" stroke="#5a6b80" stroke-width="4" stroke-linecap="round" opacity=".7"/>"""
 
 
 def _prop(name: str) -> str:
@@ -182,7 +185,7 @@ def _prop(name: str) -> str:
 
 def _sweat(expr: str) -> str:
     if expr in ("worried", "sad"):
-        return f'<path d="M282 214 q 12 16 0 28 q -12 -12 0 -28 z" fill="{BLUE}" stroke="{NAVY}" stroke-width="4"/>'
+        return f'<path d="M296 222 q 12 16 0 28 q -12 -12 0 -28 z" fill="{BLUE}" stroke="{NAVY}" stroke-width="4"/>'
     return ""
 
 
@@ -198,7 +201,7 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
         pose = "hold"
     parts = [_defs()]
     if shadow:
-        parts.append(f'<ellipse cx="200" cy="414" rx="100" ry="13" fill="{NAVY}" opacity=".12"/>')
+        parts.append(f'<ellipse cx="200" cy="420" rx="110" ry="12" fill="{NAVY}" opacity=".12"/>')
     parts.append(_arm("L", pose))
     parts.append(_bag())
     parts.append(_dollar())
@@ -208,7 +211,7 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
     parts.append(_arm("R", pose))
     parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
     attrs = f'width="{size}" height="{size}"' if size else ""
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 70 300 360" {attrs}>{"".join(parts)}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 56 300 380" {attrs}>{"".join(parts)}</svg>'
 
 
 if __name__ == "__main__":
