@@ -347,3 +347,33 @@ body.look-studio.serif-body p.body, body.look-studio.serif-body .item, body.look
 .cover-buck svg { width: 100%; height: 100%; }
 body.has-buck .content { right: 520px; }
 body.has-buck .swipe { display: none; }
+
+/* pop: Outfit + Inter, coral, teal and lemon on cream, confetti dots and a big disc */
+body.look-pop { --serif: "Outfit", "Inter", sans-serif; --sans: "Inter", system-ui, sans-serif;
+  --navy: #12766b; --navy-2: #0b5a51; --navy-3: #1b8f82; --slate: #c8473a; --slate-2: #a5372c;
+  --paper: #fff4e6; --paper-2: #ffe8cc; --gold: #ffd166; --gold-2: #ffe08a; --gold-deep: #e0a020; --blue: #ff6b57; --blue-light: #ffb3a7;
+  --ink: #1f2a2e; --ink-2: #3f4f55; --muted: #6f7f86; --line: rgba(31,42,46,.16);
+  --glow-a: rgba(255,209,102,.30); --glow-b: rgba(255,107,87,.16); --glow-light-a: rgba(255,107,87,.22); --glow-light-b: rgba(18,118,107,.12); }
+body.look-pop h1, body.look-pop h2, body.look-pop .dyk .fact, body.look-pop .quote blockquote { font-weight: 700; letter-spacing: -.025em; font-style: normal; }
+body.look-pop .stat .num { font-weight: 800; letter-spacing: -.04em; }
+body.look-pop mark { font-style: normal; }
+body.look-pop .vs .col, body.look-pop .stat, body.look-pop .icon-tile, body.look-pop .band .logo { border-radius: 30px; }
+body.look-pop .kicker { color: var(--blue); } body.look-pop .kicker:before { background: var(--blue); }
+body.look-pop .bg .shape.s1 { right: -160px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: var(--blue); opacity: .16; }
+body.look-pop .bg .shape.s2 { inset: 0; background-image: radial-gradient(var(--gold) 4px, transparent 4px), radial-gradient(var(--blue) 3px, transparent 3px), radial-gradient(var(--navy) 3px, transparent 3px); background-size: 140px 140px, 190px 190px, 230px 230px; background-position: 0 0, 60px 90px, 120px 40px; opacity: .22; mask-image: linear-gradient(180deg, rgba(0,0,0,.9), transparent 75%); }
+body.look-pop.dark .bg .shape.s2 { opacity: .30; }
+body.look-pop .vs .col.fact { background: var(--blue); color: var(--white); } body.look-pop .vs .col.fact .tag { color: var(--gold-2); }
+body.look-pop .bar.emph .fill { background: var(--blue); color: var(--white); }
+
+/* midnight: Fraunces + Inter, deep violet with mint and lilac, soft orbs */
+body.look-midnight { --serif: "Fraunces", Georgia, serif; --sans: "Inter", system-ui, sans-serif;
+  --navy: #2a1b4e; --navy-2: #1a0f33; --navy-3: #3a2868; --slate: #3b2a6b; --slate-2: #261a4a;
+  --paper: #f3effa; --paper-2: #e6dff5; --gold: #7ee8c8; --gold-2: #a9f2dd; --gold-deep: #1f9c7a; --blue: #7c5cff; --blue-light: #c4b5ff;
+  --ink: #2a1b4e; --ink-2: #4a3d6e; --muted: #7a6f99; --line: rgba(42,27,78,.16);
+  --glow-a: rgba(124,92,255,.34); --glow-b: rgba(126,232,200,.16); --glow-light-a: rgba(124,92,255,.20); --glow-light-b: rgba(126,232,200,.18); }
+body.look-midnight h1, body.look-midnight h2, body.look-midnight .dyk .fact, body.look-midnight .quote blockquote { font-weight: 500; font-variation-settings: "SOFT" 60, "opsz" 144; }
+body.look-midnight .bg .shape { border-radius: 50%; }
+body.look-midnight .bg .shape.s1 { right: -200px; top: 120px; width: 620px; height: 620px; background: radial-gradient(circle at 40% 40%, var(--blue), transparent 70%); opacity: .35; }
+body.look-midnight .bg .shape.s2 { left: -120px; bottom: 240px; width: 320px; height: 320px; background: radial-gradient(circle at 40% 40%, var(--gold), transparent 70%); opacity: .35; }
+body.look-midnight .bg .shape.s3 { left: 40%; top: 60px; width: 120px; height: 120px; background: var(--gold); opacity: .18; }
+body.look-midnight.t-paper .bg .shape.s1, body.look-midnight.t-white .bg .shape.s1 { opacity: .22; }

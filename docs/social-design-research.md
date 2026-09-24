@@ -71,7 +71,7 @@ Theme aliases: `cream` → `paper`, `sky` → `slate`. Existing queue specs rend
 
 ## Looks (added 2026-09-24)
 
-Five complete looks, each a font pairing, palette and shape language, picked per post by a seed
+Seven complete looks (equal odds per post), each a font pairing, palette and shape language, picked per post by a seed
 of the post's date so the grid does not read as one template. All share the logo, footer text and
 layout grid. Fonts are open-license from the Google Fonts repo, stored in `agent/assets/fonts/`.
 
@@ -82,6 +82,8 @@ layout grid. Fonts are open-license from the Google Fonts repo, stored in `agent
 | grotesk | Space Grotesk | charcoal, the logo's lemon and blue | hard corners, diagonal stripes, a blue square |
 | warm | Fraunces + Outfit | plum, terracotta, sand | arches, blobs |
 | notebook | Lora + Inter | slate blue, ice, gold | ruled lines, margin rule |
+| pop | Outfit + Inter | coral, teal, lemon on cream | confetti dots, a big disc |
+| midnight | Fraunces + Inter | deep violet, mint, lilac | soft orbs |
 
 Within each look the per-post variants still apply (cover alignment, glow corner, frame, kicker
 style, footer style, highlight style, white/paper body mix, accent slide, serif body, big index).

@@ -38,13 +38,15 @@ DARK = {"navy", "slate", "photo"}
 _css = (HERE / "theme.css").read_text(encoding="utf-8").replace("__FONTS__", FONTS.as_uri())
 
 
-LOOKS = ["ledger", "ledger", "studio", "grotesk", "warm", "notebook"]
+LOOKS = ["ledger", "studio", "grotesk", "warm", "notebook", "pop", "midnight"]
 SHAPES = {
     "ledger": "",
     "studio": '<div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div>',
     "grotesk": '<div class="shape s1"></div><div class="shape s2"></div>',
     "warm": '<div class="shape s1"></div><div class="shape s2"></div>',
     "notebook": '<div class="shape s1"></div><div class="shape s2"></div>',
+    "pop": '<div class="shape s1"></div><div class="shape s2"></div>',
+    "midnight": '<div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div>',
 }
 
 
