@@ -28,7 +28,7 @@ PINK = "#f28b8b"
 TONGUE = "#e0575d"
 
 # Face anchor points (body centre x=200). Eyes sit high on a wide face, Disney-style.
-EY, LX, RX = 250, 168, 232
+EY, LX, RX = 238, 168, 232
 
 
 def _defs() -> str:
@@ -59,7 +59,7 @@ def _bag() -> str:
 
 
 def _dollar() -> str:
-    return f"""<text x="200" y="386" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="56" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
+    return f"""<text x="200" y="360" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="62" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
 
 
 def _eye(cx: int, look_x: int = 0, look_y: int = 0, scale: float = 1.0) -> str:
@@ -109,9 +109,9 @@ def _mouth(expr: str) -> str:
     if expr in ("happy", "wink"):
         return f'<path d="M168 {y} Q 200 {y+34} 232 {y}" {s}/>'
     if expr == "big":
-        return (f'<path d="M160 {y-6} Q 200 {y+60} 240 {y-6} Z" fill="{NAVY}"/>'
+        return (f'<path d="M160 {y-6} Q 200 {y+48} 240 {y-6} Z" fill="{NAVY}"/>'
                 f'<path d="M166 {y-2} Q 200 {y+8} 234 {y-2} L 234 {y+6} Q 200 {y+16} 166 {y+6} Z" fill="{WHITE}"/>'
-                f'<ellipse cx="200" cy="{y+34}" rx="16" ry="10" fill="{TONGUE}"/>')
+                f'<ellipse cx="200" cy="{y+26}" rx="15" ry="9" fill="{TONGUE}"/>')
     if expr == "relieved":
         return f'<path d="M174 {y} Q 200 {y+22} 226 {y}" {s}/>'
     if expr == "worried":
@@ -147,7 +147,7 @@ def _arm(side: str, pose: str) -> str:
         "rest":  (sx + d * 34, 352),
         "wave":  (sx + d * 62, 190) if side == "R" else (sx + d * 34, 352),
         "chin":  (200 - 34, 322) if side == "R" else (sx + d * 34, 352),
-        "hold":  (200 + d * 40, 360),
+        "hold":  (200 + d * 42, 352),
         "shrug": (sx + d * 68, 262),
         "cheer": (sx + d * 62, 176),
         "point": (sx + d * 78, 250) if side == "R" else (sx + d * 34, 352),
@@ -207,7 +207,7 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
     parts.append(_dollar())
     parts.append(_legs())
     if pose == "hold":
-        parts.append('<g transform="translate(0 16)">' + _prop(prop) + "</g>")
+        parts.append('<g transform="translate(0 8)">' + _prop(prop) + "</g>")
     parts.append(_arm("R", pose))
     parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
     attrs = f'width="{size}" height="{size}"' if size else ""
