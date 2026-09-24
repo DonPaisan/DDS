@@ -3,79 +3,6 @@
   "generated_at": "2026-09-20",
   "posts": [
     {
-      "id": "2026-09-20-pm",
-      "kind": "carousel",
-      "title": "Interest and APR are two views of the same cost.",
-      "theme": "Debt basics",
-      "slides": [
-        {
-          "heading": "Interest is the price of borrowing.",
-          "body": "When a balance carries past the due date, the card issuer charges interest on it. It is added to the balance, so next month there is a little more to charge interest on."
-        },
-        {
-          "heading": "APR is the yearly rate.",
-          "body": "APR stands for annual percentage rate. A card at 24% APR charges about 2% a month. Statements show the APR; the interest line shows what that rate cost this month in dollars."
-        },
-        {
-          "heading": "Cards charge daily, not monthly.",
-          "body": "Most issuers divide the APR by 365 and apply it to the balance every day. That is why paying a few days earlier saves a little, and why a balance grows faster than the yearly rate suggests."
-        },
-        {
-          "heading": "Where to find it on a statement.",
-          "body": "Look for a box called \"Interest Charge Calculation\" or \"APR.\" It lists purchase APR, cash advance APR, and any penalty APR. Penalty APRs are often above 29% and can apply after a late payment."
-        },
-        {
-          "heading": "Why it matters.",
-          "body": "Two people can owe the same $5,000. At 12% APR the interest is about $50 a month at first. At 29% it is about $120. Same balance, very different cost."
-        }
-      ],
-      "caption": "Interest and APR describe the same thing from two angles: interest is the dollar cost of carrying a balance, APR is the yearly rate that produces it. Cards apply that rate daily, which is why balances grow faster than people expect and why a penalty APR after one late payment hurts so much. Knowing the APR on each account is the first step to any plan, because it tells you which balance is the most expensive to keep. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
-      "hashtags": [
-        "debtbasics",
-        "apr",
-        "creditcardinterest",
-        "personalfinance",
-        "financialliteracy",
-        "over50",
-        "moneymatters"
-      ],
-      "scheduled_for": "2026-09-20",
-      "slot": "pm",
-      "image_paths": [
-        "site/social/2026-09-20-pm-01.jpg",
-        "site/social/2026-09-20-pm-02.jpg",
-        "site/social/2026-09-20-pm-03.jpg",
-        "site/social/2026-09-20-pm-04.jpg",
-        "site/social/2026-09-20-pm-05.jpg",
-        "site/social/2026-09-20-pm-06.jpg",
-        "site/social/2026-09-20-pm-07.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-06.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-07.jpg"
-      ],
-      "status": "posted",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "results": {
-        "instagram": {
-          "id": "18115052455976870"
-        },
-        "facebook": {
-          "id": "868663969665622_122139688977139646",
-          "post_supports_client_mutation_id": true
-        }
-      },
-      "surface": "feed"
-    },
-    {
       "id": "2026-09-21-am",
       "kind": "carousel",
       "title": "An emergency fund is not a number. It is a reason.",
@@ -216,6 +143,79 @@
       }
     },
     {
+      "id": "2026-09-20-pm",
+      "kind": "carousel",
+      "title": "Interest and APR are two views of the same cost.",
+      "theme": "Debt basics",
+      "slides": [
+        {
+          "heading": "Interest is the price of borrowing.",
+          "body": "When a balance carries past the due date, the card issuer charges interest on it. It is added to the balance, so next month there is a little more to charge interest on."
+        },
+        {
+          "heading": "APR is the yearly rate.",
+          "body": "APR stands for annual percentage rate. A card at 24% APR charges about 2% a month. Statements show the APR; the interest line shows what that rate cost this month in dollars."
+        },
+        {
+          "heading": "Cards charge daily, not monthly.",
+          "body": "Most issuers divide the APR by 365 and apply it to the balance every day. That is why paying a few days earlier saves a little, and why a balance grows faster than the yearly rate suggests."
+        },
+        {
+          "heading": "Where to find it on a statement.",
+          "body": "Look for a box called \"Interest Charge Calculation\" or \"APR.\" It lists purchase APR, cash advance APR, and any penalty APR. Penalty APRs are often above 29% and can apply after a late payment."
+        },
+        {
+          "heading": "Why it matters.",
+          "body": "Two people can owe the same $5,000. At 12% APR the interest is about $50 a month at first. At 29% it is about $120. Same balance, very different cost."
+        }
+      ],
+      "caption": "Interest and APR describe the same thing from two angles: interest is the dollar cost of carrying a balance, APR is the yearly rate that produces it. Cards apply that rate daily, which is why balances grow faster than people expect and why a penalty APR after one late payment hurts so much. Knowing the APR on each account is the first step to any plan, because it tells you which balance is the most expensive to keep. If you want a clear picture of your own balances, the free review on our site takes about a minute. Link in bio.",
+      "hashtags": [
+        "debtbasics",
+        "apr",
+        "creditcardinterest",
+        "personalfinance",
+        "financialliteracy",
+        "over50",
+        "moneymatters"
+      ],
+      "scheduled_for": "2026-09-20",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-20-pm-01.jpg",
+        "site/social/2026-09-20-pm-02.jpg",
+        "site/social/2026-09-20-pm-03.jpg",
+        "site/social/2026-09-20-pm-04.jpg",
+        "site/social/2026-09-20-pm-05.jpg",
+        "site/social/2026-09-20-pm-06.jpg",
+        "site/social/2026-09-20-pm-07.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-20-pm-07.jpg"
+      ],
+      "status": "posted",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "results": {
+        "instagram": {
+          "id": "18115052455976870"
+        },
+        "facebook": {
+          "id": "868663969665622_122139688977139646",
+          "post_supports_client_mutation_id": true
+        }
+      },
+      "surface": "feed"
+    },
+    {
       "id": "2026-09-21-pm",
       "kind": "single",
       "subkind": "did_you_know",
@@ -270,139 +270,6 @@
           "post_id": "868663969665622_122139785871139646"
         }
       }
-    },
-    {
-      "id": "2026-09-22-am",
-      "kind": "carousel",
-      "title": "Your credit score is five numbers pretending to be one.",
-      "theme": "Credit basics",
-      "spec": {
-        "kicker": "Credit basics",
-        "theme": "cream",
-        "cover": {
-          "title": "Your credit score is five numbers pretending to be one.",
-          "highlight": [
-            "five",
-            "numbers"
-          ],
-          "subtitle": "What actually moves it, in order of weight."
-        },
-        "slides": [
-          {
-            "kind": "compare",
-            "heading": "What FICO weighs",
-            "bars": [
-              {
-                "label": "Payment history",
-                "value": 35,
-                "display": "35%",
-                "emphasis": true
-              },
-              {
-                "label": "Amounts owed",
-                "value": 30,
-                "display": "30%"
-              },
-              {
-                "label": "Length of history",
-                "value": 15,
-                "display": "15%"
-              }
-            ],
-            "note": "New credit and credit mix make up the last 20%."
-          },
-          {
-            "kind": "text",
-            "heading": "Payment history",
-            "body": "One late payment reported 30+ days past due can stay on your report for seven years. Autopay for at least the minimum removes the biggest risk.",
-            "icon": "calendar",
-            "highlight": null
-          },
-          {
-            "kind": "text",
-            "heading": "Amounts owed",
-            "body": "Mostly utilization: balance divided by limit, per card and overall. Under 30% is the usual guidance, under 10% is better. This part reacts within a month.",
-            "icon": "credit-card",
-            "highlight": null
-          },
-          {
-            "kind": "list",
-            "heading": "Small things that help",
-            "items": [
-              "Keep old cards open, even at zero",
-              "Pay before the statement closes",
-              "Dispute errors for free with each bureau",
-              "Do not open several new accounts at once"
-            ],
-            "numbered": false
-          }
-        ]
-      },
-      "caption": "Your credit score is five numbers pretending to be one. 📊 Payment history is 35% of a FICO score, amounts owed 30%, length of history 15%, and new credit and mix make up the rest. Two of those you can move fast: never miss a payment (autopay the minimum) and keep utilization low. Swipe for the small things that help ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
-      "hashtags": [
-        "creditscore",
-        "credittips",
-        "moneybasics",
-        "debtfreejourney",
-        "debtfreecommunity",
-        "financialfreedom",
-        "moneytips",
-        "financialliteracy",
-        "personalfinance",
-        "budgeting",
-        "moneymindset",
-        "smartmoneymoves",
-        "creditcarddebt",
-        "savingmoney",
-        "debtfree"
-      ],
-      "scheduled_for": "2026-10-04",
-      "slot": "am",
-      "surface": "feed",
-      "image_paths": [
-        "site/social/2026-09-22-am-01.jpg",
-        "site/social/2026-09-22-am-02.jpg",
-        "site/social/2026-09-22-am-03.jpg",
-        "site/social/2026-09-22-am-04.jpg",
-        "site/social/2026-09-22-am-05.jpg",
-        "site/social/2026-09-22-am-06.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ]
-    },
-    {
-      "id": "2026-09-22-am-story",
-      "kind": "single",
-      "subkind": "cover",
-      "surface": "story",
-      "title": "Your credit score is five numbers pretending to be one.",
-      "caption": "",
-      "hashtags": [],
-      "scheduled_for": "2026-10-04",
-      "slot": "am",
-      "image_paths": [
-        "site/social/frames/2026-09-22-am-cover-01.jpg"
-      ],
-      "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-22-am-cover-01.jpg"
-      ],
-      "status": "queued",
-      "platforms": [
-        "instagram",
-        "facebook"
-      ],
-      "companion_of": "2026-09-22-am"
     },
     {
       "id": "2026-09-22-noon",
@@ -1628,71 +1495,131 @@
       "photo_credit": null
     },
     {
-      "id": "2026-09-27-am",
+      "id": "2026-09-26-comic",
       "kind": "carousel",
-      "title": "Interest and APR are two views of the same cost.",
-      "theme": "Money basics",
+      "subkind": "comic",
+      "title": "Buck pays the minimum.",
+      "theme": "Buck comic",
       "spec": {
-        "kicker": "Money basics",
-        "theme": "sky",
-        "cover": {
-          "title": "Interest and APR are two views of the same cost.",
-          "highlight": [
-            "APR"
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "ledger",
+          "body_mix": [
+            "white"
           ],
-          "subtitle": "Once you can read them, the statement stops being scary."
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "worried",
+          "pose": "hold",
+          "prop": "bill"
+        },
+        "cover": {
+          "title": "Buck pays the minimum.",
+          "highlight": [
+            "minimum."
+          ],
+          "subtitle": "A short comic about the box on every card statement."
         },
         "slides": [
           {
-            "kind": "text",
-            "heading": "Interest is the price of borrowing",
-            "body": "Carry a balance past the due date and the issuer charges interest on it. It gets added to the balance, so next month there is more to charge.",
-            "icon": "receipt",
-            "highlight": null
+            "kind": "comic",
+            "scene": "mail",
+            "buck": {
+              "expr": "happy",
+              "pose": "hold",
+              "prop": "bill",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Minimum due: $150. Easy.",
+              "style": "say"
+            },
+            "cap": "Month one."
           },
           {
-            "kind": "stat",
-            "heading": "APR is the yearly rate",
-            "value": "24%",
-            "label": "APR is about 2% a month",
-            "body": "Statements show the APR. The interest line shows what that rate cost this month, in dollars."
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "bill",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "I paid $150 and the balance only dropped $50?",
+              "style": "say"
+            },
+            "cap": "Month two."
           },
           {
-            "kind": "compare",
-            "heading": "Same $5,000 balance, first month of interest",
-            "bars": [
-              {
-                "label": "At 12% APR",
-                "value": 50,
-                "display": "$50",
-                "emphasis": true
-              },
-              {
-                "label": "At 29% APR",
-                "value": 121,
-                "display": "$121"
-              }
+            "kind": "comic",
+            "scene": "night",
+            "buck": {
+              "expr": "thinking",
+              "pose": "chin",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "$100 went to interest. The minimum is built to keep me here.",
+              "style": "thought"
+            },
+            "cap": "That night."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "determined",
+              "pose": "hold",
+              "prop": "calculator",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Fixed $150 every month. Never lower it.",
+              "style": "shout"
+            },
+            "fx": "CLICK"
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "big",
+              "pose": "cheer",
+              "prop": "none",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Paid off in about 5 years instead of 20.",
+              "style": "say"
+            },
+            "cap_bottom": "Same card. Same $150. One habit."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Pick a payment and never lower it.",
+            "body": "The minimum shrinks as the balance shrinks, so the account stays open as long as possible. A fixed payment is the whole trick.",
+            "highlight": [
+              "never"
             ],
-            "note": "Same balance. Very different cost. The rate matters more than the balance."
-          },
-          {
-            "kind": "list",
-            "heading": "Find it on your statement",
-            "items": [
-              "The box labeled Interest Charge Calculation",
-              "Purchase APR vs cash advance APR",
-              "Any penalty APR, often above 29%",
-              "The interest line, in dollars"
-            ],
-            "numbered": false
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
           }
-        ]
+        ],
+        "serial": "5 panels, 8 slides"
       },
-      "caption": "Interest and APR are the same cost from two angles. 💳 Interest is the dollar amount, APR is the yearly rate that produces it, applied daily. A $5,000 balance costs about $50 a month at 12% and about $121 at 29%. Knowing the APR on each account tells you which balance is the most expensive to keep. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "caption": "Buck pays the minimum. 💳 On a $5,000 card at 24% APR the minimum is about $150: $100 of it is interest, so the balance barely moves. Paying the minimum takes about 20 years and costs $8,887 in interest. Keep the payment fixed at $150 and it clears in about 5. Same card, same money, one habit. Swipe for the comic ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "apr",
+        "minimumpayment",
         "creditcards",
-        "moneybasics",
+        "interest",
         "debtfreejourney",
         "debtfreecommunity",
         "financialfreedom",
@@ -1710,20 +1637,24 @@
       "slot": "am",
       "surface": "feed",
       "image_paths": [
-        "site/social/2026-09-27-am-01.jpg",
-        "site/social/2026-09-27-am-02.jpg",
-        "site/social/2026-09-27-am-03.jpg",
-        "site/social/2026-09-27-am-04.jpg",
-        "site/social/2026-09-27-am-05.jpg",
-        "site/social/2026-09-27-am-06.jpg"
+        "site/social/2026-09-26-comic-01.jpg",
+        "site/social/2026-09-26-comic-02.jpg",
+        "site/social/2026-09-26-comic-03.jpg",
+        "site/social/2026-09-26-comic-04.jpg",
+        "site/social/2026-09-26-comic-05.jpg",
+        "site/social/2026-09-26-comic-06.jpg",
+        "site/social/2026-09-26-comic-07.jpg",
+        "site/social/2026-09-26-comic-08.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-08.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -1732,27 +1663,27 @@
       ]
     },
     {
-      "id": "2026-09-27-am-story",
+      "id": "2026-09-26-comic-story",
       "kind": "single",
       "subkind": "cover",
       "surface": "story",
-      "title": "Interest and APR are two views of the same cost.",
+      "title": "Buck pays the minimum.",
       "caption": "",
       "hashtags": [],
       "scheduled_for": "2026-09-26",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-27-am-cover-01.jpg"
+        "site/social/frames/2026-09-26-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-27-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-26-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "companion_of": "2026-09-27-am"
+      "companion_of": "2026-09-26-comic"
     },
     {
       "id": "2026-09-27-noon",
@@ -2210,72 +2141,128 @@
       "companion_of": "2026-09-30-am"
     },
     {
-      "id": "2026-10-01-am",
+      "id": "2026-09-30-comic",
       "kind": "carousel",
-      "title": "A 401(k) match is a raise you have to opt into.",
-      "theme": "Retirement",
+      "subkind": "comic",
+      "title": "Buck gets the call.",
+      "theme": "Buck comic",
       "spec": {
-        "kicker": "Retirement",
-        "theme": "white",
-        "cover": {
-          "title": "A 401(k) match is a raise you have to opt into.",
-          "highlight": [
-            "raise"
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "notebook",
+          "body_mix": [
+            "white"
           ],
-          "subtitle": "What it is, what it is worth, and the one mistake that forfeits it."
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "worried",
+          "pose": "hold",
+          "prop": "phone"
+        },
+        "cover": {
+          "title": "Buck gets the call.",
+          "highlight": [
+            "call."
+          ],
+          "subtitle": "What a collector has to give you before you give them anything."
         },
         "slides": [
           {
-            "kind": "stat",
-            "heading": "A common match",
-            "value": "$3,000",
-            "label": "a year on a $50,000 salary with a 6% match",
-            "body": "Contribute 6%, the employer adds 6%. Contribute less and the difference is simply not paid to you."
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "worried",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "“This is about a debt. Pay today or else.”",
+              "style": "say"
+            },
+            "cap": "Tuesday, 8:40 AM."
           },
           {
-            "kind": "compare",
-            "heading": "That match, invested at 7% for 25 years",
-            "bars": [
-              {
-                "label": "Your own 6%",
-                "value": 202517.92325577774,
-                "display": "$202,518"
-              },
-              {
-                "label": "Employer match",
-                "value": 202517.92325577774,
-                "display": "$202,518",
-                "emphasis": true
-              }
-            ],
-            "note": "Two piles, one of them free. Illustration only; returns vary."
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "thinking",
+              "pose": "chin",
+              "prop": "none",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Or else what? I don’t even know if this is real.",
+              "style": "thought"
+            }
           },
           {
-            "kind": "text",
-            "heading": "Vesting",
-            "body": "Some employers keep part of the match if you leave within a few years. Ask HR for the vesting schedule. It can change the math on switching jobs.",
-            "icon": "clock",
-            "highlight": null
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "determined",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Send me a validation notice in writing. Company name and address, please.",
+              "style": "shout"
+            },
+            "cap": "Federal rules say they must."
           },
           {
-            "kind": "list",
-            "heading": "If money is tight",
-            "items": [
-              "Contribute at least enough to get the full match",
-              "Raise it 1% each time you get a raise",
-              "Do not cash it out when you change jobs; roll it over",
-              "Check the fees on the funds once a year"
-            ],
-            "numbered": false
+            "kind": "comic",
+            "scene": "mail",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "letter",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Amount, original creditor, dates, how to dispute. Now I can actually check it.",
+              "style": "say"
+            },
+            "cap": "Five days later."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "relieved",
+              "pose": "rest",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "No threats, no rush. I decide the next step, in writing.",
+              "style": "say"
+            },
+            "cap_bottom": "More than 7 calls in 7 days about one debt is presumed harassment (Regulation F)."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Ask for it in writing. Then decide.",
+            "body": "A collector must send a validation notice with the amount, the original creditor, and how to dispute it. Nothing has to be decided on the phone. Log every call: date, time, company.",
+            "highlight": [],
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
           }
-        ]
+        ],
+        "serial": "5 panels, 8 slides"
       },
-      "caption": "A 401(k) match is a raise you have to opt into. 💼 On a $50,000 salary with a 6% match, that is $3,000 a year the employer adds only if you contribute. Invested at a 7% average for 25 years, the match alone grows to roughly $202,518. Contribute less than the match and that money is never paid to you. Swipe ➡️ (Illustration only, not investment advice.)\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "caption": "Buck gets the call. 📞 A collector says “pay today or else.” Buck says “send me a validation notice.” Federal rules require it: the amount, the original creditor, and how to dispute, in writing, before anything else. Nothing has to be decided on the phone, and more than 7 calls in 7 days about one debt is presumed harassment under Regulation F. Swipe for the comic ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
       "hashtags": [
-        "401k",
-        "retirementplanning",
-        "investing101",
-        "moneybasics",
+        "debtcollectors",
+        "knowyourrights",
+        "collections",
         "debtfreejourney",
         "debtfreecommunity",
         "financialfreedom",
@@ -2286,26 +2273,31 @@
         "moneymindset",
         "smartmoneymoves",
         "creditcarddebt",
-        "savingmoney"
+        "savingmoney",
+        "debtfree"
       ],
       "scheduled_for": "2026-09-30",
       "slot": "am",
       "surface": "feed",
       "image_paths": [
-        "site/social/2026-10-01-am-01.jpg",
-        "site/social/2026-10-01-am-02.jpg",
-        "site/social/2026-10-01-am-03.jpg",
-        "site/social/2026-10-01-am-04.jpg",
-        "site/social/2026-10-01-am-05.jpg",
-        "site/social/2026-10-01-am-06.jpg"
+        "site/social/2026-09-30-comic-01.jpg",
+        "site/social/2026-09-30-comic-02.jpg",
+        "site/social/2026-09-30-comic-03.jpg",
+        "site/social/2026-09-30-comic-04.jpg",
+        "site/social/2026-09-30-comic-05.jpg",
+        "site/social/2026-09-30-comic-06.jpg",
+        "site/social/2026-09-30-comic-07.jpg",
+        "site/social/2026-09-30-comic-08.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-01.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-02.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-03.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-04.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-05.jpg",
-        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-06.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-30-comic-08.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2314,27 +2306,27 @@
       ]
     },
     {
-      "id": "2026-10-01-am-story",
+      "id": "2026-09-30-comic-story",
       "kind": "single",
       "subkind": "cover",
       "surface": "story",
-      "title": "A 401(k) match is a raise you have to opt into.",
+      "title": "Buck gets the call.",
       "caption": "",
       "hashtags": [],
       "scheduled_for": "2026-09-30",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-01-am-cover-01.jpg"
+        "site/social/frames/2026-09-30-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-01-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-30-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "companion_of": "2026-10-01-am"
+      "companion_of": "2026-09-30-comic"
     },
     {
       "id": "2026-10-02-am",
@@ -2576,6 +2568,774 @@
       "companion_of": "2026-10-03-am"
     },
     {
+      "id": "2026-10-03-comic",
+      "kind": "carousel",
+      "subkind": "comic",
+      "title": "Buck closes a card.",
+      "theme": "Buck comic",
+      "spec": {
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "studio",
+          "body_mix": [
+            "white"
+          ],
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "happy",
+          "pose": "hold",
+          "prop": "card"
+        },
+        "cover": {
+          "title": "Buck closes a card.",
+          "highlight": [
+            "closes"
+          ],
+          "subtitle": "The paid-off card that was quietly helping his score."
+        },
+        "slides": [
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "big",
+              "pose": "hold",
+              "prop": "card",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Paid off! Closing it so I’m never tempted again.",
+              "style": "say"
+            },
+            "fx": "SNIP"
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "My score went DOWN?",
+              "style": "say"
+            },
+            "cap": "Next month."
+          },
+          {
+            "kind": "comic",
+            "scene": "night",
+            "buck": {
+              "expr": "thinking",
+              "pose": "chin",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Same balances. Less total limit. My utilization went up.",
+              "style": "thought"
+            },
+            "cap_bottom": "$3,000 owed on $10,000 = 30%. Close a $4,000 card: $3,000 on $6,000 = 50%."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "determined",
+              "pose": "point",
+              "prop": "none",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Next time: keep it open, one small charge, autopay in full.",
+              "style": "say"
+            }
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "relieved",
+              "pose": "rest",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Utilization has no memory. Next month’s balance is next month’s score.",
+              "style": "say"
+            },
+            "cap": "Two months later."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Keep paid-off cards open.",
+            "body": "Utilization is balance divided by limit, across all your cards. Closing a card removes its limit and raises the ratio. Keep it open at zero, or with one small autopaid charge.",
+            "highlight": [
+              "open."
+            ],
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
+          }
+        ],
+        "serial": "5 panels, 8 slides"
+      },
+      "caption": "Buck closes a card. ✂️ He paid it off, closed it, and his score dropped. Utilization is balance divided by limit across all cards: $3,000 on $10,000 is 30%, but close a $4,000 card and the same $3,000 is now 50%. Keep paid-off cards open with one small autopaid charge. Utilization has no memory, so the fix shows up next cycle. Swipe ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "creditscore",
+        "creditutilization",
+        "credittips",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-03",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-03-comic-01.jpg",
+        "site/social/2026-10-03-comic-02.jpg",
+        "site/social/2026-10-03-comic-03.jpg",
+        "site/social/2026-10-03-comic-04.jpg",
+        "site/social/2026-10-03-comic-05.jpg",
+        "site/social/2026-10-03-comic-06.jpg",
+        "site/social/2026-10-03-comic-07.jpg",
+        "site/social/2026-10-03-comic-08.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-03-comic-08.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-03-comic-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Buck closes a card.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-03",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-03-comic-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-03-comic-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-03-comic"
+    },
+    {
+      "id": "2026-09-22-am",
+      "kind": "carousel",
+      "title": "Your credit score is five numbers pretending to be one.",
+      "theme": "Credit basics",
+      "spec": {
+        "kicker": "Credit basics",
+        "theme": "cream",
+        "cover": {
+          "title": "Your credit score is five numbers pretending to be one.",
+          "highlight": [
+            "five",
+            "numbers"
+          ],
+          "subtitle": "What actually moves it, in order of weight."
+        },
+        "slides": [
+          {
+            "kind": "compare",
+            "heading": "What FICO weighs",
+            "bars": [
+              {
+                "label": "Payment history",
+                "value": 35,
+                "display": "35%",
+                "emphasis": true
+              },
+              {
+                "label": "Amounts owed",
+                "value": 30,
+                "display": "30%"
+              },
+              {
+                "label": "Length of history",
+                "value": 15,
+                "display": "15%"
+              }
+            ],
+            "note": "New credit and credit mix make up the last 20%."
+          },
+          {
+            "kind": "text",
+            "heading": "Payment history",
+            "body": "One late payment reported 30+ days past due can stay on your report for seven years. Autopay for at least the minimum removes the biggest risk.",
+            "icon": "calendar",
+            "highlight": null
+          },
+          {
+            "kind": "text",
+            "heading": "Amounts owed",
+            "body": "Mostly utilization: balance divided by limit, per card and overall. Under 30% is the usual guidance, under 10% is better. This part reacts within a month.",
+            "icon": "credit-card",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "Small things that help",
+            "items": [
+              "Keep old cards open, even at zero",
+              "Pay before the statement closes",
+              "Dispute errors for free with each bureau",
+              "Do not open several new accounts at once"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "Your credit score is five numbers pretending to be one. 📊 Payment history is 35% of a FICO score, amounts owed 30%, length of history 15%, and new credit and mix make up the rest. Two of those you can move fast: never miss a payment (autopay the minimum) and keep utilization low. Swipe for the small things that help ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "creditscore",
+        "credittips",
+        "moneybasics",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-04",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-22-am-01.jpg",
+        "site/social/2026-09-22-am-02.jpg",
+        "site/social/2026-09-22-am-03.jpg",
+        "site/social/2026-09-22-am-04.jpg",
+        "site/social/2026-09-22-am-05.jpg",
+        "site/social/2026-09-22-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-22-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-22-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Your credit score is five numbers pretending to be one.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-04",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-22-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-22-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-22-am"
+    },
+    {
+      "id": "2026-09-27-am",
+      "kind": "carousel",
+      "title": "Interest and APR are two views of the same cost.",
+      "theme": "Money basics",
+      "spec": {
+        "kicker": "Money basics",
+        "theme": "sky",
+        "cover": {
+          "title": "Interest and APR are two views of the same cost.",
+          "highlight": [
+            "APR"
+          ],
+          "subtitle": "Once you can read them, the statement stops being scary."
+        },
+        "slides": [
+          {
+            "kind": "text",
+            "heading": "Interest is the price of borrowing",
+            "body": "Carry a balance past the due date and the issuer charges interest on it. It gets added to the balance, so next month there is more to charge.",
+            "icon": "receipt",
+            "highlight": null
+          },
+          {
+            "kind": "stat",
+            "heading": "APR is the yearly rate",
+            "value": "24%",
+            "label": "APR is about 2% a month",
+            "body": "Statements show the APR. The interest line shows what that rate cost this month, in dollars."
+          },
+          {
+            "kind": "compare",
+            "heading": "Same $5,000 balance, first month of interest",
+            "bars": [
+              {
+                "label": "At 12% APR",
+                "value": 50,
+                "display": "$50",
+                "emphasis": true
+              },
+              {
+                "label": "At 29% APR",
+                "value": 121,
+                "display": "$121"
+              }
+            ],
+            "note": "Same balance. Very different cost. The rate matters more than the balance."
+          },
+          {
+            "kind": "list",
+            "heading": "Find it on your statement",
+            "items": [
+              "The box labeled Interest Charge Calculation",
+              "Purchase APR vs cash advance APR",
+              "Any penalty APR, often above 29%",
+              "The interest line, in dollars"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "Interest and APR are the same cost from two angles. 💳 Interest is the dollar amount, APR is the yearly rate that produces it, applied daily. A $5,000 balance costs about $50 a month at 12% and about $121 at 29%. Knowing the APR on each account tells you which balance is the most expensive to keep. Swipe ➡️\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "apr",
+        "creditcards",
+        "moneybasics",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-05",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-09-27-am-01.jpg",
+        "site/social/2026-09-27-am-02.jpg",
+        "site/social/2026-09-27-am-03.jpg",
+        "site/social/2026-09-27-am-04.jpg",
+        "site/social/2026-09-27-am-05.jpg",
+        "site/social/2026-09-27-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-09-27-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Interest and APR are two views of the same cost.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-05",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-27-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-27-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-27-am"
+    },
+    {
+      "id": "2026-10-01-am",
+      "kind": "carousel",
+      "title": "A 401(k) match is a raise you have to opt into.",
+      "theme": "Retirement",
+      "spec": {
+        "kicker": "Retirement",
+        "theme": "white",
+        "cover": {
+          "title": "A 401(k) match is a raise you have to opt into.",
+          "highlight": [
+            "raise"
+          ],
+          "subtitle": "What it is, what it is worth, and the one mistake that forfeits it."
+        },
+        "slides": [
+          {
+            "kind": "stat",
+            "heading": "A common match",
+            "value": "$3,000",
+            "label": "a year on a $50,000 salary with a 6% match",
+            "body": "Contribute 6%, the employer adds 6%. Contribute less and the difference is simply not paid to you."
+          },
+          {
+            "kind": "compare",
+            "heading": "That match, invested at 7% for 25 years",
+            "bars": [
+              {
+                "label": "Your own 6%",
+                "value": 202517.92325577774,
+                "display": "$202,518"
+              },
+              {
+                "label": "Employer match",
+                "value": 202517.92325577774,
+                "display": "$202,518",
+                "emphasis": true
+              }
+            ],
+            "note": "Two piles, one of them free. Illustration only; returns vary."
+          },
+          {
+            "kind": "text",
+            "heading": "Vesting",
+            "body": "Some employers keep part of the match if you leave within a few years. Ask HR for the vesting schedule. It can change the math on switching jobs.",
+            "icon": "clock",
+            "highlight": null
+          },
+          {
+            "kind": "list",
+            "heading": "If money is tight",
+            "items": [
+              "Contribute at least enough to get the full match",
+              "Raise it 1% each time you get a raise",
+              "Do not cash it out when you change jobs; roll it over",
+              "Check the fees on the funds once a year"
+            ],
+            "numbered": false
+          }
+        ]
+      },
+      "caption": "A 401(k) match is a raise you have to opt into. 💼 On a $50,000 salary with a 6% match, that is $3,000 a year the employer adds only if you contribute. Invested at a 7% average for 25 years, the match alone grows to roughly $202,518. Contribute less than the match and that money is never paid to you. Swipe ➡️ (Illustration only, not investment advice.)\n\nFollow @debt_direct_solutions for plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "401k",
+        "retirementplanning",
+        "investing101",
+        "moneybasics",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney"
+      ],
+      "scheduled_for": "2026-10-06",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-01-am-01.jpg",
+        "site/social/2026-10-01-am-02.jpg",
+        "site/social/2026-10-01-am-03.jpg",
+        "site/social/2026-10-01-am-04.jpg",
+        "site/social/2026-10-01-am-05.jpg",
+        "site/social/2026-10-01-am-06.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-01-am-06.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-01-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "A 401(k) match is a raise you have to opt into.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-06",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-01-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-01-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-01-am"
+    },
+    {
+      "id": "2026-10-07-comic",
+      "kind": "carousel",
+      "subkind": "comic",
+      "title": "Buck and the medical bill.",
+      "theme": "Buck comic",
+      "spec": {
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "warm",
+          "body_mix": [
+            "white"
+          ],
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "worried",
+          "pose": "hold",
+          "prop": "bill"
+        },
+        "cover": {
+          "title": "Buck and the medical bill.",
+          "highlight": [
+            "medical"
+          ],
+          "subtitle": "Never pay a bill you haven’t read line by line."
+        },
+        "slides": [
+          {
+            "kind": "comic",
+            "scene": "mail",
+            "buck": {
+              "expr": "worried",
+              "pose": "hold",
+              "prop": "bill",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "$1,240 for a twenty-minute visit?",
+              "style": "say"
+            },
+            "cap": "The envelope."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "thinking",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Can I get an itemized bill, please?",
+              "style": "say"
+            },
+            "cap": "They have to provide one."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "letter",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Charged twice for the same test.",
+              "style": "say"
+            },
+            "cap": "Line 14 and line 22.",
+            "fx": "!!"
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "determined",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Please remove the duplicate. And do you offer financial assistance or an interest-free plan?",
+              "style": "shout"
+            }
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "big",
+              "pose": "cheer",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "$1,240 became $780. $65 a month, no interest.",
+              "style": "say"
+            },
+            "cap_bottom": "Twelve months. No card involved."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Read it. Ask. Then pay.",
+            "body": "Ask for the itemized bill and check every line. Ask about financial assistance and interest-free payment plans; most hospitals have both. Errors are common, and the worst answer is no.",
+            "highlight": [
+              "Ask."
+            ],
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
+          }
+        ],
+        "serial": "5 panels, 8 slides"
+      },
+      "caption": "Buck and the medical bill. 🏥 $1,240 for a twenty-minute visit. Buck asks for the itemized bill, finds the same test charged twice, gets it removed, and asks the two questions that change everything: financial assistance, and an interest-free payment plan. $780 at $65 a month, no card involved. Never pay a medical bill you haven’t read. Swipe ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "medicalbills",
+        "medicaldebt",
+        "negotiation",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-07",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-07-comic-01.jpg",
+        "site/social/2026-10-07-comic-02.jpg",
+        "site/social/2026-10-07-comic-03.jpg",
+        "site/social/2026-10-07-comic-04.jpg",
+        "site/social/2026-10-07-comic-05.jpg",
+        "site/social/2026-10-07-comic-06.jpg",
+        "site/social/2026-10-07-comic-07.jpg",
+        "site/social/2026-10-07-comic-08.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-07-comic-08.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-07-comic-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Buck and the medical bill.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-07",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-07-comic-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-07-comic-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-07-comic"
+    },
+    {
       "id": "2026-10-04-am",
       "kind": "carousel",
       "title": "Your credit reports are free every week. Most people have never looked.",
@@ -2648,7 +3408,7 @@
         "creditcarddebt",
         "savingmoney"
       ],
-      "scheduled_for": "2026-10-03",
+      "scheduled_for": "2026-10-08",
       "slot": "am",
       "surface": "feed",
       "image_paths": [
@@ -2681,7 +3441,7 @@
       "title": "Your credit reports are free every week. Most people have never looked.",
       "caption": "",
       "hashtags": [],
-      "scheduled_for": "2026-10-03",
+      "scheduled_for": "2026-10-08",
       "slot": "am",
       "image_paths": [
         "site/social/frames/2026-10-04-am-cover-01.jpg"
@@ -2695,6 +3455,386 @@
         "facebook"
       ],
       "companion_of": "2026-10-04-am"
+    },
+    {
+      "id": "2026-10-10-comic",
+      "kind": "carousel",
+      "subkind": "comic",
+      "title": "Buck thinks it’s too late.",
+      "theme": "Buck comic",
+      "spec": {
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "grotesk",
+          "body_mix": [
+            "white"
+          ],
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "sad",
+          "pose": "rest"
+        },
+        "cover": {
+          "title": "Buck thinks it’s too late.",
+          "highlight": [
+            "too",
+            "late."
+          ],
+          "subtitle": "Ten years is still ten years."
+        },
+        "slides": [
+          {
+            "kind": "comic",
+            "scene": "night",
+            "buck": {
+              "expr": "sad",
+              "pose": "rest",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Fifty-five, nothing saved. Why bother now?",
+              "style": "thought"
+            }
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "thinking",
+              "pose": "hold",
+              "prop": "calculator",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "$200 a month. Ten years. 7% average…",
+              "style": "say"
+            },
+            "cap": "Just to see."
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "calculator",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "$34,617? From $24,000 in?",
+              "style": "say"
+            },
+            "fx": "WHOA"
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "determined",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Automatic transfer. Payday. Done.",
+              "style": "shout"
+            },
+            "fx": "TAP"
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer",
+              "prop": "none",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Ten years still counts.",
+              "style": "say"
+            },
+            "cap_bottom": "Illustration only, not investment advice. Returns vary."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Late beats never.",
+            "body": "$200 a month at a 7% average return is about $34,617 after ten years, from $24,000 of deposits. The best time was twenty years ago. The next best is this month.",
+            "highlight": [
+              "never."
+            ],
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
+          }
+        ],
+        "serial": "5 panels, 8 slides"
+      },
+      "caption": "Buck thinks it’s too late. ⏳ Fifty-five and nothing saved, so why bother? Because $200 a month at a 7% average return is about $34,617 after ten years, from $24,000 of deposits. Set the transfer to run on payday and let it go. Illustration only, not investment advice; returns vary. Swipe ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "retirementplanning",
+        "compoundinterest",
+        "investing101",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-10",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-10-comic-01.jpg",
+        "site/social/2026-10-10-comic-02.jpg",
+        "site/social/2026-10-10-comic-03.jpg",
+        "site/social/2026-10-10-comic-04.jpg",
+        "site/social/2026-10-10-comic-05.jpg",
+        "site/social/2026-10-10-comic-06.jpg",
+        "site/social/2026-10-10-comic-07.jpg",
+        "site/social/2026-10-10-comic-08.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-10-comic-08.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-10-comic-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Buck thinks it’s too late.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-10",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-10-comic-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-10-comic-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-10-comic"
+    },
+    {
+      "id": "2026-10-14-comic",
+      "kind": "carousel",
+      "subkind": "comic",
+      "title": "Buck’s $500 cushion.",
+      "theme": "Buck comic",
+      "spec": {
+        "kicker": "Buck learns",
+        "theme": "paper",
+        "variant": {
+          "look": "ledger",
+          "body_mix": [
+            "white"
+          ],
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "happy",
+          "pose": "hold",
+          "prop": "coffee"
+        },
+        "cover": {
+          "title": "Buck’s $500 cushion.",
+          "highlight": [
+            "$500"
+          ],
+          "subtitle": "The difference between a surprise and a new balance."
+        },
+        "slides": [
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "happy",
+              "pose": "hold",
+              "prop": "coffee",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "Car’s making a noise. It’s probably fine.",
+              "style": "say"
+            },
+            "cap": "Monday."
+          },
+          {
+            "kind": "comic",
+            "scene": "mail",
+            "buck": {
+              "expr": "surprised",
+              "pose": "hold",
+              "prop": "bill",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "$480 repair.",
+              "style": "say"
+            },
+            "cap": "Wednesday.",
+            "fx": "CLUNK"
+          },
+          {
+            "kind": "comic",
+            "scene": "night",
+            "buck": {
+              "expr": "worried",
+              "pose": "hold",
+              "prop": "card",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "On the card. Again. At 24%.",
+              "style": "thought"
+            }
+          },
+          {
+            "kind": "comic",
+            "scene": "desk",
+            "buck": {
+              "expr": "thinking",
+              "pose": "chin",
+              "prop": "none",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "What if $500 was just sitting there, for exactly this?",
+              "style": "thought"
+            }
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "determined",
+              "pose": "hold",
+              "prop": "piggy",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "$40 a week. Three months. Boring on purpose.",
+              "style": "shout"
+            },
+            "cap_bottom": "$40 × 13 weeks = $520."
+          },
+          {
+            "kind": "lesson",
+            "heading": "The first $500 does the most work.",
+            "body": "It turns a surprise into an inconvenience instead of new debt. Keep it in a separate account, named Emergency, and refill it after you use it.",
+            "highlight": [
+              "$500"
+            ],
+            "buck": {
+              "expr": "relieved",
+              "pose": "cheer"
+            }
+          }
+        ],
+        "serial": "5 panels, 8 slides"
+      },
+      "caption": "Buck’s $500 cushion. 🛟 The car noise becomes a $480 repair, and without a cushion it goes on the card at 24%. $40 a week for thirteen weeks is $520 in a separate account named Emergency. The first $500 does the most work of any money you will ever save, because it breaks the cycle of borrowing for small surprises. Swipe ➡️\n\nFollow @debt_direct_solutions for Buck and plain-English money basics every day. Want a clear picture of your own numbers? DM us “REVIEW” or tap the link in bio for a free, no-judgment money review. 💙",
+      "hashtags": [
+        "emergencyfund",
+        "savingmoney",
+        "moneyhabits",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialfreedom",
+        "moneytips",
+        "financialliteracy",
+        "personalfinance",
+        "budgeting",
+        "moneymindset",
+        "smartmoneymoves",
+        "creditcarddebt",
+        "savingmoney",
+        "debtfree"
+      ],
+      "scheduled_for": "2026-10-14",
+      "slot": "am",
+      "surface": "feed",
+      "image_paths": [
+        "site/social/2026-10-14-comic-01.jpg",
+        "site/social/2026-10-14-comic-02.jpg",
+        "site/social/2026-10-14-comic-03.jpg",
+        "site/social/2026-10-14-comic-04.jpg",
+        "site/social/2026-10-14-comic-05.jpg",
+        "site/social/2026-10-14-comic-06.jpg",
+        "site/social/2026-10-14-comic-07.jpg",
+        "site/social/2026-10-14-comic-08.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-01.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-02.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-03.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-04.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-05.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-06.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-07.jpg",
+        "https://debtdirectsolutions.netlify.app/social/2026-10-14-comic-08.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-10-14-comic-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Buck’s $500 cushion.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-14",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-14-comic-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-14-comic-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-14-comic"
     }
   ]
 }
