@@ -46,8 +46,8 @@ def _bag() -> str:
 <path d="M110 348 q 10 14 26 10 M118 366 q 10 12 24 8" fill="none" stroke="{YELLOW_DK}" stroke-width="5" stroke-linecap="round" opacity=".6"/>
 <path d="M226 200 C 262 236, 288 280, 296 330" fill="none" stroke="{YELLOW_DK}" stroke-width="10" stroke-linecap="round" opacity=".28"/>
 <ellipse cx="150" cy="246" rx="24" ry="12" fill="{WHITE}" opacity=".25" transform="rotate(-40 150 246)"/>
-<path d="M178 156 C 164 138, 142 124, 136 104 C 160 108, 178 120, 190 134 C 190 116, 196 100, 206 88 C 216 102, 220 118, 216 134 C 230 120, 250 110, 270 108 C 262 126, 246 142, 224 156 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="8" stroke-linejoin="round"/>
-<path d="M186 146 C 178 134, 168 124, 158 114 M202 146 C 204 130, 206 116, 208 102 M216 146 C 226 134, 238 124, 250 114" fill="none" stroke="{YELLOW_DK}" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+<path d="M178 156 C 158 148, 138 132, 140 112 C 142 100, 158 100, 170 110 C 180 118, 186 128, 192 136 C 190 122, 192 106, 200 96 C 210 90, 220 102, 218 120 C 217 126, 216 132, 214 136 C 224 124, 240 112, 256 110 C 270 110, 272 124, 262 134 C 254 144, 240 152, 224 156 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="8" stroke-linejoin="round"/>
+<path d="M188 146 C 178 136, 168 126, 158 118 M203 146 C 204 132, 205 118, 206 106 M218 146 C 228 136, 240 126, 252 120" fill="none" stroke="{YELLOW_DK}" stroke-width="4" stroke-linecap="round" opacity=".55"/>
 <path d="M170 160 C 186 154, 214 154, 230 160" fill="none" stroke="{NAVY}" stroke-width="7" stroke-linecap="round"/>
 <path d="M172 169 C 188 163, 212 163, 228 169" fill="none" stroke="{NAVY}" stroke-width="7" stroke-linecap="round"/>
 <circle cx="230" cy="165" r="7" fill="{NAVY}"/>
