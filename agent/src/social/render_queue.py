@@ -31,8 +31,8 @@ def main(argv=None):
         data = json.loads(qf.read_text(encoding="utf-8"))
         dirty = False
         for p in data["posts"]:
-            if p.get("kind") != "single" or p["status"] not in ("queued", "partial"):
-                continue
+            if p.get("kind") != "single" or p["status"] not in ("queued", "partial") or not p.get("photo_query"):
+                continue  # cover Stories and other pre-rendered singles have no photo/spec to (re)render
             has_photo = bool(p.get("photo")) and (REPO_DIR / p["photo"]).exists()
             has_images = all((REPO_DIR / x).exists() for x in p.get("image_paths", []))
             if args.photos_only and has_photo:
