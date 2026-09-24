@@ -188,6 +188,31 @@ def due_posts(t: str | None = None, slot: str | None = None):
             yield f, data, p
 
 
+def human_skips(t: str, slot: str | None, cfg: dict) -> int:
+    """Warm-up behaviour: some days a slot simply does not post. Seeded by date+slot so every
+    run that day agrees. When a slot is skipped, everything queued in that slot from today on
+    moves back one day, so nothing is lost and there is still at most one feed post per day."""
+    import random
+    from datetime import date as _date, timedelta as _td
+    if not slot:
+        return 0
+    prob = (cfg.get("random_skip") or {}).get(slot, 0)
+    if not prob or random.Random(f"skip:{t}:{slot}").random() >= prob:
+        return 0
+    moved = 0
+    for f in sorted(QUEUE_DIR.glob("*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        dirty = False
+        for p in data["posts"]:
+            if p["status"] in ("queued", "partial") and p.get("slot") == slot and p["scheduled_for"] >= t:
+                p["scheduled_for"] = (_date.fromisoformat(p["scheduled_for"]) + _td(days=1)).isoformat()
+                moved += 1; dirty = True
+        if dirty:
+            f.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"[publish] {t} {slot}: skipping today on purpose (warm-up rhythm); {moved} post(s) moved back a day")
+    return moved
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--really", action="store_true", help="actually post")
@@ -206,6 +231,8 @@ def main(argv=None):
     if page_token:
         token = page_token   # Page token works for both Page and Instagram publishing
 
+    if live and human_skips(args.date or today().isoformat(), args.slot, cfg):
+        return
     n = 0
     for f, data, p in due_posts(args.date, args.slot):
         n += 1

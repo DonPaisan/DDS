@@ -9,9 +9,9 @@ name: Social publish
 # instagram_basic, instagram_content_publish) and social.enabled: true.
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 9:00 AM ET  → am   (feed carousel)
-    - cron: "0 16 * * *"   # 16:00 UTC = 12:00 PM ET → noon (story)
-    - cron: "0 22 * * *"   # 22:00 UTC = 6:00 PM ET  → pm   (feed one-pager)
+    - cron: "0 12 * * *"   # 12:00 UTC + 0-150 min = 8:00-10:30 AM ET → am (feed carousel or comic)
+    - cron: "30 15 * * *"  # 15:30 UTC + 0-150 min = 11:30 AM-2:00 PM ET → noon (story)
+    - cron: "0 21 * * *"   # 21:00 UTC + 0-150 min = 5:00-7:30 PM ET → pm (one-pager, reel or story)
   workflow_dispatch:
     inputs:
       slot:
@@ -41,9 +41,9 @@ jobs:
       - name: Chromium for slide rendering
         run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
 
-      - name: Random delay so posts do not land on the exact minute every day
+      - name: Random delay of 0-150 minutes so posts land at uneven times
         if: github.event_name == 'schedule'
-        run: sleep $((RANDOM % 1500))
+        run: sleep $((RANDOM % 9000))
       - name: Pick slot
         id: slot
         run: |
