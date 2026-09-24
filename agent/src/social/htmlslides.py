@@ -33,6 +33,47 @@ DARK = {"navy", "slate", "photo"}
 _css = (HERE / "theme.css").read_text(encoding="utf-8").replace("__FONTS__", FONTS.as_uri())
 
 
+def variant(slug: str, override: dict | None = None) -> dict:
+    """Deterministic per-post look, seeded by the slug so re-renders are stable.
+    Keys: cover_align, glow, frame, kicker, band, highlight, body_mix, accent_slide, serif_body, big_idx."""
+    import random
+    r = random.Random(f"ledger:{slug}")
+    v = {
+        "cover_align": r.choice(["left", "left", "center", "bottom"]),
+        "glow": r.choice(["tr", "tl", "bl"]),
+        "frame": r.random() < 0.65,
+        "kicker": r.choice(["rule", "rule", "pill"]),
+        "band": r.choice(["solid", "solid", "clear"]),
+        "highlight": r.choice(["gold", "gold", "underline", "blue"]),
+        "body_mix": r.choice([["white"], ["paper"], ["white", "paper"], ["paper", "white"]]),
+        "accent_slide": r.choice([None, None, "stat", "vs", "compare"]),
+        "serif_body": r.random() < 0.25,
+        "big_idx": r.random() < 0.3,
+    }
+    v.update(override or {})
+    return v
+
+
+def variant_classes(v: dict, *, cover: bool = False, body: bool = False) -> str:
+    cls = []
+    if cover and v["cover_align"] != "left":
+        cls.append(f"align-{v['cover_align']}")
+    cls.append(f"glow-{v['glow']}")
+    if not v["frame"]:
+        cls.append("noframe")
+    if v["kicker"] == "pill":
+        cls.append("kicker-pill")
+    if v["band"] == "clear":
+        cls.append("band-clear")
+    if v["highlight"] != "gold":
+        cls.append(f"hl-{v['highlight']}")
+    if body and v["serif_body"]:
+        cls.append("serif-body")
+    if body and v["big_idx"]:
+        cls.append("big-idx")
+    return " ".join(cls)
+
+
 def esc(s: str) -> str:
     return html.escape(str(s), quote=False)
 
@@ -97,34 +138,34 @@ def page(theme: str, body: str, *, surface: str = "feed", photo: Path | None = N
 SWIPE = '<div class="swipe">swipe <svg viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h104"/><path d="M92 8l16 12-16 12"/></svg></div>'
 
 
-def _cls(surface: str) -> str:
-    return "reel" if surface == "reel" else ""
+def _cls(surface: str, extra: str = "") -> str:
+    return (("reel " if surface == "reel" else "") + extra).strip()
 
 
 # ── carousel slides ──────────────────────────────────────────────────────────
-def slide_cover(spec, i, total, theme, photo=None, surface="feed"):
+def slide_cover(spec, i, total, theme, photo=None, surface="feed", vcls=""):
     c = spec["cover"]
     h = rich(c["title"], c.get("highlight"))
     sub = f'<p class="sub">{esc(c["subtitle"])}</p>' if c.get("subtitle") else ""
     serial = f'<div class="serial">{esc(spec.get("serial", f"{total - 2} ideas, {total} slides"))}</div>'
     body = f'{top(spec["kicker"])}<main class="content"><h1 class="{size_class(c["title"], 60, 85)}">{h}</h1>{sub}</main>{serial}{SWIPE}{band(i, total)}'
-    return page(theme, body, photo=photo, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, photo=photo, surface=surface, extra_class=_cls(surface, vcls))
 
 
-def slide_text(s, i, total, theme, kicker, surface="feed"):
+def slide_text(s, i, total, theme, kicker, surface="feed", vcls=""):
     ic = f'<div class="icon-tile">{icon(s["icon"])}</div>' if s.get("icon") else ""
     body = f'{top(kicker, i, total)}<main class="content">{ic}<h2 class="{size_class(s["heading"], 40)}">{rich(s["heading"], s.get("highlight"))}</h2><p class="body">{esc(s["body"])}</p></main>{band(i, total)}'
-    return page(theme, body, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
-def slide_stat(s, i, total, theme, kicker, surface="feed"):
+def slide_stat(s, i, total, theme, kicker, surface="feed", vcls=""):
     num_cls = "long" if len(s["value"]) > 7 else ""
     b = f'<p class="body">{esc(s["body"])}</p>' if s.get("body") else ""
     body = f'{top(kicker, i, total)}<main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="stat"><div class="num {num_cls}">{esc(s["value"])}</div><div class="lbl">{esc(s["label"])}</div></div>{b}</main>{band(i, total)}'
-    return page(theme, body, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
-def slide_compare(s, i, total, theme, kicker, surface="feed"):
+def slide_compare(s, i, total, theme, kicker, surface="feed", vcls=""):
     vmax = max(b["value"] for b in s["bars"]) or 1
     bars = ""
     for b in s["bars"]:
@@ -134,37 +175,37 @@ def slide_compare(s, i, total, theme, kicker, surface="feed"):
         bars += f'<div class="bar {"emph" if b.get("emphasis") else ""}"><div class="lbl">{esc(b["label"])}</div><div class="track">{fill}</div></div>'
     note = f'<p class="note">{esc(s["note"])}</p>' if s.get("note") else ""
     body = f'{top(kicker, i, total)}<main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="bars">{bars}</div>{note}</main>{band(i, total)}'
-    return page(theme, body, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
-def slide_list(s, i, total, theme, kicker, surface="feed"):
+def slide_list(s, i, total, theme, kicker, surface="feed", vcls=""):
     items = ""
     for n, it in enumerate(s["items"], 1):
         bullet = f"{n:02d}" if s.get("numbered") else icon("check")
         items += f'<div class="item"><div class="bullet">{bullet}</div><div>{esc(it)}</div></div>'
     body = f'{top(kicker, i, total)}<main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2><div class="list">{items}</div></main>{band(i, total)}'
-    return page(theme, body, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
-def slide_vs(s, i, total, theme, kicker, surface="feed"):
+def slide_vs(s, i, total, theme, kicker, surface="feed", vcls=""):
     note = f'<p class="note" style="margin-top:34px">{esc(s["note"])}</p>' if s.get("note") else ""
     body = (f'{top(kicker, i, total)}<main class="content"><h2 class="{size_class(s["heading"], 40)}">{esc(s["heading"])}</h2>'
             f'<div class="vs"><div class="col myth"><div class="tag">{esc(s.get("left_tag", "Myth"))}</div><div class="txt">{esc(s["left"])}</div></div>'
             f'<div class="col fact"><div class="tag">{esc(s.get("right_tag", "Fact"))}</div><div class="txt">{esc(s["right"])}</div></div></div>{note}</main>{band(i, total)}')
-    return page(theme, body, surface=surface, extra_class=_cls(surface))
+    return page(theme, body, surface=surface, extra_class=_cls(surface, vcls))
 
 
 TRUST = ["Free review", "No obligation", SITE]
 
 
-def slide_cta(i, total, surface="feed"):
+def slide_cta(i, total, surface="feed", vcls=""):
     trust = "".join(f"<span>{esc(t)}</span>" for t in TRUST)
     body = (f'<div class="head"><div class="glow"></div><div class="line"></div></div><main class="content cta"><img class="logo" src="{LOGO.as_uri()}">'
             f'<h1>Save this for later.</h1><p class="sub">Send it to someone who could use it.</p>'
             f'<span class="follow">Follow <b>{HANDLE}</b><small>Plain-English money basics, every day. Link in bio for a free, no-judgment money review.</small></span>'
             f'<div class="trust">{trust}</div></main>'
             f'<footer class="band" style="background:transparent;box-shadow:none;justify-content:flex-end">{progress(i, total)}</footer>')
-    return page("paper", body, surface=surface, extra_class=_cls(surface))
+    return page("paper", body, surface=surface, extra_class=_cls(surface, vcls))
 
 
 def render_carousel(out_dir: Path, slug: str, spec: dict, photo: Path | None = None, surface: str = "feed") -> list[Path]:
@@ -172,38 +213,51 @@ def render_carousel(out_dir: Path, slug: str, spec: dict, photo: Path | None = N
     theme = theme_name(spec.get("theme", "navy"))
     slides = spec["slides"]
     total = len(slides) + 2
-    pages = [(f"{slug}-01", slide_cover(spec, 1, total, spec.get("cover_theme", theme), photo, surface))]
-    body_theme = spec.get("body_theme", "white" if theme in DARK else theme)
+    v = variant(slug, spec.get("variant"))
+    pages = [(f"{slug}-01", slide_cover(spec, 1, total, spec.get("cover_theme", theme), photo, surface, variant_classes(v, cover=True)))]
+    if "body_theme" in spec:
+        mix = [theme_name(spec["body_theme"])]
+    elif theme in DARK:
+        mix = v["body_mix"]
+    else:
+        mix = [theme]
+    accent_done = False
     for k, s in enumerate(slides, start=2):
         fn = {"text": slide_text, "stat": slide_stat, "compare": slide_compare, "list": slide_list, "vs": slide_vs}[s["kind"]]
-        pages.append((f"{slug}-{k:02d}", fn(s, k, total, s.get("theme", body_theme), spec["kicker"], surface)))
-    pages.append((f"{slug}-{total:02d}", slide_cta(total, total, surface)))
+        t = s.get("theme") or mix[(k - 2) % len(mix)]
+        cls = variant_classes(v, body=True)
+        if not accent_done and v["accent_slide"] == s["kind"] and theme in DARK and "theme" not in s:
+            t, cls, accent_done = theme, cls + " accent", True
+        pages.append((f"{slug}-{k:02d}", fn(s, k, total, t, spec["kicker"], surface, cls)))
+    pages.append((f"{slug}-{total:02d}", slide_cta(total, total, surface, variant_classes(v))))
     return _render(out_dir, pages, "story" if surface == "reel" else "feed")
 
 
 # ── one-pagers ───────────────────────────────────────────────────────────────
-def one_dyk(spec, theme, surface, photo, credit):
+def one_dyk(spec, theme, surface, photo, credit, vcls=""):
     body = f'{top("Did you know?")}<main class="content dyk"><div class="icon-tile">{icon(spec.get("icon", "bulb"))}</div><p class="fact {size_class(spec["fact"], 80)}">{rich(spec["fact"], spec.get("highlight"))}</p><p class="so">{esc(spec["so_what"])}</p></main>{band(None, None, credit)}'
-    return page(theme, body, surface=surface, photo=photo)
+    return page(theme, body, surface=surface, photo=photo, extra_class=vcls)
 
 
-def one_story(spec, theme, surface, photo, credit):
+def one_story(spec, theme, surface, photo, credit, vcls=""):
     body = f'{top(spec.get("kicker", "True story"))}<main class="content story"><h1 class="{size_class(spec["headline"], 55, 75)}">{esc(spec["headline"])}</h1><p class="body" style="margin-top:32px;font-size:35px">{esc(spec["summary"])}</p><div class="source">{esc(spec["source"])}</div></main>{band(None, None, credit)}'
-    return page(theme, body, surface=surface, photo=photo)
+    return page(theme, body, surface=surface, photo=photo, extra_class=vcls)
 
 
-def one_quote(spec, theme, surface, photo, credit):
+def one_quote(spec, theme, surface, photo, credit, vcls=""):
     body = f'<main class="content quote"><div class="mark">“</div><blockquote>{esc(spec["text"])}</blockquote><div class="attr">{esc(spec["attribution"])}</div></main>{band(None, None, credit)}'
-    return page(theme, body, surface=surface, photo=photo)
+    return page(theme, body, surface=surface, photo=photo, extra_class=vcls)
 
 
 def render_onepager(out_dir: Path, slug: str, spec: dict, photo: Path | None, credit: str | None, surfaces=("feed",)) -> dict[str, Path]:
     theme = theme_name(spec.get("theme", "photo" if photo else "navy"))
     fn = {"did_you_know": one_dyk, "story": one_story, "quote": one_quote}[spec["kind"]]
+    v = variant(slug, spec.get("variant"))
+    vcls = variant_classes(v, cover=True)
     out = {}
     for s in surfaces:
         name = f"{slug}{'' if s == 'feed' else '-story'}"
-        paths = _render(out_dir, [(name, fn(spec, theme, s, photo, credit))], s)
+        paths = _render(out_dir, [(name, fn(spec, theme, s, photo, credit, vcls))], s)
         out[s] = paths[0]
     return out
 

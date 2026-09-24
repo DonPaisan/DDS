@@ -185,3 +185,43 @@ body.reel .swipe, body.reel .progress, body.reel .serial { display: none; }
 body.reel .content { top: 380px; bottom: calc(var(--band) + 140px); }
 body.reel .top { top: 240px; }
 body.reel .cta .head { height: 300px; }
+
+/* ── per-post variants (seeded by slug in htmlslides.variant) ─────────────── */
+/* cover alignment */
+body.align-center .content { align-items: center; text-align: center; }
+body.align-center p.sub { margin-left: auto; margin-right: auto; }
+body.align-center p.sub:before, body.align-center .dyk .so:before { margin-left: auto; margin-right: auto; }
+body.align-center .quote .attr, body.align-center .story .source { justify-content: center; }
+body.align-center .icon-tile { margin-left: auto; margin-right: auto; }
+body.align-bottom .content { justify-content: flex-end; bottom: calc(var(--band) + 150px); }
+/* glow placement */
+body.glow-tl .bg .glow.g1 { right: auto; left: -420px; }
+body.glow-tl .bg .glow.g2 { left: auto; right: -260px; }
+body.glow-bl .bg .glow.g1 { top: auto; bottom: -380px; }
+body.glow-bl .bg .glow.g2 { bottom: auto; top: 140px; }
+/* frame off */
+body.noframe .frame { display: none; }
+/* kicker as a pill */
+body.kicker-pill .kicker { background: var(--gold); color: var(--navy); padding: 10px 22px; border-radius: 999px; letter-spacing: .16em; font-size: 22px; }
+body.kicker-pill .kicker:before { display: none; }
+body.kicker-pill.t-paper .kicker, body.kicker-pill.t-white .kicker { background: var(--navy); color: var(--gold-2); }
+/* clear footer on dark themes: logo sits on the background, text goes light */
+body.band-clear.t-navy .band, body.band-clear.t-slate .band, body.band-clear.t-photo .band { background: transparent; box-shadow: none; }
+body.band-clear.t-navy .follow, body.band-clear.t-slate .follow, body.band-clear.t-photo .follow { color: var(--white); }
+body.band-clear.t-navy .site, body.band-clear.t-slate .site, body.band-clear.t-photo .site, body.band-clear.t-navy .credit, body.band-clear.t-slate .credit { color: rgba(255,255,255,.65); }
+body.band-clear.t-navy .band:before, body.band-clear.t-slate .band:before { background: rgba(255,255,255,.18); }
+body.band-clear.t-navy .progress i, body.band-clear.t-slate .progress i { background: rgba(255,255,255,.2); }
+body.band-clear.t-navy .progress i.on, body.band-clear.t-slate .progress i.on { background: var(--gold); }
+body.band-clear.t-navy .band .logo, body.band-clear.t-slate .band .logo, body.band-clear.t-photo .band .logo { background: var(--white); border-radius: 22px; padding: 10px; height: 150px; }
+/* highlight as an underline instead of italic gold */
+body.hl-underline mark { font-style: normal; color: inherit; background: linear-gradient(transparent 70%, var(--gold) 70%); padding: 0 6px; }
+body.hl-underline.t-paper mark, body.hl-underline.t-white mark { background: linear-gradient(transparent 70%, var(--gold-2) 70%); }
+/* highlight in blue */
+body.hl-blue mark { color: var(--blue-light); }
+body.hl-blue.t-paper mark, body.hl-blue.t-white mark { color: var(--blue); }
+/* dark accent slide inside a light carousel: stat and vs pop */
+body.accent .stat .num { color: var(--gold-2); }
+/* serif body option: the whole slide in serif for a bookish feel */
+body.serif-body p.body, body.serif-body .item, body.serif-body p.note { font-family: var(--serif); font-size: 42px; line-height: 1.42; }
+/* index as a big faded numeral in the corner */
+body.big-idx .idx { position: absolute; right: 0; top: 60px; font-size: 150px; opacity: .08; font-style: normal; }
