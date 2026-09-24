@@ -128,7 +128,7 @@ def _cheeks() -> str:
     return f'<ellipse cx="138" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/><ellipse cx="262" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/>'
 
 
-def _glove(x: int, y: int, rot: float = 0) -> str:
+def _glove(x: int, y: int, rot: float = 0, mirror: bool = False) -> str:
     """A cartoon four-finger glove: palm, three fingers, a thumb. Fingers point 'up' before rotation."""
     fingers = [(-12, -6, -15, -24), (0, -8, 0, -28), (12, -6, 15, -24)]
     thumb = (-13, 2, -27, -6)
@@ -138,7 +138,8 @@ def _glove(x: int, y: int, rot: float = 0) -> str:
             out += f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{w}" stroke-linecap="round"/>'
         return out
     cuff = f'<path d="M-16 8 q 16 10 32 0" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
-    return f'<g transform="translate({x} {y}) rotate({rot:.0f})">{layer(NAVY, 20)}{layer(WHITE, 12)}{cuff}</g>'
+    flip = " scale(-1 1)" if mirror else ""
+    return f'<g transform="translate({x} {y}) rotate({rot:.0f}){flip}">{layer(NAVY, 20)}{layer(WHITE, 12)}{cuff}</g>'
 
 
 def _arm(side: str, pose: str) -> str:
@@ -157,8 +158,17 @@ def _arm(side: str, pose: str) -> str:
     hx, hy = poses.get(pose, poses["rest"])
     cx, cy = (sx + hx) / 2 + d * 20, (sy + hy) / 2 + 12
     import math
-    rot = math.degrees(math.atan2(hy - cy, hx - cx)) + 90
-    return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>{_glove(int(hx), int(hy), rot)}'
+    along = math.degrees(math.atan2(hy - cy, hx - cx)) + 90   # fingers continue the arm's direction
+    if pose == "hold":
+        rot = -25 * d          # gripping the prop from below, fingers up and slightly inward
+    elif pose == "chin":
+        rot = -30 if side == "R" else along
+    elif pose == "rest":
+        rot = along + 35 * d   # hanging hands: fingers down and a little outward
+    else:
+        rot = along
+    mirror = side == "R"       # thumb toward the body on both hands
+    return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>{_glove(int(hx), int(hy), rot, mirror)}'
 
 
 def _legs() -> str:
