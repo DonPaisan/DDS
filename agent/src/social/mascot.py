@@ -28,7 +28,7 @@ PINK = "#f28b8b"
 TONGUE = "#e0575d"
 
 # Face anchor points (body centre x=200). Eyes sit high on a wide face, Disney-style.
-EY, LX, RX = 246, 170, 230
+EY, LX, RX = 238, 170, 230
 
 
 def _defs() -> str:
@@ -56,7 +56,7 @@ def _bag() -> str:
 
 
 def _dollar() -> str:
-    return f"""<text x="200" y="368" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="64" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
+    return f"""<text x="200" y="374" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="60" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
 
 
 def _eye(cx: int, look_x: int = 0, look_y: int = 0, scale: float = 1.0) -> str:
@@ -128,12 +128,17 @@ def _cheeks() -> str:
     return f'<ellipse cx="138" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/><ellipse cx="262" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/>'
 
 
-def _glove(x: int, y: int, rot: int = 0) -> str:
-    """A four-finger cartoon glove."""
-    return (f'<g transform="translate({x} {y}) rotate({rot})">'
-            f'<path d="M-22 4 C -26 -12, -14 -24, -2 -22 C 6 -30, 20 -26, 22 -14 C 30 -10, 30 6, 20 12 C 16 24, -8 26, -20 16 Z" fill="url(#glove)" stroke="{NAVY}" stroke-width="7" stroke-linejoin="round"/>'
-            f'<path d="M-6 -20 L -6 -6 M8 -22 L 8 -6" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".5"/>'
-            f'<path d="M-14 16 q 14 -6 28 -2" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/></g>')
+def _glove(x: int, y: int, rot: float = 0) -> str:
+    """A cartoon four-finger glove: palm, three fingers, a thumb. Fingers point 'up' before rotation."""
+    fingers = [(-12, -6, -15, -24), (0, -8, 0, -28), (12, -6, 15, -24)]
+    thumb = (-13, 2, -27, -6)
+    def layer(color, w):
+        out = f'<circle cx="0" cy="0" r="{18 if w > 12 else 12}" fill="{color}"/>'
+        for x1, y1, x2, y2 in fingers + [thumb]:
+            out += f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{w}" stroke-linecap="round"/>'
+        return out
+    cuff = f'<path d="M-16 8 q 16 10 32 0" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
+    return f'<g transform="translate({x} {y}) rotate({rot:.0f})">{layer(NAVY, 20)}{layer(WHITE, 12)}{cuff}</g>'
 
 
 def _arm(side: str, pose: str) -> str:
@@ -151,7 +156,8 @@ def _arm(side: str, pose: str) -> str:
     }
     hx, hy = poses.get(pose, poses["rest"])
     cx, cy = (sx + hx) / 2 + d * 20, (sy + hy) / 2 + 12
-    rot = {"wave": -20 * d, "cheer": -30 * d, "point": -60 * d, "shrug": -40 * d, "chin": 20}.get(pose, 0)
+    import math
+    rot = math.degrees(math.atan2(hy - cy, hx - cx)) + 90
     return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>{_glove(int(hx), int(hy), rot)}'
 
 
@@ -208,7 +214,7 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
     parts.append(_arm("R", pose))
     parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
     attrs = f'width="{size}" height="{size}"' if size else ""
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 70 300 370" {attrs}>{"".join(parts)}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 60 360 380" {attrs}>{"".join(parts)}</svg>'
 
 
 if __name__ == "__main__":

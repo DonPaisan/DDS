@@ -320,9 +320,9 @@ body.look-studio.serif-body p.body, body.look-studio.serif-body .item, body.look
 .panel .scene .clock { position: absolute; right: 70px; top: 50px; width: 90px; height: 90px; border-radius: 50%; border: 6px solid var(--ink); background: #fff; }
 .panel .scene .clock:before { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 30px; background: var(--ink); transform-origin: top; transform: rotate(180deg); margin-left: -2px; }
 .panel .scene .clock:after { content: ""; position: absolute; left: 50%; top: 50%; width: 5px; height: 22px; background: var(--ink); transform-origin: top; transform: rotate(-90deg); margin-left: -2px; }
-.panel .buck { position: absolute; bottom: 16px; width: 560px; height: 680px; }
-.panel .buck.left { left: 20px; }
-.panel .buck.right { right: 20px; }
+.panel .buck { position: absolute; bottom: 10px; width: 620px; height: 720px; }
+.panel .buck.left { left: 0; }
+.panel .buck.right { right: 0; }
 .panel .buck.small { width: 380px; height: 460px; }
 .panel .buck svg { width: 100%; height: 100%; }
 .bubble { position: absolute; top: 40px; max-width: 600px; background: var(--white); color: var(--ink); border: 5px solid var(--ink); border-radius: 30px; padding: 30px 36px; font-family: var(--sans); font-weight: 600; font-size: 42px; line-height: 1.25; }
@@ -341,9 +341,9 @@ body.look-studio.serif-body p.body, body.look-studio.serif-body .item, body.look
 .panel .fx { position: absolute; font-family: var(--sans); font-weight: 800; font-size: 44px; color: var(--ink); transform: rotate(-12deg); letter-spacing: .04em; }
 .comic h2 { font-size: 56px; margin: 0 0 24px; }
 .comic .lesson { margin-top: 0; }
-.lesson-slide .buck-big { width: 520px; height: 630px; margin: 0 auto 6px; }
+.lesson-slide .buck-big { width: 580px; height: 660px; margin: 0 auto 0; }
 .lesson-slide .buck-big svg { width: 100%; height: 100%; }
-.cover-buck { position: absolute; z-index: 2; right: 10px; bottom: calc(var(--band) + 4px); width: 560px; height: 680px; }
+.cover-buck { position: absolute; z-index: 2; right: -10px; bottom: calc(var(--band) + 0px); width: 620px; height: 720px; }
 .cover-buck svg { width: 100%; height: 100%; }
 body.has-buck .content { right: 520px; }
 body.has-buck .swipe { display: none; }
