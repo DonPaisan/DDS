@@ -372,6 +372,29 @@
       ]
     },
     {
+      "id": "2026-09-22-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Your credit score is five numbers pretending to be one.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-04",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-22-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-22-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-22-am"
+    },
+    {
       "id": "2026-09-22-noon",
       "kind": "single",
       "subkind": "quote",
@@ -1334,6 +1357,29 @@
       ]
     },
     {
+      "id": "2026-09-26-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Credit utilization is the fastest lever on your score.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-25",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-26-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-26-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-26-am"
+    },
+    {
       "id": "2026-09-26-noon",
       "kind": "single",
       "subkind": "did_you_know",
@@ -1587,6 +1633,29 @@
       ]
     },
     {
+      "id": "2026-09-27-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Interest and APR are two views of the same cost.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-26",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-27-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-27-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-27-am"
+    },
+    {
       "id": "2026-09-27-noon",
       "kind": "single",
       "subkind": "quote",
@@ -1763,6 +1832,29 @@
       ]
     },
     {
+      "id": "2026-09-28-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "A $5,000 card paid at the minimum takes about 20 years to clear.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-27",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-28-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-28-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-28-am"
+    },
+    {
       "id": "2026-09-29-am",
       "kind": "carousel",
       "title": "Most bills are negotiable. Almost nobody asks.",
@@ -1846,6 +1938,29 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-09-29-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Most bills are negotiable. Almost nobody asks.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-28",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-29-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-29-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-29-am"
     },
     {
       "id": "2026-09-30-am",
@@ -1932,6 +2047,29 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-09-30-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Avalanche pays the highest rate first. Snowball pays the smallest balance first.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-29",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-09-30-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-30-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-09-30-am"
     },
     {
       "id": "2026-10-01-am",
@@ -2028,6 +2166,29 @@
       ]
     },
     {
+      "id": "2026-10-01-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "A 401(k) match is a raise you have to opt into.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-09-30",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-01-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-01-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-01-am"
+    },
+    {
       "id": "2026-10-02-am",
       "kind": "carousel",
       "title": "Five signs the call about your money is a scam.",
@@ -2112,6 +2273,29 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-10-02-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Five signs the call about your money is a scam.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-01",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-02-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-02-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-02-am"
     },
     {
       "id": "2026-10-03-am",
@@ -2202,6 +2386,29 @@
       ]
     },
     {
+      "id": "2026-10-03-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Christmas is not an emergency. Neither are tires.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-02",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-03-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-03-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-03-am"
+    },
+    {
       "id": "2026-10-04-am",
       "kind": "carousel",
       "title": "Your credit reports are free every week. Most people have never looked.",
@@ -2288,6 +2495,29 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-10-04-am-story",
+      "kind": "single",
+      "subkind": "cover",
+      "surface": "story",
+      "title": "Your credit reports are free every week. Most people have never looked.",
+      "caption": "",
+      "hashtags": [],
+      "scheduled_for": "2026-10-03",
+      "slot": "am",
+      "image_paths": [
+        "site/social/frames/2026-10-04-am-cover-01.jpg"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-04-am-cover-01.jpg"
+      ],
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "companion_of": "2026-10-04-am"
     }
   ]
 }
