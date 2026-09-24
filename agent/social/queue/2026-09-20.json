@@ -1419,12 +1419,11 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-06.jpg"
       ],
-      "status": "held",
+      "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
-      ],
-      "held_reason": "manual in-app post: API reach test"
+      ]
     },
     {
       "id": "2026-09-26-am-story",
