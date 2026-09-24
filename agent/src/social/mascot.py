@@ -38,6 +38,21 @@ def _bag() -> str:
 """
 
 
+def _chain() -> str:
+    """A gold chain hanging from the neck with a round dollar pendant."""
+    import math
+    links = []
+    for k in range(13):
+        t = k / 12
+        # quadratic bezier from (138,186) via (200,238) to (262,186)
+        x = (1 - t) ** 2 * 138 + 2 * (1 - t) * t * 200 + t ** 2 * 262
+        y = (1 - t) ** 2 * 184 + 2 * (1 - t) * t * 226 + t ** 2 * 184
+        links.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3.5"/>')
+    pendant = (f'<circle cx="200" cy="213" r="17" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="6"/>'
+               f'<text x="200" y="222" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="24" fill="{NAVY}">$</text>')
+    return "".join(links) + pendant
+
+
 def _dollar(y: int = 350) -> str:
     return f"""<text x="200" y="{y}" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="64" fill="{NAVY}">$</text>"""
 
@@ -108,7 +123,7 @@ def _arm(side: str, pose: str) -> str:
     poses = {
         "rest":  (sx + d * 30, 335),
         "wave":  (sx + d * 55, 190) if side == "R" else (sx + d * 30, 335),
-        "chin":  (200 - 30, 285) if side == "R" else (sx + d * 30, 335),
+        "chin":  (200 - 30, 322) if side == "R" else (sx + d * 30, 335),
         "hold":  (200 + d * 38, 330),
         "shrug": (sx + d * 62, 250),
         "cheer": (sx + d * 55, 180),
@@ -163,12 +178,13 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
         parts.append(f'<ellipse cx="200" cy="404" rx="96" ry="14" fill="{NAVY}" opacity=".12"/>')
     parts.append(_arm("L", pose))
     parts.append(_bag())
-    parts.append(_dollar())
     parts.append(_legs())
     if pose == "hold":
         parts.append(_prop(prop))
     parts.append(_arm("R", pose))
-    parts += [_brows(expr), _eyes(expr), _mouth(expr), _cheeks(), _sweat(expr), _thought(expr)]
+    parts.append(_chain())
+    parts.append('<g transform="translate(0 40)">' + "".join([_brows(expr), _eyes(expr), _mouth(expr), _cheeks(), _sweat(expr)]) + "</g>")
+    parts.append(_thought(expr))
     attrs = f'width="{size}" height="{size}"' if size else ""
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 80 280 340" {attrs}>{"".join(parts)}</svg>'
 
