@@ -33,6 +33,7 @@ ads:
   auto_activate: false  # new ads are created PAUSED; a human (or an explicit set-status) turns them on
 
 social:
+  default_collaborators: []   # Instagram usernames invited as co-authors on every feed post (max 3; they accept in-app; their followers see the post)
   enabled: true                      # publish.py refuses to post unless true (turned on 2026-09-20 at Brendon's request)
   posts_per_week: 3
   platforms: ["instagram", "facebook"]

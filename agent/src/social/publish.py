@@ -105,13 +105,25 @@ def _wait_ready(container_id: str, token: str) -> None:
     raise RuntimeError(f"Instagram container {container_id} not ready after 90s")
 
 
+def collab(p: dict) -> dict:
+    """Instagram Collab: up to 3 usernames who co-author the post once they accept the invite in
+    the app. Their followers then see it in their feeds. Set `collaborators` on a queue entry,
+    or `social.default_collaborators` in config for every feed post."""
+    names = p.get("collaborators")
+    if names is None:
+        names = load_config()["social"].get("default_collaborators") or []
+    names = [n.lstrip("@") for n in names][:3]
+    import json as _json
+    return {"collaborators": _json.dumps(names)} if names else {}
+
+
 def post_instagram(p: dict, token: str, ig: str) -> dict:
     """Container model: create → poll status_code until FINISHED → publish.
     Carousels: one container per slide (is_carousel_item), then a CAROUSEL parent.
     Stories: media_type=STORIES with a 9:16 image, no caption."""
     urls = public_urls(p)
     if p.get("kind") == "reel":
-        creation = graph("POST", f"{ig}/media", media_type="REELS", video_url=urls[0], caption=caption_text(p), share_to_feed="true", access_token=token)
+        creation = graph("POST", f"{ig}/media", media_type="REELS", video_url=urls[0], caption=caption_text(p), share_to_feed="true", access_token=token, **collab(p))
         _wait_ready(creation["id"], token)
         return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
     if p.get("surface") == "story":
@@ -124,10 +136,10 @@ def post_instagram(p: dict, token: str, ig: str) -> dict:
             c = graph("POST", f"{ig}/media", image_url=u, is_carousel_item="true", access_token=token)
             _wait_ready(c["id"], token)
             children.append(c["id"])
-        creation = graph("POST", f"{ig}/media", media_type="CAROUSEL", children=",".join(children), caption=caption_text(p), access_token=token)
+        creation = graph("POST", f"{ig}/media", media_type="CAROUSEL", children=",".join(children), caption=caption_text(p), access_token=token, **collab(p))
         _wait_ready(creation["id"], token)
         return graph("POST", f"{ig}/media_publish", creation_id=creation["id"], access_token=token)
-    creation = graph("POST", f"{ig}/media", image_url=urls[0], caption=caption_text(p), access_token=token)
+    creation = graph("POST", f"{ig}/media", image_url=urls[0], caption=caption_text(p), access_token=token, **collab(p))
     for _ in range(20):
         st = graph("GET", creation["id"], fields="status_code,status", access_token=token)
         code = st.get("status_code")
