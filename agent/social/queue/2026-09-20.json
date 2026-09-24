@@ -1250,12 +1250,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-25-noon-story.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "posted_at": "2026-09-24T17:45:07+00:00",
+      "results": {
+        "instagram": {
+          "id": "18225239614326838"
+        },
+        "facebook": {
+          "success": true,
+          "post_id": "1446806340638212"
+        }
+      }
     },
     {
       "id": "2026-09-25-pm",
