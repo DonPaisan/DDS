@@ -69,6 +69,24 @@ Pulled from the fintech and luxury-brand design trend write-ups for 2026:
 
 Theme aliases: `cream` → `paper`, `sky` → `slate`. Existing queue specs render unchanged.
 
+## Looks (added 2026-09-24)
+
+Five complete looks, each a font pairing, palette and shape language, picked per post by a seed
+of the post's date so the grid does not read as one template. All share the logo, footer text and
+layout grid. Fonts are open-license from the Google Fonts repo, stored in `agent/assets/fonts/`.
+
+| Look | Fonts | Palette | Shapes |
+|---|---|---|---|
+| ledger | Playfair Display + Poppins | navy, paper, gold | glows, grain, hairline frame |
+| studio | DM Serif Display + Inter | deep green, mint | rings, rounded cards |
+| grotesk | Space Grotesk | charcoal, the logo's lemon and blue | hard corners, diagonal stripes, a blue square |
+| warm | Fraunces + Outfit | plum, terracotta, sand | arches, blobs |
+| notebook | Lora + Inter | slate blue, ice, gold | ruled lines, margin rule |
+
+Within each look the per-post variants still apply (cover alignment, glow corner, frame, kicker
+style, footer style, highlight style, white/paper body mix, accent slide, serif body, big index).
+Pin any of it with `spec.variant`, for example `{"look": "warm", "cover_align": "center"}`.
+
 ## What still needs a human
 
 - **A face.** The single biggest gap between us and the accounts that perform. A short

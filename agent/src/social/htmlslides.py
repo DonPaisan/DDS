@@ -5,6 +5,9 @@ Design system v2 "Ledger" (html/theme.css, docs/social-design-research.md): edit
 headlines, quiet sans body, navy base with the logo's yellow used as a gold accent, paper
 grain, hairline rules, a thin frame, and only true trust cues (site, free review, no obligation).
 
+Looks (font pairing + palette + shapes, picked per post by variant()): ledger (Playfair + Poppins,
+navy/gold), studio (DM Serif + Inter, green/mint), grotesk (Space Grotesk, charcoal/lemon/blue),
+warm (Fraunces + Outfit, plum/terracotta/sand), notebook (Lora + Inter, slate/ice, ruled lines).
 Themes: navy (default), paper, slate, white, photo. Old names still work: cream → paper,
 sky → slate. Slide kinds: cover, text, stat, compare, list, vs (myth vs fact), cta.
 One-pagers: did_you_know, story, quote.
@@ -33,12 +36,23 @@ DARK = {"navy", "slate", "photo"}
 _css = (HERE / "theme.css").read_text(encoding="utf-8").replace("__FONTS__", FONTS.as_uri())
 
 
+LOOKS = ["ledger", "ledger", "studio", "grotesk", "warm", "notebook"]
+SHAPES = {
+    "ledger": "",
+    "studio": '<div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div>',
+    "grotesk": '<div class="shape s1"></div><div class="shape s2"></div>',
+    "warm": '<div class="shape s1"></div><div class="shape s2"></div>',
+    "notebook": '<div class="shape s1"></div><div class="shape s2"></div>',
+}
+
+
 def variant(slug: str, override: dict | None = None) -> dict:
     """Deterministic per-post look, seeded by the slug so re-renders are stable.
     Keys: cover_align, glow, frame, kicker, band, highlight, body_mix, accent_slide, serif_body, big_idx."""
     import random
     r = random.Random(f"ledger:{slug}")
     v = {
+        "look": r.choice(LOOKS),
         "cover_align": r.choice(["left", "left", "center", "bottom"]),
         "glow": r.choice(["tr", "tl", "bl"]),
         "frame": r.random() < 0.65,
@@ -55,7 +69,7 @@ def variant(slug: str, override: dict | None = None) -> dict:
 
 
 def variant_classes(v: dict, *, cover: bool = False, body: bool = False) -> str:
-    cls = []
+    cls = [f"look-{v['look']}"]
     if cover and v["cover_align"] != "left":
         cls.append(f"align-{v['cover_align']}")
     cls.append(f"glow-{v['glow']}")
@@ -126,7 +140,8 @@ def top(kicker: str, i: int | None = None, total: int | None = None) -> str:
 def page(theme: str, body: str, *, surface: str = "feed", photo: Path | None = None, extra_class: str = "") -> str:
     theme = theme_name(theme)
     surface = "story" if surface in ("story", "reel") else surface
-    bg = '<div class="bg"><div class="glow g1"></div><div class="glow g2"></div><div class="grain"></div></div>'
+    look = next((c[5:] for c in extra_class.split() if c.startswith("look-")), "ledger")
+    bg = f'<div class="bg"><div class="glow g1"></div><div class="glow g2"></div>{SHAPES.get(look, "")}<div class="grain"></div></div>'
     if theme == "photo" and photo:
         bg = f'<div class="bg"><div class="photo" style="background-image:url({Path(photo).resolve().as_uri()})"></div><div class="tint"></div><div class="shade"></div><div class="grain"></div></div>'
     elif theme == "photo":
