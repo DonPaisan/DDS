@@ -36,7 +36,7 @@ Carousel shape (6 slides, rendered by agent/src/social/slides.py in the logo pal
 - Slide 6, CTA (automatic): "Save this for later. Send it to someone who could use it.", the
   free-review pill, and "Follow @debt_direct_solutions". Saves and sends are what the algorithm rewards.
 - Caption: a hook line first, then 60–110 words, one to three emojis, "Swipe ➡️", and the close:
-  "Follow @debt_direct_solutions … DM us REVIEW or tap the link in bio". 3 to 5 lowercase hashtags (Instagram's own guidance; more reads as spam).
+  one of several rotating CTA lines (save it, send it, tell us below, follow), never the same block on every post. 20 to 25 lowercase hashtags drawn from the debt-free community pool plus 3 topic tags, rotated so no two posts share the same set (Instagram's 3-5 guidance did not hold for this account; the November posts with 20-30 tags were the only ones that reached non-followers).
 - Slots: 9:00 AM and 6:00 PM Eastern. Mid-week mornings perform best; weekends worst.
 
 Why 6 and not 10: research in 2026 puts the sweet spot at 5–10 slides with completion rate as the

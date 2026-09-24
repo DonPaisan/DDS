@@ -41,6 +41,9 @@ jobs:
       - name: Chromium for slide rendering
         run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
 
+      - name: Random delay so posts do not land on the exact minute every day
+        if: github.event_name == 'schedule'
+        run: sleep $((RANDOM % 1500))
       - name: Pick slot
         id: slot
         run: |
