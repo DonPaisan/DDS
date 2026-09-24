@@ -1,11 +1,13 @@
-"""Buck: the Debt Direct Solutions mascot, drawn as SVG from the logo's money bag.
+"""Buck: the Debt Direct Solutions mascot, a classic animated money bag, drawn as SVG.
 
 Vector, hand-built, deterministic: no generative imagery, so nothing for Meta to label.
-Every part is a small path so expressions and poses compose:
+Design cues from the classic animated money bag: a wide soft sack, a rope tied round the neck
+with the cloth flaring above it in loose folds, a dollar on the belly, big eyes with coloured
+irises and two highlights, gloved four-finger hands, sneakers, soft radial shading.
 
     mascot(expr="happy", pose="wave", prop="phone")  -> "<svg ...>...</svg>"
 
-Expressions: happy, worried, surprised, thinking, relieved, determined, sad, wink.
+Expressions: happy, worried, surprised, thinking, relieved, determined, sad, wink, big (open-mouth grin).
 Poses: rest, wave, chin, hold (holds the prop), shrug, cheer, point.
 Props: phone, bill, calculator, coffee, piggy, letter, card, none.
 """
@@ -13,180 +15,200 @@ from __future__ import annotations
 
 NAVY = "#1c2b3a"
 YELLOW = "#ffd84d"
-YELLOW_DK = "#e6b800"
+YELLOW_LT = "#ffe98a"
+YELLOW_DK = "#e0ac1c"
 BLUE = "#3b9cf6"
 BLUE_DK = "#1c6fd1"
-PEACH = "#f6c9a3"
+IRIS = "#2f7fd0"
+ROPE = "#c98a3a"
+ROPE_DK = "#8a5a1e"
 WHITE = "#ffffff"
 RED = "#e35d5b"
-GREEN = "#3bb273"
+PINK = "#f28b8b"
+TONGUE = "#e0575d"
 
-W = 400  # viewBox width; the character is centred at x=200
+# Face anchor points (body centre x=200). Eyes sit high on a wide face, Disney-style.
+EY, LX, RX = 250, 168, 232
+
+
+def _defs() -> str:
+    return f"""<defs>
+<radialGradient id="bagg" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="{YELLOW_LT}"/><stop offset=".55" stop-color="{YELLOW}"/><stop offset="1" stop-color="{YELLOW_DK}"/></radialGradient>
+<radialGradient id="glove" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ea"/></radialGradient>
+</defs>"""
 
 
 def _bag() -> str:
-    """Body: a soft pear-shaped bag, a rope-tied neck, and a gathered tuft leaning a little right."""
+    """Sack body, rope, and the flared cloth above the rope."""
     return f"""
-<path d="M158 178 C 100 205, 78 300, 118 350 C 150 388, 250 388, 282 350 C 322 300, 300 205, 242 178 C 225 170, 175 170, 158 178 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M126 330 C 150 372, 250 372, 274 330" fill="none" stroke="{YELLOW_DK}" stroke-width="7" stroke-linecap="round" opacity=".55"/>
-<path d="M160 178 C 168 160, 232 160, 240 178 L 236 150 L 164 150 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M164 150 C 150 128, 158 104, 182 96 C 198 90, 224 92, 238 100 C 256 110, 258 132, 236 150 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
-<path d="M186 104 C 190 118, 190 132, 186 146 M212 100 C 218 116, 218 132, 214 146" fill="none" stroke="{YELLOW_DK}" stroke-width="5" stroke-linecap="round" opacity=".8"/>
-<rect x="152" y="142" width="96" height="18" rx="9" fill="{BLUE}" stroke="{NAVY}" stroke-width="7"/>
-<circle cx="250" cy="151" r="9" fill="{BLUE}" stroke="{NAVY}" stroke-width="6"/>
-<path d="M256 156 q 14 6 12 20" fill="none" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/>
+<path d="M148 190 C 92 214, 66 300, 96 348 C 122 388, 278 388, 304 348 C 334 300, 308 214, 252 190 C 232 180, 168 180, 148 190 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M116 322 C 150 366, 250 366, 284 322" fill="none" stroke="{YELLOW_DK}" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+<ellipse cx="150" cy="232" rx="26" ry="14" fill="{WHITE}" opacity=".28" transform="rotate(-30 150 232)"/>
+<path d="M150 190 C 158 168, 242 168, 250 190 L 244 160 L 156 160 Z" fill="{YELLOW}" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M156 160 C 118 148, 122 108, 150 104 C 156 90, 176 84, 186 96 C 196 80, 220 82, 226 98 C 244 88, 266 100, 260 118 C 284 124, 282 154, 244 160 Z" fill="url(#bagg)" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round"/>
+<path d="M172 112 C 178 128, 178 146, 172 158 M200 100 C 204 120, 204 142, 200 158 M228 110 C 224 128, 224 146, 228 158" fill="none" stroke="{YELLOW_DK}" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{ROPE}" stroke-width="16" stroke-linecap="round"/>
+<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{ROPE_DK}" stroke-width="16" stroke-linecap="round" stroke-dasharray="6 9" opacity=".55"/>
+<path d="M146 168 C 168 156, 232 156, 254 168" fill="none" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".35" transform="translate(0 8)"/>
+<circle cx="254" cy="170" r="10" fill="{ROPE}" stroke="{NAVY}" stroke-width="5"/>
+<path d="M258 178 q 16 10 10 30 M262 176 q 22 -2 30 14" fill="none" stroke="{ROPE}" stroke-width="8" stroke-linecap="round"/>
+<path d="M258 178 q 16 10 10 30 M262 176 q 22 -2 30 14" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round" opacity=".45"/>
 """
 
 
-def _chain() -> str:
-    """A gold chain hanging from the neck with a round dollar pendant."""
-    import math
-    links = []
-    for k in range(13):
-        t = k / 12
-        # quadratic bezier from (138,186) via (200,238) to (262,186)
-        x = (1 - t) ** 2 * 138 + 2 * (1 - t) * t * 200 + t ** 2 * 262
-        y = (1 - t) ** 2 * 184 + 2 * (1 - t) * t * 226 + t ** 2 * 184
-        links.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5.5" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3.5"/>')
-    pendant = (f'<circle cx="200" cy="213" r="17" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="6"/>'
-               f'<text x="200" y="222" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="24" fill="{NAVY}">$</text>')
-    return "".join(links) + pendant
+def _dollar() -> str:
+    return f"""<text x="200" y="382" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="52" fill="{YELLOW_DK}" stroke="{NAVY}" stroke-width="3">$</text>"""
 
 
-def _dollar(y: int = 350) -> str:
-    return f"""<text x="200" y="{y}" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="64" fill="{NAVY}">$</text>"""
+def _eye(cx: int, look_x: int = 0, look_y: int = 0, scale: float = 1.0) -> str:
+    rx, ry = 20 * scale, 25 * scale
+    px, py = cx + look_x, EY + look_y
+    return (f'<ellipse cx="{cx}" cy="{EY}" rx="{rx:.1f}" ry="{ry:.1f}" fill="{WHITE}" stroke="{NAVY}" stroke-width="6"/>'
+            f'<circle cx="{px}" cy="{py}" r="{12 * scale:.1f}" fill="{IRIS}"/><circle cx="{px}" cy="{py}" r="{7 * scale:.1f}" fill="{NAVY}"/>'
+            f'<circle cx="{px - 4}" cy="{py - 5}" r="{3.6 * scale:.1f}" fill="{WHITE}"/><circle cx="{px + 4}" cy="{py + 4}" r="{1.8 * scale:.1f}" fill="{WHITE}"/>')
 
 
 def _eyes(expr: str) -> str:
-    lx, rx, y = 172, 228, 232
     if expr in ("happy", "relieved"):
-        # closed, smiling eyes
-        return f"""<path d="M{lx-14} {y+2} Q {lx} {y-14} {lx+14} {y+2}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>
-<path d="M{rx-14} {y+2} Q {rx} {y-14} {rx+14} {y+2}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>"""
+        return (f'<path d="M{LX-20} {EY+4} Q {LX} {EY-22} {LX+20} {EY+4}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>'
+                f'<path d="M{RX-20} {EY+4} Q {RX} {EY-22} {RX+20} {EY+4}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>')
     if expr == "wink":
-        return f"""<circle cx="{lx}" cy="{y}" r="14" fill="{WHITE}" stroke="{NAVY}" stroke-width="7"/><circle cx="{lx+3}" cy="{y+2}" r="7" fill="{NAVY}"/><circle cx="{lx+6}" cy="{y-1}" r="2.5" fill="{WHITE}"/>
-<path d="M{rx-14} {y} Q {rx} {y+10} {rx+14} {y}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>"""
-    r = 18 if expr == "surprised" else 14
-    pr = 9 if expr == "surprised" else 7
-    dx = 3 if expr != "thinking" else 8
-    return f"""<circle cx="{lx}" cy="{y}" r="{r}" fill="{WHITE}" stroke="{NAVY}" stroke-width="7"/><circle cx="{lx+dx}" cy="{y-1}" r="{pr}" fill="{NAVY}"/><circle cx="{lx+dx+3}" cy="{y-4}" r="2.5" fill="{WHITE}"/>
-<circle cx="{rx}" cy="{y}" r="{r}" fill="{WHITE}" stroke="{NAVY}" stroke-width="7"/><circle cx="{rx+dx}" cy="{y-1}" r="{pr}" fill="{NAVY}"/><circle cx="{rx+dx+3}" cy="{y-4}" r="2.5" fill="{WHITE}"/>"""
+        return _eye(LX, 2, 0) + f'<path d="M{RX-20} {EY} Q {RX} {EY+14} {RX+20} {EY}" fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"/>'
+    if expr == "surprised":
+        return _eye(LX, 0, 0, 1.25) + _eye(RX, 0, 0, 1.25)
+    if expr == "thinking":
+        return _eye(LX, 9, -7) + _eye(RX, 9, -7)
+    if expr == "big":
+        return _eye(LX, 0, 2, 1.1) + _eye(RX, 0, 2, 1.1)
+    if expr in ("worried", "sad"):
+        return _eye(LX, 0, 3) + _eye(RX, 0, 3)
+    return _eye(LX, 2, 0) + _eye(RX, 2, 0)
 
 
 def _brows(expr: str) -> str:
-    lx, rx, y = 172, 228, 204
-    s = f'fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"'
+    y = EY - 40
+    s = f'fill="none" stroke="{NAVY}" stroke-width="9" stroke-linecap="round"'
     if expr in ("worried", "sad"):
-        return f'<path d="M{lx-16} {y+6} L {lx+12} {y-4}" {s}/><path d="M{rx-12} {y-4} L {rx+16} {y+6}" {s}/>'
+        return f'<path d="M{LX-20} {y+10} Q {LX} {y-2} {LX+16} {y-4}" {s}/><path d="M{RX-16} {y-4} Q {RX} {y-2} {RX+20} {y+10}" {s}/>'
     if expr == "determined":
-        return f'<path d="M{lx-16} {y-6} L {lx+12} {y+6}" {s}/><path d="M{rx-12} {y+6} L {rx+16} {y-6}" {s}/>'
-    if expr == "surprised":
-        return f'<path d="M{lx-16} {y-8} Q {lx} {y-20} {lx+16} {y-8}" {s}/><path d="M{rx-16} {y-8} Q {rx} {y-20} {rx+16} {y-8}" {s}/>'
+        return f'<path d="M{LX-20} {y-8} Q {LX} {y-2} {LX+16} {y+8}" {s}/><path d="M{RX-16} {y+8} Q {RX} {y-2} {RX+20} {y-8}" {s}/>'
+    if expr in ("surprised", "big"):
+        return f'<path d="M{LX-20} {y-4} Q {LX} {y-22} {LX+20} {y-6}" {s}/><path d="M{RX-20} {y-6} Q {RX} {y-22} {RX+20} {y-4}" {s}/>'
     if expr == "thinking":
-        return f'<path d="M{lx-16} {y} L {lx+14} {y-2}" {s}/><path d="M{rx-14} {y-12} Q {rx} {y-18} {rx+16} {y-6}" {s}/>'
-    return ""
+        return f'<path d="M{LX-20} {y+4} Q {LX} {y} {LX+18} {y+2}" {s}/><path d="M{RX-18} {y-10} Q {RX} {y-22} {RX+20} {y-8}" {s}/>'
+    if expr == "wink":
+        return f'<path d="M{LX-20} {y+2} Q {LX} {y-10} {LX+18} {y}" {s}/><path d="M{RX-18} {y+2} Q {RX} {y-8} {RX+20} {y+4}" {s}/>'
+    return f'<path d="M{LX-20} {y+2} Q {LX} {y-10} {LX+18} {y}" {s}/><path d="M{RX-18} {y} Q {RX} {y-10} {RX+20} {y+2}" {s}/>'
 
 
 def _mouth(expr: str) -> str:
-    y = 262
+    y = EY + 40
     s = f'fill="none" stroke="{NAVY}" stroke-width="8" stroke-linecap="round"'
     if expr in ("happy", "wink"):
-        return f'<path d="M176 {y} Q 200 {y+26} 224 {y}" {s}/>'
+        return f'<path d="M168 {y} Q 200 {y+34} 232 {y}" {s}/>'
+    if expr == "big":
+        return (f'<path d="M160 {y-6} Q 200 {y+60} 240 {y-6} Z" fill="{NAVY}"/>'
+                f'<path d="M166 {y-2} Q 200 {y+8} 234 {y-2} L 234 {y+6} Q 200 {y+16} 166 {y+6} Z" fill="{WHITE}"/>'
+                f'<ellipse cx="200" cy="{y+34}" rx="16" ry="10" fill="{TONGUE}"/>')
     if expr == "relieved":
-        return f'<path d="M180 {y+2} Q 200 {y+18} 220 {y+2}" {s}/>'
-    if expr in ("worried",):
-        return f'<path d="M180 {y+12} Q 200 {y-4} 220 {y+12}" {s}/>'
+        return f'<path d="M174 {y} Q 200 {y+22} 226 {y}" {s}/>'
+    if expr == "worried":
+        return f'<path d="M176 {y+12} Q 200 {y-6} 224 {y+12}" {s}/>'
     if expr == "sad":
-        return f'<path d="M178 {y+14} Q 200 {y-6} 222 {y+14}" {s}/>'
+        return f'<path d="M172 {y+16} Q 200 {y-8} 228 {y+16}" {s}/>'
     if expr == "surprised":
-        return f'<ellipse cx="200" cy="{y+6}" rx="13" ry="17" fill="{NAVY}"/>'
+        return f'<ellipse cx="200" cy="{y+8}" rx="14" ry="19" fill="{NAVY}"/><ellipse cx="200" cy="{y+16}" rx="8" ry="6" fill="{TONGUE}"/>'
     if expr == "thinking":
-        return f'<path d="M184 {y+6} L 216 {y+2}" {s}/>'
+        return f'<path d="M184 {y+6} Q 200 {y+2} 218 {y}" {s}/>'
     if expr == "determined":
-        return f'<path d="M180 {y+6} Q 200 {y+14} 220 {y+6}" {s}/>'
+        return f'<path d="M178 {y+6} Q 200 {y+16} 222 {y+6}" {s}/>'
     return f'<path d="M182 {y+4} L 218 {y+4}" {s}/>'
 
 
 def _cheeks() -> str:
-    return f'<circle cx="148" cy="262" r="10" fill="{RED}" opacity=".22"/><circle cx="252" cy="262" r="10" fill="{RED}" opacity=".22"/>'
+    return f'<ellipse cx="138" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/><ellipse cx="262" cy="{EY+34}" rx="13" ry="8" fill="{PINK}" opacity=".45"/>'
 
 
-def _hand(x: int, y: int, rot: int = 0) -> str:
-    return f'<g transform="translate({x} {y}) rotate({rot})"><circle r="20" fill="{PEACH}" stroke="{NAVY}" stroke-width="8"/></g>'
+def _glove(x: int, y: int, rot: int = 0) -> str:
+    """A four-finger cartoon glove."""
+    return (f'<g transform="translate({x} {y}) rotate({rot})">'
+            f'<path d="M-22 4 C -26 -12, -14 -24, -2 -22 C 6 -30, 20 -26, 22 -14 C 30 -10, 30 6, 20 12 C 16 24, -8 26, -20 16 Z" fill="url(#glove)" stroke="{NAVY}" stroke-width="7" stroke-linejoin="round"/>'
+            f'<path d="M-6 -20 L -6 -6 M8 -22 L 8 -6" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".5"/>'
+            f'<path d="M-14 16 q 14 -6 28 -2" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/></g>')
 
 
 def _arm(side: str, pose: str) -> str:
-    """Arms are a stroke from the shoulder to the hand, then a hand circle."""
-    sx = 118 if side == "L" else 282
-    sy = 270
+    sx = 112 if side == "L" else 288
+    sy = 292
     d = -1 if side == "L" else 1
     poses = {
-        "rest":  (sx + d * 30, 335),
-        "wave":  (sx + d * 55, 190) if side == "R" else (sx + d * 30, 335),
-        "chin":  (200 - 30, 322) if side == "R" else (sx + d * 30, 335),
-        "hold":  (200 + d * 38, 330),
-        "shrug": (sx + d * 62, 250),
-        "cheer": (sx + d * 55, 180),
-        "point": (sx + d * 70, 240) if side == "R" else (sx + d * 30, 335),
+        "rest":  (sx + d * 34, 352),
+        "wave":  (sx + d * 62, 190) if side == "R" else (sx + d * 34, 352),
+        "chin":  (200 - 34, 322) if side == "R" else (sx + d * 34, 352),
+        "hold":  (200 + d * 40, 360),
+        "shrug": (sx + d * 68, 262),
+        "cheer": (sx + d * 62, 176),
+        "point": (sx + d * 78, 250) if side == "R" else (sx + d * 34, 352),
     }
     hx, hy = poses.get(pose, poses["rest"])
-    cx, cy = (sx + hx) / 2 + d * 18, (sy + hy) / 2 + 10
-    return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="12" stroke-linecap="round"/>{_hand(int(hx), int(hy))}'
+    cx, cy = (sx + hx) / 2 + d * 20, (sy + hy) / 2 + 12
+    rot = {"wave": -20 * d, "cheer": -30 * d, "point": -60 * d, "shrug": -40 * d, "chin": 20}.get(pose, 0)
+    return f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>{_glove(int(hx), int(hy), rot)}'
 
 
 def _legs() -> str:
-    return f"""<path d="M172 366 L 168 396" stroke="{NAVY}" stroke-width="12" stroke-linecap="round"/><path d="M228 366 L 232 396" stroke="{NAVY}" stroke-width="12" stroke-linecap="round"/>
-<ellipse cx="160" cy="400" rx="26" ry="11" fill="{BLUE}" stroke="{NAVY}" stroke-width="7"/><ellipse cx="240" cy="400" rx="26" ry="11" fill="{BLUE}" stroke="{NAVY}" stroke-width="7"/>"""
+    return f"""<path d="M170 376 L 166 398" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/><path d="M230 376 L 234 398" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>
+<path d="M132 404 C 132 392, 150 386, 166 388 C 182 388, 194 394, 194 404 C 194 412, 176 416, 160 416 C 144 416, 132 412, 132 404 Z" fill="{BLUE}" stroke="{NAVY}" stroke-width="6"/><path d="M136 408 q 30 8 56 0" fill="none" stroke="{WHITE}" stroke-width="5" stroke-linecap="round"/>
+<path d="M206 404 C 206 394, 218 388, 234 388 C 250 386, 268 392, 268 404 C 268 412, 256 416, 240 416 C 224 416, 206 412, 206 404 Z" fill="{BLUE}" stroke="{NAVY}" stroke-width="6"/><path d="M208 408 q 30 8 56 0" fill="none" stroke="{WHITE}" stroke-width="5" stroke-linecap="round"/>"""
 
 
 def _prop(name: str) -> str:
-    """Drawn between the hands when pose == hold (centred near 200, 330)."""
+    """Drawn between the hands when pose == hold (centred near 200, 344)."""
     s = f'stroke="{NAVY}" stroke-width="7" stroke-linejoin="round"'
     if name == "phone":
-        return f'<rect x="168" y="290" width="64" height="100" rx="12" fill="{NAVY}"/><rect x="176" y="300" width="48" height="76" rx="6" fill="{BLUE}"/>'
-    if name == "bill" or name == "letter":
-        return f'<rect x="150" y="296" width="100" height="84" rx="6" fill="{WHITE}" {s}/><path d="M164 316 H 236 M164 334 H 236 M164 352 H 210" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/>' + (f'<text x="200" y="372" text-anchor="middle" font-family="Poppins, Arial" font-weight="800" font-size="20" fill="{RED}">DUE</text>' if name == "bill" else "")
+        return f'<rect x="168" y="304" width="64" height="100" rx="12" fill="{NAVY}"/><rect x="176" y="314" width="48" height="76" rx="6" fill="{BLUE}"/>'
+    if name in ("bill", "letter"):
+        return f'<rect x="150" y="310" width="100" height="84" rx="6" fill="{WHITE}" {s}/><path d="M164 330 H 236 M164 348 H 236 M164 366 H 210" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/>' + (f'<text x="200" y="386" text-anchor="middle" font-family="Poppins, Arial" font-weight="800" font-size="20" fill="{RED}">DUE</text>' if name == "bill" else "")
     if name == "calculator":
-        return f'<rect x="160" y="290" width="80" height="100" rx="10" fill="{NAVY}"/><rect x="170" y="300" width="60" height="22" rx="4" fill="{WHITE}"/>' + "".join(f'<circle cx="{180+i*20}" cy="{340+j*20}" r="6" fill="{YELLOW}"/>' for i in range(3) for j in range(2))
+        return f'<rect x="160" y="304" width="80" height="100" rx="10" fill="{NAVY}"/><rect x="170" y="314" width="60" height="22" rx="4" fill="{WHITE}"/>' + "".join(f'<circle cx="{180+i*20}" cy="{354+j*20}" r="6" fill="{YELLOW}"/>' for i in range(3) for j in range(2))
     if name == "coffee":
-        return f'<path d="M170 306 H 230 L 224 372 H 176 Z" fill="{WHITE}" {s}/><path d="M230 318 C 252 318, 252 350, 228 350" fill="none" {s}/><path d="M188 300 q 3 -6 0 -11 M202 300 q 3 -6 0 -11" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round" opacity=".6"/>'
+        return f'<path d="M170 320 H 230 L 224 386 H 176 Z" fill="{WHITE}" {s}/><path d="M230 332 C 252 332, 252 364, 228 364" fill="none" {s}/><path d="M188 314 q 3 -6 0 -11 M202 314 q 3 -6 0 -11" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round" opacity=".6"/>'
     if name == "piggy":
-        return f'<ellipse cx="200" cy="340" rx="52" ry="38" fill="#f7a8c4" {s}/><circle cx="240" cy="336" r="14" fill="#f7a8c4" {s}/><rect x="186" y="298" width="28" height="7" rx="3" fill="{NAVY}"/>'
+        return f'<ellipse cx="200" cy="354" rx="52" ry="38" fill="#f7a8c4" {s}/><circle cx="240" cy="350" r="14" fill="#f7a8c4" {s}/><rect x="186" y="312" width="28" height="7" rx="3" fill="{NAVY}"/>'
     if name == "card":
-        return f'<rect x="146" y="312" width="108" height="66" rx="8" fill="{BLUE}" {s}/><rect x="146" y="326" width="108" height="14" fill="{NAVY}"/><rect x="158" y="352" width="44" height="10" rx="3" fill="{WHITE}"/>'
+        return f'<rect x="146" y="326" width="108" height="66" rx="8" fill="{BLUE}" {s}/><rect x="146" y="340" width="108" height="14" fill="{NAVY}"/><rect x="158" y="366" width="44" height="10" rx="3" fill="{WHITE}"/>'
     return ""
 
 
 def _sweat(expr: str) -> str:
     if expr in ("worried", "sad"):
-        return f'<path d="M268 200 q 10 14 0 24 q -10 -10 0 -24 z" fill="{BLUE}" stroke="{NAVY}" stroke-width="4"/>'
+        return f'<path d="M282 214 q 12 16 0 28 q -12 -12 0 -28 z" fill="{BLUE}" stroke="{NAVY}" stroke-width="4"/>'
     return ""
 
 
 def _thought(expr: str) -> str:
     if expr == "thinking":
-        return f'<circle cx="292" cy="160" r="7" fill="{WHITE}" stroke="{NAVY}" stroke-width="5"/><circle cx="312" cy="134" r="11" fill="{WHITE}" stroke="{NAVY}" stroke-width="5"/>'
+        return f'<circle cx="300" cy="188" r="7" fill="{WHITE}" stroke="{NAVY}" stroke-width="5"/><circle cx="320" cy="162" r="11" fill="{WHITE}" stroke="{NAVY}" stroke-width="5"/>'
     return ""
 
 
 def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shadow: bool = True, size: int | None = None) -> str:
-    """Full character SVG. Layers: shadow, back arm, body, prop, front arm, face."""
+    """Full character SVG. Layers: shadow, back arm, body, dollar, legs, prop, front arm, face."""
     if prop != "none" and pose == "rest":
         pose = "hold"
-    parts = []
+    parts = [_defs()]
     if shadow:
-        parts.append(f'<ellipse cx="200" cy="404" rx="96" ry="14" fill="{NAVY}" opacity=".12"/>')
+        parts.append(f'<ellipse cx="200" cy="414" rx="100" ry="13" fill="{NAVY}" opacity=".12"/>')
     parts.append(_arm("L", pose))
     parts.append(_bag())
+    parts.append(_dollar())
     parts.append(_legs())
     if pose == "hold":
-        parts.append(_prop(prop))
+        parts.append('<g transform="translate(0 16)">' + _prop(prop) + "</g>")
     parts.append(_arm("R", pose))
-    parts.append(_chain())
-    parts.append('<g transform="translate(0 40)">' + "".join([_brows(expr), _eyes(expr), _mouth(expr), _cheeks(), _sweat(expr)]) + "</g>")
-    parts.append(_thought(expr))
+    parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
     attrs = f'width="{size}" height="{size}"' if size else ""
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 80 280 340" {attrs}>{"".join(parts)}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 70 300 360" {attrs}>{"".join(parts)}</svg>'
 
 
 if __name__ == "__main__":
@@ -194,10 +216,6 @@ if __name__ == "__main__":
     from pathlib import Path
     out = Path(sys.argv[1] if len(sys.argv) > 1 else "/tmp/buck")
     out.mkdir(parents=True, exist_ok=True)
-    for e in ["happy", "worried", "surprised", "thinking", "relieved", "determined", "sad", "wink"]:
+    for e in ["happy", "worried", "surprised", "thinking", "relieved", "determined", "sad", "wink", "big"]:
         (out / f"{e}.svg").write_text(mascot(e))
-    for p in ["phone", "bill", "calculator", "coffee", "piggy", "card"]:
-        (out / f"hold-{p}.svg").write_text(mascot("happy", "hold", p))
-    for p in ["wave", "chin", "shrug", "cheer", "point"]:
-        (out / f"pose-{p}.svg").write_text(mascot("happy", p))
     print("wrote", out)
