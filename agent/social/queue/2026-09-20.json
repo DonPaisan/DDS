@@ -1447,7 +1447,7 @@
       "id": "2026-09-26-pm",
       "kind": "single",
       "subkind": "quote",
-      "surface": "feed",
+      "surface": "story",
       "spec": {
         "kind": "quote",
         "text": "Annual income twenty pounds, annual expenditure nineteen six: happiness. Annual expenditure twenty pounds six: misery.",
@@ -1482,17 +1482,18 @@
       "photo_slug": "2026-09-26-quote",
       "render_slug": "2026-09-26-pm",
       "image_paths": [
-        "site/social/2026-09-26-pm.jpg"
+        "site/social/2026-09-26-pm-story.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-story.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "was_feed": true
     },
     {
       "id": "2026-09-26-comic",
@@ -1724,7 +1725,7 @@
       "id": "2026-09-27-pm",
       "kind": "single",
       "subkind": "did_you_know",
-      "surface": "feed",
+      "surface": "story",
       "spec": {
         "kind": "did_you_know",
         "fact": "A collector who calls more than 7 times in 7 days about one debt is presumed to be harassing you.",
@@ -1764,17 +1765,18 @@
       "photo_slug": "2026-09-27-did_you_know",
       "render_slug": "2026-09-27-pm",
       "image_paths": [
-        "site/social/2026-09-27-pm.jpg"
+        "site/social/2026-09-27-pm-story.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/2026-09-27-pm.jpg"
+        "https://debtdirectsolutions.netlify.app/social/2026-09-27-pm-story.jpg"
       ],
       "status": "queued",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "photo_credit": null
+      "photo_credit": null,
+      "was_feed": true
     },
     {
       "id": "2026-09-28-am",
