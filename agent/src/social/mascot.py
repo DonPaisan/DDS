@@ -143,13 +143,17 @@ def _glove(x: int, y: int, rot: float = 0, mirror: bool = False) -> str:
 
 
 def _fist(x: int, y: int, rot: float = 0, mirror: bool = False) -> str:
-    """A closed cartoon hand gripping something: mitten palm, three knuckle bumps curling over the edge, a thumb across."""
+    """A gripping hand in the same style as the open glove: round palm, three fingers curled
+    forward over the edge of the object (drawn in front of it). Fingers point +x before mirroring."""
+    fingers = [(2, -12, 22, -10), (4, 0, 24, 0), (2, 12, 22, 10)]
+    def layer(color, w, r):
+        out = f'<circle cx="0" cy="0" r="{r}" fill="{color}"/>'
+        for x1, y1, x2, y2 in fingers:
+            out += f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{w}" stroke-linecap="round"/>'
+        return out
+    cuff = f'<path d="M-10 -14 q -8 14 0 28" fill="none" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".6"/>'
     flip = " scale(-1 1)" if mirror else ""
-    body = (f'<path d="M-20 -4 C -20 -18, -10 -24, 0 -24 C 12 -24, 22 -16, 22 -4 L 22 10 C 22 20, 12 24, 0 24 C -12 24, -20 18, -20 8 Z" fill="{WHITE}" stroke="{NAVY}" stroke-width="7" stroke-linejoin="round"/>'
-            f'<path d="M-16 -2 a 8 8 0 0 1 14 0 M-2 -4 a 8 8 0 0 1 14 0 M11 0 a 7 7 0 0 1 11 2" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
-            f'<path d="M-14 12 C -6 8, 6 8, 16 12" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>'
-            f'<path d="M-20 4 q 14 -2 26 4" fill="none" stroke="{NAVY}" stroke-width="4" stroke-linecap="round" opacity=".6"/>')
-    return f'<g transform="translate({x} {y}) rotate({rot:.0f}){flip}">{body}</g>'
+    return f'<g transform="translate({x} {y}) rotate({rot:.0f}){flip}">{layer(NAVY, 20, 19)}{layer(WHITE, 12, 13)}{cuff}</g>'
 
 
 def _arm(side: str, pose: str) -> str:
@@ -179,7 +183,7 @@ def _arm(side: str, pose: str) -> str:
         rot = along
     mirror = side == "R"       # thumb toward the body on both hands
     line = f'<path d="M{sx} {sy} Q {cx} {cy} {hx} {hy}" fill="none" stroke="{NAVY}" stroke-width="13" stroke-linecap="round"/>'
-    hand = _fist(int(hx), int(hy), -15 * d, mirror) if pose == "hold" else _glove(int(hx), int(hy), rot, mirror)
+    hand = _fist(int(hx), int(hy), 0, mirror) if pose == "hold" else _glove(int(hx), int(hy), rot, mirror)
     return line + hand
 
 
