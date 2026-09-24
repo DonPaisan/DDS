@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency: social-metrics
 
@@ -32,11 +33,25 @@ jobs:
       - name: Write review
         working-directory: agent
         run: python src/social/review.py
+      - name: Post history (every post ever, then vs now)
+        working-directory: agent
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python src/social/history.py
+      - name: Update the "Social reach watch" issue
+        working-directory: agent
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python src/social/watch.py > /tmp/watch.md
+          n=$(gh issue list --search "Social reach watch in:title" --state open --json number --jq '.[0].number')
+          if [ -z "$n" ]; then gh issue create --title "Social reach watch" --body-file /tmp/watch.md --label monitor 2>/dev/null || gh issue create --title "Social reach watch" --body-file /tmp/watch.md; else gh issue edit "$n" --body-file /tmp/watch.md; fi
       - name: Commit
         run: |
           git config user.name "dds-social-bot"
           git config user.email "noreply@debtdirectsolutions.com"
           git pull --rebase origin ${{ github.ref_name }} || true
-          git add agent/social/metrics.jsonl agent/social/account.jsonl agent/social/review.md
+          git add agent/social/metrics.jsonl agent/social/account.jsonl agent/social/review.md agent/social/history.json agent/social/history.md
           git diff --cached --quiet || git commit -m "social: metrics snapshot $(date -u +%F)"
           git push
