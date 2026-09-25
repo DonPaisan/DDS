@@ -1528,13 +1528,23 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/2026-09-26-pm-story.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
       "photo_credit": null,
-      "was_feed": true
+      "was_feed": true,
+      "posted_at": "2026-09-25T19:19:35+00:00",
+      "results": {
+        "instagram": {
+          "id": "17994199377032591"
+        },
+        "facebook": {
+          "success": true,
+          "post_id": "2364160417725777"
+        }
+      }
     },
     {
       "id": "2026-09-26-comic",
