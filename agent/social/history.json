@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-09-24T21:50+00:00",
+ "pulled_at": "2026-09-25T16:17+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18079100945362564",
+   "date": "2026-09-25",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Credit utilization is the fastest lever on your score. 📈 Balance divided by limi",
+   "permalink": "https://www.instagram.com/p/DdtoLqcjC1j/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18134237053648027",
    "date": "2026-09-24",
@@ -235,6 +246,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A_LC9mLSlPtljEHqTrkUgHb'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AVUqXMuqCKrX1DEmabZnpkF'}"
  }
 }

@@ -1,4 +1,4 @@
-# Post history — pulled 2026-09-24T21:50+00:00
+# Post history — pulled 2026-09-25T16:17+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,7 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-09-25 | feed | 0 | 0 |  |  | Credit utilization is the fastest lever on your sc |
 | 2026-09-24 | feed | 0 | 1 |  |  | True story. 🌱 In 1935, Grace Groner, a secretary a |
 | 2026-09-24 | feed | 0 | 0 |  |  | $20 a day is $7,300 a year. ☕️ Nobody notices twen |
 | 2026-09-24 | feed | 0 | 0 |  |  | 50/30/20 is a starting point, not a rule. 🧾 Half o |
@@ -31,4 +32,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 10 posts, 0 likes, 1 comments.
+- Since 2026-09-20: 11 posts, 0 likes, 1 comments.
