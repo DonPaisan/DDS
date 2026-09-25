@@ -1806,6 +1806,54 @@
       "was_feed": true
     },
     {
+      "id": "2026-09-26-comic-reel",
+      "kind": "reel",
+      "surface": "feed",
+      "title": "Buck pays the minimum.",
+      "source_carousel": "2026-09-26-comic",
+      "caption": "Buck pays the minimum. 💳 On a $5,000 card at 24% APR the minimum is about $150: $100 of it is interest, so the balance barely moves. Paying the minimum takes about 20 years and costs $8,887 in interest. Keep the payment fixed at $150 and it clears in about 5. Same card, same money, one habit. Swipe for the comic ➡️\n\nBuck learns something new every week. 💛 Follow along @debt_direct_solutions.",
+      "hashtags": [
+        "minimumpayment",
+        "creditcards",
+        "interest",
+        "frugalliving",
+        "creditscore",
+        "moneyhabits",
+        "moneymindset",
+        "debtfreecommunity",
+        "debtpayoff",
+        "financialliteracy",
+        "retirementplanning",
+        "creditrepair",
+        "emergencyfund",
+        "moneymanagement",
+        "financialfreedom",
+        "wealthbuilding",
+        "budgeting",
+        "budgetingtips",
+        "smartmoneymoves",
+        "debtfreejourney"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-26-comic-reel.mp4"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-comic-reel.mp4"
+      ],
+      "cover_path": "site/social/anim/2026-09-26-comic-reel/stills/2026-09-26-comic-reel-01.jpg",
+      "needs_audio": true,
+      "music": null,
+      "seconds": 25.9,
+      "animated": true,
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
       "id": "2026-09-28-am",
       "kind": "carousel",
       "title": "A $5,000 card paid at the minimum takes about 20 years to clear.",

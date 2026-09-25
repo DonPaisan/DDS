@@ -241,12 +241,13 @@ def mascot(expr: str = "happy", pose: str = "rest", prop: str = "none", *, shado
     if pose == "hold":
         l_line, l_hand = _arm_parts("L", pose)
         r_line, r_hand = _arm_parts("R", pose)
-        parts += [l_line, _bag(), _dollar(), _legs(), r_line, '<g transform="translate(0 8)">' + _prop(prop) + "</g>", l_hand, r_hand]
+        parts += [f'<g class="arm arm-L">{l_line}</g>', _bag(), _dollar(), _legs(), f'<g class="arm arm-R">{r_line}</g>', '<g class="prop" transform="translate(0 8)">' + _prop(prop) + "</g>", f'<g class="hand hand-L">{l_hand}</g>', f'<g class="hand hand-R">{r_hand}</g>']
     else:
-        parts += [_arm("L", pose), _bag(), _dollar(), _legs(), _arm("R", pose)]
-    parts += [_cheeks(), _brows(expr), _eyes(expr), _mouth(expr), _sweat(expr), _thought(expr)]
+        parts += [f'<g class="arm arm-L">{_arm("L", pose)}</g>', _bag(), _dollar(), _legs(), f'<g class="arm arm-R">{_arm("R", pose)}</g>']
+    parts += [_cheeks(), f'<g class="brows">{_brows(expr)}</g>', f'<g class="eyes">{_eyes(expr)}</g>', f'<g class="mouth">{_mouth(expr)}</g>',
+              f'<g class="sweat">{_sweat(expr)}</g>', f'<g class="thought">{_thought(expr)}</g>']
     attrs = f'width="{size}" height="{size}"' if size else ""
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 60 360 380" {attrs}>{"".join(parts)}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 60 360 380" class="buck-svg pose-{pose} expr-{expr}" {attrs}>{"".join(parts)}</svg>'
 
 
 if __name__ == "__main__":
