@@ -1329,10 +1329,10 @@
       "scheduled_for": "2026-09-25",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-26-am-cover-01.jpg"
+        "site/social/covers/2026-09-26-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-26-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-26-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -1710,10 +1710,10 @@
       "scheduled_for": "2026-09-26",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-26-comic-cover-01.jpg"
+        "site/social/covers/2026-09-26-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-26-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-26-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -1982,10 +1982,10 @@
       "scheduled_for": "2026-09-27",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-28-am-cover-01.jpg"
+        "site/social/covers/2026-09-28-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-28-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-28-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2109,10 +2109,10 @@
       "scheduled_for": "2026-09-28",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-29-am-cover-01.jpg"
+        "site/social/covers/2026-09-29-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-29-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-29-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2235,10 +2235,10 @@
       "scheduled_for": "2026-09-29",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-30-am-cover-01.jpg"
+        "site/social/covers/2026-09-30-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-30-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-30-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2429,10 +2429,10 @@
       "scheduled_for": "2026-09-30",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-30-comic-cover-01.jpg"
+        "site/social/covers/2026-09-30-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-30-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-30-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2556,10 +2556,10 @@
       "scheduled_for": "2026-10-01",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-02-am-cover-01.jpg"
+        "site/social/covers/2026-10-02-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-02-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-02-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2687,10 +2687,10 @@
       "scheduled_for": "2026-10-02",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-03-am-cover-01.jpg"
+        "site/social/covers/2026-10-03-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-03-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-03-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -2884,10 +2884,10 @@
       "scheduled_for": "2026-10-03",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-03-comic-cover-01.jpg"
+        "site/social/covers/2026-10-03-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-03-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-03-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3025,10 +3025,10 @@
       "scheduled_for": "2026-10-04",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-22-am-cover-01.jpg"
+        "site/social/covers/2026-09-22-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-22-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-22-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3159,10 +3159,10 @@
       "scheduled_for": "2026-10-05",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-09-27-am-cover-01.jpg"
+        "site/social/covers/2026-09-27-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-09-27-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-09-27-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3293,10 +3293,10 @@
       "scheduled_for": "2026-10-06",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-01-am-cover-01.jpg"
+        "site/social/covers/2026-10-01-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-01-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-01-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3492,10 +3492,10 @@
       "scheduled_for": "2026-10-07",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-07-comic-cover-01.jpg"
+        "site/social/covers/2026-10-07-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-07-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-07-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3620,10 +3620,10 @@
       "scheduled_for": "2026-10-08",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-04-am-cover-01.jpg"
+        "site/social/covers/2026-10-04-am-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-04-am-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-04-am-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -3817,10 +3817,10 @@
       "scheduled_for": "2026-10-10",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-10-comic-cover-01.jpg"
+        "site/social/covers/2026-10-10-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-10-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-10-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
@@ -4015,10 +4015,10 @@
       "scheduled_for": "2026-10-14",
       "slot": "am",
       "image_paths": [
-        "site/social/frames/2026-10-14-comic-cover-01.jpg"
+        "site/social/covers/2026-10-14-comic-cover-01.jpg"
       ],
       "image_urls": [
-        "https://debtdirectsolutions.netlify.app/social/frames/2026-10-14-comic-cover-01.jpg"
+        "https://debtdirectsolutions.netlify.app/social/covers/2026-10-14-comic-cover-01.jpg"
       ],
       "status": "queued",
       "platforms": [
