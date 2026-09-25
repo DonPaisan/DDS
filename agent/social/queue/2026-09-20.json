@@ -1334,12 +1334,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/covers/2026-09-26-am-cover-01.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "companion_of": "2026-09-26-am"
+      "companion_of": "2026-09-26-am",
+      "posted_at": "2026-09-25T14:05:37+00:00",
+      "results": {
+        "instagram": {
+          "id": "18099957980434610"
+        },
+        "facebook": {
+          "success": true,
+          "post_id": "2152187968989264"
+        }
+      }
     },
     {
       "id": "2026-09-26-noon",
