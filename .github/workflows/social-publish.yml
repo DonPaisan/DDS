@@ -74,4 +74,4 @@ jobs:
           git config user.email "noreply@debtdirectsolutions.com"
           git add agent/social/queue site/social
           git diff --cached --quiet || git commit -m "social: mark posts published $(date -u +%F) ${{ steps.slot.outputs.slot }}"
-          git push
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs origin ${{ github.ref_name }} && git push && break || sleep $((i * 10)); done

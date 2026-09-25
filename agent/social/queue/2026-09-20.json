@@ -1303,11 +1303,20 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-26-am-06.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "posted_at": "2026-09-25T14:03+00:00",
+      "results": {
+        "instagram": {
+          "id": "posted; id not captured (run 36144598578), reconciled by history.py"
+        },
+        "facebook": {
+          "id": "posted; id not captured (run 36144598578)"
+        }
+      }
     },
     {
       "id": "2026-09-26-am-story",
