@@ -9,9 +9,7 @@ name: Social publish
 # instagram_basic, instagram_content_publish) and social.enabled: true.
 on:
   schedule:
-    - cron: "0 12 * * *"   # 12:00 UTC + 0-150 min = 8:00-10:30 AM ET → am (feed carousel or comic)
-    - cron: "30 15 * * *"  # 15:30 UTC + 0-150 min = 11:30 AM-2:00 PM ET → noon (story)
-    - cron: "0 21 * * *"   # 21:00 UTC + 0-150 min = 5:00-7:30 PM ET → pm (one-pager, reel or story)
+    - cron: "0 12-23 * * *"   # hourly 8 AM-7 PM ET; GitHub runs these hours late, so a slot's first run posts and later runs are no-ops
   workflow_dispatch:
     inputs:
       slot:
@@ -41,9 +39,9 @@ jobs:
       - name: Chromium for slide rendering
         run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
 
-      - name: Random delay of 0-150 minutes so posts land at uneven times
+      - name: Random delay of 0-50 minutes so posts land at uneven times
         if: github.event_name == 'schedule'
-        run: sleep $((RANDOM % 9000))
+        run: sleep $((RANDOM % 3000))
       - name: Pick slot
         id: slot
         run: |
