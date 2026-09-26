@@ -171,6 +171,9 @@ def post_facebook(p: dict, token: str, page: str) -> dict:
     return graph("POST", f"{page}/feed", **params)
 
 
+ORDER = {"am": 0, "noon": 1, "pm": 2}
+
+
 def due_posts(t: str | None = None, slot: str | None = None):
     """Queued posts scheduled on or before `t`. With a slot (am/pm), today's posts
     only publish in their own slot; overdue ones from earlier days always go."""
@@ -183,8 +186,8 @@ def due_posts(t: str | None = None, slot: str | None = None):
             if p.get("needs_audio"):
                 print(f"[publish] {p['id']}: reel has no licensed music track yet (agent/assets/audio/) — skipping", file=sys.stderr)
                 continue
-            if slot and p["scheduled_for"] == t and p.get("slot", slot) != slot:
-                continue
+            if slot and p["scheduled_for"] == t and ORDER.get(p.get("slot", slot), 0) > ORDER.get(slot, 0):
+                continue   # today's later slots wait; today's earlier slots that were missed go now
             yield f, data, p
 
 
