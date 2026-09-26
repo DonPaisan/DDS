@@ -1903,6 +1903,119 @@
       ]
     },
     {
+      "id": "2026-09-26-clip",
+      "kind": "reel",
+      "subkind": "clip",
+      "surface": "feed",
+      "title": "Does checking your score lower it?",
+      "spec": {
+        "kicker": "Buck asks",
+        "theme": "paper",
+        "variant": {
+          "look": "ledger",
+          "body_mix": [
+            "white"
+          ],
+          "accent_slide": null,
+          "serif_body": false,
+          "big_idx": false
+        },
+        "buck": {
+          "expr": "thinking",
+          "pose": "hold",
+          "prop": "phone"
+        },
+        "cover": {
+          "title": "Does checking your score lower it?",
+          "subtitle": ""
+        },
+        "slides": [
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "worried",
+              "pose": "hold",
+              "prop": "phone",
+              "side": "right"
+            },
+            "bubble": {
+              "text": "If I check my credit score… does it go down?",
+              "style": "thought"
+            },
+            "cap": "Buck asks."
+          },
+          {
+            "kind": "comic",
+            "scene": "kitchen",
+            "buck": {
+              "expr": "big",
+              "pose": "cheer",
+              "side": "left"
+            },
+            "bubble": {
+              "text": "Nope. Checking your own score is a soft inquiry. It never counts.",
+              "style": "shout"
+            },
+            "cap_bottom": "Only applications for new credit are hard inquiries."
+          },
+          {
+            "kind": "lesson",
+            "heading": "Check it as often as you like.",
+            "body": "Your own checks are soft inquiries and never touch the score. Free weekly reports: AnnualCreditReport.com.",
+            "highlight": [
+              "never"
+            ],
+            "buck": {
+              "expr": "wink",
+              "pose": "wave"
+            }
+          }
+        ]
+      },
+      "caption": "Does checking your credit score lower it? 🤔 Buck asked too. Nope: your own checks are soft inquiries and never count. Only applications for new credit are hard inquiries. Check it as often as you like, and your reports are free every week at AnnualCreditReport.com.\n\nBuck learns something new every week. 💛 Follow along @debt_direct_solutions.",
+      "hashtags": [
+        "creditscore",
+        "creditreport",
+        "credittips",
+        "softinquiry",
+        "debtfreejourney",
+        "debtfreecommunity",
+        "financialliteracy",
+        "personalfinance",
+        "moneytips",
+        "moneymindset",
+        "creditrepair",
+        "financialeducation",
+        "budgeting",
+        "savingmoney",
+        "smartmoneymoves",
+        "financialfreedom",
+        "debtfree",
+        "moneyhabits",
+        "creditcarddebt",
+        "moneymanagement"
+      ],
+      "scheduled_for": "2026-09-26",
+      "slot": "pm",
+      "image_paths": [
+        "site/social/2026-09-26-clip.mp4"
+      ],
+      "image_urls": [
+        "https://debtdirectsolutions.netlify.app/social/2026-09-26-clip.mp4"
+      ],
+      "cover_path": "",
+      "needs_audio": false,
+      "silent": true,
+      "seconds": 10.8,
+      "animated": true,
+      "status": "queued",
+      "platforms": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
       "id": "2026-09-28-am",
       "kind": "carousel",
       "title": "A $5,000 card paid at the minimum takes about 20 years to clear.",
