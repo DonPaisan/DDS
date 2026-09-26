@@ -63,20 +63,20 @@ def panel_html(spec: dict, i: int, total: int, t: float) -> str:
     return html.replace("</style>", ANIM_CSS + f":root{{--t:{t:.4f}}}</style>", 1)
 
 
-def render_frames(spec: dict, slug: str, out_dir: Path, seconds: float = 3.6) -> list[tuple[Path, float]]:
+def render_frames(spec: dict, slug: str, out_dir: Path, seconds: float = 3.6, cover: bool = True, cta_seconds: float = 2.5, still_seconds: float = 3.2) -> list[tuple[Path, float]]:
     """Returns [(frame_or_still_path, duration_seconds)] in order: cover, animated panels, lesson, cta."""
     spec = dict(spec, _slug=slug)
     slides = spec["slides"]
     total = len(slides) + 2
     stills = H.render_carousel(out_dir / "stills", slug, spec, surface="reel")   # 9:16 stills of every slide
-    seq: list[tuple[Path, float]] = [(stills[0], 2.2)]
+    seq: list[tuple[Path, float]] = [(stills[0], 2.2)] if cover else []
     jobs, frames_dir = [], out_dir / "frames"
     frames_dir.mkdir(parents=True, exist_ok=True)
     tmp = Path(tempfile.mkdtemp(prefix="dds-anim-"))
     n_frames = int(seconds * FPS)
     for i, s in enumerate(slides, start=2):
         if s["kind"] != "comic":
-            seq.append((stills[i - 1], 3.2))
+            seq.append((stills[i - 1], still_seconds))
             continue
         for k in range(n_frames):
             hp = tmp / f"{slug}-{i:02d}-{k:03d}.html"
@@ -84,7 +84,7 @@ def render_frames(spec: dict, slug: str, out_dir: Path, seconds: float = 3.6) ->
             op = frames_dir / f"{slug}-{i:02d}-{k:03d}.jpg"
             jobs.append({"html": str(hp), "out": str(op), "width": 1080, "height": 1920})
         seq.append((frames_dir / f"{slug}-{i:02d}-%03d.jpg", seconds))
-    seq.append((stills[-1], 2.5))
+    seq.append((stills[-1], cta_seconds))
     jf = tmp / "jobs.json"
     jf.write_text(json.dumps(jobs))
     env = {**os.environ, "NODE_PATH": os.environ.get("NODE_PATH", "") + ":/opt/node22/lib/node_modules:" + str(REPO_DIR / "node_modules")}
@@ -120,6 +120,23 @@ def build_video(seq: list[tuple[Path, float]], out: Path, music: Path | None) ->
 def animate_comic(spec: dict, slug: str, out_slug: str, music: Path | None = None, preview_bed: bool = False) -> dict:
     work = IMG_DIR / "anim" / out_slug
     seq = render_frames(spec, out_slug, work)
+    total = sum(d for _, d in seq)
+    needs_audio = False
+    if music is None:
+        music = pick_music()
+    if music is None and preview_bed:
+        music = placeholder_bed(work / f"{out_slug}-bed.mp3", total + 1)
+        needs_audio = True
+    elif music is None:
+        needs_audio = True
+    out = build_video(seq, IMG_DIR / f"{out_slug}.mp4", music)
+    return {"video": out, "cover": seq[0][0], "seconds": round(total, 1), "needs_audio": needs_audio, "music": music.name if music else None}
+
+
+def animate_clip(spec: dict, out_slug: str, music: Path | None = None, preview_bed: bool = False, seconds: float = 3.2) -> dict:
+    """A short tip clip (10-15 s): no cover, one or two animated panels, a lesson still, the follow card."""
+    work = IMG_DIR / "anim" / out_slug
+    seq = render_frames(spec, out_slug, work, seconds=seconds, cover=False, cta_seconds=1.8, still_seconds=2.6)
     total = sum(d for _, d in seq)
     needs_audio = False
     if music is None:
