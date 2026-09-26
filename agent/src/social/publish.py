@@ -218,6 +218,7 @@ def main(argv=None):
     ap.add_argument("--really", action="store_true", help="actually post")
     ap.add_argument("--date", default=None, help="treat this YYYY-MM-DD as today (default: today UTC)")
     ap.add_argument("--slot", choices=["am", "noon", "pm"], default=None, help="only post items in this slot for today")
+    ap.add_argument("--force", action="store_true", help="ignore the warm-up skip roll (manual runs)")
     args = ap.parse_args(argv)
     load_env()
     cfg = load_config()["social"]
@@ -231,7 +232,7 @@ def main(argv=None):
     if page_token:
         token = page_token   # Page token works for both Page and Instagram publishing
 
-    if live and human_skips(args.date or today().isoformat(), args.slot, cfg):
+    if live and not args.force and human_skips(args.date or today().isoformat(), args.slot, cfg):
         return
     n = 0
     for f, data, p in due_posts(args.date, args.slot):
