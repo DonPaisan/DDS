@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Debt Direct Solutions</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/brand/logo.png">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="top"><div class="wrap row"><a class="brand" href="/">Debt Direct Solutions</a></div></header>
+  <header class="top">
+    <div class="wrap row">
+      <a class="brand" href="/"><img src="/brand/logo.png" alt="" width="44" height="44"><span>Debt Direct Solutions<small>Debt settlement, explained</small></span></a>
+    </div>
+  </header>
   <main><section class="page"><div class="wrap narrow prose">
     <h1>Privacy Policy</h1>
     <p><em>Last updated: September 20, 2026. This is a starting template — have it reviewed before launch.</em></p>
@@ -24,6 +30,15 @@
     <h2>Contact</h2>
     <p>Debt Direct Solutions — privacy@debtdirectsolutions.com</p>
   </div></section></main>
-  <footer class="foot"><div class="wrap"><p class="fine"><a href="/">Home</a></p></div></footer>
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <a class="brand" href="/"><img src="/brand/logo.png" alt="" width="44" height="44"><span>Debt Direct Solutions<small>debtdirectsolutions.com</small></span></a>
+        <div class="foot-links"><a href="/">Home</a><a href="/privacy.html">Privacy Policy</a></div>
+      </div>
+      <p class="fine">© <span id="year"></span> Debt Direct Solutions</p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

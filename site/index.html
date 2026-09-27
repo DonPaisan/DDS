@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Debt Direct Solutions — Free Debt Review</title>
-  <meta name="description" content="Free, no-obligation debt settlement review for credit card, medical, and personal loan balances. Four questions, about 60 seconds.">
+  <title>Debt Direct Solutions — Free Debt Settlement Review</title>
+  <meta name="description" content="A free, no-obligation review of debt settlement options for credit card, medical, and personal loan balances. Four questions, about 60 seconds, explained in plain English.">
   <meta name="robots" content="noindex">
+  <meta property="og:title" content="Debt Direct Solutions — Free Debt Settlement Review">
+  <meta property="og:description" content="Four questions, about 60 seconds, and a specialist explains what's possible in plain English.">
+  <meta property="og:image" content="/brand/logo.png">
+  <link rel="icon" href="/brand/logo.png">
+  <link rel="preload" href="/fonts/PlayfairDisplay.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://connect.facebook.net">
   <link rel="stylesheet" href="/styles.css">
   <script src="/config.js"></script>
@@ -26,7 +32,13 @@
 <body>
   <header class="top">
     <div class="wrap row">
-      <a class="brand" href="/">Debt Direct Solutions</a>
+      <a class="brand" href="/"><img src="/brand/logo.png" alt="" width="44" height="44"><span>Debt Direct Solutions<small>Debt settlement, explained</small></span></a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#review">The review</a>
+        <a href="#how">How it works</a>
+        <a href="#buck">Meet Buck</a>
+        <a href="#faq">Questions</a>
+      </nav>
       <a id="header-phone" class="phone" href="#" hidden></a>
     </div>
   </header>
@@ -38,11 +50,13 @@
           <p class="eyebrow" id="hero-eyebrow"></p>
           <h1 id="hero-headline"></h1>
           <p class="sub" id="hero-subhead"></p>
-          <button class="btn primary big" id="hero-cta" type="button"></button>
+          <button class="btn gold big" id="hero-cta" type="button"></button>
           <ul class="trust" id="hero-trust"></ul>
+          <img class="hero-buck" src="/brand/buck/wave.svg" alt="" width="200" height="200">
         </div>
 
         <div class="card" id="survey-card">
+          <div class="card-head"><p class="eyebrow">Free review</p></div>
           <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
           <p class="progress-label" id="progress-label"></p>
           <div id="survey" aria-live="polite"></div>
@@ -51,9 +65,35 @@
       </div>
     </section>
 
-    <section class="how">
+    <section class="band white" id="review">
       <div class="wrap">
-        <h2>How it works</h2>
+        <p class="eyebrow">What a review is</p>
+        <h2>A plain-English look at the options for unsecured debt.</h2>
+        <p class="lede">Credit cards, medical bills, personal loans, and accounts in collections. A specialist looks at the numbers and explains what debt settlement can and cannot do, so the decision is an informed one.</p>
+        <div class="cards">
+          <div class="tile">
+            <img src="/brand/buck/bill.svg" alt="">
+            <h3>What it is</h3>
+            <p>A conversation about balances, creditors, and what negotiating a settlement typically involves. Free, and it takes about fifteen minutes.</p>
+          </div>
+          <div class="tile">
+            <img src="/brand/buck/think.svg" alt="">
+            <h3>What it isn't</h3>
+            <p>Not a loan. Not a credit repair service. Not legal or tax advice. No fee unless someone enrolls in a program and a debt is actually settled.</p>
+          </div>
+          <div class="tile">
+            <img src="/brand/buck/relieved.svg" alt="">
+            <h3>What you get</h3>
+            <p>A clear picture of the options, the trade-offs said out loud, including the effect on credit, and no pressure to do anything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band navy" id="how">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2>Three steps. One of them is a phone call.</h2>
         <ol class="steps">
           <li><strong>Answer 4 questions.</strong> About a minute. No credit check for the review.</li>
           <li><strong>Get a free review.</strong> A specialist looks at the numbers and explains the options in plain language.</li>
@@ -62,21 +102,57 @@
       </div>
     </section>
 
-    <section class="faq">
-      <div class="wrap">
-        <h2>Common questions</h2>
+    <section class="band paper" id="buck">
+      <div class="wrap buck-row">
+        <img class="buck-hero" src="/brand/buck/cheer.svg" alt="Buck, the Debt Direct Solutions mascot" width="300" height="300">
+        <div>
+          <p class="eyebrow">Meet Buck</p>
+          <h2>Money basics, one comic at a time.</h2>
+          <p class="lede">Buck gets the minimum payment wrong, closes the wrong card, and talks to a collector, so nobody else has to learn the hard way. New comics on Instagram every week, plus plain-English money basics every day.</p>
+          <div class="strip">
+            <img src="/social/2026-09-26-comic-01.jpg" alt="Comic: Buck pays the minimum" loading="lazy">
+            <img src="/social/2026-09-30-comic-01.jpg" alt="Comic: Buck gets the call" loading="lazy">
+            <img src="/social/2026-10-03-comic-01.jpg" alt="Comic: Buck closes a card" loading="lazy">
+          </div>
+          <a class="social-cta" href="https://www.instagram.com/debt_direct_solutions/" target="_blank" rel="noopener">Follow @debt_direct_solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band white" id="faq">
+      <div class="wrap narrow">
+        <p class="eyebrow">Common questions</p>
+        <h2>Asked on most calls.</h2>
         <details><summary>Is this a loan?</summary><p>No. We are not a lender. Debt settlement works by negotiating with your creditors to accept less than the full balance owed.</p></details>
         <details><summary>Does the review cost anything?</summary><p>No. The review is free. A fee applies only if someone enrolls in a program and a debt is actually settled.</p></details>
         <details><summary>What kinds of debt can be included?</summary><p>Unsecured debt such as credit cards, medical bills, personal loans, and accounts in collections. Mortgages, auto loans, and federal student loans generally cannot be included.</p></details>
+        <details><summary>Does debt settlement affect credit?</summary><p>It can, and the review says so plainly. Enrolling in a program may lower credit scores while accounts are being negotiated. It is not the right fit for everyone, and the review is where that gets worked out.</p></details>
         <details><summary>Is my information safe?</summary><p>Yes. Your answers are private, used only to match you with the right option, and never sold. See our <a href="/privacy.html">Privacy Policy</a>.</p></details>
+      </div>
+    </section>
+
+    <section class="band navy cta-band">
+      <div class="wrap narrow">
+        <p class="eyebrow">Free, no obligation</p>
+        <h2>Four questions. About a minute.</h2>
+        <p>A specialist explains what's possible in plain English. Not a lender, no upfront fees.</p>
+        <a class="btn gold" href="#survey-card">Start the free review</a>
       </div>
     </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
+      <div class="foot-top">
+        <a class="brand" href="/"><img src="/brand/logo.png" alt="" width="44" height="44"><span>Debt Direct Solutions<small>debtdirectsolutions.com</small></span></a>
+        <div class="foot-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="https://www.instagram.com/debt_direct_solutions/" target="_blank" rel="noopener">Instagram</a>
+          <a href="#survey-card">Free review</a>
+        </div>
+      </div>
       <div id="disclosures" class="disclosures"></div>
-      <p class="fine">© <span id="year"></span> Debt Direct Solutions · <a href="/privacy.html">Privacy Policy</a></p>
+      <p class="fine">© <span id="year"></span> Debt Direct Solutions</p>
     </div>
   </footer>
 
