@@ -1,4 +1,4 @@
-# Post history — pulled 2026-09-26T15:31+00:00
+# Post history — pulled 2026-09-27T16:11+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,9 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-09-27 | feed | 0 | 0 |  |  | “Just pay the minimum” is the most expensive advic |
+| 2026-09-26 | feed | 0 | 1 |  |  | Buck pays the minimum. 💳 On a $5,000 card at 24% A |
+| 2026-09-26 | reel | 0 | 0 |  |  | Does checking your credit score lower it? 🤔 Buck a |
 | 2026-09-25 | feed | 0 | 0 |  |  | Credit utilization is the fastest lever on your sc |
 | 2026-09-24 | feed | 0 | 1 |  |  | True story. 🌱 In 1935, Grace Groner, a secretary a |
 | 2026-09-24 | feed | 0 | 0 |  |  | $20 a day is $7,300 a year. ☕️ Nobody notices twen |
@@ -32,4 +35,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 11 posts, 0 likes, 1 comments.
+- Since 2026-09-20: 14 posts, 0 likes, 2 comments.

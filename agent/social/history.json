@@ -1,7 +1,40 @@
 {
- "pulled_at": "2026-09-26T15:31+00:00",
+ "pulled_at": "2026-09-27T16:11+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "17878537905545987",
+   "date": "2026-09-27",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "“Just pay the minimum” is the most expensive advice on your statement. 😬 $5,000 ",
+   "permalink": "https://www.instagram.com/p/DdxXCaXmPKS/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
+  {
+   "id": "17910868410495509",
+   "date": "2026-09-26",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 1,
+   "caption": "Buck pays the minimum. 💳 On a $5,000 card at 24% APR the minimum is about $150: ",
+   "permalink": "https://www.instagram.com/p/DdwuKypjGOW/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
+  {
+   "id": "17923600833424672",
+   "date": "2026-09-26",
+   "type": "VIDEO",
+   "kind": "reel",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Does checking your credit score lower it? 🤔 Buck asked too. Nope: your own check",
+   "permalink": "https://www.instagram.com/reel/DdwtmvyjVuK/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18079100945362564",
    "date": "2026-09-25",
@@ -246,6 +279,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A-_2DUrX4Hm8ml005KTkgkR'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A7QkwkXP4qRK0eSBowy6PQC'}"
  }
 }
