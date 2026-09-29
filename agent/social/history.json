@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-09-28T19:05+00:00",
+ "pulled_at": "2026-09-29T17:26+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18132991120673996",
+   "date": "2026-09-29",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Avalanche or snowball? The right answer is the one you will actually keep doing.",
+   "permalink": "https://www.instagram.com/p/Dd2hYFel97i/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18089992859428360",
    "date": "2026-09-28",
@@ -290,6 +301,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'APXJfjgSFFUgIh55_JzSMbM'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AzvRrijG0CGFCYe86Isp9AH'}"
  }
 }
