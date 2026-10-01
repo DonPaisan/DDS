@@ -1,4 +1,4 @@
-# Post history — pulled 2026-09-30T17:24+00:00
+# Post history — pulled 2026-10-01T17:50+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,7 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-10-01 | feed | 0 | 0 |  |  | Buck gets the call. 📞 A collector says “pay today  |
 | 2026-09-29 | feed | 0 | 0 |  |  | Avalanche or snowball? The right answer is the one |
 | 2026-09-28 | feed | 0 | 0 |  |  | Most bills are negotiable. Almost nobody asks. ☎️  |
 | 2026-09-27 | feed | 0 | 0 |  |  | “Just pay the minimum” is the most expensive advic |
@@ -37,4 +38,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 16 posts, 0 likes, 2 comments.
+- Since 2026-09-20: 17 posts, 0 likes, 2 comments.

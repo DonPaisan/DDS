@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-09-30T17:24+00:00",
+ "pulled_at": "2026-10-01T17:50+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18476649751116992",
+   "date": "2026-10-01",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Buck gets the call. 📞 A collector says “pay today or else.” Buck says “send me a",
+   "permalink": "https://www.instagram.com/p/Dd7wBhjF4ex/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18132991120673996",
    "date": "2026-09-29",
@@ -301,6 +312,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A_-ZzFHPvNoYTG3t47pNxRe'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'Aq8bbgIyCPM1CthOWhxWUqG'}"
  }
 }
