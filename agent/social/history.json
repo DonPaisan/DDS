@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-01T17:50+00:00",
+ "pulled_at": "2026-10-02T17:13+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18463959976190706",
+   "date": "2026-10-02",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Five signs the call about your money is a scam. 🚩 Urgency, payment by gift card ",
+   "permalink": "https://www.instagram.com/p/Dd-XEcxlE6y/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18476649751116992",
    "date": "2026-10-01",
@@ -312,6 +323,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'Aq8bbgIyCPM1CthOWhxWUqG'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'APUTH3gAXobjtUcQoCRlE7I'}"
  }
 }
