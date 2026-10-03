@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-02T17:13+00:00",
+ "pulled_at": "2026-10-03T15:32+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18115181999018937",
+   "date": "2026-10-03",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Christmas is not an emergency. Neither are tires. 🎄🛞 A sinking fund is a small m",
+   "permalink": "https://www.instagram.com/p/DeA3uetmhvS/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18463959976190706",
    "date": "2026-10-02",
@@ -323,6 +334,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'APUTH3gAXobjtUcQoCRlE7I'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A7bu26B1_m8n6G6OpEbVPPs'}"
  }
 }
