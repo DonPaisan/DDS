@@ -1,4 +1,4 @@
-# Post history — pulled 2026-10-04T16:17+00:00
+# Post history — pulled 2026-10-05T20:08+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
