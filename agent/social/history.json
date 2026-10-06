@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-05T20:08+00:00",
+ "pulled_at": "2026-10-06T17:43+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18098125349426590",
+   "date": "2026-10-06",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Your credit score is five numbers pretending to be one. 📊 Payment history is 35%",
+   "permalink": "https://www.instagram.com/p/DeIqsKdjLTH/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18140963728614402",
    "date": "2026-10-04",
@@ -345,6 +356,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A1CkFBSd0dclbdt6X2YLRm7'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AOvsAZhx9EGChQ6jakflzkr'}"
  }
 }

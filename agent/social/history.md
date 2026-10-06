@@ -1,4 +1,4 @@
-# Post history — pulled 2026-10-05T20:08+00:00
+# Post history — pulled 2026-10-06T17:43+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,7 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-10-06 | feed | 0 | 0 |  |  | Your credit score is five numbers pretending to be |
 | 2026-10-04 | feed | 0 | 0 |  |  | Buck closes a card. ✂️ He paid it off, closed it,  |
 | 2026-10-03 | feed | 0 | 0 |  |  | Christmas is not an emergency. Neither are tires.  |
 | 2026-10-02 | feed | 0 | 0 |  |  | Five signs the call about your money is a scam. 🚩  |
@@ -41,4 +42,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 20 posts, 0 likes, 2 comments.
+- Since 2026-09-20: 21 posts, 0 likes, 2 comments.
