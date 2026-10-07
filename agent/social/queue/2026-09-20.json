@@ -3494,11 +3494,21 @@
         "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-05.jpg",
         "https://debtdirectsolutions.netlify.app/social/2026-09-27-am-06.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
-      ]
+      ],
+      "posted_at": "2026-10-07T02:17:41+00:00",
+      "results": {
+        "instagram": {
+          "id": "18442379812133112"
+        },
+        "facebook": {
+          "id": "868663969665622_122141736159139646",
+          "post_supports_client_mutation_id": true
+        }
+      }
     },
     {
       "id": "2026-09-27-am-story",
@@ -3516,12 +3526,22 @@
       "image_urls": [
         "https://debtdirectsolutions.netlify.app/social/covers/2026-09-27-am-cover-01.jpg"
       ],
-      "status": "queued",
+      "status": "posted",
       "platforms": [
         "instagram",
         "facebook"
       ],
-      "companion_of": "2026-09-27-am"
+      "companion_of": "2026-09-27-am",
+      "posted_at": "2026-10-07T02:18:05+00:00",
+      "results": {
+        "instagram": {
+          "id": "18166261039466410"
+        },
+        "facebook": {
+          "success": true,
+          "post_id": "934651499370425"
+        }
+      }
     },
     {
       "id": "2026-10-01-am",
