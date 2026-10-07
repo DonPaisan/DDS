@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-06T17:43+00:00",
+ "pulled_at": "2026-10-07T18:16+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18442379812133112",
+   "date": "2026-10-07",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Interest and APR are the same cost from two angles. 💳 Interest is the dollar amo",
+   "permalink": "https://www.instagram.com/p/DeLRCkzjQg0/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18098125349426590",
    "date": "2026-10-06",
@@ -356,6 +367,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AOvsAZhx9EGChQ6jakflzkr'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AHjlzt1Kf4-qwYWjyGJ5l6m'}"
  }
 }
