@@ -1,7 +1,29 @@
 {
- "pulled_at": "2026-10-08T18:17+00:00",
+ "pulled_at": "2026-10-09T17:50+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18099333089543223",
+   "date": "2026-10-09",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Buck and the medical bill. 🏥 $1,240 for a twenty-minute visit. Buck asks for the",
+   "permalink": "https://www.instagram.com/p/DeQLw1umB8v/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
+  {
+   "id": "18190519246407093",
+   "date": "2026-10-08",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "A 401(k) match is a raise you have to opt into. 💼 On a $50,000 salary with a 6% ",
+   "permalink": "https://www.instagram.com/p/DePnS0PGA-X/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18442379812133112",
    "date": "2026-10-07",
@@ -367,6 +389,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AuiPR67YAd65mpDydtmg94g'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AlSeQAAhL3Z2yXZAOeNcZJS'}"
  }
 }
