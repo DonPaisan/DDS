@@ -1,4 +1,4 @@
-# Post history — pulled 2026-10-09T17:50+00:00
+# Post history — pulled 2026-10-10T16:45+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,7 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-10-10 | feed | 0 | 0 |  |  | Your credit reports are free every week from all t |
 | 2026-10-09 | feed | 0 | 0 |  |  | Buck and the medical bill. 🏥 $1,240 for a twenty-m |
 | 2026-10-08 | feed | 0 | 0 |  |  | A 401(k) match is a raise you have to opt into. 💼  |
 | 2026-10-07 | feed | 0 | 0 |  |  | Interest and APR are the same cost from two angles |
@@ -45,4 +46,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 24 posts, 0 likes, 2 comments.
+- Since 2026-09-20: 25 posts, 0 likes, 2 comments.

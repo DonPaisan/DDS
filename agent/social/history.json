@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-09T17:50+00:00",
+ "pulled_at": "2026-10-10T16:45+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18114437540047927",
+   "date": "2026-10-10",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Your credit reports are free every week from all three bureaus at AnnualCreditRe",
+   "permalink": "https://www.instagram.com/p/DeTAPlUGF07/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18099333089543223",
    "date": "2026-10-09",
@@ -389,6 +400,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AlSeQAAhL3Z2yXZAOeNcZJS'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A5WwxiUVlZuEXqZnQgE0e_I'}"
  }
 }
