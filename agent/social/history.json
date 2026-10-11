@@ -1,5 +1,5 @@
 {
- "pulled_at": "2026-10-10T16:45+00:00",
+ "pulled_at": "2026-10-11T17:10+00:00",
  "ig": "17841478475121767",
  "posts": [
   {
@@ -400,6 +400,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A5WwxiUVlZuEXqZnQgE0e_I'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AzxSm0tLByGEQNbf2WyHN46'}"
  }
 }
