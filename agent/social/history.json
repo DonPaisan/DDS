@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-12T20:42+00:00",
+ "pulled_at": "2026-10-13T18:45+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "17943168018091122",
+   "date": "2026-10-13",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Buck thinks it’s too late. ⏳ Fifty-five and nothing saved, so why bother? Becaus",
+   "permalink": "https://www.instagram.com/p/DeazVm9mFwq/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "18114437540047927",
    "date": "2026-10-10",
@@ -400,6 +411,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'ADTwDmxxHteNsY27Ubsqjmc'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'ATTxB115mLWLymXHpC8DU5d'}"
  }
 }
