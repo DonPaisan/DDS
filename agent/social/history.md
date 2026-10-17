@@ -1,4 +1,4 @@
-# Post history — pulled 2026-10-16T15:54+00:00
+# Post history — pulled 2026-10-17T14:47+00:00
 
 **Followers vs non-followers (last 30 days):** not readable yet. The token needs `instagram_manage_insights`, which comes with assigning the Instagram account to the system user (Business Settings → System users → Instagram row → Manage → Everything).
 
@@ -6,6 +6,7 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 
 | Date | Type | Likes | Comments | Reach | Views | Caption |
 |---|---|---|---|---|---|---|
+| 2026-10-17 | feed | 0 | 0 |  |  | Buck’s $500 cushion. 🛟 The car noise becomes a $48 |
 | 2026-10-13 | feed | 0 | 0 |  |  | Buck thinks it’s too late. ⏳ Fifty-five and nothin |
 | 2026-10-10 | feed | 0 | 0 |  |  | Your credit reports are free every week from all t |
 | 2026-10-09 | feed | 0 | 0 |  |  | Buck and the medical bill. 🏥 $1,240 for a twenty-m |
@@ -47,4 +48,4 @@ Reach is not readable, so likes and comments stand in. A post nobody saw has zer
 ## Then vs now
 
 - Before 2026-09-20: 11 posts, 0 likes, 0 comments.
-- Since 2026-09-20: 26 posts, 0 likes, 2 comments.
+- Since 2026-09-20: 27 posts, 0 likes, 2 comments.

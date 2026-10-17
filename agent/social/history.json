@@ -1,7 +1,18 @@
 {
- "pulled_at": "2026-10-16T15:54+00:00",
+ "pulled_at": "2026-10-17T14:47+00:00",
  "ig": "17841478475121767",
  "posts": [
+  {
+   "id": "18118460920956250",
+   "date": "2026-10-17",
+   "type": "CAROUSEL_ALBUM",
+   "kind": "feed",
+   "likes": 0,
+   "comments": 0,
+   "caption": "Buck’s $500 cushion. 🛟 The car noise becomes a $480 repair, and without a cushio",
+   "permalink": "https://www.instagram.com/p/Dek8lo5FPO6/",
+   "insights_error": "Graph API error: {'message': '(#10) Application does not have permission for thi"
+  },
   {
    "id": "17943168018091122",
    "date": "2026-10-13",
@@ -411,6 +422,6 @@
   }
  ],
  "reach_split_30d": {
-  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'AjI3uckr9B536A-H8-7axiU'}"
+  "error": "Graph API error: {'message': '(#10) Application does not have permission for this action', 'code': 10, 'type': 'OAuthException', 'fbtrace_id': 'A6dzG_e9tstC4nIycx44FA9'}"
  }
 }
