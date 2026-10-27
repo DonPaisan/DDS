@@ -1,4 +1,4 @@
-# Social review — 2026-10-26
+# Social review — 2026-10-27
 
 **Followers:** 57 (+0 since yesterday)
 **Follower growth:** +0 this week vs +0 the week before.
